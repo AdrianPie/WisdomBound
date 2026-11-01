@@ -1,0 +1,128 @@
+# Birds: birds
+#
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+trv_flaming_kolor	Easy	Where do flamingos get their pink colour from?	Pigments in the food they eat	Sunlight on their feathers	Their blood showing through	Minerals in the water
+trv_sowa_glowa	Easy	Which bird can turn its head about 270 degrees?	The owl	The eagle	The parrot	The crow
+anix_flaming_noga	Easy	Which pink bird often rests standing on one leg?	The flamingo	The heron	The stork	The spoonbill
+anix_paw	Easy	Which bird fans out a huge tail covered in 'eyes' to impress females?	The peacock	The turkey	The pheasant	The parrot
+ani_flightless_bird_new	Easy	Which flightless bird is New Zealand's national symbol?	The kiwi	The emu	The penguin	The ostrich
+ani_bird_symbol_peace	Easy	Which bird is a symbol of peace?	The dove	The swan	The eagle	The owl
+ani_tropical_bird_huge	Easy	Which tropical bird has a huge, brightly coloured beak?	The toucan	The flamingo	The peacock	The pelican
+ani_baby_owl	Easy	What is a baby owl called?	An owlet	A cygnet	A gosling	A duckling
+ani_birds_famously_migrate	Easy	Which birds famously migrate in a V-shaped formation?	Geese	Crows	Pigeons	Parrots
+ani_bird_huge_pouch	Easy	Which bird has a huge pouch under its beak for scooping up fish?	The pelican	The stork	The flamingo	The heron
+ani_city_birds_often	Easy	Which city birds are often jokingly called 'rats with wings'?	Pigeons	Seagulls	Sparrows	Crows
+ani_bird_miners_once	Easy	Which bird did miners once carry underground as an early warning of poisonous gas?	The canary	The pigeon	The sparrow	The robin
+ani_emperor_penguins_survive	Easy	How do emperor penguins survive the freezing storms of the Antarctic winter?	By huddling together in huge groups	By digging deep snow burrows	By flying north to warmer seas	By sleeping underwater
+ani_touch_baby_bird	Easy	If you touch a baby bird, will its parents reject it?	No, they usually keep caring for it	Yes, because of the human smell	Yes, but only the mother does	Only if it is touched twice
+zwi2_strus_jajo	Easy	Which living animal lays the largest eggs?	Ostrich	Condor	Pelican	Albatross
+anix_golab_pocztowy	Easy	What were homing pigeons famously used for?	Carrying messages	Hunting rabbits	Guarding castles	Finding water
+anix_bielik	Easy	Which bird is the national symbol of the United States?	The bald eagle	The golden eagle	The wild turkey	The condor
+ani_penguin_lives_south	Easy	Which penguin lives on South African beaches and brays like a donkey?	African penguin	Galapagos penguin	Humboldt penguin	Little penguin
+ani_kolibr	Medium	Which bird can fly backwards?	Hummingbird	Sparrow	Kingfisher	Stork
+zwi2_pingwin_gatunek	Medium	Which penguin is the largest?	Emperor penguin	White-flippered penguin	King penguin	Adelie penguin
+zwi2_papuga_mowa	Medium	Which parrot is famous for the best mimicry of speech?	African grey parrot	Cockatiel	Macaw	Pink cockatoo
+scicmp_najwiekszy_ptak	Medium	Which of these birds is the largest?	The ostrich	The emu	The Andean condor	The albatross
+trv_rybitwa_migracja	Medium	Which bird makes the longest yearly migration, roughly from the Arctic to the Antarctic and back?	The Arctic tern	The swallow	The white stork	The Canada goose
+trv_wrony_stado	Medium	What is a group of crows called?	A murder	A parliament	A gaggle	A pride
+trv_kaczor_nazwa	Medium	What is a male duck called?	A drake	A gander	A cob	A buck
+ani_kolibr_najmniejszy	Medium	What is the smallest bird in the world?	The bee hummingbird	The goldcrest	The wren	The sunbird
+ani_mlody_labedz	Medium	What is a young swan called?	A cygnet	A gosling	A duckling	An eaglet
+ani_lirogon	Medium	Which bird can imitate chainsaws and camera shutters?	The lyrebird	The mockingbird	The starling	The myna
+ani_sowa_cicho	Medium	Why can owls fly almost silently?	Soft, fringed wing feathers	They only glide, never flap	Their bones are hollow	They fly very slowly
+ani_australian_bird_call	Medium	Which Australian bird is famous for a call that sounds like laughter?	The kookaburra	The cockatoo	The emu	The lyrebird
+ani_large_flightless_bird	Medium	Which large flightless bird appears on Australia's coat of arms beside the kangaroo?	The emu	The cassowary	The ostrich	The kiwi
+ani_group_geese_ground	Medium	What is a group of geese on the ground called?	A gaggle	A murder	A parliament	A pride
+ani_male_goose	Medium	What is a male goose called?	A gander	A drake	A cob	A rooster
+ani_national_bird_india	Medium	What is the national bird of India?	The peacock	The parrot	The eagle	The crane
+ani_bird_national_symbol	Medium	Which bird is a national symbol of France?	The rooster	The eagle	The swan	The stork
+ani_large_flightless_bird_2	Medium	Which large flightless bird of Australia and New Guinea has a dagger-like claw on each foot?	Cassowary	Emu	Ostrich	Rhea
+ani_huge_vulture_andes	Medium	Which huge vulture of the Andes is one of the largest flying birds?	Andean condor	Golden eagle	Harpy eagle	Bald eagle
+ani_huge_swirling_flock	Medium	What is a huge, swirling flock of starlings called?	A murmuration	A parliament	A clamour	A congregation
+ani_owl_cough_some	Medium	What does an owl cough up some hours after a meal?	A pellet of bones and fur	A ball of undigested seeds	A lump of hardened fat	A bundle of feathers only
+ani_ostrich_egg_holds	Medium	One ostrich egg holds roughly as much as how many hen's eggs?	About 24	About 4	About 100	About 10
+ani_flamingo_hold_head	Medium	How does a flamingo hold its head while it feeds?	Upside down	Sideways	Tilted far back	Straight up
+ani_joint_looks_like	Medium	The joint that looks like a flamingo's backward-bending knee is really its what?	Its ankle	Its hip	Its elbow	Its toe
+ani_vultures_safely_eat	Medium	Why can vultures safely eat rotting meat full of germs?	Their stomach acid is extremely strong	They only eat meat dried by the sun	They swallow stones that kill germs	They have no sense of taste
+ani_england_traditionally_claims	Medium	In England, who traditionally claims ownership of unmarked mute swans on open water?	The monarch	The Archbishop of Canterbury	The Lord Mayor of London	The local parish church
+ani_almost_never_see	Medium	Why do you almost never see baby pigeons?	They leave the nest almost fully grown	They hatch only in the depths of winter	They spend their first weeks underground	Most of them are raised far out at sea
+ani_guano_once_fortune	Medium	Guano, once a fortune-making fertiliser, is the droppings of which animals?	Seabirds and bats	Cattle and sheep	Pigs and goats	Horses and donkeys
+ani_smallest_species_penguin	Medium	Which is the smallest species of penguin?	The little penguin	The Galapagos penguin	The Adelie penguin	The rockhopper penguin
+ani_alex_parrot_studied	Medium	Alex, a parrot studied for 30 years by Irene Pepperberg, became famous for what?	Naming colours, shapes and numbers	Flying home from 500 km away	Singing whole opera arias	Living to be over 100
+ani_bird_largest_wingspan	Medium	Which bird has the largest wingspan of any living bird?	Wandering albatross	Andean condor	Marabou stork	Great white pelican
+ani_pingwin_ojciec	Medium	Which parent keeps an emperor penguin's egg warm through the winter?	The father	The mother	Both, taking turns	Neither - it is buried
+ani_owl_pale_heart	Medium	Which owl has a pale, heart-shaped face?	Barn owl	Snowy owl	Tawny owl	Eagle owl
+ani_seabird_colourful_striped	Medium	Which seabird with a colourful striped beak is nicknamed the 'clown of the sea'?	Puffin	Toucan	Gannet	Cormorant
+ani_small_red_breasted	Medium	Which small red-breasted bird is Britain's unofficial national bird?	Robin	Wren	Blue tit	Sparrow
+ani_bird_symbol_long	Medium	Which bird is a symbol of long life in Japan, where people fold a thousand paper ones?	Crane	Swan	Heron	Stork
+ani_wild_hummingbirds_live	Medium	Wild hummingbirds live only in which part of the world?	The Americas	Africa	South-East Asia	Australia
+ani_woodpeckers_sometimes_hammer	Medium	Why do woodpeckers sometimes hammer away on metal drainpipes?	To make a loud drumming call	To find insects hiding inside	To sharpen the tips of their beaks	To chip off rust to eat
+zwi2_sokolwedrowny	Medium	Which animal is the fastest in the world during a dive?	Peregrine falcon	Swift	Golden eagle	Hummingbird
+trv_sowy_stado	Medium	What is a group of owls called?	A parliament	A murder	A congress	A choir
+mst_sowa_oczy	Medium	Why must an owl turn its whole head to look sideways?	Its eyes cannot rotate	Its eyes have no lids	Its neck is rigid	It sees only in front
+anix_wrony_twarze	Medium	Crows can remember what for years, and hold grudges against it?	Individual human faces	Car number plates	Their own reflection	The sound of thunder
+aniy_papuga_wiek	Medium	Roughly how long can large parrots such as macaws live?	Over 50 years	About 5 years	About 15 years	About 200 years
+aniy_pingwin_galapagos	Medium	Which is the only penguin that lives wild at the equator?	The Galapagos penguin	The emperor penguin	The king penguin	The little penguin
+ani_african_bird_leads	Medium	Which African bird leads people to wild bees' nests, then feeds on the leftover wax?	The greater honeyguide	The bee-eater	The hoopoe	The weaver bird
+ani_owl_nesting_underground	Medium	Which owl, nesting underground, can hiss like a rattlesnake to scare off intruders?	The burrowing owl	The barn owl	The snowy owl	The tawny owl
+trv_kiwi_jajo	Hard	Which bird lays the largest egg relative to its own body size?	The kiwi	The ostrich	The hummingbird	The emu
+trv_strus_oczy	Hard	Which land animal has the largest eyes?	The ostrich	The horse	The giraffe	The elephant
+ext_jerzyk_lot	Hard	The common swift can stay airborne without landing for how long?	Months	Hours	A few days	A couple of weeks
+dpt_zwi_pingwin_nurek	Hard	How long can an emperor penguin stay down on one dive?	Over twenty minutes	About two minutes	About five minutes	Almost two hours
+ani_kakapo	Hard	Which flightless parrot is the heaviest parrot in the world?	The kakapo	The kea	The macaw	The cockatoo
+ani_kiwi_nozdrza	Hard	What is unusual about a kiwi's nostrils?	They are at the tip of its beak	It has none at all	They sit on its forehead	They close underwater
+anix_strus_predkosc	Hard	About how fast can an ostrich run?	About 70 km/h	About 30 km/h	About 110 km/h	About 15 km/h
+ani_woodpecker_long_tongue	Hard	Where does a woodpecker's long tongue go when it isn't using it?	It wraps around its skull	It coils up in its beak	It folds into its throat	It tucks under its wing
+ani_bird_holds_record	Hard	Which bird holds the record for the longest non-stop flight, about 13,000 km from Alaska to Australia?	The bar-tailed godwit	The Arctic tern	The wandering albatross	The common swift
+ani_wisdom_laysan_albatross	Hard	Wisdom, a Laysan albatross on Midway Atoll, is famous for being what?	The oldest known wild bird	The largest albatross ever measured	The fastest-flying seabird	The first bird tracked by satellite
+ani_makes_diet_bearded	Hard	What makes up most of the diet of the bearded vulture?	Bones	Fresh meat	Eggs	Fish
+ani_martha_died_cincinnati	Hard	Martha, who died at Cincinnati Zoo in 1914, was the very last of which bird?	The passenger pigeon	The Carolina parakeet	The dodo	The great auk
+ani_toes_ostrich_each	Hard	How many toes does an ostrich have on each foot?	Two	Three	Four	Five
+ani_long_legged_african	Hard	Which long-legged African bird of prey kills snakes by stamping on them?	The secretary bird	The shoebill	The marabou stork	The martial eagle
+ani_female_hornbill_usually	Hard	How does a female hornbill usually nest?	She seals herself inside a tree hole, fed by the male	She lays her eggs in a mound of rotting leaves	She leaves her eggs in other birds' nests	She hangs a woven nest over a river
+ani_penguins_drink_salty	Hard	How can penguins drink salty seawater?	A gland above their eyes removes the salt	They only swallow the fresh layer on top	Their stomach turns salt into fat	They spit the salt out as crystals
+ani_songbird_nicknamed_butcher	Hard	Which songbird, nicknamed the 'butcher bird', impales its prey on thorns?	The shrike	The magpie	The jay	The starling
+ani_bird_nest_soup	Hard	Bird's nest soup is made from nests built mainly from what?	Swiftlet saliva	Woven grass and mud	Seaweed and feathers	Caterpillar silk
+ani_male_swan	Hard	What is a male swan called?	Cob	Pen	Drake	Gander
+ani_seabird_used_fishermen	Hard	Which seabird is used by fishermen in China and Japan to catch fish?	Cormorant	Pelican	Puffin	Gannet
+ani_huge_billed_african	Hard	Which huge-billed African bird stands motionless for hours waiting for lungfish?	Shoebill	Marabou stork	Hammerkop	Secretary bird
+ani_call_group_ravens	Hard	What do you call a group of ravens?	Unkindness	Murder	Parliament	Charm
+ani_seabird_dives_sea	Hard	Which seabird dives into the sea at nearly 100 km/h to catch fish?	Gannet	Puffin	Cormorant	Pelican
+ani_large_flightless_bird_3	Hard	Which large flightless bird of South America is related to the ostrich?	Rhea	Emu	Cassowary	Kiwi
+ani_extinct_flightless_bird	Hard	Which extinct flightless bird from Madagascar laid the largest eggs ever known?	Elephant bird	Moa	Dodo	Roc
+ani_blue_jays_look	Hard	Blue jays look bright blue. What colour is the pigment in their feathers?	Brown	Blue	Green	Yellow
+ani_bird_builds_heaviest	Hard	Which bird builds the heaviest tree nests, one recorded at over 2 tonnes?	Bald eagle	Golden eagle	White stork	Osprey
+ani_pingwin_kamyk	Hard	Male Adelie penguins court females by offering what?	A pebble	A fish	A feather	A shell
+anix_wrona_narzedzia	Hard	Which bird is famous for making tools, like hooks bent from twigs?	The New Caledonian crow	The African grey parrot	The common magpie	The European starling
+anix_dodo	Hard	On which island did the dodo live before it was wiped out?	Mauritius	Madagascar	Sri Lanka	Tahiti
+ani_tiny_bird_smallest	Hard	Which tiny bird is the smallest in Europe?	Goldcrest	Wren	Blue tit	Robin
+ani_australian_bird_decorates	Hard	Which Australian bird decorates its courtship 'bower' with blue objects?	Satin bowerbird	Lyrebird	Kookaburra	Cassowary
+ani_seabird_male_inflates	Hard	Which seabird male inflates a huge red throat pouch to attract a mate?	Frigatebird	Pelican	Puffin	Gannet
+ani_flock_geese_flying	Hard	What is a flock of geese flying in formation called?	A skein	A gaggle	A charm	A brood
+ani_bald_eagle_bald	Hard	Why is the bald eagle called 'bald'?	From an old word for 'white'	It moults all its head feathers	Its chicks hatch without feathers	It was named after a man called Bald
+ani_cheeky_new_zealand	Hard	Which cheeky New Zealand mountain parrot is notorious for ripping rubber off parked cars?	The kea	The kakapo	The kaka	The cockatoo
+ani_nose_japan_500	Hard	The nose of Japan's 500 Series bullet train was redesigned to copy the beak of which bird?	The kingfisher	The pelican	The heron	The toucan
+ani_african_bird_rides	Hard	Which African bird rides on rhinos and giraffes, picking ticks off their skin?	The oxpecker	The hornbill	The weaver	The hoopoe
+ani_eagle_nest	Hard	What is an eagle's nest called?	An eyrie	A drey	A sett	A lodge
+ani_bird_big_hollow	Hard	Which bird has a big hollow casque on top of its bill?	Hornbill	Toucan	Cassowary	Shoebill
+ani_hummingbirds_tiny_weak	Hard	Hummingbirds have tiny, weak feet. What can't they do with them?	Walk or hop	Perch on twigs	Scratch their heads	Grip a feeder
+ani_colour_emu_eggs	Hard	What colour are emu eggs?	Dark green	Pure white	Speckled brown	Pale pink
+dpt_zwi_koliber_serce	Hard	What is unusual about a hummingbird at night?	It drops into a torpor to save energy	It keeps flying while it is asleep	It buries itself under leaf litter	It shares a nest with other birds
+ref_ani_flamingi_grupa	Hard	What is a group of flamingos called?	A flamboyance	A parade	A blush	A pageant
+ref_ani_kukulka	Hard	What is the cuckoo's famous breeding trick called?	Brood parasitism	Kleptoparasitism	Parthenogenesis	Cooperative breeding
+aniy_strus_oko	Hard	An ostrich's eye is bigger than which of its organs?	Its brain	Its heart	Its stomach	Its liver
+ani_bird_bill_longer	Hard	Which is the only bird with a bill longer than its body, not counting the tail?	The sword-billed hummingbird	The long-billed curlew	The Australian pelican	The toco toucan
+zwi2_ptak_jadowity	Expert	Which bird is poisonous to touch thanks to toxins in its feathers?	Hooded pitohui	Andean condor	Toucan	Kea parrot
+ani_pingwin_papuaski	Expert	Which bird is the fastest swimmer?	The gentoo penguin	The emperor penguin	The cormorant	The puffin
+ani_kwelea	Expert	Which is thought to be the most numerous wild bird on Earth?	The red-billed quelea	The house sparrow	The common starling	The rock pigeon
+ani_pustulka_uv	Expert	Kestrels can see ultraviolet light. What does it help them find?	Urine trails of voles	Ripe berries	Water in the desert	Their own nests
+ani_ptasie_mleko	Expert	Which birds feed their chicks a milk-like substance called 'crop milk'?	Pigeons	Eagles	Ostriches	Parrots
+ani_chicks_south_american	Expert	Chicks of which South American bird have claws on their wings to clamber through branches?	The hoatzin	The toucan	The macaw	The rhea
+ani_tracking_studies_showed	Expert	Tracking studies showed that great frigatebirds can do what during weeks-long flights over the ocean?	Sleep in flight, seconds at a time	Fly upside down to rest their wings	Dive deeper than penguins	Float on the sea to rest
+ani_rueppell_vulture_holds	Expert	A Rueppell's vulture holds the bird altitude record after it hit a plane at roughly what height?	About 11 km	About 3 km	About 6 km	About 20 km
+ani_extinct_flightless_seabird	Expert	Which extinct flightless seabird of the North Atlantic was the original 'penguin'?	Great auk	Dodo	Moa	Razorbill
+ani_gas_engineers_once	Expert	Gas engineers once found leaking pipelines by watching where which birds circled?	Turkey vultures	Canaries	Seagulls	Ravens
+ani_south_american_cave	Expert	Which South American cave bird finds its way in the dark by echolocation, like a bat?	The oilbird	The potoo	The nightjar	The frogmouth
+ani_storks_vultures_pee	Expert	Why do many storks and vultures pee on their own legs?	To cool down in the heat	To mark their territory	To keep off biting insects	To clean mud off their feet
+ani_bird_non_mammal	Expert	Which bird was the first non-mammal shown to recognise itself in a mirror?	The Eurasian magpie	The African grey parrot	The raven	The barn owl
+ani_australian_bird_incubates	Expert	Which Australian bird incubates its eggs in a mound of rotting leaves?	Malleefowl	Emu	Kookaburra	Cassowary

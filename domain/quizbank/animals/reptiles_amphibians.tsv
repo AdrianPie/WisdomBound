@@ -1,0 +1,85 @@
+# Reptiles & Amphibians: reptiles, amphibians, dinosaurs
+#
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+ani_komodo	Easy	What is the largest living lizard?	The Komodo dragon	The marine iguana	The Gila monster	The frilled lizard
+ani_zolw_skorupa	Easy	Can a turtle crawl out of its shell?	No - it is fused to its skeleton	Yes, when it outgrows it	Yes, to escape a predator	Only sea turtles can
+ani_lizards_drop_body	Easy	Many lizards can drop which body part to escape a predator?	Their tail	Their skin	A leg	Their claws
+ani_baby_frog	Easy	What is a baby frog called?	A tadpole	A cub	A fry	A kit
+ani_snake_spreads_hood	Easy	Which snake spreads a 'hood' around its neck when threatened?	The cobra	The python	The rattlesnake	The viper
+ani_venomous_snake_shakes	Easy	Which venomous snake shakes its tail as a warning?	The rattlesnake	The cobra	The anaconda	The mamba
+ani_dinosaur_three_horns	Easy	Which dinosaur had three horns and a bony frill around its neck?	Triceratops	Stegosaurus	Ankylosaurus	Brachiosaurus
+ani_dinosaur_large_plates	Easy	Which dinosaur had large plates along its back and a spiked tail?	Stegosaurus	Triceratops	Diplodocus	Velociraptor
+ani_dinosaur_means_tyrant	Easy	Which dinosaur's name means 'tyrant lizard king'?	Tyrannosaurus rex	Velociraptor	Allosaurus	Spinosaurus
+ani_chameleon_eyes_cannot	Easy	What can a chameleon do with its eyes that we cannot?	Move each one in a different direction	See through its closed eyelids	See clearly in total darkness	Close them both from the inside
+ani_python_usually_kill	Easy	How does a python usually kill its prey?	By squeezing it	With a venomous bite	By spitting at its eyes	By stinging it
+ani_animal_regularly_sheds	Easy	Which animal regularly sheds its whole skin, often in one piece and even over its eyes?	A snake	A crocodile	A tortoise	A hedgehog
+ani_snakes_eat_prey	Easy	How do snakes eat their prey?	They swallow it whole	They chew it into chunks	They tear off small bites	They suck out its juices
+ani_kameleon	Easy	Which reptile is famous for changing skin color?	Chameleon	Iguana	Gecko	Monitor lizard
+zwi2_kameleon_jezyk	Easy	How does a chameleon catch insects?	With a long, sticky tongue	With its front paws	With its tail	With spikes
+scicmp_ktory_gad	Easy	Which of these animals is a reptile?	The crocodile	The frog	The salamander	The newt
+ani_spitting_cobra_aim	Easy	Where does a spitting cobra aim its venom?	At its attacker's eyes	At its attacker's feet	At the ground in front	Straight up into the air
+ani_australian_lizard_opens	Easy	Which Australian lizard opens a big frill around its neck to scare enemies?	Frilled lizard	Thorny devil	Bearded dragon	Goanna
+anix_szklana_zaba	Easy	Which frog has see-through belly skin that shows its beating heart?	The glass frog	The tree frog	The bullfrog	The dart frog
+wld_ani_ptaki_dinozaury	Medium	Which living animals are the direct descendants of dinosaurs?	Birds	Crocodiles	Lizards	Sharks
+ani_dinozaur_nazwa	Medium	What does the word 'dinosaur' mean?	Terrible lizard	Giant beast	Ancient dragon	Thunder foot
+anix_zolw_dlugowiecznosc	Medium	Which land animal can live the longest, sometimes past 150 years?	The giant tortoise	The elephant	The parrot	The crocodile
+aniy_gekon	Medium	How do geckos cling to walls and ceilings?	Millions of tiny hairs on their toes	Sticky glue from their feet	Suction cups on their toes	Tiny hooked claws
+aniy_waz_powieki	Medium	Why do snakes never seem to blink?	They have no eyelids	They sleep with open eyes	They blink too fast to see	Their eyes are dry
+ani_largest_living_reptile	Medium	Which is the largest living reptile?	The saltwater crocodile	The Komodo dragon	The anaconda	The leatherback turtle
+ani_heaviest_snake_world	Medium	Which is the heaviest snake in the world?	The green anaconda	The reticulated python	The king cobra	The boa constrictor
+ani_flying_reptiles_lived	Medium	Which flying reptiles lived alongside the dinosaurs but were not dinosaurs themselves?	Pterosaurs	Plesiosaurs	Ichthyosaurs	Mosasaurs
+ani_snakes_outer_ears	Medium	Snakes have no outer ears. How do they pick up sounds?	Through vibrations in their jawbone	Through their flicking tongue	Through holes along their tail	They cannot sense sound at all
+ani_lets_rattlesnakes_find	Medium	What lets rattlesnakes find warm-blooded prey in total darkness?	Heat-sensing pits on their face	Echolocation like a bat's	A glow given off by their eyes	Whiskers that feel air currents
+ani_decides_whether_sea	Medium	What decides whether a sea turtle egg hatches as a male or a female?	The temperature of the sand	The size of the egg	The phase of the moon	The mother's diet that year
+ani_dinosaur_possibly_even	Medium	Which dinosaur, possibly even longer than T. rex, is thought to have hunted fish in rivers?	Spinosaurus	Allosaurus	Velociraptor	Diplodocus
+ani_frogs_never_drink	Medium	Most frogs never drink with their mouths. How do they take in water?	Through their skin	Through their nostrils	Through their gills	Through their eyes
+ani_flying_snakes_south	Medium	What can the 'flying snakes' of South and South-East Asia do?	Glide from tree to tree	Leap out of the sea	Run across water	Hover like a hummingbird
+ani_lizard_world_feeds	Medium	Which is the only lizard in the world that feeds in the sea?	The marine iguana	The Komodo dragon	The frilled lizard	The water monitor
+ani_toad_brought_australia	Medium	Which toad was brought to Australia in 1935 to eat beetles, and became a disastrous pest?	The cane toad	The natterjack toad	The fire-bellied toad	The common toad
+ani_largest_frog_world	Medium	Which is the largest frog in the world?	The Goliath frog	The American bullfrog	The cane toad	The African bullfrog
+ani_fossil_animal_150	Medium	Which famous fossil animal, about 150 million years old, is seen as a link between dinosaurs and birds?	Archaeopteryx	Pterodactylus	Velociraptor	Dimetrodon
+ani_lonesome_george_died	Medium	Lonesome George, who died in 2012, was the last known member of which animal?	The Pinta Island tortoise	The Javan rhinoceros	The Yangtze river dolphin	The Tasmanian tiger
+ani_waz_jezyk	Medium	What does a snake mainly use its flicking tongue for?	Smelling	Tasting its prey	Hearing	Cooling down
+ani_armoured_dinosaur_heavy	Medium	Which armoured dinosaur had a heavy bony club at the end of its tail?	Ankylosaurus	Diplodocus	Brachiosaurus	Iguanodon
+zwi2_aksolotl_kraj	Medium	Which country does the axolotl come from?	Mexico	Brazil	China	Australia
+dpt_zwi_krokodyl_zgryz	Medium	Which living animal has the strongest measured bite?	The saltwater crocodile	The great white shark	The spotted hyena	The Bengal tiger
+zwi2_axolotl_regeneracja	Medium	What else can an axolotl regenerate besides its limbs?	Parts of its heart and brain	Only the tip of its tail	Only patches of its skin	Nothing beyond its limbs
+zwi2_zabka_jad	Medium	Which frog is considered the most poisonous land animal?	Golden poison frog	Cane toad	Tree frog	African clawed frog
+trv_zaba_mroz	Hard	Which animal can survive being frozen solid through the winter?	The wood frog	The garden snail	The brown bear	The garter snake
+wld_kameleon_kolor	Hard	Chameleons change colour mainly to do what?	Signal mood and control temperature	Hide from every predator	Match any background exactly	Attract prey
+ani_taipan	Hard	Which snake has the most toxic venom in laboratory tests?	The inland taipan	The black mamba	The king cobra	The rattlesnake
+aniy_kobra_krolewska	Hard	What does the king cobra mainly eat?	Other snakes	Birds' eggs	Frogs	Monkeys
+ani_largest_amphibian_world	Hard	Which is the largest amphibian in the world?	The Chinese giant salamander	The Japanese giant salamander	The cane toad	The axolotl
+ani_lizard_squirt_blood	Hard	Which lizard can squirt blood from its eyes to put off predators?	The horned lizard	The frilled lizard	The thorny devil	The Gila monster
+ani_jonathan_giant_tortoise	Hard	Jonathan, a giant tortoise thought to have hatched around 1832, has spent most of his life on which island?	Saint Helena	The Galapagos	Aldabra	Mauritius
+ani_female_komodo_dragons	Hard	Female Komodo dragons in zoos have astonished keepers by doing what?	Laying eggs that hatched with no father	Learning to open their own cages	Recognising their keepers' voices	Changing colour in the breeding season
+ani_black_mamba_gets	Hard	The black mamba gets its name from the colour of what?	The inside of its mouth	The scales on its back	The tip of its tail	Its eyes and tongue
+ani_tyrannosaurus_rex_lived	Hard	Tyrannosaurus rex lived closer in time to us than to which dinosaur?	Stegosaurus	Triceratops	Velociraptor	Ankylosaurus
+ani_crocodilian_very_long	Hard	Which crocodilian has a very long, thin snout and a pot-shaped knob on the tip of the male's nose?	The gharial	The caiman	The American alligator	The Nile crocodile
+ani_geckos_eyelids_keep	Hard	Most geckos have no eyelids. How do they keep their eyes clean?	By licking them	By weeping thick tears	By dipping their heads in water	By shedding an eye scale daily
+ani_proteins_rex_bone	Hard	Proteins from a T. rex bone most closely matched those of which living animal?	The chicken	The crocodile	The Komodo dragon	The iguana
+ani_frog_use_eyes	Hard	How does a frog use its eyes to help it swallow?	It pulls them down to push food along	It closes them to tighten its throat	It blinks to squeeze out digestive juice	It rolls them to work its jaw muscles
+ani_quetzalcoatlus_flying_reptile	Hard	Quetzalcoatlus, a flying reptile of the dinosaur age, stood about as tall as what?	A giraffe	A chicken	A pony	A man
+ani_baby_surinam_toads	Hard	Baby Surinam toads grow up where, before popping out as tiny toads?	In pockets in their mother's back	In their father's mouth	In a foam nest on a branch	Inside a hollow log
+ani_cold_snaps_alligators	Hard	During cold snaps, alligators survive in iced-over ponds by doing what?	Poking their snouts through the ice	Burying themselves in dry leaves	Huddling in large groups	Moving into rivers' deepest pools
+ani_poison_dart_frogs	Hard	Why are poison dart frogs raised in captivity usually harmless?	They get their toxins from wild insects	Their skin dries out indoors	They lose their bright colours	Zoo keepers remove their glands
+ani_pyton	Hard	Which is the longest snake species in the world?	The reticulated python	The green anaconda	The king cobra	The black mamba
+ani_krokodyl_lzy	Hard	Do crocodiles really shed 'crocodile tears' while eating?	Yes, but not from emotion	No, it is only a saying	Only when they are hurt	Only in salt water
+ani_aligator_zeby	Hard	Which one shows its lower teeth when its mouth is shut?	The crocodile	The alligator	Both of them	Neither of them
+ani_largest_species_turtle	Hard	Which is the largest species of turtle?	Leatherback sea turtle	Galapagos tortoise	Green sea turtle	Loggerhead turtle
+ani_period_tyrannosaurus_rex	Hard	In which period did Tyrannosaurus rex live?	Cretaceous	Jurassic	Triassic	Permian
+ani_lizard_sprint_across	Hard	Which lizard can sprint across water on its hind legs?	Basilisk lizard	Komodo dragon	Gecko	Iguana
+scicmp_jadowity_nie_trujacy	Hard	Which of these animals is venomous rather than poisonous?	The cobra	The poison dart frog	The pufferfish	The monarch butterfly
+aniy_zolwie_morskie	Hard	How do newly hatched sea turtles find the sea at night?	They head for the brighter horizon	They follow their mother	They smell the salt	They listen for waves
+ani_now_extinct_gastric	Hard	The now-extinct gastric-brooding frog of Australia raised its young where?	In its stomach	In its mouth	In pockets on its back	In a foam nest
+ref_ani_neotenia	Expert	An axolotl keeps its larval features for life. What is this called?	Neoteny	Metamorphosis	Diapause	Estivation
+ani_widely_used_diabetes	Expert	A widely used diabetes drug was first developed from the saliva of which venomous lizard?	The Gila monster	The Komodo dragon	The frilled lizard	The green iguana
+ani_australia_thorny_devil	Expert	How does Australia's thorny devil lizard drink?	Grooves in its skin wick water to its mouth	It licks dew off rocks with its tongue	It absorbs water through its belly	It gets all its water from ants
+ani_living_fossil_reptile	Expert	Which 'living fossil' reptile of New Zealand has a light-sensitive 'third eye' on top of its head?	The tuatara	The gharial	The Gila monster	The leatherback turtle
+ani_olm_blind_salamander	Expert	The olm, a blind salamander of European caves, can survive without food for about how long?	Up to ten years	About a month	About a year	About three years
+ani_tortoise_diego_helped	Expert	Which Galapagos tortoise helped save his species by fathering hundreds of babies?	Diego	Jonathan	Lonesome George	Harriet
+ani_small_dinosaur_feathered	Expert	Which small dinosaur had feathered wings on both its arms and its legs?	Microraptor	Compsognathus	Oviraptor	Velociraptor
+ani_threatened_african_hairy	Expert	When threatened, the African hairy frog does what to make claws?	Breaks toe bones to pierce its skin	Grows horny scales overnight	Sharpens its toes on stones	Inflates spines along its legs
+ani_besides_usa_country	Expert	Besides the USA, which is the only country with wild alligators?	China	Brazil	Australia	India
+ani_plant_eating_dinosaur	Expert	Which plant-eating dinosaur had claws up to about a metre long?	Therizinosaurus	Velociraptor	Spinosaurus	Allosaurus
+ani_snake_build_nest	Expert	Which is the only snake known to build a nest for its eggs?	The king cobra	The black mamba	The green anaconda	The reticulated python

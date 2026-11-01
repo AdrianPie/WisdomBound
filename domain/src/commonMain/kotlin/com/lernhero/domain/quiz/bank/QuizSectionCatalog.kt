@@ -144,6 +144,12 @@ object QuizSectionCatalog {
         QuizSection("technology/internet", "Internet & Phones", "📱", QuizCategory.Technology),
         QuizSection("technology/transport", "Transport", "🚗", QuizCategory.Technology),
         QuizSection("technology/inventions", "Inventions & Gadgets", "💡", QuizCategory.Technology),
-        QuizSection("technology/companies", "Companies & Founders", "🏢", QuizCategory.Technology)
+        QuizSection("technology/companies", "Companies & Founders", "🏢", QuizCategory.Technology),
+        QuizSection("animals/mammals", "Mammals", "🐘", QuizCategory.Animals),
+        QuizSection("animals/birds", "Birds", "🦅", QuizCategory.Animals),
+        QuizSection("animals/sea_life", "Sea Life", "🐙", QuizCategory.Animals),
+        QuizSection("animals/reptiles_amphibians", "Reptiles & Amphibians", "🦎", QuizCategory.Animals),
+        QuizSection("animals/bugs", "Insects & Creepy-Crawlies", "🐞", QuizCategory.Animals),
+        QuizSection("animals/pets_farm", "Pets & Farm Animals", "🐄", QuizCategory.Animals)
     )
 }

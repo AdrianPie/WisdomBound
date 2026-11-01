@@ -1,0 +1,105 @@
+# Pets & Farm Animals: pets, farm animals, dog and cat breeds, animal records/words that fit no other shelf
+#
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+ani_chart	Easy	Which dog breed is the fastest runner?	The greyhound	The Dalmatian	The husky	The border collie
+ani_chihuahua	Easy	Which is the smallest dog breed?	The Chihuahua	The pug	The dachshund	The beagle
+anix_czekolada_pies	Easy	Which common human treat is poisonous to dogs?	Chocolate	Carrots	Plain rice	Cucumber
+aniy_kot_sen	Easy	Roughly how many hours a day does a typical house cat sleep?	12 to 16	4 to 6	20 to 22	Exactly 8
+ani_baby_goat	Easy	What is a baby goat called?	A kid	A calf	A foal	A cub
+ani_baby_horse	Easy	What is a baby horse called?	A foal	A calf	A kid	A lamb
+ani_female_sheep	Easy	What is a female sheep called?	A ewe	A mare	A sow	A doe
+ani_short_legged_dog	Easy	Which short-legged dog breed was Queen Elizabeth II's favourite?	The corgi	The dachshund	The beagle	The pug
+ani_baby_sheep	Easy	What is a baby sheep called?	A lamb	A kid	A calf	A foal
+ani_group_sheep	Easy	What is a group of sheep called?	A flock	A herd	A pack	A pride
+ani_male_sheep	Easy	What is a male sheep called?	A ram	A buck	A bull	A boar
+ani_pet_rodent_stores	Easy	Which pet rodent stores food in its cheek pouches?	The hamster	The rabbit	The guinea pig	The chinchilla
+ani_group_puppies_born	Easy	What is a group of puppies born together called?	A litter	A flock	A brood	A clutch
+ani_adult_female_horse	Easy	What is an adult female horse called?	A mare	A filly	A foal	A colt
+ani_adult_male_pig	Easy	What is an adult male pig called?	A boar	A sow	A gilt	A piglet
+ani_dog_breed_nicknamed	Easy	Which dog breed is nicknamed the 'sausage dog'?	Dachshund	Beagle	Basset Hound	Corgi
+ani_dog_breed_often_2	Easy	Which dog breed is often rated the most intelligent and is famous for herding sheep?	Border Collie	Poodle	German Shepherd	Labrador
+ani_male_cat	Easy	What is a male cat called?	A tom	A buck	A billy	A sire
+ani_small_hardy_pony	Easy	Which small, hardy pony comes from the islands north of Scotland?	Shetland pony	Welsh pony	Connemara pony	Exmoor pony
+ani_pet_rabbits_need	Easy	Why do pet rabbits need plenty of hay to chew?	Their teeth never stop growing	Hay is their only source of water	It keeps their fur soft and shiny	They use it to sharpen their claws
+ani_dogs_sweat_very	Easy	Dogs sweat very little. How do they mainly cool down?	By panting	By rolling in mud	By licking their fur	By shedding hair
+ani_cat_eyes_shine	Easy	Why do a cat's eyes shine in car headlights at night?	A mirror-like layer behind the retina	They glow with their own light	Their tears reflect the light	Their pupils are coloured silver
+ani_male_betta_fish	Easy	Why are male betta fish usually kept one per tank?	They fight other males	They eat all the food	They need total darkness	They jump out when crowded
+ani_pet_dogs_descended	Easy	Pet dogs are descended from which wild animals?	Wolves	Foxes	Jackals	Hyenas
+ani_sled_pulling_dog	Easy	Which sled-pulling dog breed is famous for its wolf-like looks and often bright blue eyes?	The Siberian Husky	The Alaskan Malamute	The Samoyed	The Akita
+ani_adult_female_pig	Easy	What is an adult female pig called?	A sow	A nanny	A jenny	A hen
+ani_phrase_pecking_order	Easy	The phrase 'pecking order' comes from studies of which animals?	Chickens	Pigeons	Crows	Geese
+ani_chewed_food_cows	Easy	What is the chewed food that cows bring back up from their stomach to chew again called?	Cud	Silage	Mash	Chaff
+ani_small_pet_run	Easy	Which small pet can run several kilometres in one night on its exercise wheel?	The hamster	The rabbit	The guinea pig	The tortoise
+ani_farmyard_birds_often	Easy	Which farmyard birds are often kept as noisy 'guards' because they honk and chase off intruders?	Geese	Chickens	Ducks	Turkeys
+ani_cats_knead_soft	Easy	Cats 'knead' soft blankets with their front paws. What is this habit thought to come from?	Kneading their mother for milk	Sharpening their claws	Checking for hidden snakes	Warming up cold paws
+anix_konie_sen	Easy	Horses can sleep while doing what?	Standing up	Walking	Swimming	Eating
+anix_wibrysy	Easy	What do cats mainly use their whiskers for?	Sensing their surroundings	Keeping warm	Attracting mates	Cleaning their fur
+anix_bernardyn	Easy	Which dog breed is famous for mountain rescues in the Swiss Alps?	The St. Bernard	The Husky	The Labrador	The Great Dane
+ani_giant_dog_breed	Easy	Which giant dog breed holds records for the tallest dog?	The Great Dane	The St. Bernard	The Newfoundland	The Rottweiler
+ani_merino_breed_animal	Easy	Merino is a famous breed of which animal?	Sheep	Goat	Horse	Cattle
+ani_kittens_born_closed	Easy	Kittens are born with closed eyes. Roughly when do they open them?	After one to two weeks	After a few hours	After about two months	After six months
+ani_cat_breed_habit	Easy	Which cat breed is named for its habit of going limp when it is picked up?	The Ragdoll	The Persian	The Burmese	The Russian Blue
+ani_cat_looks_slowly	Easy	When a cat looks at you and slowly blinks, what is it thought to mean?	It feels relaxed and friendly	It is about to pounce	It is going blind	It wants to be left alone
+zwi3_kon_zeby_wiek	Medium	What can a horse's age be roughly judged by?	Its teeth	The length of its tail	The color of its eyes	The growth of its hooves
+trv_pies_pot	Medium	Where does a dog mostly sweat from?	Its paw pads	Its tongue	Its back	Its ears
+trv_koza_zrenice	Medium	Which animal has rectangular, horizontal pupils?	The goat	The cat	The owl	The frog
+ani_kura_liczba	Medium	Counting farm animals, which is the most numerous bird on Earth?	The chicken	The pigeon	The sparrow	The duck
+ani_jamnik	Medium	The dachshund was bred in Germany to hunt which animal?	The badger	The rabbit	The deer	The rat
+ani_chow_chow	Medium	Which dog breed is famous for its blue-black tongue?	The Chow Chow	The Dalmatian	The Shiba Inu	The Great Dane
+ani_psi_nos	Medium	Which part of a dog is as unique as a human fingerprint?	Its nose print	Its bark	Its tail	Its bite
+ani_call_offspring_male	Medium	What do you call the offspring of a male donkey and a female horse?	A mule	A hinny	A pony	A zebroid
+ani_real_mozzarella_bufala	Medium	Real 'mozzarella di bufala' is made from which animal's milk?	The water buffalo	The cow	The goat	The sheep
+ani_chihuahua_dog_breed	Medium	The Chihuahua dog breed is named after a state in which country?	Mexico	Spain	Peru	Chile
+ani_cat_breed_comes	Medium	Which cat breed comes originally from Thailand?	The Siamese	The Persian	The Maine Coon	The Bengal
+ani_unit_horse_height	Medium	In which unit is a horse's height traditionally measured?	Hands	Feet	Spans	Yards
+ani_animal_gives_soft	Medium	Which animal gives us soft cashmere wool?	A goat	A sheep	A rabbit	A llama
+ani_female_goat	Medium	What is a female goat called?	A nanny	A sow	A mare	A jenny
+ani_small_wrinkly_faced	Medium	Which small wrinkly-faced dog breed comes from China?	The pug	The bulldog	The boxer	The beagle
+ani_traditional_greek_feta	Medium	Traditional Greek feta cheese is made mainly from which animal's milk?	Sheep	Cow	Camel	Buffalo
+ani_rhode_island_red	Medium	Rhode Island Red is a famous breed of which animal?	Chicken	Pig	Cow	Duck
+ani_poodle_originally_bred	Medium	What was the poodle originally bred to do?	Fetch ducks from water	Herd sheep on hills	Hunt rats in barns	Guard royal palaces
+ani_chinese_dog_breed	Medium	Which Chinese dog breed is famous for its deeply wrinkled skin?	Shar Pei	Chow Chow	Pekingese	Shih Tzu
+ani_1925_sled_dog	Medium	In 1925, the sled dog Balto helped carry what to the Alaskan town of Nome?	Diphtheria medicine	Gold from the mines	Christmas mail	Food for a starving town
+ani_adult_cats_rarely	Medium	Adult cats rarely meow at each other. Who do they mostly meow at?	Humans	Dogs	Rival cats	Birds
+ani_calico_tortoiseshell_cats	Medium	Calico and tortoiseshell cats are almost always of which sex?	Female	Male	Equally male or female	Male if born in winter
+ani_dalmatians_become_traditional	Medium	Why did Dalmatians become the traditional mascot of fire stations?	They ran with horse-drawn fire engines	Their spots hide soot from fires	They can sniff out smoke early	They were bred to rescue children
+ani_guinea_pigs_originally	Medium	Where do guinea pigs originally come from?	South America	West Africa	New Guinea	Southeast Asia
+ani_dog_breed_tracking	Medium	Which dog breed's tracking has been so reliable that its evidence has been accepted in US courts?	The bloodhound	The beagle	The German Shepherd	The Labrador retriever
+ani_rin_tin_tin	Medium	Rin Tin Tin, the Hollywood dog star of the 1920s, was which breed?	A German Shepherd	A Collie	A Golden Retriever	A Dobermann
+ani_cat_breed_ears	Medium	Which cat breed has ears that bend forward and down, giving it an owl-like face?	The Scottish Fold	The Devon Rex	The Abyssinian	The Siamese
+ani_farm_animal_learned	Medium	Which farm animal has learned to play simple video games with a joystick?	The pig	The cow	The sheep	The goat
+ani_pet_chinchillas_roll	Medium	Why do pet chinchillas roll in fine dust instead of bathing in water?	Their thick fur would stay damp and rot	Water burns their sensitive skin	Dust makes their fur grow faster	They cannot hold their breath
+ani_sfinks_kot	Medium	Which cat breed is famous for being hairless?	The Sphynx	The Siamese	The Persian	The Maine Coon
+ani_dog_breed_often	Medium	Which dog breed is most often trained as a guide dog?	The Labrador retriever	The German shepherd	The Border collie	The poodle
+ani_budgies_popular_pet	Medium	Budgies, popular pet birds, come from the wild in which country?	Australia	Brazil	India	South Africa
+ani_long_haired_cat	Medium	Which long-haired cat breed is famous for its flat, squashed-looking face?	The Persian	The Siamese	The Maine Coon	The Bengal
+ani_horse_breed_dominates	Medium	Which horse breed dominates big flat races such as the Kentucky Derby?	The Thoroughbred	The Clydesdale	The Shetland pony	The Appaloosa
+ani_red_fleshy_crest	Medium	What is the red, fleshy crest on top of a rooster's head called?	Its comb	Its wattle	Its crown	Its snood
+ani_krowa_zoladek	Medium	How many chambers does a cow's stomach have?	4	1	2	3
+cur_krowy_najlepsi	Medium	Studies show cows get stressed when separated from whom?	Their best friend in the herd	Their calf only	The farmer	Any other cow
+anix_dalmatynczyk	Medium	What colour are Dalmatian puppies when they are born?	Pure white	Black with white spots	Grey	Brown
+ani_large_cat_breed	Medium	Which large cat breed is often called the 'gentle giant' of house cats?	The Maine Coon	The Sphynx	The Siamese	The Persian
+ani_japanese_dog_breed	Medium	Which Japanese dog breed was the famously loyal Hachiko?	The Akita	The Shiba Inu	The Tosa	The Japanese Spitz
+ani_cat_breed_having	Medium	Which cat breed is famous for having no tail?	The Manx	The Sphynx	The Ragdoll	The Burmese
+ani_horses_obligate_nasal	Medium	Horses are 'obligate nasal breathers'. What does that mean?	They can breathe only through the nose	They breathe faster through the nose	They must sniff food before eating	They hold their breath while drinking
+ani_mike_chicken_colorado	Medium	Mike, a chicken from Colorado, became famous in the 1940s for living about 18 months without what?	His head	Any water	His feathers	His legs
+dpt_zwi_kontrcien	Hard	What is countershading in animals?	Dark on top, pale below, to hide	Bright colours warning of poison	Stripes that confuse a chasing eye	A coat that changes with the season
+ani_kon_wymioty	Hard	Which of these animals is physically unable to vomit?	The horse	The dog	The cat	The pig
+ani_kot_slodycz	Hard	Which taste can cats not detect?	Sweetness	Saltiness	Bitterness	Sourness
+ani_krowa_magnes	Hard	Why do some farmers feed their cows magnets?	To catch swallowed bits of metal	To calm them down	To make their milk richer	To help them find the way home
+ani_kot_przodek	Hard	Domestic cats descend from which wild cat?	The African wildcat	The European wildcat	The lynx	The serval
+ani_dog_breed_originally	Hard	Which dog breed was originally bred in southern Africa to help hunt lions?	The Rhodesian Ridgeback	The Great Dane	The Bullmastiff	The Saluki
+ani_2017_cambridge_study	Hard	In a 2017 Cambridge study, sheep learned to recognise what?	Photos of celebrities' faces	Their own reflection	Simple spoken words	Numbers up to five
+ani_group_cats	Hard	What is a group of cats called?	A clowder	A kindle	A litter	A pack
+ani_young_cow_not	Hard	What is a young cow that has not yet had a calf called?	A heifer	A calf	A steer	A bullock
+ani_african_dog_breed	Hard	Which African dog breed hardly barks, making a yodel-like sound instead?	The basenji	The Rhodesian ridgeback	The saluki	The Afghan hound
+ani_morocco_goats_famously	Hard	In Morocco, goats famously climb which trees to eat their fruit?	Argan trees	Olive trees	Date palms	Fig trees
+ani_some_farmers_keep	Hard	Why do some farmers keep a llama living with their flock of sheep?	To guard them from foxes and dogs	To keep the sheep warm at night	To teach the lambs to graze	To lead them to fresh water
+ani_large_dog_breed	Hard	Which large dog breed with webbed feet is famous for rescuing people from water?	The Newfoundland	The St. Bernard	The Great Dane	The Dalmatian
+ani_clever_hans_german	Hard	Clever Hans, a famous German horse of the early 1900s, seemed to be able to do what?	Solve arithmetic problems	Speak a few German words	Paint simple pictures	Play tunes on a piano
+ani_greyfriars_bobby_terrier	Hard	Greyfriars Bobby, a terrier said to have guarded his master's grave for 14 years, lived in which city?	Edinburgh	Dublin	London	Glasgow
+ani_flehmen_response_cat	Hard	What is the 'flehmen response', when a cat or horse curls back its upper lip?	A way of taking in scents	A sign of extreme anger	A way of cooling the mouth	A warning call to the herd
+ani_norwegian_dog_breed	Expert	Which Norwegian dog breed, once used to hunt puffins on cliffs, has at least six toes on each foot?	The Norwegian Lundehund	The Norwegian Elkhound	The Finnish Spitz	The Icelandic Sheepdog
+ani_group_kittens	Expert	What is a group of kittens called?	A kindle	A clowder	A pounce	A litterbox
+ani_fleshy_flap_hangs	Expert	What is the fleshy flap that hangs over a male turkey's beak called?	A snood	A comb	A crest	A beard
+ani_cat_breed_nicknamed	Expert	Which cat breed is nicknamed 'the swimming cat' for its love of water?	The Turkish Van	The Siamese	The Persian	The Ragdoll

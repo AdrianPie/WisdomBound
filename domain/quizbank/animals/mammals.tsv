@@ -1,0 +1,280 @@
+# Mammals: land and sea mammals (whales/dolphins too)
+#
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+ani_najwieksze	Easy	Which animal is the largest on Earth?	Blue whale	African elephant	Giraffe	Whale shark
+ani_gepard	Easy	Which animal is the fastest on land?	Cheetah	Lion	Horse	Antelope
+ani_zyrafa	Easy	Which land animal is the tallest?	Giraffe	Elephant	Camel	Moose
+zwi2_wielblad_garby	Easy	What does a camel store in its hump?	Fat	Water	Air	Salt
+zwi2_wilk_grupa	Easy	What is a group of wolves called?	A pack	A flock	A swarm	A shoal
+scicmp_najciezsze_ladowe	Easy	Which is the heaviest land animal?	The African elephant	The hippopotamus	The white rhinoceros	The giraffe
+scicmp_nie_ssak	Easy	Which of these animals is NOT a mammal?	The penguin	The bat	The dolphin	The platypus
+trv_nietoperz_lot	Easy	Which is the only mammal capable of true, powered flight?	The bat	The flying squirrel	The sugar glider	The colugo
+ani_kangur_mlode	Easy	What is a baby kangaroo called?	A joey	A kit	A cub	A calf
+ani_lwy_stado	Easy	What is a group of lions called?	A pride	A pack	A herd	A troop
+ani_wielblad_statek	Easy	Which animal is nicknamed the 'ship of the desert'?	The camel	The horse	The ostrich	The donkey
+ani_lew_grupa	Easy	Which is the only big cat that lives in large family groups?	The lion	The tiger	The leopard	The jaguar
+ani_opos_udaje	Easy	Which animal is famous for 'playing dead' when it is threatened?	The opossum	The raccoon	The skunk	The badger
+ani_szop_mycie	Easy	Raccoons are famous for seeming to do what with their food?	Wash it	Bury it	Share it	Hide it in trees
+anix_wieloryb_oddech	Easy	Through what does a whale breathe?	A blowhole	Gills	Its skin	Its tail
+anix_nietoperz_spanie	Easy	How do bats usually rest?	Hanging upside down	Lying on their backs	Standing on one leg	Floating on water
+anix_jez	Easy	What does a hedgehog do when it feels threatened?	Rolls into a spiky ball	Plays dead	Sprays a bad smell	Spits at the attacker
+anix_skunks	Easy	Which black-and-white animal sprays a foul smell to defend itself?	The skunk	The badger	The raccoon	The panda
+anix_bobr_tama	Easy	Which animal builds dams across streams?	The beaver	The otter	The muskrat	The water vole
+ani_baby_elephant	Easy	What is a baby elephant called?	A calf	A cub	A pup	A foal
+ani_african_animal_laughing	Easy	Which African animal is famous for its 'laughing' call?	The hyena	The baboon	The jackal	The warthog
+ani_mammal_slowest_earth	Easy	Which mammal is famous for being the slowest on Earth?	The sloth	The koala	The panda	The wombat
+ani_koalas_eat_almost	Easy	What do koalas eat almost exclusively?	Eucalyptus leaves	Bamboo shoots	Grass	Insects
+ani_animal_logo_wwf	Easy	Which animal is the logo of the WWF conservation group?	The giant panda	The polar bear	The tiger	The elephant
+ani_baby_seal	Easy	What is a baby seal called?	A pup	A cub	A calf	A kit
+ani_wild_dog_roams	Easy	Which wild dog roams across mainland Australia?	The dingo	The coyote	The jackal	The hyena
+ani_south_american_animal	Easy	Which South American animal is a close relative of the camel?	The llama	The tapir	The capybara	The anteater
+ani_female_deer	Easy	What is a female deer called?	A doe	A ewe	A sow	A mare
+ani_baby_deer	Easy	What is a baby deer called?	A fawn	A cub	A kit	A pup
+ani_male_deer	Easy	What is a male deer called?	A stag	A boar	A ram	A gander
+ani_big_cat_lives	Easy	Which big cat lives high in the snowy mountains of Central Asia?	The snow leopard	The jaguar	The cheetah	The lynx
+ani_animal_lives_network	Easy	Which animal lives in a network of burrows called a warren?	Rabbit	Badger	Fox	Mole
+ani_big_cat_cougar	Easy	Which big cat is also called the cougar or mountain lion?	Puma	Jaguar	Lynx	Leopard
+ani_squirrels_accidentally_help	Easy	How do squirrels accidentally help to plant new trees?	They forget some of the nuts they bury	They carry seeds stuck in their fur	They dig over the soil for their nests	They chew off twigs that take root
+ani_annoyed_llamas_well	Easy	When annoyed, llamas are well known for doing what?	Spitting	Howling	Playing dead	Puffing up their wool
+ani_while_group_meerkats	Easy	While a group of meerkats digs for food, what does one of them usually do?	Stands on guard as a lookout	Sings to keep the group together	Fetches water for the others	Digs a new escape tunnel
+ani_true_stripe_pattern	Easy	What is true of the stripe pattern of every zebra?	No two are exactly alike	It changes every year	It is the same in siblings	It fades away with age
+ani_animal_eats_sleeps	Easy	Which animal eats, sleeps and even gives birth while dangling from tree branches?	The sloth	The koala	The lemur	The orangutan
+ani_polar_bear_main	Easy	What is a polar bear's main prey?	Seals	Arctic hares	Reindeer	Penguins
+ani_giant_pandas_spend	Easy	Giant pandas spend around half of every day doing what?	Eating	Grooming their fur	Bathing in streams	Climbing trees
+ani_rabbit_back_feet	Easy	What does a rabbit do with its back feet to warn others of danger?	Thumps them on the ground	Kicks up a cloud of dust	Raises them in the air	Rubs them together
+ani_animal_biggest_ears	Easy	Which animal has the biggest ears on Earth?	The African elephant	The Asian elephant	The giraffe	The donkey
+ani_tiny_desert_fox	Easy	Which tiny desert fox has huge ears that help it get rid of heat?	The fennec fox	The Arctic fox	The red fox	The swift fox
+ani_blue_whales_biggest	Easy	Blue whales, the biggest animals ever, feed mainly on what?	Tiny shrimp-like krill	Giant squid	Seals and penguins	Seaweed and kelp
+ani_according_saying_animal	Easy	According to the saying, which animal 'never forgets'?	The elephant	The owl	The dog	The dolphin
+ani_elephant_swims_deep	Easy	When an elephant swims in deep water, what does it use as a snorkel?	Its trunk	Its ears	Its tail	Its tusks
+ani_ape_beating_chest	Easy	Which ape is famous for beating its chest to show off its strength?	The gorilla	The chimpanzee	The orangutan	The gibbon
+ani_masked_animal_ringed	Easy	Which masked animal with a ringed tail is famous for raiding rubbish bins in North American towns?	The raccoon	The badger	The skunk	The opossum
+ani_helps_newborn_deer	Easy	What helps a newborn deer stay hidden on the forest floor?	Its white-spotted coat	Its striped legs	Its green-tinted fur	Its long, dark mane
+ani_must_giraffe_drink	Easy	What must a giraffe do to drink from a pond?	Spread its front legs wide apart	Lie down on its side	Rear up on its hind legs	Suck water up through its nose
+ani_rabbit_spot_fox	Easy	How can a rabbit spot a fox creeping up from almost any direction?	Its eyes sit high on the sides of its head	Its eyes can swivel all the way round	It sees through its closed eyelids	It feels the fox's body heat
+ani_despite_nickname_king	Easy	Despite the nickname 'king of the jungle', where do most wild lions live?	Savannas and grasslands	Rainforests	Mountain forests	Swamps and marshes
+ani_nietoperz	Easy	Which sense does a bat use to navigate in the dark?	Echolocation	Night vision	Smell	Magnetoreception
+trv_zyrafa_noworodek	Easy	Which of these newborns can usually stand and walk within an hour of birth?	A giraffe calf	A kitten	A kangaroo joey	A human baby
+ani_lemury	Easy	Where do wild lemurs live?	Madagascar	Borneo	Sri Lanka	New Guinea
+anix_nietoperz_wampir	Easy	What do vampire bats feed on?	Blood	Fruit	Insects	Nectar
+anix_wyjec	Easy	Which monkey is one of the loudest land animals on Earth?	The howler monkey	The spider monkey	The capuchin	The macaque
+anix_diabel_tasmanski	Easy	Which noisy marsupial with a powerful bite now lives wild only on Tasmania?	The Tasmanian devil	The quokka	The wombat	The numbat
+ani_largest_primate	Easy	Which is the largest primate?	The gorilla	The orangutan	The chimpanzee	The baboon
+ani_largest_living_marsupial	Easy	Which is the largest living marsupial?	Red kangaroo	Koala	Wombat	Tasmanian devil
+ani_leopard_often_drag	Easy	Why does a leopard often drag its kill high up into a tree?	To keep it from lions and hyenas	To let the meat dry in the sun	To attract a mate with it	To teach its cubs to climb
+ani_pink_river_dolphins	Easy	Pink river dolphins live in which river system?	The Amazon	The Nile	The Mississippi	The Danube
+ani_wolves_really_howl	Easy	Do wolves really howl at the Moon?	No, they howl to keep in touch	Yes, mainly at the full moon	Yes, to welcome the night	Only during the winter months
+ani_dziobak	Easy	Which mammal lays eggs?	Platypus	Armadillo	Sloth	Hedgehog
+ani_narwal	Easy	Which marine mammal has a long, spiral tusk growing from its head?	Narwhal	Beluga whale	Porpoise	Manatee
+ani_ciaza_slonia	Medium	Which land animal has the longest pregnancy?	Elephant	Rhinoceros	Horse	Giraffe
+zwi2_orka_grupa	Medium	Which family do orcas belong to?	Dolphins (Delphinidae)	Sharks	Seals	Porpoises
+zwi3_panda_kciuk	Medium	What helps a panda hold bamboo?	An extra 'thumb' made from an enlarged wrist bone	Rough suction pads on the soles of its paws	Unusually long claws and nothing else	A tail it can curl round the stem
+trv_niedzwiedz_skora	Medium	What colour is a polar bear's skin under its white fur?	Black	White	Pink	Grey
+trv_delfin_sen	Medium	Which animal sleeps with one half of its brain at a time?	The dolphin	The horse	The sloth	The hedgehog
+trv_wielblad_powieka	Medium	What is a camel's transparent third eyelid for?	Wiping sand off the eye while still seeing	Sleeping with its eyes open	Seeing in the dark	Keeping the eye warm at night
+ext_gepard_rozped	Medium	A cheetah reaches its top speed in roughly how long?	About three seconds	About ten seconds	About thirty seconds	Just under a minute
+ext_wieloryb_jezyk	Medium	A blue whale's tongue alone can weigh about as much as what?	An elephant	A horse	A cow	A small car
+cur_zyrafa_jezyk	Medium	What colour is a giraffe's tongue?	Dark blue-purple	Pink	Grey	Bright red
+cur_slon_skok	Medium	Which large land mammal is unable to jump?	The elephant	The hippopotamus	The rhinoceros	The giraffe
+ani_hipopotam_nazwa	Medium	The word 'hippopotamus' comes from Greek words meaning what?	River horse	Water pig	Big mouth	Mud cow
+ani_zyrafa_szyja	Medium	How many vertebrae are in a giraffe's neck?	Seven	Twelve	Nineteen	Twenty-six
+ani_delfin_imiona	Medium	Dolphins are known to call each other using what?	Signature whistles, like names	Unique colour flashes	Slaps of the tail	Rings of bubbles
+ani_nosorozec_rog	Medium	Which animal's horn is made of keratin, the stuff of fingernails?	The rhinoceros	The narwhal	The deer	The walrus
+ani_samica_lisa	Medium	What is a female fox called?	A vixen	A doe	A sow	A jenny
+ani_tygrys_skora	Medium	What does a tiger's skin look like under its fur?	Striped, like the fur	Plain orange	Pure white	Spotted
+ani_slon_traba	Medium	Roughly how many muscles are in an elephant's trunk?	Tens of thousands	About a hundred	About a thousand	About a dozen
+ani_wydra_kamien	Medium	Why do sea otters often carry a favourite stone?	To crack open shellfish	To weigh themselves down	To mark their territory	To sharpen their teeth
+aniy_zebra_skora	Medium	What colour is a zebra's skin under its stripes?	Black	White	Pink	Grey
+aniy_lew_ryk	Medium	From roughly how far away can a lion's roar be heard?	About 8 km	About 80 metres	About 800 metres	About 80 km
+ani_largest_species_bear	Medium	Which is the largest species of bear?	The polar bear	The sun bear	The black bear	The giant panda
+ani_apes_humans_closest	Medium	Which apes are humans' closest living relatives?	Chimpanzees and bonobos	Gorillas and orangutans	Gibbons and siamangs	Orangutans and gibbons
+ani_great_ape_lives	Medium	Which great ape lives only on the islands of Borneo and Sumatra?	The orangutan	The gorilla	The bonobo	The chimpanzee
+ani_cross_between_male	Medium	What is the cross between a male lion and a female tiger called?	A liger	A tigon	A leopon	A jaglion
+ani_largest_species_deer	Medium	Which is the largest species of deer?	The moose	The red deer	The reindeer	The fallow deer
+ani_north_americans_call	Medium	What do North Americans call wild reindeer?	Caribou	Moose	Elk	Wapiti
+ani_big_african_animal	Medium	Which big African animal is considered one of the most dangerous to humans?	The hippopotamus	The giraffe	The zebra	The gorilla
+ani_small_mammal_fighting	Medium	Which small mammal is famous for fighting and killing cobras?	The mongoose	The meerkat	The ferret	The weasel
+ani_national_animal_india	Medium	What is the national animal of India?	The Bengal tiger	The Indian elephant	The peacock	The cobra
+ani_big_cat_largest	Medium	Which big cat is the largest in the Americas?	The jaguar	The puma	The ocelot	The lynx
+ani_black_panther_usually	Medium	A 'black panther' is usually a dark-coated what?	Leopard or jaguar	Lion or tiger	Cheetah or puma	Lynx or ocelot
+ani_word_rhinoceros_mean	Medium	What does the word 'rhinoceros' mean in Greek?	Nose horn	Horned beast	Thick skin	Great beast
+ani_group_whales	Medium	What is a group of whales called?	A pod	A flock	A shoal	A fleet
+ani_national_animal_canada	Medium	What is the national animal of Canada?	The beaver	The moose	The polar bear	The bald eagle
+ani_colour_polar_bear	Medium	What colour are a polar bear's hairs, really?	See-through	White	Cream	Pale grey
+ani_arctic_mammal_brown	Medium	Which Arctic mammal's brown summer coat turns white in winter?	Arctic fox	Polar bear	Musk ox	Walrus
+ani_white_arctic_whale	Medium	Which white Arctic whale is nicknamed the 'sea canary' for its chirping calls?	Beluga	Narwhal	Orca	Minke whale
+ani_largest_species_seal	Medium	Which is the largest species of seal?	Elephant seal	Leopard seal	Grey seal	Harp seal
+ani_adult_female_elephant	Medium	What is an adult female elephant called?	A cow	A doe	A mare	A sow
+ani_baby_hedgehog	Medium	What is a baby hedgehog called?	A hoglet	A kit	A pup	A spikelet
+ani_desert_rodent_live	Medium	Which desert rodent can live its whole life without drinking water?	The kangaroo rat	The chinchilla	The guinea pig	The capybara
+ani_animal_lick_inside	Medium	Which animal can lick inside its own ears with its tongue?	The giraffe	The horse	The camel	The kangaroo
+ani_kind_deer_females	Medium	In which kind of deer do the females grow antlers too?	Reindeer	Red deer	Moose	Fallow deer
+ani_rabbits_eat_some	Medium	Why do rabbits eat some of their own droppings?	To digest their food a second time	To hide their scent from predators	To keep their teeth short	To mark their burrow as theirs
+ani_monkey_brightest_colours	Medium	Which monkey has the brightest colours of any primate, with a red-and-blue face?	The mandrill	The baboon	The gelada	The proboscis monkey
+ani_gives_some_sloths	Medium	What gives some sloths' fur a greenish tint?	Algae growing in it	Moss they roll in	Leaf juice they rub on	Green pigment in their hair
+ani_roughly_water_thirsty	Medium	Roughly how much water can a thirsty camel drink in about a quarter of an hour?	Over 100 litres	About 10 litres	About 3 litres	About 1,000 litres
+ani_scaly_mammal_often	Medium	Which scaly mammal is often called the most trafficked mammal in the world?	The pangolin	The armadillo	The aardvark	The echidna
+ani_since_2020_orcas	Medium	Since 2020, orcas off Spain and Portugal have made headlines for doing what to sailing boats?	Ramming and breaking their rudders	Following them for leftover fish	Pushing them back into port	Leaping right over their decks
+ani_spotted_hyena_clans	Medium	In spotted hyena clans, who is in charge?	The females	The oldest male	The strongest male	Whoever eats first
+ani_elephant_drink	Medium	How does an elephant drink?	It squirts trunkfuls of water into its mouth	It sips through its trunk like a straw	It laps water up with its tongue	It kneels and sucks it up with its lips
+ani_monkey_borneo_male	Medium	Which monkey of Borneo is famous for the male's huge, droopy nose?	The proboscis monkey	The howler monkey	The golden snub-nosed monkey	The spider monkey
+ani_1960_jane_goodall	Medium	In 1960, Jane Goodall famously saw chimpanzees using stripped twigs to 'fish' for what?	Termites	Honey	Fish	Birds' eggs
+ani_animal_became_official	Medium	Which animal became the official national mammal of the United States in 2016?	The American bison	The grizzly bear	The grey wolf	The white-tailed deer
+ani_unlike_cats_cheetah	Medium	Unlike most cats, what can a cheetah never fully pull back in?	Its claws	Its tongue	Its whiskers	Its ears
+ani_snow_leopard_use	Medium	How does a snow leopard use its long, thick tail in the bitter cold?	Wraps it over its face like a scarf	Uses it to dig out a snow den	Stores spare body fat inside it	Sweeps snow over its own tracks
+ani_antarctic_seal_fierce	Medium	Which Antarctic seal is a fierce hunter of penguins?	The leopard seal	The Weddell seal	The crabeater seal	The fur seal
+ani_sudan_died_kenya	Medium	Sudan, who died in Kenya in 2018, was the last male of which animal?	The northern white rhino	The Sumatran tiger	The mountain gorilla	The Grevy's zebra
+ani_blue_whales_use	Medium	What do blue whales use instead of teeth to filter their food?	Baleen plates	Gill rakers	Bony ridges	Rows of bristly tusks
+ani_wild_orangutan_build	Medium	What does a wild orangutan build high in the trees almost every evening?	A fresh nest to sleep in	A store for spare fruit	A platform to call from	A lookout for leopards
+ani_member_cat_family	Medium	Which is the only member of the cat family with a tuft of hair at the tip of its tail?	The lion	The lynx	The tiger	The caracal
+ani_polar_bear_scientific	Medium	The polar bear's scientific name, Ursus maritimus, means what?	Sea bear	Ice bear	White bear	Snow bear
+ani_wolves_attack_musk	Medium	When wolves attack, how do musk oxen protect their calves?	Form a ring, horns out, calves inside	Hide the calves in deep snowdrifts	Stampede with the calves in front	Send the bulls to chase the wolves
+ani_rival_male_giraffes	Medium	How do rival male giraffes usually fight?	Swinging their heads like clubs	Biting each other's legs	Wrestling with their tongues	Charging like rhinos
+anix_slon_lustro	Medium	Which of these animals can recognise itself in a mirror?	The elephant	The dog	The cat	The sheep
+ani_tygrys_najwiekszy	Medium	Which is the largest of the big cats?	The tiger	The lion	The jaguar	The leopard
+ani_koala_sen	Medium	Which animal can sleep up to 22 hours a day?	The koala	The house cat	The panda	The meerkat
+ani_kapibara	Medium	What is the largest rodent in the world?	The capybara	The beaver	The porcupine	The coypu
+ani_wydry_lapki	Medium	Why do sea otters often hold paws while they sleep?	So they don't drift apart	To keep each other warm	To show who is in charge	To protect their food
+ani_humps_dromedary_camel	Medium	How many humps does a dromedary camel have?	One	Two	Three	None
+ani_wild_cat_black	Medium	Which wild cat is known for the black tufts on its ears?	Lynx	Puma	Ocelot	Serval
+ani_happens_stag_antlers	Medium	What happens to a stag's antlers every year?	They fall off and grow back	They turn white for winter	They are worn down to stubs	They harden into solid horn
+ani_unlike_cats_tigers	Medium	Unlike most cats, what do tigers often enjoy?	Swimming in water	Climbing tall trees	Living in big groups	Eating ripe fruit
+ani_usually_leads_herd	Medium	Who usually leads a herd of elephants?	The oldest female	The biggest male	The youngest mother	Each elephant in turn
+ani_koko_learning_hundreds	Medium	Koko, famous for learning hundreds of signs in sign language, was what kind of animal?	A gorilla	A chimpanzee	An orangutan	A bonobo
+ani_monkeys_warming_hot	Medium	Which monkeys are famous for warming up in hot springs during snowy winters?	Japanese macaques	Barbary macaques	Golden snub-nosed monkeys	Proboscis monkeys
+ani_newborn_kangaroo_roughly	Medium	A newborn kangaroo is roughly the size of what?	A jellybean	A mouse	A kitten	A tennis ball
+ani_small_famously_fearless	Medium	Which small, famously fearless animal raids beehives and will even stand up to lions?	The honey badger	The wolverine	The mongoose	The meerkat
+ani_big_cat_black	Medium	Which big cat has black 'tear lines' running from its eyes down to its mouth?	The cheetah	The leopard	The jaguar	The lion
+ani_venison_meat_animal	Medium	Venison is the meat of which animal?	Deer	Wild boar	Rabbit	Goose
+ani_animal_mammal_covered	Medium	Which animal is the only mammal covered in hard scales?	Pangolin	Porcupine	Hedgehog	Echidna
+ani_gepard_pazury	Medium	Which big cat cannot roar, but purrs instead?	Cheetah	Lion	Tiger	Jaguar
+zwi2_mrowkojad_zeby	Medium	How many teeth does a giant anteater have?	None at all	Eight	Twenty	Forty-two
+zwi3_slon_infradzwieki	Medium	How do elephants communicate over long distances?	Infrasound felt through the ground	Trumpeting alone	Long-range urine scent	Flapping their ears in daylight
+zwi3_wieloryb_babelkowanie	Medium	How do humpback whales hunt together using 'bubble netting'?	They surround fish with a ring of air bubbles	They stun fish with sound	They release poison into the water	They use rays as bait
+trv_wombat_kupa	Medium	Which animal produces cube-shaped droppings?	The wombat	The koala	The rabbit	The beaver
+anix_wilk_tasmanski	Medium	The thylacine, declared extinct in the 20th century, was better known as what?	The Tasmanian tiger	The Australian lion	The marsupial bear	The dingo wolf
+anix_manat	Medium	Sailors' tales of mermaids may have come from sightings of which animal?	The manatee	The walrus	The seal	The dolphin
+anix_quokka	Medium	Which small Australian marsupial is famous for seeming to smile?	The quokka	The bilby	The bandicoot	The sugar glider
+ani_animal_comes_afrikaans	Medium	Which animal's name comes from the Afrikaans for 'earth pig'?	The aardvark	The warthog	The meerkat	The pangolin
+ani_platypus_skin_reached	Medium	When the first platypus skin reached Britain in 1799, what did scientists suspect?	A fake stitched together	A new kind of giant mole	A fish that had grown fur	A bird that lost its feathers
+ani_echidna	Medium	Which animal, alongside the platypus, is a monotreme?	Echidna	Opossum	Wombat	Koala
+zwi2_wieloryb_piesn	Medium	Which whale is famous for the most complex mating songs?	Humpback whale	Narwhal	Killer whale	Porpoise
+dpt_zwi_slon_uszy	Medium	How does an elephant shed excess heat?	Through its huge, blood-rich ears	By sweating across its whole back	By rolling in a bath of cool dust	By slowing its heart in the heat
+zwi2_okapi_krewny	Hard	Which animal is the okapi's closest living relative?	Giraffe	Zebra	Antelope	Tapir
+zwi2_nagi_kretoszczur	Hard	What makes the naked mole-rat unusual?	It lives in a colony with a queen, like social insects	It flies between burrows like a bat	It changes sex halfway through its life	It hibernates for ten years at a stretch
+zwi2_wal_grenlandzki	Hard	Which mammal has the longest lifespan of all?	Bowhead whale	African elephant	Human	Sperm whale
+zwi2_dziobak_jad	Hard	What does a male platypus have on its hind legs?	Venomous spurs	Webbed membranes with suckers	Regrowing claws	Scent glands
+trv_opos_torbacz	Hard	Which is the only marsupial native to North America?	The Virginia opossum	The raccoon	The armadillo	The porcupine
+trv_zebra_paski	Hard	What is the leading explanation for a zebra's stripes?	They confuse biting flies	They keep the zebra warm	They attract mates	They help it hide in grass
+wld_ani_leniwiec	Hard	How often does a sloth usually climb down from its tree to go to the toilet?	About once a week	Several times a day	Once a year	Never - it goes from the branches
+ani_nosorozce_grupa	Hard	What is a group of rhinos called?	A crash	A charge	A bloat	A thunder
+ani_mlody_zajac	Hard	What is a young hare called?	A leveret	A kit	A kid	A pup
+ani_panda_noworodek	Hard	A newborn giant panda weighs about as much as what?	A stick of butter	A house cat	A bag of flour	A bowling ball
+ani_mors_kly	Hard	What does a walrus use its tusks for, among other things?	Hauling itself onto the ice	Spearing fish to eat	Digging dens in the snow	Digging clams out of the mud
+ani_czerwona_panda	Hard	Which animal was called a 'panda' first, decades before the giant panda was described?	The red panda	The raccoon	The binturong	The sun bear
+anix_hipopotam_pot	Hard	What is the reddish 'blood sweat' of a hippo actually?	A natural sunscreen	Real blood	Muddy water	Poison
+anix_zyrafa_sen	Hard	About how long does a giraffe sleep in a whole day?	Under two hours	About six hours	About ten hours	About fourteen hours
+anix_kaszalot_glos	Hard	Which animal makes the loudest sounds of any animal on Earth?	The sperm whale	The humpback whale	The elephant	The lion
+anix_uszy_foki	Hard	How can you tell a sea lion from a true seal?	Sea lions have ear flaps	Seals have whiskers	Sea lions lack flippers	Seals are always bigger
+aniy_mrowkojad_jezyk	Hard	Roughly how long can a giant anteater's tongue reach?	About 60 cm	About 6 cm	About 2 metres	About 15 cm
+ani_marsupial_pouch_opens	Hard	Which marsupial's pouch opens backwards, so it doesn't fill with soil while digging?	The wombat	The kangaroo	The wallaby	The sugar glider
+ani_group_giraffes	Hard	What is a group of giraffes called?	A tower	A pride	A parliament	A murder
+ani_paddington_bear_belongs	Hard	Paddington Bear belongs to which real species?	The spectacled bear	The sun bear	The sloth bear	The brown bear
+ani_baby_rabbit	Hard	What is a baby rabbit called?	A kit	A pup	A cub	A joey
+ani_monkeys_live_wild	Hard	Which monkeys live wild on the Rock of Gibraltar?	Barbary macaques	Rhesus macaques	Capuchins	Baboons
+ani_unlike_big_cats	Hard	Unlike most big cats, how does the jaguar often kill its prey?	By biting through the skull	By a long suffocating throat bite	By drowning it in a river	By clawing open its belly
+ani_madagascan_lemur_taps	Hard	Which Madagascan lemur taps on bark and hooks out grubs with an extra-long middle finger?	The aye-aye	The ring-tailed lemur	The sifaka	The indri
+ani_myth_lemmings_leap	Hard	The myth that lemmings leap off cliffs in mass suicide was spread by what?	A staged Disney documentary	A Victorian children's book	A Norwegian folk song	A 1970s video game
+ani_tiny_bat_thailand	Hard	Which tiny bat from Thailand and Myanmar is one of the smallest mammals on Earth?	The bumblebee bat	The vampire bat	The flying fox	The horseshoe bat
+ani_scientific_western_lowland	Hard	What is the scientific name of the western lowland gorilla?	Gorilla gorilla gorilla	Gorilla beringei	Pan troglodytes	Pongo pygmaeus
+ani_male_ring_tailed	Hard	Male ring-tailed lemurs settle disputes with what kind of 'fights'?	Stink fights	Staring contests	Tail-pulling fights	Shouting matches
+ani_north_american_animal	Hard	Which North American animal can keep up a high speed far longer than a cheetah?	The pronghorn	The white-tailed deer	The coyote	The elk
+ani_old_elephants_starve	Hard	Old elephants can starve to death after wearing out their last set of what?	Molar teeth	Tusks	Trunk muscles	Foot pads
+ani_woolly_mammoths_still	Hard	Woolly mammoths still lived on Wrangel Island in the Arctic while which was being built?	The Great Pyramid of Giza	The Colosseum in Rome	The Parthenon in Athens	The Great Wall of China
+ani_giant_relative_manatee	Hard	Which giant relative of the manatee was hunted to extinction within about 27 years of being discovered in 1741?	Steller's sea cow	The great auk	The dodo	The Caribbean monk seal
+ani_missing_platypus_digestive	Hard	What is missing from a platypus's digestive system?	A stomach	A gullet	A liver	Intestines
+ani_largest_bats_flying	Hard	The largest bats, flying foxes, can reach a wingspan of roughly how much?	About 1.5 metres	About 30 cm	About 60 cm	About 4 metres
+ani_giant_panda_eats	Hard	A giant panda eats bamboo all day, yet its gut is built like that of what?	A meat-eater	A cow	A termite	A horse
+ani_cat_like_predator	Hard	Which cat-like predator, Madagascar's largest, is actually a relative of mongooses?	The fossa	The serval	The caracal	The ocelot
+ani_1970s_chimpanzees_gombe	Hard	In the 1970s, the chimpanzees of Gombe in Tanzania shocked scientists by doing what?	Fighting a years-long war	Cooking food on fires	Building huts of branches	Taming wild dogs
+ani_some_bottlenose_dolphins	Hard	Why do some bottlenose dolphins in Shark Bay, Australia, wear sea sponges on their snouts?	To shield them while foraging	To show off to mates	To carry food to calves	To filter sand from water
+ani_asian_animal_bearcat	Hard	Which Asian animal, the 'bearcat', smells like buttered popcorn?	The binturong	The red panda	The wolverine	The sun bear
+ani_2024_study_suggested	Hard	A 2024 study suggested that wild African elephants do what, as dolphins do?	Call each other by name	Navigate by the stars	Count up to a hundred	Paint pictures unprompted
+ani_agaves_plants_used	Hard	Agaves, the plants used to make tequila, are pollinated in the wild mainly by which animals?	Bats	Bees	Hummingbirds	Moths
+ani_truly_wild_horse	Hard	Which rare horse, once extinct in the wild, was brought back to the steppes of Mongolia?	Przewalski's horse	Camargue horse	Akhal-Teke horse	Mongolian mustang
+ani_antelope_leap_ten	Hard	Which antelope can leap up to ten metres in a single bound?	Impala	Wildebeest	Gazelle	Kudu
+ani_rabbit_eared_australian	Hard	Which rabbit-eared Australian marsupial is promoted as a native stand-in for the Easter Bunny?	Bilby	Bandicoot	Quokka	Bettong
+trv_koala_odciski	Hard	Which animal has fingerprints so similar to a human's that they could confuse a crime lab?	The koala	The chimpanzee	The raccoon	The otter
+ani_orangutan_nazwa	Hard	The name 'orangutan' comes from Malay words meaning what?	Person of the forest	King of the trees	Red monkey	Wise old man
+ani_kaszalot_mozg	Hard	Which animal has the largest brain on Earth?	The sperm whale	The blue whale	The African elephant	The orca
+ani_bobr_zeby	Hard	Why are a beaver's front teeth orange?	They contain iron	They are stained by bark	They are stained by mud	They are rusting from water
+ani_animal_lives_underground	Hard	Which animal lives in an underground home called a sett?	The badger	The fox	The rabbit	The mole
+ani_squirrel_nest	Hard	What is a squirrel's nest called?	A drey	A sett	A holt	A form
+ani_group_zebras	Hard	What is a group of zebras called?	A dazzle	A parade	A crash	A tower
+ani_tiny_primate_eyes	Hard	Which tiny primate has eyes each as large as its whole brain?	Tarsier	Loris	Marmoset	Lemur
+ani_scientific_sabre_toothed	Hard	What was the scientific name of the famous sabre-toothed cat?	Smilodon	Megalodon	Mastodon	Glyptodon
+ani_african_predator_painted	Hard	Which African predator is also called the 'painted wolf'?	African wild dog	Hyena	Jackal	Aardwolf
+ani_group_kangaroos	Hard	What is a group of kangaroos called?	A mob	A troop	A pack	A herd
+ani_group_hyenas	Hard	What is a group of hyenas called?	A cackle	A crash	A parade	A tower
+ani_wild_relative_llama	Hard	Which wild relative of the llama has the finest and most expensive wool?	Vicuna	Alpaca	Guanaco	Yak
+ani_smallest_species_bear	Hard	Which is the smallest species of bear?	Sun bear	Sloth bear	Black bear	Spectacled bear
+ani_elephant_tusks	Hard	What are an elephant's tusks?	Enlarged incisor teeth	Horns	Enlarged canine teeth	Bony growths
+ani_farmers_africa_protect	Hard	Farmers in Africa protect their crops from elephants with fences hung with what?	Beehives	Mirrors	Wind chimes	Scarecrows
+ani_magawa_won_gold	Hard	Magawa, who won a gold medal for bravery in 2020, was what kind of animal?	A landmine-sniffing rat	A bomb-sniffing dog	A messenger pigeon	A rescue horse
+ani_sound_cheetahs_often	Hard	What sound do cheetahs often use to call to each other?	A bird-like chirp	A deep roar	A loud bark	A high howl
+ani_forest_animal_short	Hard	Which forest animal with a short, trunk-like snout lives in both South America and South-East Asia?	The tapir	The anteater	The aardvark	The okapi
+ani_roughly_every_five	Hard	Roughly one in every five mammal species on Earth is what?	A bat	A primate	A marsupial	A whale or dolphin
+ani_kangaroo_use_tail	Hard	How does a kangaroo use its tail when it moves around slowly?	As a fifth leg	As a rudder	As a whip	As a fan
+ani_unlike_mammals_baby	Hard	Unlike most mammals, how are baby dolphins usually born?	Tail first	Head first	Inside an egg	Already swimming upside down
+ani_ambergris_once_prized	Hard	Ambergris, once prized in perfumes, comes from the gut of which animal?	The sperm whale	The blue whale	The walrus	The basking shark
+ani_single_bound_roughly	Hard	In one single bound, roughly how far can a red kangaroo leap at most?	About 8 metres	About 3 metres	About 20 metres	About 1.5 metres
+ani_spotted_skunk_often	Hard	What does a spotted skunk often do as a last warning before it sprays?	A handstand on its front paws	Rolls over onto its back	Hisses like an angry snake	Drums its tail on the ground
+ani_thumb_like_digits	Hard	How many thumb-like digits does a koala have on each front paw?	Two	One	None	Three
+ani_vampire_bats_roost	Hard	What do vampire bats do for a roost-mate that failed to find a meal?	Bring up some blood to feed it	Lead it to a sleeping cow	Groom it until it falls asleep	Chase it out of the roost
+ani_hares_box_each	Hard	When hares 'box' each other in spring, who is usually fighting whom?	A female fending off a male	Two males fighting over a female	A mother teaching her young	Two females fighting over a nest
+ani_wild_cat_leap	Hard	Which wild cat can leap about 3 metres into the air to swat birds in flight?	The caracal	The ocelot	The bobcat	The sand cat
+ani_springboks_doing_pronk	Hard	What are springboks doing when they 'pronk'?	Leaping stiff-legged into the air	Rubbing their horns on trees	Digging for water	Grazing at night
+dpt_zwi_luskowiec	Hard	What is a pangolin's armour made of?	Keratin, like fingernails	Fused plates of bone	Hardened plates of chitin	Layers of calcified skin
+ref_ani_wydra_futro	Hard	Which mammal has the densest fur of any animal?	The sea otter	The polar bear	The beaver	The musk ox
+ref_ani_dziobak_elektro	Hard	How does a platypus find prey underwater with its eyes closed?	It senses electric fields with its bill	It uses echolocation	It sees in infrared	It smells through its tail
+ani_wieloryb_krewny	Hard	Which land animals are whales' closest living relatives?	Hippos	Seals	Elephants	Manatees
+anix_leniwiec_plywanie	Hard	Sloths are surprisingly good at what?	Swimming	Jumping	Running	Digging
+aniy_kaszalot_sen	Hard	How do sperm whales sleep?	Floating upright in short naps	Lying on the sea floor	Swimming in slow circles	Beached on sand
+ani_female_kangaroo_new	Hard	A female kangaroo can do what with a new embryo while her pouch is still occupied?	Pause its development	Give it to another female	Carry it in a second pouch	Absorb it back for food
+ani_tasmanian_devils_dying	Hard	Why have Tasmanian devils been dying in huge numbers since the 1990s?	A cancer that spreads by biting	A virus carried by mosquitoes	Poison baits set for foxes	Cats competing for prey
+ani_rodent_live_over	Hard	Which rodent can live over 30 years and almost never gets cancer?	The naked mole-rat	The capybara	The chinchilla	The porcupine
+ani_whale_makes_longest	Hard	Which whale makes one of the longest migrations of any mammal, between Alaska and Mexico?	Grey whale	Blue whale	Orca	Narwhal
+ani_whale_calling_hertz	Hard	Why was a whale calling at 52 hertz nicknamed 'the loneliest whale in the world'?	No known whale species calls like it	It was the last of its kind	It was stranded in a lake	It sang only once a year
+ani_alpine_ibex_reach	Hard	How do Alpine ibex reach the salt they crave on Italian dams?	They climb near-vertical walls	They lick rain puddles	They dig under the dam	They wait for floods
+dpt_zwi_wal_dziobowy	Expert	Which mammal holds the record for the deepest dive?	Cuvier's beaked whale	The sperm whale	The southern right whale	The leopard seal
+ref_ani_mleko_foka	Expert	Which animal produces the fattiest known milk, at around 60% fat?	The hooded seal	The blue whale	The reindeer	The domestic cow
+ani_fretki_grupa	Expert	What is a group of ferrets called?	A business	A gang	A mischief	A parade
+ani_kret_gwiazdonosy	Expert	Which mammal is considered the fastest eater, finding and swallowing prey in about a quarter of a second?	The star-nosed mole	The pygmy shrew	The anteater	The aardvark
+ani_orki_menopauza	Expert	Besides humans, which animals are known to go through menopause?	Orcas and pilot whales	Chimpanzees and gorillas	Elephants and rhinos	Lions and tigers
+ani_small_furry_animal	Expert	Which small furry animal is one of the elephant's closest living relatives?	The rock hyrax	The capybara	The pangolin	The wombat
+ani_baby_echidna	Expert	What is a baby echidna called?	A puggle	A joey	A kit	A cub
+ani_scientists_found_2019	Expert	Scientists found in 2019 that under ultraviolet light, American flying squirrels glow which colour?	Pink	Green	Blue	Yellow
+ani_happens_eyes_arctic	Expert	What happens to the eyes of Arctic reindeer in the long dark of winter?	They change colour from gold to blue	They grow a third eyelid	They swell to twice their size	They turn completely black
+ani_mammal_shortest_pregnancies	Expert	Which mammal has one of the shortest pregnancies, only about 12 days?	The Virginia opossum	The house mouse	The rabbit	The hamster
+ani_call_group_porcupines	Expert	What do you call a group of porcupines?	Prickle	Spike	Thicket	Bristle
+ani_call_group_hippos	Expert	What do you call a group of hippos?	Bloat	Crash	Wallow	Pod
+ani_small_dolphin_among	Expert	Which small dolphin, among the rarest marine mammals, lives only in Mexico's Gulf of California?	Vaquita	Hector's dolphin	Irrawaddy dolphin	Baiji
+ani_chinese_river_dolphin	Expert	Which Chinese river dolphin was declared functionally extinct in 2006?	Baiji	Vaquita	Boto	Susu
+ani_bonobo_learned_communicate	Expert	What was the name of the bonobo who learned to communicate with a symbol keyboard?	Kanzi	Koko	Washoe	Nim Chimpsky
+ani_chimpanzee_taught_american	Expert	What was the name of the first chimpanzee taught American Sign Language?	Washoe	Koko	Kanzi	Lucy
+ani_studies_prairie_dog	Expert	Studies of prairie dog alarm calls suggest they can describe what about an approaching person?	Size, shape and clothing colour	Whether they carry food	What language they speak	How old they are
+ani_hedgehog_meets_strong	Expert	When a hedgehog meets a strong new smell, what may it do?	Lick foamy spit onto its spines	Roll in it to hide its own scent	Sneeze to clear its nose	Dig a hole and bury it
+ani_months_winter_sleep	Expert	During months of winter sleep, what happens to an American black bear's urine?	Its body recycles it into protein	It is stored in a swollen bladder	It is sweated out through the skin	It freezes inside its body
+ani_some_capuchin_monkeys	Expert	Some capuchin monkeys rub crushed millipedes into their fur. Why?	To keep off biting insects	To attract mates	To mark their territory	To warm up on cold nights
+ani_1987_killer_whales	Expert	In 1987, killer whales near Seattle started a short-lived fad of doing what?	Wearing dead salmon on their heads	Leaping over passing ferries	Pushing kayaks back to shore	Singing along to ship horns
+ani_orcas_off_south	Expert	Orcas off South Africa have been killing great white sharks mainly to eat which organ?	The liver	The heart	The stomach	The eyes
+ani_naked_mole_rats	Expert	Naked mole-rats can survive about how long with no oxygen at all?	About 18 minutes	About 2 minutes	About 2 hours	About 10 seconds
+ani_baby_koalas_eat	Expert	What do baby koalas eat to pick up the gut microbes they need to digest eucalyptus?	Their mother's special droppings	Soil from under gum trees	Termites from tree bark	Honey from wild bees
+ani_nine_banded_armadillo	Expert	The nine-banded armadillo almost always gives birth to what?	Identical quadruplets	A single huge baby	Twins of opposite sex	A dozen tiny eggs
+ani_african_wild_dogs	Expert	African wild dogs have been found to 'vote' on whether to go hunting by doing what?	Sneezing	Howling	Wagging their tails	Yawning
+ani_mother_platypus_nipples	Expert	A mother platypus has no nipples. How do her babies get milk?	It oozes from patches on her belly skin	She brings it up from her throat	She squirts it from glands in her bill	It drips from a pouch under her tail
+ani_two_hair_covered	Expert	What are the two hair-covered, horn-like knobs on a giraffe's head called?	Ossicones	Antlers	Tusks	Pedicles
+ani_male_chinese_water	Expert	Male Chinese water deer grow no antlers. What do they have instead?	Long fang-like tusks	A single horn	A bony crest	Big hooked claws
+ani_group_giant_pandas	Expert	What is a group of giant pandas sometimes called?	An embarrassment	A bamboozle	A cuddle	A shrug
+ani_small_mammals_venomous	Expert	Which of these small mammals has a venomous bite?	The short-tailed shrew	The field vole	The garden mole	The dormouse
+ani_mammal_drop_body	Expert	Which mammal can drop its body temperature below 0 C while hibernating?	Arctic ground squirrel	American black bear	European hedgehog	Hazel dormouse

@@ -1,0 +1,96 @@
+# Insects & Creepy-Crawlies: insects, spiders, worms, snails and other small creatures
+#
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+wld_pajak_owad	Easy	Why is a spider not an insect?	It has eight legs and two body parts	It cannot fly and has no wings	It spins silk instead of wax	It has no antennae on its head
+ani_komar_zabojca	Easy	Which animal causes the most human deaths every year?	The mosquito	The shark	The crocodile	The lion
+ani_pszczoly_nektar	Easy	What do bees collect from flowers to turn into honey?	Nectar	Pollen	Sap	Dew
+ani_arachnofobia	Easy	What is the fear of spiders called?	Arachnophobia	Claustrophobia	Agoraphobia	Acrophobia
+anix_swietlik	Easy	Which insects light up in the dark to attract mates?	Fireflies	Crickets	Moths	Ladybirds
+ani_group_ants	Easy	What is a group of ants called?	A colony	A herd	A flock	A pride
+ani_group_bees	Easy	What is a group of bees called?	A swarm	A pack	A pride	A herd
+ani_red_beetle_black	Easy	Which red beetle with black spots is a symbol of good luck?	The ladybird	The firefly	The scarab	The cockchafer
+ani_ants_live_every	Easy	Ants live on every continent except which?	Antarctica	Australia	Europe	South America
+ani_gardeners_usually_happy	Easy	Why are gardeners usually happy to see ladybirds?	They eat aphids	They pollinate roses	They scare off slugs	They enrich the soil
+ani_venomous_spider_red	Easy	Which venomous spider has a red hourglass mark on its belly?	The black widow	The tarantula	The wolf spider	The huntsman spider
+ani_maggots_young_insects	Easy	Maggots are the young of which insects?	Flies	Beetles	Wasps	Moths
+ani_insects_secretly_eat	Easy	Which insects can secretly eat away the wooden beams of a house?	Termites	Wasps	Earwigs	Crickets
+ani_holes_woollen_jumpers	Easy	Holes in woollen jumpers are often chewed by the larvae of which insect?	Moths	Fleas	Ants	Mosquitoes
+ani_tiny_insects_hide	Easy	Which tiny insects hide in mattresses and bite people while they sleep?	Bedbugs	Silverfish	Earwigs	Ladybirds
+zwi2_pszczola_rodzina	Easy	How many queens live in one healthy bee colony?	One	Three	Ten	None
+scicmp_najwiecej_nog	Easy	Which of these creatures has the most legs?	The millipede	The spider	The beetle	The crab
+ani_modliszka	Easy	What is the female praying mantis infamous for?	Sometimes eating the male	Carrying her young on her back	Laying eggs in other nests	Stinging her rivals
+anix_pszczola_zadlo	Easy	What usually happens to a honeybee after it stings a person?	It dies	It loses its wings	It becomes a queen	Nothing at all
+ani_caterpillar_form_around	Easy	What does a caterpillar form around itself before it becomes a butterfly?	A chrysalis	An egg sac	A burrow	A web
+ani_tiny_bloodsucker_jump	Easy	Which tiny bloodsucker can jump more than 100 times its own body length?	The flea	The tick	The bedbug	The louse
+zwi3_motyl_monarcha	Easy	How far do monarch butterflies migrate?	Thousands of kilometers between Canada and Mexico	A few dozen kilometres around one meadow	Only inside a single flowering meadow	They do not migrate anywhere at all
+zwi3_mrowki_feromony	Medium	What do ants mark a trail to food with?	Pheromones	Saliva	Droppings alone	Sound
+trv_pszczola_taniec	Medium	How do honeybees tell each other where flowers are?	With a 'waggle dance'	By buzzing at different pitches	By leaving a trail of wax	By flashing their wings
+anix_komar_samice	Medium	Which mosquitoes bite people to drink blood?	Only the females	Only the males	Both equally	Only the young
+aniy_motyl_zycie	Medium	How long does an adult butterfly usually live?	A few weeks	A single day	Several years	About a year
+ani_spider_infamous_sometimes	Medium	Which spider is infamous for sometimes eating its mate?	The black widow	The tarantula	The wolf spider	The huntsman
+ani_wings_bee	Medium	How many wings does a bee have?	Four	Two	Six	Eight
+ani_some_ants_farm	Medium	Some ants 'farm' which insects, protecting them in return for sweet honeydew?	Aphids	Termites	Fleas	Ladybirds
+ani_sex_all_worker	Medium	What sex are all the worker bees in a honeybee hive?	Female	Male	Mostly male	Half and half
+ani_roughly_honey_worker	Medium	Roughly how much honey does one worker bee make in its whole life?	A twelfth of a teaspoon	About two tablespoons	About half a cup	About one full jar
+ani_tiny_australian_spider	Medium	Which tiny Australian spider is famous for a colourful courtship dance?	The peacock spider	The huntsman spider	The redback spider	The funnel-web spider
+ani_mother_scorpion_carry	Medium	Where does a mother scorpion carry her newborn young?	On her back	In her claws	In a pouch	In her mouth
+ani_inside_chrysalis_happens	Medium	Inside its chrysalis, what happens to most of a caterpillar's body?	It breaks down into a kind of soup	It shrinks into a hard seed	It folds up like origami	It sheds one skin after another
+ani_birds_learn_avoid	Medium	Why do birds learn to avoid eating monarch butterflies?	They carry toxins from milkweed	They can sting like wasps	Their wings are covered in glue	They are too fast to catch
+ani_nest_floods_fire	Medium	When their nest floods, how do fire ants survive?	They link up into a floating raft	They hold their breath for days	They burrow below the water	They seal themselves in silk
+ani_special_food_turns	Medium	What is the special food that turns a bee larva into a queen?	Royal jelly	Honeydew	Propolis	Beeswax
+ani_animal_see_ultraviolet	Medium	Which animal can see ultraviolet light and uses it to find flowers?	Bee	Dog	Cat	Cow
+ani_paper_wasps_make	Medium	How do paper wasps make the paper for their nests?	Chewing wood and mixing it with spit	Spinning silk and drying it out	Gluing dead leaves with wax	Mixing mud with their droppings
+ani_unlike_honeybee_bumblebee	Medium	Unlike a honeybee, a bumblebee can sting more than once. Why?	Its sting has no barbs	Its sting regrows in a day	It has a spare sting	It stings with its jaws
+ani_truten	Medium	What is a male honeybee called?	A drone	A worker	A soldier	A king
+ani_silkworm_turn	Medium	What does a silkworm turn into?	A moth	A butterfly	A beetle	A wasp
+zwi3_mrowki_niewolnictwo	Medium	What do some ant species called 'slave-making ants' do?	They steal other ants' pupae to work in their own colony	They trade food with other colonies	They only farm aphids like cattle	They only build bridges from their own bodies
+cur_niesporczak	Medium	Which tiny animal has survived exposure to the vacuum of space?	The tardigrade	The flea	The springtail	The rotifer
+aniy_jetka	Medium	Which insect is famous for living as an adult for only about a day?	The mayfly	The dragonfly	The housefly	The moth
+ani_silkworms_feed	Medium	What do silkworms feed on?	Mulberry leaves	Cotton plants	Oak bark	Rice stalks
+ani_heaviest_spider_world	Medium	Which is the heaviest spider in the world?	The Goliath birdeater	The black widow	The huntsman	The wolf spider
+ani_insect_sting_tops	Medium	Which insect's sting tops the Schmidt pain index, said to feel like being shot?	The bullet ant	The yellowjacket	The honeybee	The fire ant
+ani_some_honeypot_ants	Medium	Some honeypot ants serve their colony as what?	Living storage jars of food	Guards that plug the nest	Nurses for the queen's eggs	Scouts that find water
+ani_spider_lives_underwater	Medium	Which spider lives underwater, breathing from a bubble of air it traps in its web?	The diving bell spider	The raft spider	The wolf spider	The trapdoor spider
+ani_swarming_locusts_really	Medium	Swarming locusts are really which insects, transformed when they get crowded?	Grasshoppers	Crickets	Cicadas	Beetles
+zwi3_mrowki_rolnictwo	Medium	What do leafcutter ants of the genus Atta do?	Farm fungus on the leaves they bring as their main food	They hunt other insects and eat nothing else	Live in symbiosis with fish in flooded nests	Migrate to another continent every year
+anix_swierszcz	Medium	By counting what can you roughly work out the air temperature?	A cricket's chirps	A frog's croaks	An owl's hoots	A bee's buzzes
+zwi2_skorpion_uv	Hard	What happens to a scorpion under ultraviolet light?	It glows blue-green	It becomes transparent	It turns red	It faints
+zwi2_cykada_cykl	Hard	Every how many years do periodical cicadas emerge en masse in the USA?	Every 13 or 17 years	Every 2 years	Every 7 years	Every 25 years
+trv_zuk_sila	Hard	Relative to its weight, which animal is the strongest, pulling over 1,000 times its own mass?	The dung beetle	The ant	The gorilla	The elephant
+trv_mrowka_krolowa	Hard	How long can a queen ant of some species live?	Over 20 years	About a month	About a year	About 3 years
+ext_slimak_zeby	Hard	Which of these animals has the most teeth, by a wide margin?	A garden snail	A crocodile	A dolphin	A shark
+ani_pszczola_oczy	Hard	How many eyes does a honeybee have?	Five	Two	Four	Eight
+anix_termity	Hard	Termite mounds are admired by architects for what?	Natural air conditioning	Perfect round shapes	Glass-like walls	Underwater tunnels
+anix_karaluch	Hard	Roughly how long can a cockroach survive without its head?	About a week	About a minute	About an hour	About a year
+aniy_mrowki_liczba	Hard	Roughly how many ants are thought to live on Earth?	About 20 quadrillion	About 20 million	About 20 billion	About 2,000
+ani_adult_atlas_moths	Hard	Adult Atlas moths live only a week or two because they have no what?	Mouth	Wings	Legs	Antennae
+ani_bombardier_beetle_defend	Hard	How does the bombardier beetle defend itself?	It sprays a boiling chemical jet	It bites with venomous jaws	It explodes and dies	It plays dead for hours
+ani_dung_beetles_shown	Hard	Dung beetles have been shown to steer at night using what?	The Milky Way	The Moon only	Smells on the wind	Sounds of other beetles
+ani_cricket_ears	Hard	Where are a cricket's 'ears'?	On its front legs	On its antennae	Under its wings	On the sides of its head
+ani_american_tarantulas_defend	Hard	How do many American tarantulas defend themselves?	They flick irritating hairs off their abdomen	They spray a burning acid from their fangs	They squeak loudly to scare attackers	They roll up into a tight hard ball
+ani_moth_wings_big	Hard	Which moth has wings so big it is sometimes mistaken for a bird?	Atlas moth	Luna moth	Death's-head hawkmoth	Emperor moth
+ani_sticky_resin_bees	Hard	What is the sticky resin bees use to seal gaps in the hive?	Propolis	Royal jelly	Beeswax	Nectar
+ani_ladybird_defend_itself	Hard	How does a ladybird defend itself when grabbed?	It oozes bitter fluid from its leg joints	It sprays a boiling chemical jet	It bites with venomous jaws	It sheds its wing cases and flees
+ani_some_young_spiders	Hard	How do some young spiders travel hundreds of kilometres?	Floating on strands of silk	Riding on the backs of birds	Clinging to drifting leaves	Hitching rides on bees
+ani_great_smoky_mountains	Hard	In the Great Smoky Mountains each June, thousands of fireflies of one species do what?	Flash in unison	Migrate south together	Come out only in daylight	Lay eggs in the snow
+ani_japanese_honeybees_kill	Hard	How do Japanese honeybees kill a giant hornet that invades their hive?	Cook it inside a ball of bees	Sting it hundreds of times	Drown it in honey	Seal it inside wax
+ani_death_head_hawkmoth	Hard	The death's-head hawkmoth, with a skull-like pattern on its back, raids beehives to steal what?	Honey	Larvae	Royal jelly	Wax
+ext_mrowka_ciezar	Hard	Leafcutter ants can carry loads of up to roughly what multiple of their body weight?	Fifty times	Twice	Five times	Fifteen times
+ani_woodlice_often_found	Hard	Woodlice, often found under garden stones, are related to which animals?	Crabs and shrimps	Beetles and ants	Spiders and ticks	Worms and slugs
+zwi3_mrowkolew	Hard	How does an antlion larva hunt?	It digs a pit trap in the sand and waits for prey	It runs its prey down on foot in the open	It catches insects in mid-air while flying	It spins a sticky web the way a spider does
+ani_crickets_make_chirping	Hard	How do crickets make their chirping sound?	Rubbing their wings together	Rubbing their legs together	Vibrating their throats	Clicking their jaws
+ani_insect_hunter_catches	Hard	Which insect hunter catches up to about 95% of the prey it chases?	The dragonfly	The praying mantis	The hornet	The ladybird
+ani_some_southeast_asian	Hard	Some Southeast Asian ants defend their colony in an extreme way. What do they do?	Burst their bodies to spray toxic goo	Bite off their own heads	Glue attackers to the ground	Throw stones at them
+ani_argentynska_mrowka	Expert	The Argentine ant formed one 'supercolony' about 6,000 km long in which region?	Southern Europe	California	Eastern Australia	Southern Japan
+ani_madagascar_moth_seen	Expert	In Madagascar, one moth has been seen drinking what from sleeping birds?	Their tears	Their blood	Their saliva	Their egg yolk
+ani_spider_madagascar_spins	Expert	Which spider of Madagascar spins webs that can stretch right across rivers?	Darwin's bark spider	The golden orb-weaver	The Goliath birdeater	The Sydney funnel-web
+ani_tiny_insects_born	Expert	Which tiny insects can be born already pregnant?	Aphids	Fleas	Termites	Mosquitoes
+ani_insect_heaviest_world	Expert	Which insect is the heaviest in the world, found in New Zealand?	Giant weta	Goliath beetle	Atlas moth	Titan beetle
+ani_2017_experiment_bumblebees	Expert	In a 2017 experiment, bumblebees learned to do what for a sugar reward?	Roll a tiny ball into a goal	Stack blocks into a tower	Sort coins by colour	Turn a tiny steering wheel
+ani_bolas_spider_swings	Expert	The bolas spider swings a sticky ball on a thread to catch moths. How does it lure them?	It gives off a female moth's scent	It glows faintly in the dark	It hums at a moth's wingbeat pitch	It smells like sweet nectar
+ani_2016_scientists_studying	Expert	In 2016, scientists studying how praying mantises judge distance fitted them with what?	Tiny 3D glasses	Tiny hearing aids	Tiny backpacks with cameras	Tiny radio tags
+ani_females_some_photuris	Expert	Females of some Photuris fireflies copy the flashes of other species. Why?	To lure in males and eat them	To scare away bats	To find their sisters	To attract mates of their own kind
+ani_glowing_worms_new	Expert	The famous glowing 'worms' of New Zealand's Waitomo Caves are really what?	The larvae of a gnat	Tiny luminous snails	A kind of glowing mould	Baby fireflies
+ani_meganeura_giant_dragonfly	Expert	Meganeura, a giant dragonfly-like insect of 300 million years ago, had a wingspan of roughly how much?	About 70 cm	About 15 cm	About 2 metres	About 30 cm
+ani_hearts_earthworm	Expert	How many hearts does an earthworm have?	Five	One	Two	Ten
+ani_flowers_such_tomatoes	Expert	Many flowers, such as tomatoes, release pollen best when a bumblebee does what to them?	Vibrates its flight muscles	Bites off the petals	Licks the stem	Sits on them overnight
