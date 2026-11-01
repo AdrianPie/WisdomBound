@@ -150,6 +150,12 @@ object QuizSectionCatalog {
         QuizSection("animals/sea_life", "Sea Life", "🐙", QuizCategory.Animals),
         QuizSection("animals/reptiles_amphibians", "Reptiles & Amphibians", "🦎", QuizCategory.Animals),
         QuizSection("animals/bugs", "Insects & Creepy-Crawlies", "🐞", QuizCategory.Animals),
-        QuizSection("animals/pets_farm", "Pets & Farm Animals", "🐄", QuizCategory.Animals)
+        QuizSection("animals/pets_farm", "Pets & Farm Animals", "🐄", QuizCategory.Animals),
+        QuizSection("poland/history", "History to 1918", "👑", QuizCategory.Poland),
+        QuizSection("poland/twentieth_century", "20th Century & Today", "🕊️", QuizCategory.Poland),
+        QuizSection("poland/culture", "Culture & Famous Poles", "🎭", QuizCategory.Poland),
+        QuizSection("poland/places", "Places & Nature", "🏞️", QuizCategory.Poland),
+        QuizSection("poland/traditions", "Traditions & Everyday Life", "🥟", QuizCategory.Poland),
+        QuizSection("poland/sport", "Sport", "🏆", QuizCategory.Poland)
     )
 }

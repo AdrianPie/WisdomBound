@@ -1,0 +1,125 @@
+# Places & Nature: Polish geography, cities, monuments, nature, regions
+#
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+pol3_najwyzszy_szczyt	Easy	What is the name of Poland's highest peak?	Rysy	Giewont	Sniezka	Babia Gora
+pol_krasnale	Easy	Which Polish city is famous for hundreds of little bronze dwarf statues?	Wroclaw	Krakow	Gdansk	Poznan
+pol_pierniki	Easy	Which Polish city is famous for its gingerbread?	Torun	Krakow	Gniezno	Lodz
+pol_syrenka	Easy	What is shown on Warsaw's coat of arms?	A mermaid	A dragon	A white eagle	A lion
+pol_morskie_oko	Easy	What is the name of the famous lake in the Tatras whose name means 'Eye of the Sea'?	Morskie Oko	Czarny Staw	Wielki Staw	Solina
+polx_wisla_baltyk	Easy	Into which sea does the Vistula flow?	The Baltic Sea	The Black Sea	The North Sea	The Adriatic Sea
+polx_lotnisko_chopin	Easy	Which composer is Warsaw's main airport named after?	Frederic Chopin	Stanislaw Moniuszko	Karol Szymanowski	Krzysztof Penderecki
+polx_palac_kultury	Easy	Which tall Warsaw landmark was a 'gift' from Stalin?	The Palace of Culture and Science	The Royal Castle on the Vistula	The Warsaw Spire skyscraper	The Wilanow Palace
+polx_zakopane	Easy	Which town is called Poland's 'winter capital'?	Zakopane	Szczyrk	Karpacz	Krynica
+polx_bursztyn	Easy	Which fossilised tree resin washes up on Poland's Baltic beaches?	Amber	Jade	Coral	Obsidian
+pol_river_flows_through	Easy	Which river flows through both Krakow and Warsaw?	The Vistula	The Oder	The Warta	The Bug
+pol_three_cities_make	Easy	Which three cities make up the Tri-City on the Baltic coast?	Gdansk, Gdynia and Sopot	Gdansk, Elblag and Hel	Gdynia, Sopot and Leba	Gdansk, Gdynia and Puck
+pol_poland_national_stadium	Easy	What is the name of Poland's national stadium in Warsaw?	Stadion Narodowy	Stadion Slaski	Stadion Dziesieciolecia	Stadion Wojska Polskiego
+pol_hill_above_vistula	Easy	On which hill above the Vistula does Krakow's royal castle stand?	Wawel	Skalka	Giewont	Kahlenberg
+pol_mountain_range_forms	Easy	Which mountain range forms Poland's southern border with Slovakia?	Tatra Mountains	Sudetes	Alps	Ural Mountains
+pol_city_poland_second	Easy	Which city is Poland's second largest by population?	Krakow	Lodz	Wroclaw	Poznan
+pol_geo2_polska_wojewodztwa	Easy	How many provinces (voivodeships) does Poland have?	16	14	18	12
+pol_geo3_wiatr_halny	Easy	What is the warm, gusty wind blowing from the Tatras called?	The Halny	The Mistral	The Sirocco	The Bora
+pol2_kopalnia_soli	Easy	Which Polish salt mine is a UNESCO World Heritage site?	Wieliczka	Klodawa	Bochnia alone	Inowroclaw
+pol_rynek_krakow	Easy	Which city has one of the largest medieval market squares in Europe, with the Cloth Hall?	Krakow	Wroclaw	Poznan	Gdansk
+pol_koziolki	Easy	In which city do two mechanical goats butt heads on the town hall at noon?	Poznan	Wroclaw	Lublin	Torun
+pol_neptun	Easy	Which city is famous for its Neptune Fountain and the Long Market?	Gdansk	Szczecin	Gdynia	Elblag
+pol_molo_sopot	Easy	Which seaside town has the longest wooden pier in Europe?	Sopot	Gdynia	Kolobrzeg	Miedzyzdroje
+pol_odra_wroclaw	Easy	Which river flows through Wroclaw?	The Oder	The Vistula	The Warta	The Bug
+pol_bieszczady	Easy	Which remote mountains in south-eastern Poland are known for wolves, bears and empty valleys?	The Bieszczady	The Karkonosze	The Pieniny	The Beskidy
+pol_sniezka	Easy	What is the highest peak of the Karkonosze mountains?	Sniezka	Babia Gora	Kasprowy Wierch	Tarnica
+pol_spodek	Easy	In which city is the Spodek arena, shaped like a flying saucer?	Katowice	Lodz	Krakow	Poznan
+pol_warszawa_unesco	Easy	Which Polish Old Town, rebuilt from rubble after World War II, is on the UNESCO list for its reconstruction?	Warsaw	Gdansk	Wroclaw	Poznan
+pol_giewont	Easy	Which Tatra peak, with an iron cross on top, is said to look like a sleeping knight?	Giewont	Rysy	Kasprowy Wierch	Swinica
+polx_dzwon_zygmunta	Easy	What is the famous great bell of Wawel Cathedral called?	The Sigismund Bell	The Liberty Bell	The Wawel Drum	The Jagiellon Gong
+polx_kolumna	Easy	Whose column stands in Warsaw's Castle Square?	Sigismund III Vasa	John III Sobieski	Jozef Poniatowski	Casimir the Great
+polx_hel	Easy	What is the long, thin peninsula on Poland's Baltic coast called?	Hel	Wolin	Sambia	Usedom
+polx_jasna_gora	Easy	In which city is the Jasna Gora monastery with the Black Madonna icon?	Czestochowa	Krakow	Wadowice	Lichen
+poly_piotrkowska	Easy	Which city's main street is the long Piotrkowska Street?	Lodz	Poznan	Katowice	Lublin
+pol_city_capital_podlasie	Easy	Which city is the capital of the Podlasie region?	Bialystok	Lomza	Suwalki	Siedlce
+pol_polish_port_city	Easy	Which Polish port city was called Stettin before 1945?	Szczecin	Gdansk	Kolobrzeg	Elblag
+pol_cathedral_polish_kings	Easy	In which cathedral were most Polish kings crowned and buried?	Wawel Cathedral	Gniezno Cathedral	St John's in Warsaw	Poznan Cathedral
+pol_river_flows_through_2	Easy	Which river flows through Poznan?	The Warta	The Oder	The Vistula	The Notec
+pol_polish_lake_district	Easy	Which Polish lake district is known as the 'Land of a Thousand Lakes'?	Masuria	Kashubia	Pomerania	Podlasie
+pol_national_park_protects	Easy	Which national park protects Europe's last primeval lowland forest, home to bison?	Bialowieza	Kampinos	Bieszczady	Wigry
+pol_castle_poland_seat	Easy	Which castle in Poland was the seat of the Grand Master of the Teutonic Order?	Malbork Castle	Wawel Castle	Ksiaz Castle	Niedzica Castle
+pol_chandeliers_kinga_chapel	Easy	What are the chandeliers of St Kinga's Chapel, deep in a salt mine near Krakow, made of?	Salt crystals	Bohemian glass	Baltic amber	Silver
+pol_hill_above_zakopane	Easy	Which hill above Zakopane can you ride up by funicular?	Gubalowka	Nosal	Giewont	Turbacz
+pol_mariacki	Easy	From which church tower is Krakow's hourly bugle call played?	St Mary's Basilica	Wawel Cathedral	St Andrew's Church	The Church of St Peter and Paul
+pol_pieniny	Easy	In which mountains do tourists float on rafts down the Dunajec gorge?	The Pieniny	The Tatras	The Bieszczady	The Karkonosze
+polx_kasprowy	Easy	Which Tatra peak can you reach by cable car from Zakopane?	Kasprowy Wierch	Rysy	Giewont	Swinica
+pol_warsaw_district_right	Easy	Which Warsaw district on the right bank of the Vistula is famous for its pre-war tenements?	Praga	Mokotow	Wola	Zoliborz
+pol_river_forms_poland	Easy	Which river forms Poland's border with Germany alongside the Oder?	Neisse	Bobr	Warta	Kwisa
+pol_geo2_wisla_zrodlo	Medium	Where does the Vistula river originate?	In the Silesian Beskids	In the Tatras	In the Sudetes	In the Masurian Lake District
+pol_geo2_polska_jezioro	Medium	Which lake is the largest in Poland?	Sniardwy	Mamry	Hancza	Lebsko
+pol_geo2_polska_najglebsze	Medium	Which lake is the deepest in Poland?	Hancza	Sniardwy	Wigry	Mamry
+pol_lodz_manchester	Medium	Which city was called 'the Polish Manchester' for its textile mills?	Lodz	Katowice	Bielsko-Biala	Gdansk
+polx_lotnisko_krakow	Medium	Which famous Pole is Krakow's airport named after?	John Paul II	Nicolaus Copernicus	Lech Walesa	Tadeusz Kosciuszko
+polx_lotnisko_gdansk	Medium	Gdansk's airport is named after which Pole?	Lech Walesa	John Paul II	Frederic Chopin	Nicolaus Copernicus
+polx_lazienki	Medium	In which Warsaw park does the famous Chopin monument sit under a willow tree?	Lazienki Park	The Saxon Garden	Pole Mokotowskie	Skaryszewski Park
+polx_bocian	Medium	Which bird breeds in Poland in such numbers that about a fifth of the world's population nests there?	The white stork	The swallow	The crane	The heron
+pol_krakow_district_historic	Medium	Which Krakow district was the historic Jewish quarter?	Kazimierz	Podgorze	Nowa Huta	Kleparz
+pol_warsaw_palace_often	Medium	Which Warsaw palace is often called 'the Polish Versailles'?	Wilanow Palace	Lazienki Palace	The Royal Castle	Belweder
+pol_city_capital_warmia	Medium	Which city is the capital of the Warmia-Masuria region?	Olsztyn	Elblag	Gizycko	Elk
+pol_maczuga_herkulesa_near	Medium	What is the 'Maczuga Herkulesa' near Krakow?	A tall limestone rock	A royal sword	A castle tower	A giant oak tree
+pol_polish_desert_used	Medium	Which Polish 'desert' was used for training by German troops headed for Africa?	Bledow Desert	Leba Dunes	Kampinos Sands	Pustynia Siedlecka
+pol_town_western_poland	Medium	Which town in western Poland has one of the world's tallest statues of Jesus?	Swiebodzin	Czestochowa	Wadowice	Niepokalanow
+pol_artificial_tree_stood	Medium	Which artificial tree has stood on Warsaw's Jerusalem Avenue since 2002?	A palm tree	A giant oak	A Christmas spruce	A baobab
+pol_national_park_lies	Medium	Which national park lies right on the edge of Warsaw?	Kampinos National Park	Biebrza National Park	Bialowieza National Park	Roztocze National Park
+pol_warsaw_street_part	Medium	Which Warsaw street, part of the Royal Route, runs past the Presidential Palace?	Krakowskie Przedmiescie	Nowy Swiat	Marszalkowska	Aleje Ujazdowskie
+pol_city_see_huge	Medium	In which city can you see the huge 360-degree painting of the Battle of Raclawice?	Wroclaw	Krakow	Warsaw	Poznan
+pol_krakow_ring_shaped	Medium	What does Krakow's ring-shaped Planty park stand in place of?	The old medieval city walls	A former royal hunting ground	A dried-up arm of the Vistula	A tram line closed in 1950
+pol_warsaw_statue_shows	Medium	Which Warsaw statue shows a boy soldier of 1944 in an oversized helmet?	The Little Insurgent	The Warsaw Nike	The Warsaw Mermaid	The Chopin Monument
+pol_tatra_trail_dangerous	Medium	Which Tatra trail is famous as the most dangerous marked route in the Polish mountains?	Orla Perc	Droga pod Reglami	Ceprostrada	Dolina Koscieliska
+pol_city_hosts_centuries	Medium	Which city hosts the centuries-old summer fair 'Jarmark Dominikanski'?	Gdansk	Krakow	Wroclaw	Torun
+pol_krakow_mound_raised	Medium	Which Krakow mound was raised by hand in the 1820s to honour a national hero?	Kopiec Kosciuszki	Kopiec Krakusa	Kopiec Wandy	Kopiec Pilsudskiego
+pol_city_manufaktura_complex	Medium	Which city's Manufaktura complex fills a vast 19th-century textile mill?	Lodz	Poznan	Katowice	Bialystok
+pol_geo2_polska_sasiedzi	Medium	How many countries border Poland?	Seven	Five	Six	Eight
+pol_river_forms_long	Medium	Which river forms a long stretch of Poland's eastern border with both Ukraine and Belarus?	The Bug	The Dniester	The Narew	The Neman
+pol_metal_dragon_statue	Medium	What does the metal dragon statue at the foot of Wawel Hill do every few minutes?	Breathes real fire	Roars through a loudspeaker	Sprays water at passers-by	Flaps its metal wings
+pol2_malbork_co	Medium	What is Malbork best known for?	The largest brick castle in the world	A salt mine	A Gothic cathedral	A Renaissance town hall
+dpt_pol_wyspy_wroclaw	Medium	Which Polish city is built across the most islands?	Wroclaw	Szczecin	Torun	Bydgoszcz
+pol_ruchome_wydmy	Medium	Which national park on the Baltic coast is famous for its moving sand dunes?	Slowinski National Park	Wolin National Park	Kampinos National Park	Biebrza National Park
+polx_krzywy_domek	Medium	In which seaside town is the 'Crooked House', a building that looks as if it is melting?	Sopot	Gdynia	Kolobrzeg	Leba
+polx_gory_stolowe	Medium	Which Polish mountains are famous for their flat tops and rock mazes like 'Bledne Skaly'?	The Table Mountains	The Pieniny	The Beskids	The Swietokrzyskie Mountains
+polx_zamosc	Medium	Which Renaissance 'ideal city' in eastern Poland is on the UNESCO list?	Zamosc	Sandomierz	Kazimierz Dolny	Lublin
+polx_orle_gniazda	Medium	The 'Trail of the Eagles' Nests' links medieval castles across which upland?	The Krakow-Czestochowa Upland	The Lublin Upland	The Masurian Lakeland	The Silesian Lowland
+poly_babia_gora	Medium	Which mountain is the highest peak of the Beskids?	Babia Gora	Pilsko	Skrzyczne	Turbacz
+pol_spa_town_huge	Medium	Which spa town is famous for its huge wooden graduation towers for brine?	Ciechocinek	Krynica-Zdroj	Naleczow	Zakopane
+pol_vistula_town_loved	Medium	Which Vistula town, loved by painters, sells bread baked in the shape of roosters?	Kazimierz Dolny	Sandomierz	Plock	Wloclawek
+pol_zuraw_gdansk_waterfront	Medium	What is the 'Zuraw' on Gdansk's waterfront?	A medieval port crane	A Baroque granary	An old lighthouse	A Hanseatic grain ship
+pol_poland_smallest_voivodeship	Medium	Which is Poland's smallest voivodeship by area?	Opole Voivodeship	Lubusz Voivodeship	Swietokrzyskie Voivodeship	Podlaskie Voivodeship
+pol_voivodeship_splits_capital	Medium	Which voivodeship splits its capital between Gorzow Wielkopolski and Zielona Gora?	Lubusz	West Pomeranian	Greater Poland	Lower Silesian
+pol_largest_church_poland	Medium	Which is the largest church in Poland?	The basilica in Lichen	Wawel Cathedral	Jasna Gora Basilica	Gniezno Cathedral
+pol_krakow_restaurant_merchant	Medium	Which Krakow restaurant is named after a merchant said to have hosted a feast for several kings in 1364?	Wierzynek	Hawelka	Pod Aniolami	Jama Michalika
+pol_polish_city_medieval	Medium	In which Polish city does the medieval 'Leaning Tower' stand, said to be built by a knight punished for falling in love?	Torun	Gdansk	Malbork	Lublin
+pol_visitors_wawel_press	Medium	Why do visitors to Wawel press their backs against one wall of a castle courtyard?	It is said to hide a chakra stone	A king's heart is walled up there	Touching it is said to cure gout	It marks where Krakus slew the dragon
+pol_peak_five_rocky	Medium	Which famous peak with five rocky summits looks down on the Dunajec gorge?	Trzy Korony	Sokolica	Turbacz	Babia Gora
+pol_city_stands_centennial	Medium	In which city stands the Centennial Hall (Hala Stulecia)?	Wroclaw	Katowice	Poznan	Lodz
+polx_kanal_elblaski	Medium	What is unusual about the Elblag Canal?	Boats cross dry land on rails	It flows uphill	It freezes in summer	It runs underground
+poly_dar_pomorza	Medium	Which famous sailing ship, 'the white frigate', is now a museum in Gdynia?	Dar Pomorza	Dar Mlodziezy	Fryderyk Chopin	Zawisza Czarny
+pol_warsaw_cemetery_avenue	Medium	In which Warsaw cemetery is the Avenue of the Meritorious (Aleja Zasluzonych)?	Powazki	Brodno	Wolski	Bemowo
+poly_moszna	Hard	Which fairy-tale Polish castle is famous for its 99 towers and turrets?	Moszna	Malbork	Ksiaz	Czocha
+pol_largest_island_lying	Hard	Which is the largest island lying entirely in Poland?	Wolin	Uznam	Hel	Sobieszewo
+pol_malopolska_village_cottages	Hard	Which Malopolska village is famous for cottages painted all over with flowers?	Zalipie	Chocholow	Lipnica Murowana	Tyniec
+pol_baltic_island_home	Hard	Which Baltic island, home to most of Swinoujscie, does Poland share with Germany?	Usedom	Wolin	Rugen	Bornholm
+pol_malopolska_pilgrimage_park	Hard	Which Malopolska pilgrimage park of chapels and paths, founded in 1600, is on the UNESCO list?	Kalwaria Zebrzydowska	Kalwaria Paclawska	Ludzmierz Sanctuary	Tyniec Abbey
+pol_gdansk_street_lined	Hard	Which Gdansk street, lined with stone terraces and amber shops, leads to St Mary's Church?	Mariacka Street	Piwna Street	Ogarna Street	Szeroka Street
+pol_poland_longest_lake	Hard	Which is Poland's longest lake?	Jeziorak	Sniardwy	Hancza	Mamry
+pol_city_bronze_tightrope	Hard	In which city does a bronze tightrope walker hang over the Brda river?	Bydgoszcz	Torun	Gniezno	Wloclawek
+pol_city_coat_arms	Hard	Which city's coat of arms shows two white crosses beneath a golden crown on a red shield?	Gdansk	Torun	Szczecin	Poznan
+pol_red_brick_miners	Hard	Which red-brick miners' estate, with its own church and laundry, is a famous corner of Katowice?	Nikiszowiec	Ksiezy Mlyn	Zalipie	Nowa Huta
+pol_city_visit_guido	Hard	In which city can you visit the Guido coal mine, 320 m underground?	Zabrze	Katowice	Bytom	Walbrzych
+pol_poland_highest_waterfall	Hard	Which is Poland's highest waterfall?	Wielka Siklawa	Wodogrzmoty Mickiewicza	Kamienczyk	Szklarka
+pol_biebrza	Hard	Which is Poland's largest national park?	Biebrza National Park	Bialowieza National Park	Tatra National Park	Bieszczady National Park
+pol_krzywy_las	Hard	Where is Poland's mysterious 'Crooked Forest' of J-shaped pine trees?	Near Gryfino	In Bialowieza	In the Bieszczady	Near Zakopane
+pol_bochnia	Hard	Which Polish salt mine, even older than Wieliczka, is also on the UNESCO list?	Bochnia	Klodawa	Inowroclaw	Wapno
+polx_lysica	Hard	Which is the highest peak of the Swietokrzyskie Mountains?	Lysica	Lysa Gora	Sniezka	Babia Gora
+poly_ksiaz	Hard	Which Silesian castle, one of Poland's largest, hides secret wartime tunnels?	Ksiaz	Czocha	Moszna	Niedzica
+pol_pieniny_castle_tied	Hard	Which Pieniny castle is tied by legend to a hidden Inca treasure?	Niedzica	Czorsztyn	Ogrodzieniec	Moszna
+pol_polish_town_chapel	Hard	Which Polish town's chapel walls are decorated with thousands of human skulls?	Czermna	Wieliczka	Kudowa-Zdroj	Swidnica
+pol_two_silesian_towns	Expert	Which two Silesian towns have huge timber-framed 'Churches of Peace' on the UNESCO list?	Jawor and Swidnica	Legnica and Jelenia Gora	Walbrzych and Klodzko	Nysa and Brzeg
+pol_castle_said_haunted	Expert	Which castle is said to be haunted by the White Lady, Teofila Dzialynska?	Kornik	Moszna	Ksiaz	Niedzica
+pol_19th_century_landscape	Expert	Which 19th-century landscape park on the Polish-German border is on the UNESCO list?	Muskau Park	Arkadia	Lazienki	Nieborow
+pol_18th_century_canal	Expert	Which 18th-century canal, dug on Frederick the Great's orders, links the Brda with the Notec?	The Bydgoszcz Canal	The Augustow Canal	The Elblag Canal	The Gliwice Canal
+pol_village_poland_lowest	Expert	Which village is Poland's lowest point, almost 2 m below sea level?	Raczki Elblaskie	Leba	Jastarnia	Krynica Morska
+pol_deepest_lake_polish	Expert	Which is the deepest lake on the Polish side of the Tatras?	Wielki Staw Polski	Morskie Oko	Czarny Staw pod Rysami	Zmarzly Staw

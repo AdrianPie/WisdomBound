@@ -1,0 +1,220 @@
+# Culture & Famous Poles: Polish literature, art, music, theatre, film, TV, famous Poles in culture and science
+#
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+pol_lit2_lokomotywa	Easy	Who wrote the poem 'The Locomotive'?	Julian Tuwim	Jan Brzechwa	Adam Mickiewicz	Maria Konopnicka
+pol_lit2_akademia_pana_kleksa	Easy	Who wrote 'The Academy of Mr. Kleks'?	Jan Brzechwa	Julian Tuwim	Kornel Makuszynski	Janusz Korczak
+pol2_chopin_instrument	Easy	Which instrument did Frederic Chopin compose for above all?	The piano	The violin	The organ	The cello
+pol3_pan_tadeusz	Easy	Who wrote 'Pan Tadeusz'?	Adam Mickiewicz	Juliusz Slowacki	Henryk Sienkiewicz	Boleslaw Prus
+pol_bolek_lolek	Easy	Which Polish cartoon follows two adventurous brothers?	Bolek and Lolek	Reksio	Mis Uszatek	Pampalini
+pol_matolek	Easy	What kind of animal is Koziolek Matolek, who searches for the town of Pacanow?	A goat	A dog	A bear	A hare
+polx_reksio	Easy	What kind of animal is Reksio, the Polish cartoon hero?	A dog	A cat	A bear	A rabbit
+polx_mis_uszatek	Easy	Which Polish cartoon teddy bear has one floppy ear?	Mis Uszatek	Reksio	Pampalini	Koziolek Matolek
+pol_two_children_sienkiewicz	Easy	Who are the two children in Sienkiewicz's 'In Desert and Wilderness'?	Stas and Nel	Jas and Malgosia	Bolek and Lolek	Zbyszko and Danusia
+pol_painted_huge_canvas	Easy	Who painted the huge canvas 'The Battle of Grunwald'?	Jan Matejko	Jozef Chelmonski	Jacek Malczewski	Wojciech Kossak
+pol_city_hosted_national	Easy	Which city has hosted the National Festival of Polish Song since 1963?	Opole	Sopot	Kolobrzeg	Jarocin
+pol_band_fronted_singer	Easy	Which band was fronted by the singer Kora?	Maanam	Perfect	Republika	Lady Pank
+pol_game_show_polish	Easy	In which TV game show do Polish contestants guess songs from just a few notes?	Jaka to melodia?	Familiada	Milionerzy	Kolo fortuny
+pol_game_show_hosted	Easy	Which TV game show, hosted for decades by Karol Strasburger, asks what '100 people' answered?	Familiada	Milionerzy	Kolo fortuny	Jeden z dziesieciu
+pol_long_running_tvp	Easy	Which long-running TVP soap opera follows the Mostowiak family from Grabina?	M jak milosc	Klan	Na Wspolnej	Barwy szczescia
+pol_evening_cartoon_slot	Easy	What is the evening cartoon slot for small children on Polish TV traditionally called?	Dobranocka	Teleranek	Ciuchcia	Domowe Przedszkole
+pol_classic_polish_cartoon	Easy	In a classic Polish cartoon, what is the name of the curious young kitten who lives with the old tomcat Bonifacy?	Filemon	Mruczek	Puszek	Gacek
+pol_tank_series_four	Easy	What is the name of the tank in the TV series 'Four Tank-Men and a Dog'?	Rudy	Szarik	Tygrys	Orzel
+pol_three_bards_polish	Easy	Who are the 'three bards' of Polish Romantic poetry?	Mickiewicz, Slowacki and Krasinski	Mickiewicz, Slowacki and Norwid	Mickiewicz, Fredro and Krasinski	Kochanowski, Slowacki and Krasinski
+pol_children_poem_absent	Easy	In the children's poem, where does the absent-minded Pan Hilary finally find his lost glasses?	On his own nose	In the fridge	Under his pillow	In his coat pocket
+pol_lit2_przedwiosnie	Easy	Who wrote 'The Coming Spring'?	Stefan Zeromski	Wladyslaw Reymont	Zofia Nalkowska	Maria Dabrowska
+pol_lit2_dziady_autor	Easy	Who wrote 'Forefathers' Eve'?	Adam Mickiewicz	Juliusz Slowacki	Zygmunt Krasinski	Cyprian Norwid
+pol_lit2_balladyna	Easy	Who wrote 'Balladyna'?	Juliusz Slowacki	Adam Mickiewicz	Aleksander Fredro	Stanislaw Wyspianski
+pol_lit2_wesele_autor	Easy	Who wrote 'The Wedding'?	Stanislaw Wyspianski	Gabriela Zapolska	Stefan Zeromski	Juliusz Slowacki
+pol_lit2_zemsta	Easy	Who wrote the comedy 'The Revenge'?	Aleksander Fredro	Stanislaw Wyspianski	Michal Balucki	Gabriela Zapolska
+pol_lit3_pan_tadeusz_bohater	Easy	Who is the main character of 'Pan Tadeusz'?	Tadeusz Soplica	Jacek Soplica	Gerwazy	The Judge
+pol_lit3_lalka_bohater	Easy	Who is the main character of Boleslaw Prus's 'The Doll'?	Stanislaw Wokulski	Ignacy Rzecki	Julian Ochocki	Tomasz Lecki
+pol_lit3_potop_bohater	Easy	Who is the main character of Sienkiewicz's 'The Deluge'?	Andrzej Kmicic	Zbyszko of Bogdaniec	Wolodyjowski	Skrzetuski
+pol3_nobel_szymborska	Easy	Which Polish poet won the Nobel Prize in Literature in 1996?	Wislawa Szymborska	Maria Konopnicka	Halina Poswiatowska	Agnieszka Osiecka
+polx_zelazowa_wola	Easy	In which village was Frederic Chopin born?	Zelazowa Wola	Nieborow	Kazimierz Dolny	Zakopane
+polx_kajko_kokosz	Easy	Which pair of Slavic warriors star in Janusz Christa's classic comics?	Kajko and Kokosz	Bolek and Lolek	Tytus and Romek	Jacek and Placek
+polx_szarik	Easy	What was the name of the dog in the TV series 'Four Tank-Men and a Dog'?	Szarik	Reksio	Burek	Azor
+poly_disco_polo	Easy	Which cheerful Polish pop style became hugely popular in the 1990s?	Disco polo	Polo rock	Mazurka pop	Krakow house
+poly_maryla	Easy	Which Polish singer is famous for 'Niech zyje bal' and a career stretching back to the 1960s?	Maryla Rodowicz	Edyta Gorniak	Kayah	Doda
+poly_kiepscy	Easy	In which city is the sitcom 'Swiat wedlug Kiepskich' set?	Wroclaw	Lodz	Warsaw	Krakow
+pol_polish_comedy_follows	Easy	Which Polish comedy follows the feuding Kargul and Pawlak families?	Sami swoi	Mis	Rejs	Kiler
+pol_1997_comedy_stars	Easy	Which 1997 comedy stars Cezary Pazura as a taxi driver mistaken for a hitman?	Kiler	Chlopaki nie placza	Psy	Vabank
+pol_priest_solves_crimes	Easy	Which TV priest solves crimes in the town of Sandomierz?	Ojciec Mateusz	Ksiadz Robert	Brat Jan	Proboszcz Kazimierz
+pol_sang_hit_parostatek	Easy	Who sang the hit 'Parostatek'?	Krzysztof Krawczyk	Zbigniew Wodecki	Czeslaw Niemen	Andrzej Rosiewicz
+pol_polish_band_fronted	Easy	Which Polish band is fronted by Kazik Staszewski?	Kult	Perfect	Lady Pank	Dzem
+pol_wrote_nad_niemnem	Easy	Who wrote 'Nad Niemnem'?	Eliza Orzeszkowa	Maria Konopnicka	Gabriela Zapolska	Zofia Nalkowska
+pol_wrote_treny_poems	Easy	Who wrote 'Treny', poems of mourning for his little daughter?	Jan Kochanowski	Mikolaj Rej	Adam Mickiewicz	Juliusz Slowacki
+pol_disco_polo_band	Easy	Which disco polo band had a huge hit with 'Ona tanczy dla mnie'?	Weekend	Akcent	Boys	Bayer Full
+pol_comedy_follows_franek	Easy	Which comedy follows Franek Dolas, who believes he started World War II?	Jak rozpetalem druga wojne swiatowa	Czterej pancerni i pies	Stawka wieksza niz zycie	Zezowate szczescie
+pol_boastful_hard_drinking	Easy	Which boastful, hard-drinking nobleman is the comic hero of Sienkiewicz's Trilogy?	Onufry Zagloba	Michal Wolodyjowski	Jan Skrzetuski	Longinus Podbipieta
+pol_city_film_school	Easy	Which city's famous film school, nicknamed 'Filmowka', trained many of Poland's greatest directors?	Lodz	Warsaw	Krakow	Katowice
+pol_tongue_twisting_franek	Easy	Which tongue-twisting name does Franek Dolas give a baffled German officer?	Grzegorz Brzeczyszczykiewicz	Grzegorz Chrzaszczewski	Grzegorz Szczebrzeszynski	Grzegorz Pszczolkowski
+pol_elephant_sienkiewicz_desert	Easy	What is the name of the elephant in Sienkiewicz's 'In Desert and Wilderness'?	King	Saba	Kali	Mea
+pol_sitcom_tram_driver	Easy	In which sitcom is the tram driver Karol Krawczyk the main hero?	Miodowe lata	Swiat wedlug Kiepskich	Rodzina zastepcza	Daleko od noszy
+pol_actor_played_cop	Easy	Which actor played the cop Franz Maurer in the 1992 thriller 'Psy'?	Boguslaw Linda	Daniel Olbrychski	Cezary Pazura	Marek Kondrat
+pol3_chlopi_nobel	Easy	For which novel did Reymont win the Nobel Prize?	The Peasants	The Promised Land	The Comedienne	Fermenty
+polx_tytus	Easy	Who is Tytus in the comics 'Tytus, Romek i A'Tomek'?	A chimpanzee	A robot	A dog	A pirate
+polx_kloss	Easy	What was the name of the Polish spy hero of the TV series 'Stawka wieksza niz zycie'?	Hans Kloss	Hans Brunner	Otto Weiss	Karl Mayer
+polx_mis_bareja	Easy	Which cult 1981 comedy by Stanislaw Bareja mocks everyday life in communist Poland?	Mis	Rejs	Seksmisja	Kiler
+poly_zenek	Easy	Which disco polo star sang 'Przez Twe Oczy Zielone'?	Zenon Martyniuk	Shazza	Boys	Bayer Full
+poly_niemen	Easy	Which singer recorded 'Dziwny jest ten swiat' in 1967?	Czeslaw Niemen	Marek Grechuta	Krzysztof Krawczyk	Seweryn Krajewski
+poly_seksmisja	Easy	In the cult comedy 'Seksmisja', the heroes wake up in a world without what?	Men	Cars	Sunlight	Money
+pol_hosted_quiz_show	Easy	Who has hosted the TV quiz show 'Jeden z dziesieciu' for decades?	Tadeusz Sznuk	Krzysztof Ibisz	Zygmunt Chajzer	Hubert Urbanski
+pol_maria_kownacka_book	Easy	In Maria Kownacka's book, where does Plastus, the little plasticine man, live?	In a pencil case	In a matchbox	In a flowerpot	In a sugar bowl
+pol_lit2_ferdydurke	Medium	Who wrote 'Ferdydurke'?	Witold Gombrowicz	Bruno Schulz	Stanislaw Witkiewicz	Tadeusz Rozewicz
+pol_lit2_sklepy_cynamonowe	Medium	Who wrote 'The Street of Crocodiles' (Cinnamon Shops)?	Bruno Schulz	Witold Gombrowicz	Julian Tuwim	Jaroslaw Iwaszkiewicz
+pol_lit3_pan_tadeusz_miejsce	Medium	Where is 'Pan Tadeusz' set?	Lithuania (in Soplicowo)	Krakow and its outskirts	Warsaw under the Tsar	France, in exile in Paris
+pol_lit3_krzyzacy_bohater	Medium	Who is one of the main characters of Sienkiewicz's 'The Knights of the Cross'?	Zbyszko of Bogdaniec	Zagloba	Wolodyjowski	Kmicic
+ref_pol_kopernik_torun	Medium	In which city was Nicolaus Copernicus born?	Torun	Krakow	Frombork	Gdansk
+pol_techland	Medium	Which Polish studio made the zombie game 'Dying Light'?	Techland	CD Projekt Red	11 bit studios	Bloober Team
+pol_lukasiewicz	Medium	What did Ignacy Lukasiewicz invent in the 1850s?	The modern kerosene lamp	The bulletproof vest	The windscreen wiper	The electric telegraph
+pol_pianista	Medium	Which director won an Oscar for 'The Pianist'?	Roman Polanski	Andrzej Wajda	Krzysztof Kieslowski	Agnieszka Holland
+pol_mazurek_taniec	Medium	Which Polish folk dance in triple time inspired dozens of Chopin's piano pieces?	The mazurka	The polka	The krakowiak	The waltz
+pol_polish_band_1960s	Medium	Which Polish band of the 1960s was nicknamed 'the Polish Beatles'?	Czerwone Gitary	Skaldowie	Trubadurzy	No To Co
+pol_wrote_kamienie_szaniec	Medium	Who wrote 'Kamienie na szaniec' (Stones for the Rampart)?	Aleksander Kaminski	Krzysztof Kamil Baczynski	Tadeusz Borowski	Zofia Kossak
+pol_polish_soap_opera	Medium	Which Polish TV soap opera has been on air the longest, since 1997?	Klan	M jak milosc	Na Wspolnej	Barwy szczescia
+pol_polish_band_sang_2	Medium	Which Polish band sang 'Autobiografia'?	Perfect	Kult	Republika	Budka Suflera
+pol_polish_band_sang_3	Medium	Which Polish band sang 'Jolka, Jolka pamietasz'?	Budka Suflera	Perfect	Dzem	Lady Pank
+pol_city_open_music	Medium	In which city is the Open'er music festival held?	Gdynia	Gdansk	Sopot	Krakow
+pol_polish_painter_nightmarish	Medium	Which Polish painter is famous for nightmarish, dystopian landscapes?	Zdzislaw Beksinski	Jacek Malczewski	Tamara de Lempicka	Jerzy Duda-Gracz
+pol_polish_composer_wrote	Medium	Which Polish composer wrote 'Threnody to the Victims of Hiroshima'?	Krzysztof Penderecki	Witold Lutoslawski	Henryk Gorecki	Karol Szymanowski
+pol_band_sang_1980s	Medium	Which band sang the 1980s anthem 'Kocham wolnosc'?	Chlopcy z Placu Broni	Elektryczne Gitary	Budka Suflera	Czerwone Gitary
+pol_directed_oscar_nominated	Medium	Who directed the Oscar-nominated film 'Cold War' (2018)?	Pawel Pawlikowski	Agnieszka Holland	Wojciech Smarzowski	Jan Komasa
+pol_bialystok_born_eye	Medium	Which Bialystok-born eye doctor created the language Esperanto?	Ludwik Zamenhof	Bronislaw Malinowski	Florian Znaniecki	Jan Baudouin de Courtenay
+pol_small_town_hosted	Medium	Which small town hosted Poland's legendary rock festival of the 1980s?	Jarocin	Opole	Sopot	Wegorzewo
+pol_band_sang_dlugosc	Medium	Which band sang 'Dlugosc dzwieku samotnosci'?	Myslovitz	Hey	Kult	T.Love
+pol_band_sang_1980s_2	Medium	Which band sang the 1980s hit 'Przezyj to sam'?	Lombard	Perfect	Republika	Maanam
+pol_band_fronted_grzegorz	Medium	Which band was fronted by Grzegorz Ciechowski?	Republika	Maanam	Perfect	Kult
+pol_sang_dni_ktorych	Medium	Who sang 'Dni, ktorych nie znamy'?	Marek Grechuta	Tadeusz Wozniak	Krzysztof Krawczyk	Seweryn Krajewski
+pol_band_represented_poland	Medium	Which band represented Poland at Eurovision 2003, singing in several languages?	Ich Troje	Brathanki	Feel	Blue Cafe
+pol_matejko_painting_court	Medium	In Matejko's famous painting, which court jester sits alone and gloomy while a ball goes on behind him?	Stanczyk	Zagloba	Lajkonik	Janosik
+pol_band_fronted_muniek	Medium	Which band is fronted by Muniek Staszczyk?	T.Love	Kult	Hey	Perfect
+pol_band_fronted_beata	Medium	Which band, fronted by Beata Kozidrak, sang 'Biala armia'?	Bajm	Maanam	Lady Pank	Republika
+pol_directed_films_deluge	Medium	Who directed the films 'The Deluge' (1974) and 'With Fire and Sword' (1999)?	Jerzy Hoffman	Andrzej Wajda	Jerzy Kawalerowicz	Krzysztof Zanussi
+pol_main_hero_sienkiewicz	Medium	Who is the main hero of Sienkiewicz's 'With Fire and Sword'?	Jan Skrzetuski	Andrzej Kmicic	Michal Wolodyjowski	Yurko Bohun
+pol_band_recorded_wehikul	Medium	Which band recorded 'Wehikul czasu'?	Dzem	Perfect	Budka Suflera	Lady Pank
+pol_under_tree_renaissance	Medium	Under which tree did the Renaissance poet of Czarnolas famously like to write, praising it in a short verse?	A linden	An oak	A willow	A chestnut
+pol_talking_starling_academy	Medium	What is the name of the talking starling in 'The Academy of Mr. Kleks'?	Mateusz	Adas	Filip	Alojzy
+pol_wrote_tomek_adventure	Medium	Who wrote the 'Tomek' adventure novels, starting with 'Tomek in the Land of Kangaroos'?	Alfred Szklarski	Zbigniew Nienacki	Adam Bahdaj	Kornel Makuszynski
+pol_wrote_rota_patriotic	Medium	Who wrote 'Rota', the patriotic song that begins 'We will not abandon the land of our kin'?	Maria Konopnicka	Eliza Orzeszkowa	Jozef Wybicki	Adam Mickiewicz
+pol_lit3_gucio_zaczarowany	Medium	Who wrote 'About the Dwarves and Orphan Marysia'?	Maria Konopnicka	Julian Tuwim	Jan Brzechwa	Ignacy Krasicki
+pol_cd_projekt	Medium	Which Polish studio made 'The Witcher 3' and 'Cyberpunk 2077'?	CD Projekt Red	Techland	11 bit studios	People Can Fly
+pol_1970s_series_followed	Medium	Which 1970s TV series followed the engineer Stefan Karwowski?	Czterdziestolatek	Alternatywy 4	Zmiennicy	Wojna domowa
+pol_actor_played_ferdynand	Medium	Which actor played Ferdynand Kiepski for over 20 years?	Andrzej Grabowski	Marian Opania	Jerzy Stuhr	Cezary Pazura
+pol_polish_nun_apostle	Medium	Which Polish nun is known as the 'Apostle of Divine Mercy'?	Faustina Kowalska	Urszula Ledochowska	Jadwiga	Teresa of Calcutta
+pol_directed_cult_comedies	Medium	Who directed the cult comedies 'Seksmisja' and 'Va banque'?	Juliusz Machulski	Stanislaw Bareja	Marek Piwowski	Sylwester Checinski
+pol_played_andrzej_kmicic	Medium	Who played Andrzej Kmicic in the 1974 film 'The Deluge'?	Daniel Olbrychski	Jan Nowicki	Tadeusz Lomnicki	Jerzy Zelnik
+pol_polish_city_leonardo	Medium	In which Polish city does Leonardo's 'Lady with an Ermine' hang?	Krakow	Warsaw	Wroclaw	Gdansk
+pol_hit_polish_romantic	Medium	Which hit Polish romantic comedy series, started in 2011, is set around Christmas?	Listy do M.	Testosteron	Nigdy w zyciu!	Lejdis
+pol_wrote_books_koziolek	Medium	Who wrote the books about Koziolek Matolek and his journey to Pacanow?	Kornel Makuszynski	Jan Brzechwa	Julian Tuwim	Maria Konopnicka
+pol_hosted_polish_version	Medium	Who has hosted the Polish version of 'Who Wants to Be a Millionaire?' for most of its run?	Hubert Urbanski	Karol Strasburger	Tadeusz Sznuk	Zygmunt Chajzer
+pol_lit2_nobel_milosz	Medium	Which Polish poet won the Nobel Prize in 1980?	Czeslaw Milosz	Zbigniew Herbert	Tadeusz Rozewicz	Julian Przybos
+pol_lit3_dziady_czesc_iii_miejsce	Medium	In which city is most of Part III of 'Forefathers' Eve' set?	Vilnius	Dresden	Krakow	Paris
+pol_lit3_ludzie_bezdomni_bohater	Medium	Who is the main character of Zeromski's 'Homeless People'?	Tomasz Judym	Cezary Baryka	Stanislaw Wokulski	Janko the Musician
+pol_11_bit	Medium	Which Polish studio made the games 'This War of Mine' and 'Frostpunk'?	11 bit studios	Techland	CD Projekt Red	Bloober Team
+pol_moniuszko	Medium	Which composer wrote 'Halka', often called the Polish national opera?	Stanislaw Moniuszko	Fryderyk Chopin	Karol Szymanowski	Ignacy Paderewski
+pol_ida	Medium	Which Polish film won the Oscar for Best Foreign Language Film in 2015?	Ida	Cold War	Corpus Christi	Katyn
+pol_kieslowski	Medium	Which Polish director made the 'Three Colours' trilogy?	Krzysztof Kieslowski	Andrzej Wajda	Roman Polanski	Pawel Pawlikowski
+polx_frombork	Medium	In which town, where he is buried, did Copernicus spend most of his later life?	Frombork	Torun	Krakow	Olsztyn
+polx_konkurs_chopina	Medium	How often is the famous International Chopin Competition held in Warsaw?	Every five years	Every year	Every two years	Every ten years
+polx_kapuscinski	Medium	Which Polish reporter wrote 'The Emperor' and 'Travels with Herodotus'?	Ryszard Kapuscinski	Melchior Wankowicz	Hanna Krall	Mariusz Szczygiel
+poly_gorniak	Medium	Which singer gave Poland its best-ever Eurovision result, second place in 1994?	Edyta Gorniak	Maryla Rodowicz	Doda	Justyna Steczkowska
+poly_ranczo	Medium	In which fictional village is the TV series 'Ranczo' set?	Wilkowyje	Sielsko	Kozie Wolki	Brzozowka
+pol_bareja_series_set	Medium	Which Bareja TV series is set in a new Warsaw housing block run by caretaker Aniol?	Alternatywy 4	Czterdziestolatek	Zmiennicy	Dom
+pol_polish_band_sang	Medium	Which Polish band sang 'Mniej niz zero'?	Lady Pank	Perfect	Republika	Kult
+pol_blues_rock_band	Medium	Which blues-rock band was fronted by Ryszard Riedel?	Dzem	Budka Suflera	Breakout	T.Love
+pol_actor_played_lead	Medium	Which actor played the lead spy in 'Stawka wieksza niz zycie'?	Stanislaw Mikulski	Daniel Olbrychski	Janusz Gajos	Wojciech Pszoniak
+pol_wrote_medaliony_short	Medium	Who wrote 'Medaliony', short stories about the German occupation?	Zofia Nalkowska	Eliza Orzeszkowa	Maria Dabrowska	Zofia Kossak
+pol_cult_1970_comedy	Medium	In which cult 1970 comedy by Marek Piwowski do passengers on a Vistula cruise hold absurd meetings?	Rejs	Mis	Kiler	Sami swoi
+pol_wajda_film_follows	Medium	Which Wajda film follows three friends building a textile factory in Lodz?	Ziemia obiecana	Czlowiek z marmuru	Popiol i diament	Kanal
+pol_trilogy_hero_dies	Medium	Which Trilogy hero dies when the fortress of Kamieniec Podolski is blown up?	Michal Wolodyjowski	Onufry Zagloba	Jan Skrzetuski	Andrzej Kmicic
+pol_bareja_series_zmiennicy	Medium	In Bareja's TV series 'Zmiennicy', what do the heroes do for a living?	Drive taxis	Run a bar	Build ships	Repair lifts
+pol_hapless_pampalini_classic	Medium	What was the hapless Pampalini in the classic Polish cartoons?	A big-game hunter	A circus clown	A clumsy detective	A shipwrecked sailor
+pol_poet_died_poverty	Medium	Which poet, who died in poverty near Paris in 1883, is often called the 'fourth bard'?	Cyprian Kamil Norwid	Juliusz Slowacki	Zygmunt Krasinski	Adam Asnyk
+pol_duo_created_cabaret	Medium	Which duo created the TV 'Cabaret of Elderly Gentlemen'?	Przybora and Wasowski	Laskowik and Smolen	Mann and Materna	Kobiela and Cybulski
+pol_hosted_radio_trojka	Medium	Which DJ hosted Radio Trojka's famous chart show, the 'Lista Przebojow', for decades?	Marek Niedzwiecki	Piotr Kaczkowski	Wojciech Mann	Jerzy Owsiak
+pol_singer_violinist_recorded	Medium	Which singer and violinist recorded the Polish theme song of the cartoon 'Maya the Bee'?	Zbigniew Wodecki	Krzysztof Krawczyk	Wojciech Mlynarski	Andrzej Rosiewicz
+pol_artist_witkacy_ran	Medium	Which artist, known as Witkacy, ran a 'portrait-painting firm' with strict rules for clients?	Stanislaw Ignacy Witkiewicz	Tadeusz Makowski	Zdzislaw Beksinski	Bruno Schulz
+pol_directed_2004_film	Medium	Who directed the 2004 film 'Wesele', a dark comedy about a village wedding?	Wojciech Smarzowski	Marek Koterski	Wladyslaw Pasikowski	Juliusz Machulski
+pol_wrote_directed_dzien	Medium	Who wrote and directed 'Dzien swira', whose hero counts his steps and rages at the neighbours?	Marek Koterski	Stanislaw Bareja	Marek Piwowski	Olaf Lubaszenko
+pol_singer_recorded_hit	Medium	Which singer recorded a hit 1999 album with Goran Bregovic?	Kayah	Edyta Gorniak	Kasia Kowalska	Natalia Kukulska
+pol_katowice_hip_hop	Medium	Which Katowice hip-hop group is the subject of the 2012 film 'Jestem Bogiem'?	Paktofonika	Kaliber 44	Molesta	Slums Attack
+pol_kind_artist_nikifor	Medium	What kind of artist was Nikifor of Krynica?	A self-taught naive painter	A woodcarver of roadside shrines	A painter of icons on glass	A folk fiddler and singer
+pol_utopian_houses_cezary	Medium	What utopian houses did Cezary Baryka's father dream of?	Houses of glass	Houses of marble	Houses of amber	Houses of steel
+pol_prus_doll_aristocrat	Medium	In Prus's 'The Doll', which aristocrat is the object of the hero's obsession?	Izabela Lecka	Helena Stawska	Kazimiera Wasowska	Florentyna Lecka
+pol_pan_tadeusz_monk	Medium	In 'Pan Tadeusz', who is the monk Robak really?	Jacek Soplica	Gerwazy Rebajlo	The Judge Soplica	Maciej Dobrzynski
+pol_village_farmer_maciej	Medium	In which village does the farmer Maciej Boryna live?	Lipce	Bogdaniec	Spychow	Korczyn
+pol_play_wesele_straw	Medium	In the play 'Wesele', which straw-wrapped figure dances everyone into a trance?	Chochol	Marzanna	Upior	Stanczyk
+pol_murderous_queen_balladyna	Medium	How does the murderous queen Balladyna die at the end of her play?	Struck by lightning	Poisoned by her sister	Drowned in a lake	Beheaded on the scaffold
+pol_wrote_jezycjada_novels	Medium	Who wrote the 'Jezycjada' novels about families in Poznan?	Malgorzata Musierowicz	Joanna Chmielewska	Irena Jurgielewiczowa	Hanna Ozogowska
+pol_town_oder_pol	Medium	In which town on the Oder was the Pol'and'Rock festival held for many years?	Kostrzyn nad Odra	Slubice	Gorzow Wielkopolski	Krosno Odrzanskie
+pol_lit2_herbert_bohater	Medium	What is the character of Zbigniew Herbert's poem cycle called?	Mr. Cogito	Mr. Tadeusz	Mr. Wolodyjowski	Mr. Kleks
+pol_lit3_kordian_bohater	Medium	What is the title character of Slowacki's play called?	Kordian	Konrad	Gustaw	Wallenrod
+pol_lit3_nieboska_komedia	Medium	Who wrote 'The Undivine Comedy'?	Zygmunt Krasinski	Juliusz Slowacki	Adam Mickiewicz	Cyprian Norwid
+pol_lit3_tango_mrozek	Medium	Who wrote the play 'Tango'?	Slawomir Mrozek	Tadeusz Rozewicz	Witold Gombrowicz	Jerzy Andrzejewski
+pol2_banach_dziedzina	Medium	In which field did Stefan Banach work?	Mathematics	Chemistry	Medicine	Astronomy
+polx_bogurodzica	Medium	Which medieval hymn, sung by knights before Grunwald, is the oldest known Polish poem?	Bogurodzica	Gaude Mater Polonia	Rota	Te Deum
+polx_rej	Medium	Which Renaissance writer declared that Poles 'are not geese' and have their own language?	Mikolaj Rej	Jan Kochanowski	Andrzej Frycz Modrzewski	Piotr Skarga
+pol_wrote_inny_swiat	Medium	Who wrote 'Inny swiat' (A World Apart), about a Soviet labour camp?	Gustaw Herling-Grudzinski	Aleksander Wat	Stanislaw Ignacy Witkiewicz	Jozef Czapski
+pol_lively_heroine_nicknamed	Medium	Which lively heroine, nicknamed 'Hajduczek', marries the little knight in Sienkiewicz's Trilogy?	Basia	Olenka	Helena	Krysia
+pol3_nobel_tokarczuk	Hard	What did Olga Tokarczuk win the Nobel Prize for?	Her entire body of literary work	A single historical novel	Journalism	Poetry
+pol_funk	Hard	Which Polish biochemist coined the word 'vitamin' in 1912?	Kazimierz Funk	Ludwik Hirszfeld	Rudolf Weigl	Hilary Koprowski
+pol_gorecki	Hard	Which Polish composer wrote the 'Symphony of Sorrowful Songs'?	Henryk Gorecki	Krzysztof Penderecki	Wojciech Kilar	Witold Lutoslawski
+pol_wrote_pan_samochodzik	Hard	Who wrote the 'Pan Samochodzik' adventure novels?	Zbigniew Nienacki	Edmund Niziurski	Adam Bahdaj	Alfred Szklarski
+pol_painter_babie_lato	Hard	Which painter is famous for 'Babie lato' and the galloping horses of 'Czworka'?	Jozef Chelmonski	Jan Matejko	Jacek Malczewski	Wojciech Kossak
+pol_composer_wrote_music	Hard	Which composer wrote the music for Kieslowski's 'Three Colours' trilogy?	Zbigniew Preisner	Wojciech Kilar	Krzysztof Komeda	Henryk Gorecki
+pol_lwow_born_mathematician	Hard	Which Lwow-born mathematician helped design the American hydrogen bomb?	Stanislaw Ulam	Stefan Banach	Hugo Steinhaus	Waclaw Sierpinski
+pol_polish_violinist_international	Hard	Which Polish violinist has an international violin competition named after him in Poznan?	Henryk Wieniawski	Karol Lipinski	Ignacy Paderewski	Wanda Wilkomirska
+pol_polish_film_star	Hard	Which Polish film star died in 1967 trying to jump onto a moving train at Wroclaw station?	Zbigniew Cybulski	Bogumil Kobiela	Tadeusz Lomnicki	Leon Niemczyk
+pol_painter_critic_created	Hard	Which painter and critic created the 'Zakopane style', based on highlander wooden buildings?	Stanislaw Witkiewicz	Stanislaw Wyspianski	Jan Matejko	Jozef Mehoffer
+pol_polish_made_shooter	Hard	In which Polish-made shooter does time move only when you move?	Superhot	Painkiller	Bulletstorm	Sniper Elite
+pol_actor_played_healer	Hard	Which actor played the healer Kosiba in the 1982 film 'Znachor'?	Jerzy Binczycki	Jerzy Stuhr	Wojciech Pszoniak	Franciszek Pieczka
+pol_band_opole_often	Hard	Which band from Opole is often called Poland's first heavy metal band?	TSA	Kat	Turbo	Vader
+pol_composed_opera_king	Hard	Who composed the opera 'King Roger'?	Karol Szymanowski	Stanislaw Moniuszko	Witold Lutoslawski	Mieczyslaw Karlowicz
+pol_symbolist_painter_created	Hard	Which Symbolist painter created 'Vicious Circle' and 'Melancholia'?	Jacek Malczewski	Jozef Mehoffer	Stanislaw Wyspianski	Jan Matejko
+pol_made_headless_iron	Hard	Who made the headless iron figures 'Unrecognised' in Poznan's Citadel Park?	Magdalena Abakanowicz	Igor Mitoraj	Xawery Dunikowski	Alina Szapocznikow
+pol_polish_studio_created	Hard	Which Polish studio created the shooters 'Painkiller' and 'Bulletstorm'?	People Can Fly	Techland	CI Games	11 bit studios
+pol_actor_played_kargul	Hard	Which actor played Kargul in 'Sami swoi'?	Wladyslaw Hancza	Waclaw Kowalski	Jerzy Janeczek	Franciszek Pieczka
+pol_polish_jazz_pianist	Hard	Which Polish jazz pianist composed the lullaby for Polanski's 'Rosemary's Baby'?	Krzysztof Komeda	Zbigniew Namyslowski	Tomasz Stanko	Wojciech Kilar
+pol_film_won_andrzej	Hard	Which film won Andrzej Wajda the Palme d'Or in Cannes in 1981?	Man of Iron	Man of Marble	Ashes and Diamonds	The Promised Land
+pol_polish_inventor_nicknamed	Hard	Which Polish inventor, nicknamed 'the Polish Edison', designed a bulletproof vest?	Jan Szczepanik	Jan Czochralski	Ignacy Lukasiewicz	Stefan Drzewiecki
+pol_polish_astronomer_discovered	Hard	Which Polish astronomer discovered the first confirmed planets outside the Solar System, in 1992?	Aleksander Wolszczan	Bohdan Paczynski	Andrzej Udalski	Jan Heweliusz
+pol_created_comic_tytus	Hard	Who created the comic 'Tytus, Romek i A'Tomek'?	Henryk Jerzy Chmielewski	Janusz Christa	Tadeusz Baranowski	Grzegorz Rosinski
+pol_polish_artist_drew	Hard	Which Polish artist drew the fantasy comic 'Thorgal'?	Grzegorz Rosinski	Janusz Christa	Tadeusz Baranowski	Boguslaw Polch
+pol_polish_cinematographer_won	Hard	Which Polish cinematographer won Oscars for 'Schindler's List' and 'Saving Private Ryan'?	Janusz Kaminski	Slawomir Idziak	Pawel Edelman	Witold Sobocinski
+pol_polish_composer_won	Hard	Which Polish composer won an Oscar for the score of 'Finding Neverland'?	Jan A. P. Kaczmarek	Zbigniew Preisner	Wojciech Kilar	Abel Korzeniowski
+pol_sang_zegarmistrz_swiatla	Hard	Who sang 'Zegarmistrz swiatla'?	Tadeusz Wozniak	Marek Grechuta	Czeslaw Niemen	Jacek Kaczmarski
+pol_composed_polonaise_andrzej	Hard	Who composed the famous polonaise in Andrzej Wajda's film 'Pan Tadeusz' (1999)?	Wojciech Kilar	Krzysztof Penderecki	Zbigniew Preisner	Jan A. P. Kaczmarek
+pol_polish_mathematician_triangle	Hard	Which Polish mathematician's triangle is a famous fractal?	Waclaw Sierpinski	Stefan Banach	Kazimierz Kuratowski	Alfred Tarski
+pol_city_hosts_malta	Hard	Which city hosts the Malta international theatre festival every summer?	Poznan	Krakow	Wroclaw	Lublin
+pol_band_sang_kocham	Hard	Which band sang 'Kocham Cie jak Irlandie'?	Kobranocka	Elektryczne Gitary	Lady Pank	T.Love
+pol_lit3_trans_atlantyk	Hard	Which Gombrowicz novel was written in exile in Argentina?	Trans-Atlantyk	Ferdydurke	Cosmos	Pornografia
+pol2_szkola_lwowsko_warszawska	Hard	The Lwow-Warsaw School was a school of what?	Logic and philosophy	Painting	Architecture	Military engineering
+pol_tlen_ciekly	Hard	Which two Krakow scientists were the first to liquefy oxygen from the air, in 1883?	Wroblewski and Olszewski	Banach and Steinhaus	Rejewski and Zygalski	Funk and Weigl
+pol_weigl	Hard	Which scientist made a typhus vaccine in Lwow by breeding lice fed on human volunteers?	Rudolf Weigl	Kazimierz Funk	Ludwik Hirszfeld	Hilary Koprowski
+pol_czochralski	Hard	Which Polish chemist invented the method still used to grow silicon crystals for computer chips?	Jan Czochralski	Ignacy Lukasiewicz	Stefan Kudelski	Jacek Karpinski
+pol_kilar	Hard	Which Polish composer wrote the score for Francis Ford Coppola's 'Dracula' (1992)?	Wojciech Kilar	Zbigniew Preisner	Jan A. P. Kaczmarek	Krzysztof Komeda
+pol_painter_slashed_own	Hard	Which painter slashed his own scandalous canvas 'Frenzy of Exultations' with a knife in 1894?	Wladyslaw Podkowinski	Jacek Malczewski	Jozef Mehoffer	Leon Wyczolkowski
+pol_medieval_book_contains	Hard	Which medieval book contains the oldest known sentence written in Polish?	The Book of Henrykow	The Florian Psalter	The Chronicle of Gallus Anonymus	The Bull of Gniezno
+pol_polish_animator_won	Hard	Which Polish animator won an Oscar in 1983 for the short film 'Tango'?	Zbigniew Rybczynski	Tomasz Baginski	Jan Lenica	Walerian Borowczyk
+pol_stanislaw_lem_book	Hard	In which Stanislaw Lem book do the constructor robots Trurl and Klapaucius appear?	The Cyberiad	Solaris	The Star Diaries	His Master's Voice
+pol_pre_war_polish	Hard	Which pre-war Polish film star and singer died in a Soviet labour camp in 1943?	Eugeniusz Bodo	Jan Kiepura	Adolf Dymsza	Aleksander Zabczynski
+pol_polish_animator_nominated	Hard	Which Polish animator was nominated for an Oscar for the short film 'The Cathedral' (2002)?	Tomasz Baginski	Zbigniew Rybczynski	Jan Lenica	Walerian Borowczyk
+pol_wrote_znachor_novel	Hard	Who wrote 'Znachor', the novel about a surgeon who loses his memory?	Tadeusz Dolega-Mostowicz	Helena Mniszkowna	Kornel Makuszynski	Jaroslaw Iwaszkiewicz
+pol_wrote_zdazyc_przed	Hard	Who wrote 'Zdazyc przed Panem Bogiem', a book-length interview with Marek Edelman?	Hanna Krall	Agnieszka Osiecka	Wislawa Szymborska	Zofia Nalkowska
+pol_painter_girl_chrysanthemums	Hard	Which painter is famous for 'Girl with Chrysanthemums' and portraits painted in Paris?	Olga Boznanska	Jozef Mehoffer	Anna Bilinska	Zofia Stryjenska
+pol_polish_singer_born	Hard	Which Polish singer, born in Soviet Uzbekistan, became a star in the USSR as well as Poland?	Anna German	Irena Jarocka	Halina Kunicka	Anna Jantar
+pol_writer_created_eberhard	Hard	Which writer created Eberhard Mock, a detective in pre-war Breslau?	Marek Krajewski	Zygmunt Miloszewski	Joanna Chmielewska	Marek Hlasko
+pol_rotblat	Expert	Which Polish-born physicist won the 1995 Nobel Peace Prize for campaigning against nuclear weapons?	Jozef Rotblat	Lech Walesa	Czeslaw Milosz	Leopold Infeld
+pol_koprowski	Expert	Which Polish-born scientist created the first live polio vaccine?	Hilary Koprowski	Albert Sabin	Rudolf Weigl	Ludwik Hirszfeld
+pol_kudelski	Expert	Which Polish-born engineer created the Nagra portable tape recorder used by film crews?	Stefan Kudelski	Jan Czochralski	Kazimierz Proszynski	Jacek Karpinski
+pol_proszynski	Expert	Which Polish inventor built the 'aeroskop', one of the first hand-held film cameras?	Kazimierz Proszynski	Stefan Kudelski	Jan Szczepanik	Jacek Karpinski
+pol_karpinski	Expert	Which Polish engineer designed the K-202 minicomputer in the early 1970s?	Jacek Karpinski	Jan Czochralski	Stefan Kudelski	Kazimierz Proszynski
+pol_translated_winnie_pooh	Expert	Who translated 'Winnie the Pooh' into Polish as 'Kubus Puchatek'?	Irena Tuwim	Julian Tuwim	Jan Brzechwa	Maria Konopnicka
+pol_wrote_words_christmas	Expert	Who wrote the words of the Christmas carol 'Bog sie rodzi'?	Franciszek Karpinski	Jan Kochanowski	Ignacy Krasicki	Adam Mickiewicz
+pol_young_composer_died	Expert	Which young composer died in a Tatra avalanche in 1909 while out on skis?	Mieczyslaw Karlowicz	Karol Szymanowski	Wladyslaw Zelenski	Ludomir Rozycki
+pol_polish_engineer_invented	Expert	Which Polish engineer invented the rotating tank periscope later used in many Allied tanks?	Rudolf Gundlach	Jozef Kosacki	Tadeusz Sendzimir	Jan Czochralski
+pol_lodz_animation_studio	Expert	Which Lodz animation studio co-produced the Oscar-winning puppet film 'Peter and the Wolf' (2006)?	Se-ma-for	Platige Image	Studio Miniatur Filmowych	Studio Filmow Rysunkowych
+pol_polish_engineer_motorola	Expert	Which Polish engineer at Motorola led the design of the SCR-300 'walkie-talkie'?	Henryk Magnuski	Janusz Groszkowski	Mieczyslaw Wolfke	Stefan Manczarski
+pol_italian_architect_designed	Expert	Which Italian architect designed the Renaissance town of Zamosc?	Bernardo Morando	Bartolomeo Berrecci	Santi Gucci	Giovanni Battista Quadro
+pol_wrote_psie_ktory	Expert	Who wrote 'O psie, ktory jezdzil koleja' about the dog Lampo?	Roman Pisarski	Kornel Makuszynski	Jan Brzechwa	Julian Tuwim
+pol_polish_officer_invented	Expert	Which Polish officer invented the mine detector used by the British at El Alamein?	Jozef Kosacki	Rudolf Gundlach	Jan Szczepanik	Marian Rejewski

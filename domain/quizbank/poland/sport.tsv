@@ -1,0 +1,66 @@
+# Sport: Polish sport and athletes
+#
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+pol_lewandowski_rekord	Easy	Who is the all-time top scorer for Poland's national football team?	Robert Lewandowski	Grzegorz Lato	Zbigniew Boniek	Jakub Blaszczykowski
+pol_swiatek	Easy	Which Polish tennis player became world number one in 2022?	Iga Swiatek	Agnieszka Radwanska	Magda Linette	Magdalena Frech
+pol_motorcycle_sport_raced	Easy	Which motorcycle sport, raced on oval cinder tracks, packs Polish stadiums?	Speedway	Motocross	Enduro	Trial
+pol_polish_ski_jumper_2	Easy	Which Polish ski jumper was nicknamed 'the Eagle from Wisla'?	Adam Malysz	Kamil Stoch	Piotr Zyla	Dawid Kubacki
+pol_polish_strongman_won	Easy	Which Polish strongman won the World's Strongest Man title five times?	Mariusz Pudzianowski	Mateusz Kieliszkowski	Krzysztof Radzikowski	Sebastian Kot
+pol2_skoki_narciarskie_obiekt	Easy	In which Polish town is the Wielka Krokiew ski jumping hill?	Zakopane	Szczyrk	Karpacz	Wisla
+pol_siatkowka	Easy	In which team sport did Poland's men become world champions in 2014 and 2018?	Volleyball	Handball	Basketball	Ice hockey
+pol_swiatek_rg	Easy	Which Grand Slam tournament has Iga Swiatek won most often?	Roland Garros	Wimbledon	The US Open	The Australian Open
+pol_jedrzejczak	Easy	In which sport did Otylia Jedrzejczak win Olympic gold in 2004?	Swimming	Canoeing	Athletics	Cycling
+pol_euro_2012	Easy	In which year did Poland co-host the European Football Championship with Ukraine?	2012	2008	2016	2004
+pol_city_football_club	Easy	In which city does the football club Lech play?	Poznan	Warsaw	Gdansk	Krakow
+pol_polish_cross_country	Easy	Which Polish cross-country skier won Olympic gold in 2010 and 2014?	Justyna Kowalczyk	Iga Swiatek	Anita Wlodarczyk	Otylia Jedrzejczak
+pol_sport_tomasz_gollob	Easy	In which sport did Tomasz Gollob become world champion in 2010?	Speedway	Motocross	Rally driving	Ski jumping
+pol_polish_hammer_thrower	Easy	Which Polish hammer thrower won three Olympic golds in a row?	Anita Wlodarczyk	Kamila Skolimowska	Joanna Fiodorow	Malwina Kopron
+pol3_f1_pierwszy_polak	Easy	Which Pole was the first to win a Formula 1 race?	Robert Kubica	Krzysztof Holowczyc	Kajetan Kajetanowicz	Sobieslaw Zasada
+pol_kozakiewicz	Easy	Which Polish pole vaulter made a famous rude gesture at the Moscow crowd after winning gold in 1980?	Wladyslaw Kozakiewicz	Tadeusz Slusarski	Robert Korzeniowski	Tomasz Majewski
+pol_coached_poland_third	Medium	Who coached Poland to third place at the 1974 World Cup?	Kazimierz Gorski	Antoni Piechniczek	Jacek Gmoch	Leo Beenhakker
+pol_polish_footballer_starred	Medium	Which Polish footballer starred at the 1982 World Cup and then for Juventus?	Zbigniew Boniek	Grzegorz Lato	Wlodzimierz Smolarek	Andrzej Szarmach
+pol_polish_ski_jumper	Medium	Which Polish ski jumper won all four Four Hills Tournament events in 2017/18?	Kamil Stoch	Adam Malysz	Dawid Kubacki	Piotr Zyla
+pol_polish_player_beat	Medium	Which Polish player beat Roger Federer at Wimbledon in 2021, winning the last set 6-0?	Hubert Hurkacz	Kamil Majchrzak	Jerzy Janowicz	Lukasz Kubot
+pol_against_team_poland	Medium	Against which team did Poland play the waterlogged 'water match' in 1974?	West Germany	Brazil	Argentina	Sweden
+pol_polish_heavyweight_disqualified	Medium	Which Polish heavyweight was disqualified twice against Riddick Bowe for low blows?	Andrzej Golota	Tomasz Adamek	Krzysztof Wlodarczyk	Dariusz Michalczewski
+pol_football_club_plays	Medium	Which football club plays in Gdansk?	Lechia	Arka	Pogon	Zaglebie
+pol_two_football_clubs	Medium	Which two famous football clubs share the city of Krakow?	Wisla and Cracovia	Legia and Polonia	Lech and Warta	Gornik and Ruch
+pol_football_club_polish	Medium	Which football club do Polish fans call 'the Military Men' ('Wojskowi')?	Legia Warsaw	Lech Poznan	Wisla Krakow	Slask Wroclaw
+pol_town_silesian_stadium	Medium	In which town is the Silesian Stadium, known as the 'Witches' Cauldron'?	Chorzow	Katowice	Gliwice	Zabrze
+pol3_radwanska_final	Medium	Agnieszka Radwanska played the final of which Grand Slam tournament?	Wimbledon	The US Open	Roland Garros	The Australian Open
+pol_szewinska	Medium	In which sport did Irena Szewinska win seven Olympic medals?	Athletics	Swimming	Fencing	Gymnastics
+pol_kukuczka	Medium	Which Polish climber was the second person to climb all 14 of the world's 8,000-metre peaks?	Jerzy Kukuczka	Krzysztof Wielicki	Wanda Rutkiewicz	Andrzej Zawada
+pol_rutkiewicz	Medium	Who was the first woman to reach the summit of K2, in 1986?	Wanda Rutkiewicz	Junko Tabei	Kinga Baranowska	Alison Hargreaves
+pol_kaminski	Medium	Which Polish explorer reached both the North and the South Pole on foot in 1995?	Marek Kaminski	Jerzy Kukuczka	Tony Halik	Wojciech Cejrowski
+polx_lato	Medium	Which Polish forward was top scorer at the 1974 World Cup?	Grzegorz Lato	Zbigniew Boniek	Andrzej Szarmach	Kazimierz Deyna
+pol_polish_shot_putter	Medium	Which Polish shot putter won Olympic gold in 2008 and 2012?	Tomasz Majewski	Konrad Bukowiecki	Michal Haratyk	Piotr Malachowski
+pol_legia_midfielder_captained	Medium	Which Legia midfielder captained Poland at the 1974 World Cup?	Kazimierz Deyna	Wlodzimierz Lubanski	Jerzy Gorgon	Andrzej Szarmach
+pol_swimmer_otylia_jedrzejczak	Medium	What did swimmer Otylia Jedrzejczak do with a silver medal she won at the 2004 Olympics?	Auctioned it for children with leukaemia	Gave it to her coach as a gift	Buried it in her family's garden	Lost it in a taxi in Athens
+pol_team_knocked_poland	Medium	Which team knocked Poland out of Euro 2016 on penalties in the quarter-finals?	Portugal	Germany	Switzerland	Wales
+pol_polish_boxer_fought	Medium	Which Polish boxer fought Vitali Klitschko for the heavyweight title in Wroclaw in 2011?	Tomasz Adamek	Andrzej Golota	Mariusz Wach	Krzysztof Zimnoch
+pol_polish_football_club	Medium	Which Polish football club is nicknamed 'Biala Gwiazda' (White Star)?	Wisla Krakow	Legia Warszawa	Lech Poznan	Gornik Zabrze
+pol3_stoch_igrzyska	Medium	How many Olympic gold medals has Kamil Stoch won?	Three	One	Two	Four
+pol_korzeniowski	Medium	Which Polish race walker won four Olympic gold medals?	Robert Korzeniowski	Tomasz Majewski	Wladyslaw Kozakiewicz	Jan Mela
+polx_tomaszewski	Medium	Which Polish goalkeeper, mocked as a 'clown', stopped England at Wembley in 1973?	Jan Tomaszewski	Jozef Mlynarczyk	Artur Boruc	Jerzy Dudek
+polx_dudek	Medium	Whose 'spaghetti legs' helped Liverpool win the 2005 Champions League final on penalties?	Jerzy Dudek	Artur Boruc	Wojciech Szczesny	Lukasz Fabianski
+pol3_kubica_wygrana	Hard	Which Grand Prix did Robert Kubica win?	The Canadian Grand Prix	The Monaco Grand Prix	The Italian Grand Prix	The Belgian Grand Prix
+pol_scored_poland_goal	Hard	Who scored Poland's goal in the famous 1-1 draw at Wembley in 1973?	Jan Domarski	Grzegorz Lato	Kazimierz Deyna	Robert Gadocha
+pol_legendary_coach_papa	Hard	Which legendary coach, known as 'Papa', made Polish boxers Olympic champions?	Feliks Stamm	Kazimierz Gorski	Hubert Wagner	Antoni Piechniczek
+pol_coach_nicknamed_executioner	Hard	Which coach, nicknamed 'the Executioner', led Polish men's volleyball to Olympic gold in 1976?	Hubert Wagner	Feliks Stamm	Kazimierz Gorski	Andrea Anastasi
+pol_won_poland_winter	Hard	Who won Poland's first Winter Olympic gold, in ski jumping in 1972?	Wojciech Fortuna	Adam Malysz	Kamil Stoch	Stanislaw Marusarz
+pol_polish_runner_1932	Hard	Which Polish runner, the 1932 Olympic 10,000 m champion, was murdered by the Germans at Palmiry?	Janusz Kusocinski	Bronislaw Malinowski	Zdzislaw Krzyszkowiak	Jozef Szmidt
+pol_polish_cyclist_won	Hard	Which Polish cyclist won the communist-era Peace Race four times?	Ryszard Szurkowski	Czeslaw Lang	Lech Piasecki	Zenon Jaskula
+pol_polish_skier_made	Hard	Which Polish skier made the first full ski descent of K2, in 2018?	Andrzej Bargiel	Adam Bielecki	Krzysztof Wielicki	Jerzy Kukuczka
+pol_polish_club_won	Hard	Which Polish club won the men's volleyball Champions League three years running, 2021-2023?	ZAKSA Kedzierzyn-Kozle	Skra Belchatow	Jastrzebski Wegiel	Resovia Rzeszow
+pol_won_olympic_hammer	Hard	Who won Olympic hammer gold for Poland at Sydney 2000, aged just 17?	Kamila Skolimowska	Anita Wlodarczyk	Joanna Fiodorow	Malwina Kopron
+pol_won_poland_ever	Hard	Who won Poland's first ever Olympic gold medal, in the discus in 1928?	Halina Konopacka	Irena Szewinska	Stanislawa Walasiewicz	Jadwiga Wajs
+pol_polish_club_reached	Hard	Which Polish club reached the European Cup Winners' Cup final in 1970?	Gornik Zabrze	Legia Warsaw	Wisla Krakow	Ruch Chorzow
+pol_coached_poland_third_2	Hard	Who coached Poland to third place at the 1982 World Cup?	Antoni Piechniczek	Kazimierz Gorski	Jacek Gmoch	Leo Beenhakker
+pol_country_poland_beat	Hard	Which country did Poland beat in the third-place match of the 1974 World Cup?	Brazil	Netherlands	West Germany	Italy
+pol_year_poland_footballers	Hard	In which year did Poland's footballers win Olympic gold?	1972	1976	1980	1968
+pol3_malysz_puchary	Hard	How many times did Adam Malysz win the Ski Jumping World Cup?	Four times	Twice	Three times	Five times
+polx_everest_zima	Hard	Polish climbers made the first winter ascent of an 8,000 m peak in 1980. Which one?	Mount Everest	K2	Annapurna	Nanga Parbat
+pol_polish_sabre_fencer	Expert	Which Polish sabre fencer and Olympic champion turned out to be a CIA spy?	Jerzy Pawlowski	Egon Franke	Witold Woyda	Wojciech Zablocki
+pol_polish_runner_won	Expert	Which Polish runner won Olympic steeplechase gold in Rome in 1960?	Zdzislaw Krzyszkowiak	Jozef Szmidt	Janusz Sidlo	Kazimierz Zimny
+pol_nickname_given_poland	Expert	What nickname was given to Poland's great athletics team of the late 1950s?	The Wunderteam	The Golden Eleven	The Iron Squad	The White Eagles
+pol_polish_tennis_player	Expert	Which Polish tennis player reached three Grand Slam singles finals in 1937-1939?	Jadwiga Jedrzejowska	Wojciech Fibak	Ignacy Tloczynski	Jozef Hebda

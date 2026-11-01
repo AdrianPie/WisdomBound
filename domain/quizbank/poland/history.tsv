@@ -1,0 +1,72 @@
+# History to 1918: Polish history up to 1918
+#
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+pol_his2_husaria_kto	Easy	What was the Polish winged hussars famous for?	Heavy cavalry with wings	Marine infantry	Siege artillery	Light archery
+pol_his3_piastowie	Easy	What was the first ruling dynasty of Poland called?	The Piasts	The Jagiellons	The Vasas	The Habsburgs
+pol_his3_jagiellonowie	Easy	Which dynasty ruled Poland after the Piasts (with an Angevin interlude)?	The Jagiellons	The Vasas	The Habsburgs	The Romanovs
+pol_his3_polska_stolica_pierwsza	Easy	Which city was Poland's first capital?	Gniezno	Warsaw	Krakow	Poznan
+pol_polish_city_capital	Easy	Which Polish city was the capital before Warsaw?	Krakow	Gniezno	Poznan	Plock
+pol_his2_potop_szwedzki	Easy	Which invasion do we call 'the Swedish Deluge'?	Sweden's invasion of Poland in the 17th century	Denmark's invasion of Norway	Russia's invasion in the 18th century	The Teutonic Knights' invasion
+pol_his2_chrzest_kto	Easy	Which ruler adopted the baptism of Poland?	Mieszko I	Boleslaw the Brave	Casimir the Restorer	Wladyslaw the Elbow-high
+pol_his3_zygmunt_iii_stolica	Easy	Which king moved Poland's capital to Warsaw?	Sigismund III Vasa	Wladyslaw Jagiello	Casimir the Great	John III Sobieski
+pol3_chrobry	Easy	Who was the first crowned King of Poland?	Boleslaw the Brave	Mieszko I	Casimir the Great	Wladyslaw the Elbow-high
+ref_pol_sobieski_wieden	Easy	Which Polish king led the relief of Vienna in 1683?	John III Sobieski	Stephen Bathory	Sigismund III Vasa	Wladyslaw IV Vasa
+polx_kazimierz_kamien	Easy	Which king supposedly found Poland built of wood and left it built of stone?	Casimir the Great	Boleslaw the Brave	Sigismund the Old	Wladyslaw Jagiello
+pol_farm_tools_straightened	Easy	Which farm tools, straightened into pikes, did the peasant soldiers of the 1794 uprising carry into battle?	Scythes	Pitchforks	Flails	Sickles
+pol_his2_bitwa_grunwald_kto	Easy	Who commanded the Polish-Lithuanian forces at Grunwald?	Wladyslaw Jagiello	Casimir the Great	Vytautas alone	Boleslaw the Wrymouth
+pol_his2_konstytucja_3maja_rok	Easy	What was the Constitution of May 3 in Europe?	The first in Europe	The third in Europe	The first in the world	The last of the 18th century
+pol_his2_liberum_veto	Easy	What allowed a single deputy's vote to dissolve the Commonwealth's parliament?	Liberum veto	Rokosz	Confederation	Election viritim
+pol_his3_wojna_o_niepodleglosc_usa_pomoc	Easy	Which Pole fought in the American War of Independence?	Tadeusz Kosciuszko	Jozef Pilsudski	John III Sobieski	Wladyslaw Sikorski
+pol3_ostatni_krol	Easy	Who was the last King of Poland?	Stanislaw August Poniatowski	John III Sobieski	Augustus III	Stanislaw Leszczynski
+dpt_pol_rozbiory_panstwa	Easy	Which three powers partitioned the country in the 18th century?	Russia, Prussia and Austria	Russia, Sweden and Turkey	Prussia, France and Austria	Austria, Hungary and Russia
+pol_his2_rozbior_pierwszy	Medium	In which year did the first partition of Poland occur?	1772	1793	1795	1764
+pol_his2_unia_lubelska_co	Medium	What was formed by the Union of Lublin?	The Polish-Lithuanian Commonwealth	The Hanseatic League	The Congress Kingdom	The Teutonic Order's state
+pol_his2_wielka_emigracja	Medium	After which uprising did the Great Emigration take place?	The November Uprising	The January Uprising	The Greater Poland Uprising	The Kosciuszko Uprising
+pol_his2_kosciuszko_bitwa	Medium	Near which town did Kosciuszko win a battle in 1794?	Raclawice	Maciejowice	Grochow	Ostroleka
+pol_his3_akademia_krakowska	Medium	Who founded the Krakow Academy (today's Jagiellonian University)?	Casimir the Great	Wladyslaw Jagiello	Boleslaw the Brave	Sigismund the Old
+pol_last_king_jagiellonian	Medium	Who was the last king of the Jagiellonian dynasty?	Sigismund II Augustus	Sigismund I the Old	Stefan Batory	Wladyslaw IV
+pol_mieszko_czech_wife	Medium	What was the name of Mieszko I's Czech wife?	Dobrawa	Jadwiga	Rycheza	Wanda
+pol_last_leader_january	Medium	Who was the last leader of the January Uprising, executed in 1864?	Romuald Traugutt	Ludwik Mieroslawski	Marian Langiewicz	Jaroslaw Dabrowski
+pol_teutonic_grand_master	Medium	What did the Teutonic Grand Master send to Jagiello before Grunwald as a taunt?	Two naked swords	A dead crow	A white flag	A broken lance
+pol_state_napoleon_create	Medium	Which state did Napoleon create from Polish lands in 1807?	The Duchy of Warsaw	The Congress Kingdom	The Free City of Krakow	The Grand Duchy of Posen
+pol_country_dabrowski_polish	Medium	In which country were Dabrowski's Polish Legions formed, where the national anthem was written in 1797?	Italy	France	Switzerland	Austria
+pol_his3_pulaski	Medium	Which Pole died fighting for the American side in the War of Independence?	Casimir Pulaski	Tadeusz Kosciuszko	Jozef Bem	Ignacy Moscicki
+dpt_pol_nihil_novi	Medium	What did the Nihil Novi act of 1505 establish?	No new law without the parliament	A ban on all foreign merchants	A permanent tax for the king	A truce with the Teutonic Order
+polx_jadwiga	Medium	Which ruler of Poland was crowned 'king', not queen, in 1384?	Jadwiga	Bona Sforza	Anna Jagiellon	Marie Casimire
+polx_bona	Medium	Which Italian-born queen is said to have brought leeks, celery and other vegetables to Poland?	Bona Sforza	Marie Casimire	Marie Louise Gonzaga	Cecilia Renata
+polx_biskupin	Medium	What is Biskupin famous for?	An ancient wooden settlement	A Gothic cathedral	A deep salt mine	A Renaissance castle
+pol_piast_ruler_testament	Medium	Which Piast ruler's testament of 1138 split Poland among his sons?	Boleslaw III Wrymouth	Mieszko II Lambert	Casimir the Restorer	Boleslaw the Bold
+pol_bishop_krakow_killed	Medium	Which bishop of Krakow was killed in 1079 on the orders of King Boleslaw the Bold?	St Stanislaus	St Adalbert	St Florian	St Hyacinth
+pol_prince_marshal_france	Medium	Which prince and marshal of France drowned in the Elster river at Leipzig in 1813?	Jozef Poniatowski	Jan Henryk Dabrowski	Jozef Zajaczek	Jozef Bem
+pol_elected_king_poland	Medium	Which elected king of Poland had been prince of Transylvania?	Stefan Batory	Henry of Valois	Sigismund III Vasa	John III Sobieski
+pol_prior_led_defence	Medium	Which prior led the defence of Jasna Gora against the Swedes in 1655?	Augustyn Kordecki	Piotr Skarga	Stefan Czarniecki	Jakub Wujek
+pol_king_famed_small	Medium	Which king, famed for his small height, reunited Poland and was crowned in Krakow in 1320?	Wladyslaw the Elbow-high	Boleslaw the Wrymouth	Casimir the Restorer	Mieszko the Old
+pol_polish_duke_invited	Medium	Which Polish duke invited the Teutonic Knights to fight the pagan Prussians in 1226?	Konrad of Masovia	Henry the Bearded	Leszek the White	Boleslaw the Curly
+pol_king_stanislaw_august	Medium	What did King Stanislaw August famously host for writers and scholars every week at the Royal Castle?	Thursday dinners	Sunday concerts	Friday balls	Monday hunts
+pol_1792_confederation_magnates	Medium	Which 1792 confederation of magnates, whose name became a byword for treason, invited Russian troops into Poland?	Targowica	Bar	Radom	Tyszowce
+pol_lithuanian_countess_fought	Medium	Which Lithuanian countess fought in the November Uprising and inspired the poem 'The Death of the Colonel'?	Emilia Plater	Klaudyna Potocka	Anna Pustowojtowna	Izabela Czartoryska
+pol_town_polish_schoolchildren	Medium	In which town did Polish schoolchildren go on strike in 1901 rather than say their prayers in German?	Wrzesnia	Gniezno	Kalisz	Leszno
+pol_polish_peasant_lived	Medium	Which Polish peasant lived in a circus wagon to get around a Prussian ban on building a house?	Michal Drzymala	Jakub Szela	Jan Kilinski	Hipolit Cegielski
+pol_1794_uprising_peasant	Medium	During the 1794 uprising, which peasant soldier captured a Russian cannon by smothering its fuse with his cap?	Bartosz Glowacki	Jan Kilinski	Jakub Jasinski	Jakub Szela
+pol_deputy_famously_lay	Medium	Which deputy famously lay across the Sejm doorway in 1773 to protest against the First Partition?	Tadeusz Rejtan	Hugo Kollataj	Stanislaw Staszic	Jan Kilinski
+pol_emperor_came_gniezno	Medium	Which emperor came to Gniezno in the year 1000 to pray at St Adalbert's tomb?	Otto III	Otto I	Henry II	Frederick Barbarossa
+pol_battle_972_mieszko	Medium	Which battle of 972 did Mieszko I win against Margrave Hodo?	Cedynia	Psie Pole	Plowce	Legnica
+pol_young_king_poland	Medium	Which young king of Poland and Hungary died fighting the Ottomans at Varna in 1444?	Wladyslaw III	Wladyslaw II Jagiello	Casimir IV	John I Albert
+pol_country_polish_light	Medium	In which country did Polish light cavalry make the famous charge at Somosierra in 1808?	Spain	Portugal	Italy	Austria
+pol2_elekcja_pierwsza	Medium	Who was the first king elected in a free election in Poland?	Henry of Valois	Stephen Bathory	Sigismund III Vasa	Wladyslaw IV
+pol_1605_battle_polish	Hard	In which 1605 battle did Polish-Lithuanian hussars crush a Swedish army about three times larger?	Kircholm	Klushino	Chocim	Beresteczko
+pol_became_king_jan	Hard	Before he became king, Jan Sobieski beat the Ottomans in 1673 at which fortress?	Chocim	Kamieniec Podolski	Vienna	Cecora
+pol_city_tiny_independent	Hard	Which city was a tiny independent 'free city' republic from 1815 to 1846?	Krakow	Gdansk	Torun	Lublin
+pol_king_received_prussian	Hard	Which king received the 'Prussian Homage' of 1525, later painted by Matejko?	Sigismund I the Old	Sigismund II Augustus	Stephen Bathory	Casimir IV Jagiellon
+pol_russian_grand_duke	Hard	Which Russian grand duke escaped the cadets who stormed the Belweder Palace in November 1830?	Grand Duke Constantine	Grand Duke Michael	Grand Duke Nicholas	Grand Duke Alexander
+pol_12th_century_bronze	Hard	What do the 12th-century bronze doors of Gniezno Cathedral show?	The life of St Adalbert	The baptism of Mieszko I	The coronation of Chrobry	The legend of Lech's eagle
+pol_document_991_placed	Hard	Which document of about 991 placed Mieszko I's realm under papal protection?	Dagome iudex	The Bull of Gniezno	The Golden Bull	The Act of Gniezno
+pol_peasant_leader_headed	Hard	Which peasant leader headed the bloody 1846 uprising against the nobles of Galicia?	Jakub Szela	Bartosz Glowacki	Jan Kilinski	Jozef Sowinski
+pol_hetman_crushed_russian	Expert	Which hetman crushed a Russian-Swedish army at Klushino in 1610, opening the road to Moscow?	Stanislaw Zolkiewski	Jan Karol Chodkiewicz	Stanislaw Koniecpolski	Jan Zamoyski
+pol_polish_king_later	Expert	Which Polish king later became Duke of Lorraine and died after his robe caught fire by the hearth?	Stanislaw Leszczynski	Augustus III	Michal Korybut Wisniowiecki	John II Casimir
+pol_abdicating_1668_polish	Expert	After abdicating in 1668, which Polish king became an abbot in France?	John II Casimir	Henry of Valois	Stanislaw Leszczynski	Michal Korybut Wisniowiecki
+pol_battle_legnica_1241	Expert	After the Battle of Legnica in 1241, how was the headless body of Duke Henry the Pious recognised, according to chronicles?	By six toes on one foot	By his signet ring	By a scar on his chest	By his embroidered shirt
+pol_1902_international_court	Expert	In 1902, an international court in Graz settled a quarrel between Galicia and Hungary over which Tatra lake?	Morskie Oko	Czarny Staw	Wielki Staw	Strbske Pleso
+pol_prehistoric_miners_dig	Expert	What did prehistoric miners dig for at Krzemionki, a UNESCO site near Ostrowiec Swietokrzyski?	Striped flint	Rock salt	Amber	Iron ore
+pol_krakow_site_pilsudski	Expert	From which Krakow site did Pilsudski's First Cadre Company march out in August 1914?	Oleandry	Blonia	Wawel	Krzemionki
+pol_pilsudski_comrades_rob	Expert	What did Pilsudski and his comrades rob at Bezdany in 1908?	A Russian mail train	A tsarist bank in Warsaw	A gold convoy in Lodz	A ship in the port of Riga

@@ -1,0 +1,108 @@
+# 20th Century & Today: Polish history 1918 to today
+#
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+polx_1_wrzesnia	Easy	On what date in 1939 did Germany invade Poland?	1 September	11 November	17 September	1 August
+pol_1920_battle_warsaw	Easy	What is the 1920 Battle of Warsaw popularly called?	The Miracle on the Vistula	The Miracle of Grunwald	The Warsaw Wonder	The Eagle's Victory
+pol_lower_house_polish	Easy	What is the lower house of the Polish parliament called?	Sejm	Senat	Rada	Duma
+pol_polish_president_died	Easy	Which Polish president died in the 2010 plane crash near Smolensk?	Lech Kaczynski	Aleksander Kwasniewski	Bronislaw Komorowski	Lech Walesa
+pol_poland_president_1995	Easy	Who was Poland's president from 1995 to 2005?	Aleksander Kwasniewski	Lech Walesa	Lech Kaczynski	Wojciech Jaruzelski
+pol_priest_murdered_communist	Easy	Which priest was murdered by the communist secret police in 1984?	Jerzy Popieluszko	Stefan Wyszynski	Maksymilian Kolbe	Jozef Tischner
+pol_franciscan_friar_gave	Easy	Which Franciscan friar gave his life in Auschwitz in place of another prisoner?	Maksymilian Kolbe	Jerzy Popieluszko	Adam Chmielowski	Rafal Kalinowski
+pol_his2_powstanie_warszawskie	Easy	In which year did the Warsaw Uprising break out?	1944	1943	1939	1945
+pol2_walesa_funkcja	Easy	What office did Lech Walesa hold in the 1990s?	President of Poland	Prime Minister	Speaker of the Sejm	Mayor of Gdansk
+ref_pol_solidarnosc_miasto	Easy	In which city's shipyard was the Solidarity movement born?	Gdansk	Gdynia	Szczecin	Warsaw
+polx_monte_cassino	Easy	Which Italian hilltop monastery did Polish soldiers capture in 1944?	Monte Cassino	Montecatini	San Marino	Monte Carlo
+poly_westerplatte	Easy	Which Gdansk peninsula held out for seven days in September 1939?	Westerplatte	Hel	Oksywie	Sobieszewo
+pol_poland_chief_state	Easy	Who was Poland's Chief of State when it regained independence in 1918?	Jozef Pilsudski	Roman Dmowski	Ignacy Paderewski	Wojciech Korfanty
+pol_communist_leader_declared	Easy	Which communist leader declared martial law in Poland in 1981?	Wojciech Jaruzelski	Edward Gierek	Wladyslaw Gomulka	Boleslaw Bierut
+pol_anti_communist_partisans	Easy	What are the anti-communist partisans who fought on after 1945 commonly called in Poland?	The Cursed Soldiers	The Grey Ranks	The Silent Unseen	The Home Guard
+pol_1990_shock_therapy	Easy	Whose 1990 'shock therapy' plan switched Poland to a market economy?	Leszek Balcerowicz	Tadeusz Mazowiecki	Jacek Kuron	Hanna Suchocka
+pol_flowers_polish_song	Easy	Which flowers does the famous Polish song about the Battle of Monte Cassino sing of?	Red poppies	White roses	Cornflowers	Lilies of the valley
+pol2_okragly_stol_rok	Easy	In which year did the Round Table Talks take place?	1989	1980	1981	1990
+pol2_stan_wojenny_rok	Easy	In which year was martial law introduced in Poland?	1981	1976	1980	1983
+ref_pol_pilsudski_1920	Easy	Who was the Polish commander-in-chief at the Battle of Warsaw in 1920?	Jozef Pilsudski	Wladyslaw Sikorski	Jozef Haller	Roman Dmowski
+ref_pol_armia_krajowa	Easy	What was the main Polish underground army of World War II called?	The Home Army	The People's Army	The Polish Legions	The Blue Army
+polx_17_wrzesnia	Easy	Which country invaded Poland from the east on 17 September 1939?	The Soviet Union	Lithuania	Romania	Hungary
+pol_his3_polski_rzad_na_uchodzstwie	Easy	Where did the Polish government-in-exile operate during World War II?	London (earlier in France)	Moscow, alongside the Red Army	Washington, with the Allies	Rome, after the Italian campaign
+pol_his3_dywizjon_303	Easy	What was 303 Squadron known for in the Battle of Britain?	It was one of the RAF's most effective fighter squadrons	It defended Warsaw through September 1939	It fought its way up the hill at Monte Cassino	It was a naval unit escorting convoys
+pol2_polska_ludowa_nazwa	Easy	What was the official name of the Polish state between 1952 and 1989?	The Polish People's Republic	The Second Polish Republic	The Congress Kingdom	The Polish Commonwealth
+pol2_nato_rok	Medium	In which year did Poland join NATO?	1999	1991	2004	1997
+pol_walesa_nobel	Medium	Which Pole won the Nobel Peace Prize in 1983?	Lech Walesa	John Paul II	Tadeusz Mazowiecki	Bronislaw Geremek
+pol_hermaszewski	Medium	Who was the first Pole in space, in 1978?	Miroslaw Hermaszewski	Slawosz Uznanski	Jerzy Kukuczka	Wojciech Fibak
+polx_wojtek	Medium	What kind of animal was Wojtek, who served with the Polish army in World War II?	A bear	A dog	A horse	A goat
+pol_between_world_wars	Medium	Between the world wars, which city was a 'Free City' under League of Nations protection?	Gdansk	Szczecin	Wroclaw	Krakow
+pol_happened_poland_june	Medium	What happened in Poland on 4 June 1989?	The first partly free elections	The founding of Solidarity	The end of martial law	Poland joined NATO
+pol_commanded_defence_westerplatte	Medium	Who commanded the defence of Westerplatte in September 1939?	Henryk Sucharski	Stefan Starzynski	Tadeusz Kutrzeba	Wladyslaw Raginis
+pol_cardinal_primate_poland	Medium	Which cardinal, Primate of Poland, was called the 'Primate of the Millennium'?	Stefan Wyszynski	Jozef Glemp	Karol Wojtyla	August Hlond
+pol_hitler_wolf_lair	Medium	Hitler's 'Wolf's Lair' headquarters stood in which Polish region?	Masuria	Silesia	Pomerania	Podlasie
+pol_polish_prime_minister	Medium	Which Polish prime minister-in-exile died in a plane crash at Gibraltar in 1943?	Wladyslaw Sikorski	Stanislaw Mikolajczyk	Ignacy Moscicki	Jozef Beck
+pol_politician_led_national	Medium	Which politician led the National Democrats and signed the Treaty of Versailles for Poland?	Roman Dmowski	Jozef Pilsudski	Wincenty Witos	Ignacy Daszynski
+pol_communist_leader_came	Medium	Which communist leader came to power during the 'thaw' of October 1956?	Wladyslaw Gomulka	Boleslaw Bierut	Edward Gierek	Wojciech Jaruzelski
+pol_december_1981_children	Medium	On 13 December 1981, which children's TV show did Polish kids find replaced by General Jaruzelski?	Teleranek	Dobranocka	Domowe Przedszkole	Ciuchcia
+pol_buy_pewex_shops	Medium	What could you buy in the Pewex shops of communist Poland?	Western goods for dollars	Only goods made in the USSR	Food at half price for workers	Second-hand clothes from abroad
+pol_successful_uprising_broke	Medium	Which successful uprising broke out in Poznan in December 1918?	The Greater Poland Uprising	The Silesian Uprising	The November Uprising	The Kosciuszko Uprising
+pol_silesian_uprisings_between	Medium	How many Silesian Uprisings were there between 1919 and 1921?	Three	Two	Four	Five
+pol_underground_polish_scout	Medium	What was the underground Polish Scout organisation of World War II called?	The Grey Ranks	The Cursed Soldiers	The Silent Unseen	The Polish Legions
+pol_communist_era_riot	Medium	What were the communist-era riot police units in Poland called?	ZOMO	PZPR	PKP	PGR
+pol_september_1939_gdansk	Medium	On 1 September 1939, which Gdansk building did its own clerks defend against German attack for most of the day?	The Polish Post Office	The Town Hall	The Shipyard Gate	The Railway Station
+pol_jokes_empty_shops	Medium	In jokes about empty shops in communist Poland, which product was often the only thing on the shelves?	Vinegar	Mustard	Salt	Matches
+pol_katowice_coal_mine	Medium	At which Katowice coal mine did police kill nine striking miners in December 1981?	Wujek	Guido	Halemba	Wieczorek
+pol_river_caused_1997	Medium	Which river caused the 1997 'flood of the millennium' that swamped Wroclaw and Opole?	The Oder	The Vistula	The Warta	The Bug
+pol_world_pianist_became	Medium	Which world-famous pianist became Polish prime minister in 1919?	Ignacy Jan Paderewski	Frederic Chopin	Artur Rubinstein	Karol Szymanowski
+pol_kotwica_anchor_sign	Medium	What does the Kotwica (anchor) sign, painted on walls across Warsaw, stand for?	Fighting Poland	The Polish Navy	Polish Scouting	Solidarity
+pol_time_day_sirens	Medium	At what time of day do sirens sound across Warsaw every 1 August to mark the start of the 1944 Uprising?	5 p.m.	8 a.m.	Noon	9 p.m.
+pol_communist_poland_flower	Medium	In communist Poland, which flower did women traditionally receive on Women's Day, 8 March?	A carnation	A tulip	A rose	A daffodil
+ref_pol_getto_rok	Medium	In which year did the Warsaw Ghetto Uprising break out?	1943	1939	1944	1945
+pol_mazowiecki	Medium	Who became the first non-communist prime minister in the Eastern Bloc, in 1989?	Tadeusz Mazowiecki	Lech Walesa	Bronislaw Geremek	Jacek Kuron
+pol_uznanski	Medium	Which Pole flew to the International Space Station in 2025?	Slawosz Uznanski-Wisniewski	Miroslaw Hermaszewski	Marek Kaminski	Jerzy Kukuczka
+polx_sendlerowa	Medium	Which Polish social worker saved about 2,500 Jewish children from the Warsaw Ghetto?	Irena Sendler	Zofia Kossak	Wanda Rutkiewicz	Maria Dabrowska
+pol_poland_president_assassinated	Medium	Who was Poland's first president, assassinated just days after taking office in 1922?	Gabriel Narutowicz	Stanislaw Wojciechowski	Ignacy Moscicki	Jozef Pilsudski
+pol_city_workers_rise	Medium	In which city did workers rise up against the communist authorities in June 1956?	Poznan	Gdansk	Radom	Lodz
+pol_led_poland_communist	Medium	Who led Poland's communist government through most of the 1970s?	Edward Gierek	Wladyslaw Gomulka	Wojciech Jaruzelski	Stanislaw Kania
+pol_general_led_polish	Medium	Which general led a Polish army out of the Soviet Union to the Middle East in 1942?	Wladyslaw Anders	Wladyslaw Sikorski	Stanislaw Maczek	Tadeusz Bor-Komorowski
+pol_polish_courier_brought	Medium	Which Polish courier brought the Allies some of the first eyewitness reports of the Holocaust?	Jan Karski	Witold Pilecki	Jan Nowak-Jezioranski	Irena Sendler
+pol_became_poland_female	Medium	Who became Poland's first female prime minister, in 1992?	Hanna Suchocka	Ewa Kopacz	Beata Szydlo	Henryka Bochniak
+pol_august_1980_strike	Medium	The August 1980 strike at the Lenin Shipyard began over the sacking of which crane operator?	Anna Walentynowicz	Alina Pienkowska	Henryka Krzywonos	Danuta Walesa
+pol_politician_led_third	Medium	Which politician led the Third Silesian Uprising of 1921?	Wojciech Korfanty	Jozef Pilsudski	Roman Dmowski	Wincenty Witos
+pol_1943_young_warsaw	Medium	In 1943, what did young Warsaw scouts achieve in the famous 'Operation Arsenal'?	Freed captured comrades from a Gestapo truck	Blew up a German ammunition depot	Stole weapons from a German armoury	Shot the Gestapo chief of Warsaw
+pol_1995_redenomination_zloty	Medium	In the 1995 redenomination of the zloty, how many zeros were knocked off the old money?	Four	Three	Two	Six
+pol_mayor_warsaw_led	Medium	Which mayor of Warsaw led the city's resistance in September 1939 with his radio speeches?	Stefan Starzynski	Gabriel Narutowicz	Juliusz Rommel	Wladyslaw Sikorski
+pol_cichociemni_world_war	Medium	Who were the 'Cichociemni' of World War II?	Paratroopers sent into occupied Poland	Printers of underground newspapers	Codebreakers working at Bletchley Park	Couriers smuggling mail over the Tatras
+pol_polish_town_bombed	Medium	Which Polish town was bombed at dawn on 1 September 1939, in what is often called the first air raid of the war?	Wielun	Kutno	Sieradz	Plock
+pol_krojanty_1939_polish	Medium	At Krojanty in 1939, Polish lancers charged German infantry. What did propaganda later claim they had charged?	Tanks	Armoured trains	Artillery batteries	Bomber airfields
+pol_play_banned_1968	Medium	Which play, banned in 1968 for its anti-Russian lines, sparked student protests in Warsaw?	Forefathers' Eve	Kordian	The Wedding	Tango
+pol_lech_walesa_use	Medium	What did Lech Walesa use to sign the Gdansk Agreement in 1980?	A souvenir pen with the Pope's picture	A pen borrowed from a Western reporter	The pen of the shipyard's director	A pencil stub from the strike hall
+pol2_traktat_ryski	Medium	The 1921 Treaty of Riga ended a war between Poland and which state?	Soviet Russia	Germany	Lithuania	Czechoslovakia
+pol2_gdynia_port_rok	Medium	In which decade was the port of Gdynia built from scratch?	The 1920s	The 1900s	The 1940s	The 1950s
+dpt_pol_nowa_huta	Medium	What was Nowa Huta built as?	A model workers' town by a steelworks	A fortress guarding the river crossing	A spa resort in the southern mountains	A port district added after the war
+polx_pilecki	Medium	Which Polish officer let himself be imprisoned in Auschwitz to report on it?	Witold Pilecki	Jan Karski	Stanislaw Sosabowski	Emil Fieldorf
+pol_demands_august_1980	Medium	On what were the 21 demands of the August 1980 strikers famously written?	Wooden boards	A shipyard flag	A church banner	A torn sail
+pol_home_army_1944	Medium	What was the Home Army's 1944 plan of uprisings against the retreating Germans called?	Operation Tempest	Operation Wachlarz	Operation Bagration	Operation Market Garden
+pol_2015_two_treasure	Medium	In 2015, two treasure hunters near Walbrzych caused a media frenzy by claiming to have found what?	A Nazi 'gold train' in a tunnel	A Viking longship in a lake	A Roman legion's war chest	A mammoth frozen in a cave
+pol2_konstytucja_1997	Hard	In which year was Poland's current constitution adopted?	1997	1989	1992	2004
+pol_polish_general_led	Hard	Which Polish general led the 1st Armoured Division in Normandy in 1944?	Stanislaw Maczek	Wladyslaw Anders	Stanislaw Sosabowski	Wladyslaw Sikorski
+pol_jozef_pilsudski_heart	Hard	Where is Jozef Pilsudski's heart buried?	In Vilnius, in his mother's grave	In Wawel Cathedral	In Warsaw's Powazki Cemetery	In the Belweder Palace
+pol_city_young_worker	Hard	In which city was the young worker 'Janek Wisniewski' of the famous ballad shot in December 1970?	Gdynia	Gdansk	Szczecin	Elblag
+pol_code_polish_underground	Hard	What was the code name of the Polish underground Council to Aid Jews?	Zegota	Kedyw	Wachlarz	Burza
+pol_wartime_courier_courier	Hard	Which wartime courier, known as 'the Courier from Warsaw', later ran Radio Free Europe's Polish service?	Jan Nowak-Jezioranski	Jan Karski	Jozef Retinger	Witold Pilecki
+pol_polish_general_led_2	Hard	Which Polish general led the paratroopers who fought at Arnhem in 1944?	Stanislaw Sosabowski	Stanislaw Maczek	Wladyslaw Anders	Tadeusz Kutrzeba
+pol_poland_bronze_dwarf	Hard	Poland's famous bronze dwarf statues honour which 1980s anti-communist movement that painted dwarves on city walls?	Orange Alternative	Fighting Solidarity	Freedom and Peace	Polish Green Party
+pol_foreign_minister_told	Hard	Which foreign minister told the Sejm in 1939 that the one priceless thing is honour?	Jozef Beck	August Zaleski	Edward Rydz-Smigly	Ignacy Moscicki
+pol_young_medic_anti	Hard	Which young medic of the anti-communist underground, executed at 17 in 1946, is remembered as 'Inka'?	Danuta Siedzikowna	Krystyna Krahelska	Elzbieta Zawacka	Wanda Gertz
+pol_soviet_car_built	Hard	Which Soviet car was built under licence in Warsaw as the FSO Warszawa?	The GAZ-M20 Pobeda	The Moskvitch 400	The Volga GAZ-21	The ZIS-110
+pol_commanded_home_army	Hard	Who commanded the Home Army during the Warsaw Uprising?	Tadeusz Bor-Komorowski	Stefan Rowecki	Wladyslaw Sikorski	Leopold Okulicki
+pol_1979_polish_pope	Hard	Where in 1979 did the Polish pope say 'Let your Spirit descend and renew the face of the earth. Of this land'?	Victory Square in Warsaw	Main Market Square in Krakow	Jasna Gora in Czestochowa	Castle Square in Warsaw
+pol_1939_battle_often	Hard	Which 1939 battle is often called 'the Polish Thermopylae'?	Wizna	Mokra	Bzura	Kock
+pol_polish_submarine_escaped	Hard	Which Polish submarine escaped internment in Tallinn in 1939 and reached Britain without charts?	ORP Orzel	ORP Sep	ORP Wilk	ORP Sokol
+pol_town_general_haller	Hard	In which town did General Haller symbolically 'wed' Poland to the sea in 1920?	Puck	Gdynia	Kolobrzeg	Hel
+pol_polish_major_nicknamed	Hard	Which Polish major, nicknamed 'Hubal', kept fighting the Germans in uniform after the 1939 defeat?	Henryk Dobrzanski	Witold Pilecki	Jan Piwnik	Stefan Rowecki
+pol_near_town_general	Hard	Near which town did General Kleeberg fight the last battle of the September 1939 campaign?	Kock	Kutno	Tomaszow Lubelski	Mlawa
+pol_actress_announced_news	Hard	Which actress announced on the TV news in October 1989 that 'communism in Poland ended on 4 June'?	Joanna Szczepkowska	Krystyna Janda	Maja Komorowska	Anna Seniuk
+pol_polish_ocean_liner	Hard	Which Polish ocean liner was nicknamed the 'Lucky Ship' for surviving World War II?	MS Batory	MS Pilsudski	MS Chrobry	MS Polonia
+pol_two_young_poznan	Hard	Which two young Poznan mathematicians worked with Marian Rejewski in the Cipher Bureau?	Zygalski and Rozycki	Banach and Ulam	Steinhaus and Kac	Sierpinski and Kuratowski
+pol_polish_cryptologist_broke	Expert	Which Polish cryptologist broke Red Army ciphers during the war with Soviet Russia in 1919-1920?	Jan Kowalewski	Marian Rejewski	Jerzy Rozycki	Henryk Zygalski
+pol_police_chief_warsaw	Expert	Which SS and police chief of Warsaw was shot dead by Home Army fighters in Aleje Ujazdowskie in February 1944?	Franz Kutschera	Hans Frank	Jurgen Stroop	Erich von dem Bach
+pol_home_army_officer	Expert	Which Home Army officer shared a communist prison cell with SS general Jurgen Stroop and wrote 'Conversations with an Executioner'?	Kazimierz Moczarski	Jan Nowak-Jezioranski	Stefan Rowecki	Witold Pilecki
+pol_111_metre_gliwice	Expert	What is the 111-metre Gliwice Radio Tower, scene of a staged German attack in 1939, made of?	Larch wood	Riveted steel	Reinforced concrete	Red brick
+pol_wrote_lyrics_czerwone	Expert	Who wrote the lyrics of 'Czerwone maki na Monte Cassino'?	Feliks Konarski	Marian Hemar	Jerzy Petersburski	Henryk Wars
+pol_designer_created_solidarity	Expert	Which designer created the famous Solidarity logo in 1980?	Jerzy Janiszewski	Henryk Tomaszewski	Roman Cieslewicz	Jan Lenica

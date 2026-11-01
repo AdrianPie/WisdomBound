@@ -1,0 +1,182 @@
+# Traditions & Everyday Life: customs, holidays, food, language, everyday life, legends
+#
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+pol_mit3_smok_wawelski	Easy	Who did the legendary Krakus (or a clever cobbler) defeat in Polish legend?	The Wawel Dragon	A basilisk	Cerberus	The Minotaur
+pol_wigilia	Easy	What is the traditional Polish Christmas Eve supper called?	Wigilia	Andrzejki	Dozynki	Tlusty Czwartek
+pol_wigilia_nakrycie	Easy	Why is an extra place set at the Polish Christmas Eve table?	For an unexpected guest	For a lucky coin	For the Christmas tree angel	For leftovers the next day
+pol_smigus_dyngus	Easy	What do people do to each other on Smigus-dyngus, Easter Monday?	Splash each other with water	Throw flour at each other	Swap painted eggs	Ring bells at each other's doors
+pol_tlusty_czwartek	Easy	Which treat do Poles eat by the dozen on Fat Thursday?	Paczki	Pierogi	Bigos	Oscypek
+pol_zurek	Easy	What is zurek?	A sour rye soup	A beetroot soup	A tripe soup	A cucumber soup
+pol_barszcz	Easy	Which soup, made from beetroot, is served with little dumplings on Christmas Eve?	Barszcz	Zurek	Rosol	Flaki
+pol_wszystkich_swietych	Easy	What do Poles traditionally do on 1 November, All Saints' Day?	Visit graves and light candles	Splash each other with water	Burn a straw doll	Eat doughnuts
+pol_swieconka	Easy	What do Poles take to church in small baskets on Holy Saturday?	Food to be blessed	Painted stones	Candles for the dead	Palm branches
+pol_maluch	Easy	What nickname did Poles give the tiny Fiat 126p car?	Maluch	Syrenka	Polonez	Warszawa
+pol_pisanki	Easy	What are pisanki?	Decorated Easter eggs	Paper cut-outs	Christmas biscuits	Wooden toys
+pol_na_zdrowie	Easy	What does the Polish toast 'Na zdrowie!' mean?	To your health!	Good luck!	Bottoms up!	Welcome!
+polx_godlo	Easy	What is shown on Poland's coat of arms?	A white eagle with a crown	A red lion	A black bear	A golden griffin
+polx_pierogi_ruskie	Easy	What are 'pierogi ruskie' traditionally filled with?	Potato and white cheese	Minced meat	Cabbage and mushrooms	Strawberries
+polx_bigos	Easy	Which Polish 'hunter's stew' is made of sauerkraut and meat?	Bigos	Zurek	Golabki	Flaki
+polx_karp_wanna	Easy	Which fish do many Polish families famously keep alive in the bathtub before Christmas?	Carp	Pike	Herring	Trout
+polx_krowki	Easy	Which fudge-like Polish sweets are named after little cows?	Krowki	Michalki	Kukulki	Irysy
+polx_hymn_slowa	Easy	What are the opening words of Poland's national anthem?	'Poland is not yet lost'	'Poland, my homeland'	'Rise up, Poland'	'Glory to Poland'
+polx_11_listopada	Easy	On which date does Poland celebrate Independence Day?	11 November	3 May	1 September	15 August
+poly_schabowy	Easy	What is 'kotlet schabowy'?	A breaded pork cutlet	A beef stew	A fish soup	A potato pancake
+poly_placki	Easy	What are 'placki ziemniaczane'?	Potato pancakes	Potato dumplings	Mashed potato soup	Baked potatoes
+poly_makowiec	Easy	What is the filling of a Polish 'makowiec' roll?	Poppy seeds	Walnuts	Apples	Chocolate
+poly_kevin	Easy	Which American film has been a Polish Christmas TV tradition since the 1990s?	Home Alone	Die Hard	Love Actually	Elf
+pol_zapiekanka	Easy	What is a 'zapiekanka'?	A toasted half-baguette with mushrooms and cheese	A roll stuffed with cabbage and minced meat	A fried potato pancake with sour cream	A sweet bun filled with poppy seed jam
+pol_rosol	Easy	What is 'rosol'?	A clear chicken broth	A beetroot soup	A cabbage stew	A sour rye soup
+pol_mizeria	Easy	What is 'mizeria'?	A cucumber salad with cream	A mushroom and onion sauce	A potato salad with mayo	Herring in sour cream
+pol_kompot	Easy	What is 'kompot'?	A drink of fruit boiled in water	A thick plum jam cooked for hours	A fruit cake soaked in vodka	A cold dessert of whipped cream
+pol_golonka	Easy	What is 'golonka'?	Roasted pork knuckle	Smoked cheese	Beef stew	Fried fish
+pol_polish_children_traditionally	Easy	What do Polish children traditionally find under their pillows on the morning of 6 December?	Small presents	Coal	Easter eggs	Birthday cards
+pol_poles_call_new	Easy	What do Poles call New Year's Eve?	Sylwester	Wigilia	Andrzejki	Zaduszki
+pol_poland_national_airline	Easy	What is the name of Poland's national airline?	LOT	Polonia Air	Polair	Orlik
+pol_poles_say_meal	Easy	What do Poles say before a meal to wish everyone a good appetite?	Smacznego	Na zdrowie	Dzien dobry	Sto lat
+pol_polish_birthday_song	Easy	What does the Polish birthday song 'Sto lat' wish someone?	A hundred years of life	A hundred presents	A happy new year	Good luck in love
+pol_pierogi_jagodami	Easy	What are 'pierogi z jagodami'?	Dumplings filled with blueberries	Pancakes with cherry jam	Dumplings with sauerkraut	Doughnuts with plum jam
+pol_smalec	Easy	What is 'smalec'?	Lard spread with crispy bits	Smoked sheep's cheese	Sour cream with herbs	A thick barley soup
+pol_babka_polish_easter	Easy	What is a 'babka' at a Polish Easter table?	A tall ring-shaped cake	A painted egg	A lamb made of butter	A bowl of sour soup
+pol_prince_polo	Easy	What is 'Prince Polo'?	A chocolate-covered wafer bar	A brand of mineral water	A brand of crisps	A brand of chewing gum
+pol_day_polish_children	Easy	Which day do Polish children celebrate on 21 January?	Grandmother's Day	Children's Day	Women's Day	Name Day
+pol_founded_great_orchestra	Easy	Who founded the Great Orchestra of Christmas Charity?	Jerzy Owsiak	Janina Ochojska	Marek Kotanski	Jerzy Urban
+pol_tatra_highwayman_legend	Easy	Which Tatra highwayman of legend robbed the rich to give to the poor?	Janosik	Kmicic	Zawisza	Wernyhora
+pol_szarlotka	Easy	What is 'szarlotka'?	An apple pie	A cheesecake	A poppy-seed cake	A jam doughnut
+pol_nalesniki	Easy	What are 'nalesniki'?	Thin pancakes	Potato pancakes	Dumplings	Doughnuts
+pol_juwenalia_poland	Easy	What are 'Juwenalia' in Poland?	Student festivals	Harvest feasts	Christmas carols	Name days
+pol_polish_midnight_mass	Easy	What is the Polish midnight Mass on Christmas Eve called?	Pasterka	Roraty	Rezurekcja	Gorzkie zale
+pol_poles_call_long	Easy	What do Poles call the long holiday weekend around 1 and 3 May?	Majowka	Sylwester	Andrzejki	Zaduszki
+pol_day_poles_celebrate	Easy	Which day do Poles celebrate on 1 June?	Children's Day	Mother's Day	Teachers' Day	Father's Day
+pol_polish_kulig	Easy	What is a Polish 'kulig'?	A horse-drawn sleigh ride party	A wedding toast with vodka	A Christmas carol procession	A spring bonfire festival
+pol_kabanos	Easy	What is a 'kabanos'?	A thin dry pork sausage	A smoked sheep's cheese	A poppy seed roll	A rye sourdough loaf
+pol_poles_head_woods	Easy	What do Poles head into the woods for on a 'grzybobranie'?	To pick mushrooms	To pick blueberries	To cut Christmas trees	To gather firewood
+pol_highlanders_polish_tatras	Easy	What are the highlanders of the Polish Tatras called?	Gorale	Kaszubi	Kurpie	Huculi
+pol_ogorki_kiszone	Easy	What are 'ogorki kiszone'?	Cucumbers fermented in brine	Cucumbers stuffed with meat	Cucumbers pickled in honey	Cucumbers baked with cheese
+pol_guests_chant_polish	Easy	What do guests chant at a Polish wedding to make the newlyweds kiss?	'Gorzko!'	'Sto lat!'	'Na zdrowie!'	'Smacznego!'
+pol_find_printed_under	Easy	What can you find printed under the cap of a Tymbark juice bottle?	A short saying	A recipe	A weather forecast	A star sign
+pol_polish_pierogi_leniwe	Easy	What are Polish 'pierogi leniwe' ('lazy dumplings') mainly made of?	Curd cheese, flour and egg	Potato and cabbage	Minced meat and rice	Buckwheat and onion
+pol_poprawiny_polish_wedding	Easy	What is 'poprawiny' at a Polish wedding?	The party on the day after	The first dance	The church blessing	The bride's farewell
+pol_christmas_eve_polish	Easy	On Christmas Eve, what do Polish children watch for in the sky before supper can start?	The first star	The full moon	A shooting star	The northern lights
+pol_day_spring_unofficial	Easy	On the first day of spring, which unofficial 'holiday' do Polish pupils mark by skipping school?	Dzien Wagarowicza	Prima Aprilis	Juwenalia	Andrzejki
+pol_polish_zupa_ogorkowa	Easy	What is Polish 'zupa ogorkowa' made with?	Pickled cucumbers	Fresh tomatoes	Wild mushrooms	Sorrel leaves
+pol_tongue_twister_buzzes	Easy	In the famous tongue twister, what buzzes in the reeds in Szczebrzeszyn?	A beetle	A bee	A fly	A mosquito
+pol_grzaniec_popular_polish	Easy	What is 'grzaniec', popular at Polish Christmas markets?	Mulled wine or beer	Hot chocolate with chilli	Roasted chestnuts	A gingerbread biscuit
+pol_poles_call_april	Easy	What do Poles call April Fools' Day?	Prima aprilis	Lany poniedzialek	Tlusty czwartek	Zaduszki
+pol_trzepak_meeting_point	Easy	What was a 'trzepak', the meeting point of children in Polish housing estate courtyards?	A metal frame for beating carpets	A wooden sandpit with a roof	A concrete ping-pong table	A public water pump
+pol_board_game_ludo	Easy	What is the board game Ludo called in Poland?	Chinczyk	Warcaby	Mlynek	Eurobiznes
+pol_according_polish_folk	Easy	According to Polish folk belief, what can animals do at midnight on Christmas Eve?	Speak with a human voice	See the souls of the dead	Find buried treasure	Predict the next harvest
+pol_month_polish_secondary	Easy	In which month do Polish secondary-school students sit their written matura exams?	May	June	April	September
+pol_inpost_paczkomaty_found	Easy	What are InPost 'paczkomaty', found all over Polish towns?	Parcel lockers	Ticket machines	Bottle-return machines	Bike-rental stations
+pol_convenience_store_chain	Easy	Which convenience-store chain with a green frog logo seems to be on every Polish street corner?	Zabka	Biedronka	Lewiatan	Stokrotka
+pol_gofry_sold_every	Easy	What are 'gofry', sold on every Polish seaside promenade in summer?	Waffles with toppings	Fried dough balls	Grilled sausages	Ice-cream cones
+pol_polish_dzialka_city	Easy	What is a Polish 'dzialka', where many city families spend summer weekends?	A small allotment garden	A seaside campsite	A village wedding hall	A forest hunting lodge
+pol2_hymn_nazwa	Easy	What is the Polish national anthem called?	Dabrowski's Mazurka	Rota	Boze cos Polske	Warszawianka
+pol_12_potraw	Easy	How many dishes are traditionally served at the Polish Christmas Eve supper?	Twelve	Seven	Nine	Twenty
+pol_sianko	Easy	What is traditionally placed under the tablecloth at Wigilia?	Hay	Coins	Salt	Pine needles
+pol_kremowka	Easy	Which cream cake from Wadowice became famous as a favourite of Pope John Paul II?	Kremowka	Sernik	Makowiec	Szarlotka
+pol_andrzejki	Easy	What do people traditionally do on Andrzejki, St Andrew's Eve?	Tell fortunes by pouring hot wax	Light candles on graves	Splash each other with water	Bless baskets of food
+pol_bar_mleczny	Easy	What is a Polish 'bar mleczny'?	A cheap canteen with home cooking	A shop selling only milk	A dairy farm cafe	A cocktail bar
+pol_wycinanki	Easy	What are wycinanki?	Colourful paper cut-outs	Painted Easter eggs	Wooden carvings	Lace doilies
+pol_polonez_studniowka	Easy	Which stately dance opens the Polish 'studniowka' ball, 100 days before final exams?	The polonaise	The mazurka	The waltz	The tango
+polx_golabki	Easy	What are golabki?	Cabbage rolls stuffed with meat and rice	Roasted little pigeons	Plum-filled dumplings	Pancakes with white cheese
+polx_obwarzanek	Easy	Which ring-shaped bread is sold from street carts all over Krakow?	Obwarzanek	Kajzerka	Precel	Rogal
+polx_oplatek	Easy	What do Polish families share and break before the Christmas Eve supper?	A thin wafer	A loaf of bread	A honey cake	An apple
+polx_polonez_auto	Easy	Which Polish car shares its name with a stately dance?	The Polonez	The Mazurek	The Krakowiak	The Oberek
+polx_ptasie_mleczko	Easy	Which Polish sweet's name means 'bird's milk'?	Ptasie mleczko	Krowka	Michalki	Pierniczki
+poly_sernik	Easy	What is the main ingredient of Polish 'sernik'?	Twarog (white cheese)	Poppy seeds	Apples	Plums
+pol_kopytka	Easy	What are 'kopytka'?	Small potato dumplings	Pork sausages	Plum dumplings	Cabbage pancakes
+pol_kogel_mogel	Easy	What is 'kogel-mogel'?	Egg yolks whipped with sugar	A hot honey liqueur	A fried pastry bow	A pickled herring dish
+pol_chlodnik	Easy	What is 'chlodnik'?	A cold beetroot soup	A hot fish soup	A pickled cucumber	A sweet cheese spread
+pol_faworki_eaten_lent	Easy	What are 'faworki', eaten before Lent?	Crispy fried pastry ribbons	Doughnuts with rose jam	Potato pancakes	Poppy seed cakes
+pol_flaki	Easy	What is 'flaki'?	Tripe soup	Pea soup	Mushroom soup	Fish soup
+pol_kaszanka	Easy	What is 'kaszanka'?	A blood sausage with buckwheat	A smoked pork sausage	A buckwheat porridge	A barley soup
+pol_celebrated_dozynki	Easy	What is celebrated at 'dozynki'?	The end of the harvest	The first day of spring	The longest night	The miners' saint
+pol_date_mother_day	Easy	On which date is Mother's Day celebrated in Poland?	26 May	8 March	1 June	11 May
+pol_poles_celebrate_processions	Easy	What do Poles celebrate with processions on 'Boze Cialo'?	Corpus Christi	Easter Monday	All Saints' Day	Epiphany
+pol_poles_write_chalk	Easy	What do Poles write in chalk above their doors on 6 January?	K+M+B and the year	The family's names	A cross and a star	A prayer for rain
+pol_according_legend_three	Easy	According to legend, which of three brothers founded Poland after seeing a white eagle's nest?	Lech	Czech	Rus	Piast
+pol_wicked_legendary_ruler	Easy	Which wicked legendary ruler is said to have been eaten by mice in a tower?	Popiel	Krak	Lestek	Siemowit
+pol_tricked_wawel_dragon	Easy	Who tricked the Wawel Dragon with a sheep stuffed with sulphur?	Shoemaker Dratewka	Prince Krakus	Knight Zawisza	Prince Popiel
+pol_kupala_night_young	Easy	On Kupala Night, what do young women traditionally float on the water?	Wreaths	Candles	Paper boats	Eggs
+pol_kluski_slaskie	Easy	What are 'kluski slaskie'?	Potato dumplings with a dimple	Noodles with poppy seeds	Fried dough balls with jam	Pancakes rolled with cheese
+pol_nalewka	Easy	What is a 'nalewka'?	A homemade fruit liqueur	A sour rye soup	A herbal tea	A pickled cucumber
+pol_according_legend_warsaw	Easy	According to legend, Warsaw's name comes from which pair?	Wars and Sawa	Lech and Czech	Krak and Wanda	Mieszko and Dobrawa
+pol_polish_legend_sorcerer	Easy	In Polish legend, where did the sorcerer Pan Twardowski end up after outwitting the devil?	On the Moon	Under Wawel Hill	At the bottom of the Vistula	On top of Giewont
+pol_besides_money_poles	Easy	Besides money, what did Poles need in the 1980s to buy meat or sugar?	Ration coupons	A party membership card	A doctor's note	A residence permit
+pol_polish_parents_traditionally	Easy	What do Polish parents traditionally greet newlyweds with after the wedding?	Bread and salt	Honey and milk	Wine and cheese	Eggs and butter
+pol_traditional_filling_polish	Easy	What is the traditional filling of a Polish 'paczek'?	Rose petal jam	Vanilla custard	Chocolate cream	Lemon curd
+pol_professional_group_celebrates	Easy	Which professional group celebrates 'Barborka' on 4 December?	Miners	Firefighters	Fishermen	Railway workers
+pol_polish_smoked_sheep	Easy	Which Polish smoked sheep's cheese from the Tatras has EU protected status?	Oscypek	Bryndza	Twarog	Bundz
+pol_straw_figure_poles	Easy	Which straw figure do Poles drown in spring to say goodbye to winter?	Marzanna	Baba Jaga	Rusalka	Kikimora
+pol_kupala_night_magical	Easy	On Kupala Night, which magical flower do Polish legends say brings luck to whoever finds it?	A fern flower	A golden rose	A white lily	A blue poppy
+pol_ciupaga_carried_tatra	Easy	What is a 'ciupaga', carried by Tatra highlanders?	A walking stick with an axe head	A shepherd's long wooden horn	A felt hat decorated with shells	A thick woollen cloak
+pol_pegasus_games_console	Easy	What was 'Pegasus', the games console found in many Polish homes in the 1990s?	A Nintendo Famicom clone	A Polish home computer	A Sega Mega Drive clone	A ZX Spectrum clone
+pol_gadu_gadu_hugely	Easy	What was Gadu-Gadu, hugely popular in Poland in the 2000s?	An instant messenger	A TV game show	A dance craze	A children's magazine
+pol_poles_mainly_use	Easy	What did Poles mainly use the website 'Nasza-klasa.pl' for?	Finding old school friends	Booking cheap holidays	Selling used cars	Rating their teachers
+pol_poles_call_november	Easy	What do Poles call 2 November, the day of prayer for the dead?	Zaduszki	Andrzejki	Ostatki	Dozynki
+pol_polish_kisiel	Easy	What is Polish 'kisiel'?	A thick starch-set fruit jelly	A fermented milk drink	A sweet plum butter spread	A honey and nut cake
+pol_polish_zupa_szczawiowa	Easy	What is Polish 'zupa szczawiowa' made from?	Sorrel	Spinach	Nettles	Dill
+pol_oranzada_favourite_drink	Easy	What was 'oranzada', a favourite drink of Polish childhood?	A sweet fizzy fruit soda	A fermented bread drink	A hot spiced fruit punch	A sour milk drink
+pol_hejnal	Medium	Why does Krakow's hourly bugle call stop suddenly in the middle?	To honour a trumpeter shot by an arrow	The tune was never finished	To let the church bells ring	The player runs out of breath
+pol_zubrowka	Medium	Which Polish vodka has a blade of bison grass in each bottle?	Zubrowka	Wyborowa	Chopin	Belvedere
+pol_polish_chocolate_maker	Medium	Which famous Polish chocolate maker produces 'Ptasie mleczko'?	E. Wedel	Wawel	Goplana	Milka
+pol_mazurek	Medium	What is a 'mazurek'?	A flat Easter cake	A winter hat	A Christmas carol	A fish dish
+pol_kutia_eaten_christmas	Medium	What is 'kutia', eaten on Christmas Eve in eastern Poland?	Wheat with poppy seeds and honey	Fried carp in aspic	Dumplings with mushrooms	Beetroot soup with sour cream
+pol_legendary_princess_chose	Medium	Which legendary princess chose to drown in the Vistula rather than marry a German prince?	Wanda	Jadwiga	Dabrowka	Rzepicha
+pol_key_ingredient_traditional	Medium	What is the key ingredient of the traditional 'czernina' soup?	Duck blood	Beetroot	Sour rye	Dried mushrooms
+pol_wielkopolska_traditionally_brings	Medium	In Wielkopolska, who traditionally brings children their Christmas presents?	Gwiazdor	Dziadek Mroz	Krampus	Befana
+pol_according_legend_two	Medium	According to legend, why are the two towers of Krakow's St Mary's Basilica of different heights?	Two rival brothers built them	A king forbade them to outgrow Wawel	Tatar raiders burned one down	The devil stole the top of one
+pol_according_legend_engagement	Medium	According to legend, whose engagement ring turned up in the first lump of salt dug in Lesser Poland?	Princess Kinga's	Queen Jadwiga's	Princess Wanda's	Queen Bona's
+pol_little_polish_car	Medium	Which little Polish car, built from 1957 to 1983, had its best-known model called the 105?	Syrena	Warszawa	Polonez	Mikrus
+pol_according_legend_piast	Medium	According to legend, what was Piast, founder of Poland's first dynasty, by trade?	A wheelwright	A blacksmith	A fisherman	A shoemaker
+pol_polish_cream_cake	Medium	Which Polish cream cake is named after a mountain range because of its lumpy top?	Karpatka	Wuzetka	Napoleonka	Sernik
+pol_poznan_dialect_pyry	Medium	In the Poznan dialect, what are 'pyry'?	Potatoes	Dumplings	Pickles	Doughnuts
+pol_polo_cockta_launched	Medium	What was Polo Cockta, launched in communist Poland in the 1970s?	A cola-style soft drink	A cheap vodka	A cigarette brand	A chocolate bar
+pol_krakow_christmas_tradition	Medium	Which Krakow Christmas tradition of glittering nativity scenes shaped like local churches is on UNESCO's list?	Szopka krakowska	Pisanki	Wycinanki	Lajkonik
+pol_holiday_poland_celebrate	Medium	Which holiday does Poland celebrate on 15 August, the anniversary of the 1920 Battle of Warsaw?	Polish Armed Forces Day	Constitution Day	Independence Day	National Flag Day
+pol_regional_language_spoken	Medium	Which regional language, spoken around Gdansk, has official status in Poland?	Kashubian	Silesian	Masurian	Goral
+pol_frania_found_countless	Medium	What was 'Frania', found in countless Polish homes in communist times?	A simple washing machine	A brand of instant coffee	A pedal-powered sewing machine	A popular radio set
+pol_wrote_words_polish	Medium	Who wrote the words of the Polish national anthem?	Jozef Wybicki	Jan Henryk Dabrowski	Adam Mickiewicz	Juliusz Slowacki
+pol_zurek_sometimes_served	Medium	In what is zurek sometimes served instead of a bowl?	A bread loaf	A clay pot	A pumpkin	A cabbage leaf
+pol_poles_keep_scale	Medium	Why do many Poles keep a scale from the Christmas Eve carp in their wallet?	To bring money all year	To keep evil spirits away	To find true love	To remember the dead
+pol_date_polish_girls	Medium	On which date do Polish girls traditionally give boys small gifts for 'Dzien Chlopaka'?	30 September	8 March	14 February	23 June
+pol_poles_call_last	Medium	What do Poles call the last days of carnival, just before Ash Wednesday?	Ostatki	Andrzejki	Dozynki	Zaduszki
+pol_main_ingredient_polish	Medium	What is the main ingredient of Polish 'krupnik' soup?	Pearl barley	Beetroot	Sauerkraut	Sorrel
+pol_common_surname_poland	Medium	What is the most common surname in Poland?	Nowak	Kowalski	Wisniewski	Wojcik
+pol_soup_polish_families	Medium	Which soup do many Polish families make on Monday from Sunday's leftover chicken broth?	Tomato soup	Sorrel soup	Mushroom soup	Pea soup
+pol_digits_polish_blik	Medium	How many digits does a Polish BLIK payment code have?	Six	Four	Eight	Five
+polx_rogal	Medium	Which city is famous for St Martin's croissants filled with white poppy seeds?	Poznan	Krakow	Gdansk	Torun
+polx_lajkonik	Medium	Which Krakow folk figure 'rides' a hobby horse through the city every June?	Lajkonik	Krakus	Wernyhora	Twardowski
+pol_warsaw_legend_golden	Medium	In Warsaw legend, which golden creature lives in the cellars of the Ostrogski Palace?	A duck	A rooster	A carp	A stag
+pol_monster_able_kill	Medium	Which monster, able to kill with its gaze, lurked in an Old Town cellar in Warsaw legend?	A basilisk	A dragon	A griffin	A werewolf
+pol_skarbnik_silesian_folklore	Medium	What is Skarbnik in Silesian folklore?	A spirit of the coal mines	A water demon of the ponds	A forest giant	A house elf living in barns
+pol_polish_cake_baked	Medium	Which Polish cake is baked layer by layer on a rotating spit over a fire, giving it rings like a tree?	Sekacz	Karpatka	Makowiec	Piernik
+pol_oczepiny_traditional_polish	Medium	What is 'oczepiny' at a traditional Polish wedding?	Swapping the bride's veil for a cap	Greeting the couple with bread and salt	The couple's first dance together	Signing the marriage register
+pol_shaggy_horned_creature	Medium	Which shaggy horned creature with a snapping wooden jaw goes carolling with Polish 'kolednicy'?	Turon	Lajkonik	Boruta	Marzanna
+pol_polish_board_game	Medium	Which Polish board game, a Monopoly look-alike with cities from all over Europe, was a family favourite in the 1990s?	Eurobiznes	Kolejka	Magnat	Grosik
+pol_people_polish_city	Medium	People from which Polish city are jokingly called 'scyzoryki' (penknives)?	Kielce	Radom	Lublin	Rzeszow
+pol_moody_giant_spirit	Medium	What is the name of the moody giant spirit of the Karkonosze in Polish legend?	Liczyrzepa	Skarbnik	Boruta	Utopiec
+pol_baltic_legend_sea	Medium	In Baltic legend, the sea queen Jurata lived in a palace made of what?	Amber	Coral	Pearls	Ice
+pol_communist_era_van	Medium	Which communist-era van, built in Lublin, shares its name with the Polish word for a beetle?	Zuk	Nysa	Tarpan	Star
+pol_zoska_game_played	Medium	What was 'zoska', a game played in Polish schoolyards?	Kicking a weighted tuft to keep it aloft	Throwing knives into a circle in the dirt	Flicking coins against a wall	Hopping between squares drawn in chalk
+pol_polka_czeska	Hard	The polka dance, often thought to be Polish, actually comes from which country?	The Czech lands	Poland	Hungary	Austria
+pol_devil_polish_folklore	Hard	Which devil of Polish folklore is said to haunt the castle at Leczyca?	Boruta	Mephistopheles	Krampus	Baba Jaga
+pol_malopolska_village_holds	Hard	Which Malopolska village holds a contest of giant Easter palms, some over 30 m tall?	Lipnica Murowana	Wadowice	Kalwaria Zebrzydowska	Zakopane
+pol_chocolate_cream_cake	Hard	Which chocolate cream cake takes its name from a Warsaw east-west route opened in 1949?	Wuzetka	Karpatka	Napoleonka	Pischinger
+pol_torun_legend_commemorated	Hard	In a Torun legend, commemorated by a fountain, what did a raftsman's violin playing lure out of the town?	Frogs	Rats	Snakes	Mice
+pol_polish_street_game	Hard	In the Polish street game 'kapsle', children flicked bottle caps along a chalk track, pretending to be what?	Peace Race cyclists	Racehorses	Rally drivers	Ships in a regatta
+pol_floats_gdansk_liqueur	Hard	What floats in the Gdansk liqueur Goldwasser?	Flakes of gold	A blade of grass	Chips of amber	Juniper berries
+pol_according_polish_legend	Hard	According to Polish legend, where does the sister of Warsaw's mermaid sit?	In Copenhagen harbour	On a rock in the Rhine	In Gdansk harbour	On a bridge in Prague
+pol_fried_yeast_roll	Hard	Which fried yeast roll with a meat filling, served with clear borscht, is a famous snack of Szczecin?	Pasztecik	Zapiekanka	Proziak	Obwarzanek
+pol_city_cebularz_flatbread	Hard	Which city is famous for its 'cebularz', a flatbread topped with onion and poppy seeds?	Lublin	Krakow	Poznan	Bialystok
+pol_according_legend_szczerbiec	Hard	According to legend, how did Szczerbiec, the Polish coronation sword, get its notch?	Struck on Kiev's Golden Gate	Struck on a Teutonic helmet	Struck on the Wawel dragon	Struck on Gniezno's doors
+pol_silesian_water_demon	Hard	Which Silesian water demon is said to keep the souls of the drowned under little pots?	Utopiec	Skarbnik	Liczyrzepa	Boruta
+pol_nickname_poles_give	Hard	What nickname did Poles give the rounded Jelcz 043 bus?	Ogorek (cucumber)	Ziemniak (potato)	Bochenek (loaf)	Slimak (snail)
+pol_dwojniak_mean_bottle	Expert	What does 'dwojniak' mean on a bottle of Polish mead?	Equal parts honey and water	Two parts honey to one of water	One part honey to two of water	Mead aged for two years
+pol_soot_smeared_figure	Expert	Which soot-smeared figure roams villages near Krakow on Easter Monday, blackening people's faces?	Siuda Baba	Turon	Dziad	Marzanna
+pol_emaus_held_every	Expert	What is 'Emaus', held every Easter Monday in Krakow's Zwierzyniec district?	A church fair with stalls	A horseback pilgrimage	A rowing race on the Vistula	A blessing of fishing boats
+pol_habit_proud_kashubian	Expert	Which habit is a proud Kashubian tradition, with its own championships?	Taking snuff	Pipe smoking	Ice swimming	Herring eating
+pol_tiny_germanic_language	Expert	Which tiny Germanic language survives in the town of Wilamowice?	Wymysorys	Kashubian	Silesian German	Yiddish
+pol_rekawka_held_krakow	Expert	What is Rekawka, held in Krakow on the Tuesday after Easter?	A folk fair at the Krakus Mound	A procession to Wawel Cathedral	A boat parade on the Vistula	A horse race on the Blonia
+pol_church_town_pan	Expert	In the church of which town is Pan Twardowski's magic mirror said to hang?	Wegrow	Lezajsk	Lowicz	Plock
+pol_city_old_tribunal	Expert	In which city's old tribunal is a table said to bear the scorched print of a devil's paw?	Lublin	Krakow	Poznan	Plock
