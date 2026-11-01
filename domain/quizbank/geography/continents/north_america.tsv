@@ -7,87 +7,74 @@ geo_state_walt_disney	Easy	In which US state is Walt Disney World?	Florida	Calif
 geo_state_silicon_valley	Easy	In which US state is Silicon Valley?	California	Washington	Texas	Massachusetts
 geo_canadian_province_mainly	Easy	Which Canadian province is mainly French-speaking?	Quebec	Ontario	Manitoba	Nova Scotia
 geo_state_nicknamed_golden	Easy	Which US state is nicknamed 'the Golden State'?	California	Nevada	Colorado	Alaska
-geo_state_main_part	Easy	Which US state's main part is famously shaped like a mitten?	Michigan	Wisconsin	Minnesota	Ohio
 geo_two_states_share	Easy	Which two US states share no border with any other US state?	Alaska and Hawaii	Hawaii and Florida	Alaska and Maine	Hawaii and Washington
 geo_canadian_province_nova	Easy	What does the name of the Canadian province 'Nova Scotia' mean?	New Scotland	Northern Shore	New Settlement	Noble Coast
 geo_guantanamo_bay_site	Easy	Guantanamo Bay, site of a US naval base, is on which island?	Cuba	Puerto Rico	Jamaica	Hispaniola
-geo_provinces_canada	Easy	How many provinces does Canada have?	Ten	Thirteen	Eight	Twelve
 geo_state_president	Easy	Which is the only US state named after a president?	Washington	Georgia	Virginia	Louisiana
 geo_canadian_province_city	Easy	In which Canadian province is the city of Vancouver?	British Columbia	Alberta	Ontario	Manitoba
-geo_southernmost_state	Easy	Which is the southernmost US state?	Hawaii	Florida	Texas	Louisiana
-geo_canada_populous_province	Easy	Which is Canada's most populous province?	Ontario	Quebec	British Columbia	Alberta
 geo_state_nashville_capital	Easy	In which US state is Nashville, the capital of country music?	Tennessee	Kentucky	Texas	Georgia
 geo_state_city_chicago	Easy	In which US state is the city of Chicago?	Illinois	Indiana	Ohio	Michigan
 geo_state_new_orleans	Easy	In which US state is New Orleans?	Louisiana	Mississippi	Alabama	Texas
 geo_state_nicknamed_aloha	Easy	Which US state is nicknamed 'the Aloha State'?	Hawaii	California	Florida	Alaska
 geo_texas_broke_away	Easy	Texas broke away in 1836 from which country, then spent nearly ten years as an independent republic?	Mexico	Spain	France	Britain
 geo_caribbean_islands_west	Easy	Why are the Caribbean islands called the 'West Indies'?	Columbus thought he had reached Asia	Their first settlers sailed from India	They were once governed from Bombay	Their spices rivalled those of India
-geo_state_nicknamed_bay	Easy	Which US state is nicknamed 'the Bay State'?	Massachusetts	Maryland	Delaware	Rhode Island
-geo_state_nicknamed_last	Easy	Which US state is nicknamed 'the Last Frontier'?	Alaska	Montana	Wyoming	Hawaii
 geo_state_great_plains	Easy	Which US state, on the Great Plains, is nicknamed 'the Sunflower State'?	Kansas	Ohio	Florida	Oregon
-geo_state_licence_plates_2	Easy	Which US state's licence plates carry the motto 'Live Free or Die'?	New Hampshire	Texas	Vermont	Montana
-mst_kraj_dwa_oceany	Medium	Panama is unusual in that its Caribbean coast lies where relative to its Pacific coast?	To the north	To the east	To the south	To the west
-geo_rhode_island	Medium	Which is the smallest US state by area?	Rhode Island	Delaware	Connecticut	Vermont
-geo_state_nicknamed_sunshine	Medium	Which US state is nicknamed 'the Sunshine State'?	Florida	California	Arizona	Hawaii
-geo_state_nicknamed_lone	Medium	Which US state is nicknamed 'the Lone Star State'?	Texas	Arizona	Nevada	Oklahoma
+geo_rhode_island	Easy	Which is the smallest US state by area?	Rhode Island	Delaware	Connecticut	Vermont
+geo_state_nicknamed_sunshine	Easy	Which US state is nicknamed 'the Sunshine State'?	Florida	California	Arizona	Hawaii
+geo_state_nicknamed_lone	Easy	Which US state is nicknamed 'the Lone Star State'?	Texas	Arizona	Nevada	Oklahoma
+geo_state_nicknamed_empire	Easy	Which US state is nicknamed 'the Empire State'?	New York	Texas	California	Pennsylvania
+geo_state_nicknamed_peach	Easy	Which US state is nicknamed 'the Peach State'?	Georgia	South Carolina	Alabama	Texas
+geo_country_british_honduras	Easy	Which country was known as British Honduras until 1973?	Belize	Honduras	Guyana	Jamaica
+geo_mexico_spanish_colony	Easy	What was Mexico called as a Spanish colony?	New Spain	New Granada	New Castile	New Andalusia
+geo_state_licence_plates	Easy	Which US state's licence plates boast 'First in Flight', after the Wright brothers' 1903 flight at Kitty Hawk?	North Carolina	Ohio	Virginia	South Carolina
+geo_state_independent_kingdom	Easy	Which US state was an independent kingdom until its monarchy was overthrown in 1893?	Hawaii	Alaska	Texas	Vermont
+geo_state_comes_spanish	Easy	Which US state's name comes from the Spanish for 'coloured red'?	Colorado	Nevada	Montana	Arizona
+geo_state_honour_queen	Easy	Which US state was named in honour of Queen Elizabeth I, 'the Virgin Queen'?	Virginia	Maryland	Georgia	North Carolina
+geo_mexican_state_gave	Easy	Which Mexican state gave its name to the world's smallest dog breed?	Chihuahua	Sonora	Jalisco	Durango
+geo_mexico_takes_people	Easy	Mexico takes its name from which people, better known today as the Aztecs?	The Mexica	The Maya	The Olmecs	The Toltecs
+geo_canadian_province_nicknamed_2	Easy	Which Canadian province is nicknamed 'La Belle Province'?	Quebec	New Brunswick	Ontario	Manitoba
+geo_central_american_country_3	Easy	Which Central American country is named after Jesus Christ, 'the Saviour'?	El Salvador	Costa Rica	Honduras	Nicaragua
+geo_state_longest_coastline	Easy	Which US state has the longest coastline?	Alaska	Florida	California	Hawaii
 geo_state_mount_rushmore	Medium	In which US state is Mount Rushmore?	South Dakota	Wyoming	Montana	Colorado
-geo_state_nicknamed_empire	Medium	Which US state is nicknamed 'the Empire State'?	New York	Texas	California	Pennsylvania
 geo_state_especially_growing	Medium	Which US state is especially famous for growing potatoes?	Idaho	Iowa	Kansas	Ohio
-geo_state_nicknamed_big	Medium	Which US state is nicknamed 'Big Sky Country'?	Montana	Wyoming	Colorado	Idaho
-geo_state_nicknamed_garden	Medium	Which US state is nicknamed 'the Garden State'?	New Jersey	Connecticut	Oregon	Virginia
-geo_state_nicknamed_peach	Medium	Which US state is nicknamed 'the Peach State'?	Georgia	South Carolina	Alabama	Texas
 geo_state_borders_just	Medium	Which is the only US state that borders just one other state?	Maine	Florida	Washington	Delaware
-geo_four_states_meet	Medium	Which four US states meet at the 'Four Corners'?	Arizona, Utah, Colorado, New Mexico	Arizona, Nevada, Utah, Colorado	Utah, Colorado, Wyoming, New Mexico	Texas, Oklahoma, Colorado, New Mexico
 geo_louisiana_call_counties	Medium	What does Louisiana call its counties?	Parishes	Boroughs	Townships	Cantons
 geo_canada_smallest_province	Medium	Which is Canada's smallest province?	Prince Edward Island	Nova Scotia	New Brunswick	Newfoundland
-geo_two_canadian_provinces	Medium	Which two Canadian provinces have no coastline?	Alberta and Saskatchewan	Manitoba and Alberta	Saskatchewan and Manitoba	Alberta and Ontario
 geo_canada_largest_province	Medium	Which is Canada's largest province by area?	Quebec	Ontario	British Columbia	Alberta
-geo_canada_comes_iroquoian	Medium	The name 'Canada' comes from an Iroquoian word meaning what?	Village	Big land	Cold north	Many lakes
 geo_canada_motto_mari	Medium	Canada's motto 'A Mari usque ad Mare' means what?	From sea to sea	Land of the free	Strong and free	North and strong
 geo_two_countries_border	Medium	Which two countries border Mexico to the south?	Guatemala and Belize	Guatemala and Honduras	Belize and Honduras	Guatemala and El Salvador
 geo_states_border_mexico	Medium	How many US states border Mexico?	Four	Three	Five	Six
-geo_countries_make_central	Medium	How many countries make up Central America?	Seven	Five	Nine	Six
-geo_country_british_honduras	Medium	Which country was known as British Honduras until 1973?	Belize	Honduras	Guyana	Jamaica
-geo_central_american_country	Medium	Which is the only Central American country with no Caribbean coastline?	El Salvador	Guatemala	Costa Rica	Panama
 geo_aruba_bonaire_curacao	Medium	Aruba, Bonaire and Curacao, the 'ABC islands', belong to the kingdom of which country?	The Netherlands	Venezuela	France	Britain
 geo_trinidad_lies_just	Medium	Trinidad lies just off the coast of which South American country?	Venezuela	Guyana	Colombia	Brazil
 geo_caribbean_island_nicknamed	Medium	Which Caribbean island is nicknamed 'the Pearl of the Antilles'?	Cuba	Jamaica	Puerto Rico	Barbados
-geo_mexico_spanish_colony	Medium	What was Mexico called as a Spanish colony?	New Spain	New Granada	New Castile	New Andalusia
-geo_caribbean_country_nicknamed	Medium	Which Caribbean country is nicknamed 'the Spice Isle' for its nutmeg?	Grenada	Jamaica	Trinidad	Barbados
 geo_state_nicknamed_land	Medium	Which US state is nicknamed 'the Land of 10,000 Lakes'?	Minnesota	Wisconsin	Michigan	Maine
 geo_roughly_far_hawaii	Medium	Roughly how far is Hawaii from the US mainland?	About 4,000 km	About 1,000 km	About 10,000 km	About 400 km
 geo_residents_puerto_rico	Medium	Residents of Puerto Rico are US citizens, but they cannot do what?	Vote for the US president	Serve in the US army	Travel freely to the US	Use US dollars
-geo_state_nicknamed_show	Medium	Which US state is nicknamed 'the Show Me State'?	Missouri	Kansas	Iowa	Arkansas
-geo_state_licence_plates	Medium	Which US state's licence plates boast 'First in Flight', after the Wright brothers' 1903 flight at Kitty Hawk?	North Carolina	Ohio	Virginia	South Carolina
-geo_state_nicknamed_keystone	Medium	Which US state is nicknamed 'the Keystone State'?	Pennsylvania	Ohio	Virginia	Maryland
-geo_state_nicknamed_hoosier	Medium	Which US state is nicknamed 'the Hoosier State'?	Indiana	Iowa	Ohio	Kentucky
-geo_state_independent_kingdom	Medium	Which US state was an independent kingdom until its monarchy was overthrown in 1893?	Hawaii	Alaska	Texas	Vermont
 geo_delaware_nicknamed_state	Medium	Delaware is nicknamed 'the First State' because it was the first to do what?	Ratify the US Constitution	Declare independence	Abolish slavery	Give women the vote
-geo_state_flag_not	Medium	Which is the only US state whose flag is not a rectangle?	Ohio	Texas	Alaska	Maryland
-geo_state_comes_spanish	Medium	Which US state's name comes from the Spanish for 'coloured red'?	Colorado	Nevada	Montana	Arizona
-geo_state_honour_queen	Medium	Which US state was named in honour of Queen Elizabeth I, 'the Virgin Queen'?	Virginia	Maryland	Georgia	North Carolina
-geo_mexican_state_gave	Medium	Which Mexican state gave its name to the world's smallest dog breed?	Chihuahua	Sonora	Jalisco	Durango
-geo_mexico_takes_people	Medium	Mexico takes its name from which people, better known today as the Aztecs?	The Mexica	The Maya	The Olmecs	The Toltecs
-geo_populous_country_central	Medium	Which is the most populous country in Central America?	Guatemala	Honduras	Nicaragua	Costa Rica
 geo_quebec_motto_printed	Medium	Quebec's motto, printed on its licence plates, is 'Je me souviens'. What does it mean?	I remember	I will return	I believe	I stand guard
-geo_state_nicknamed_beehive	Medium	Which US state is nicknamed 'the Beehive State'?	Utah	Idaho	Vermont	Oregon
-geo_canadian_province_nicknamed_2	Medium	Which Canadian province is nicknamed 'La Belle Province'?	Quebec	New Brunswick	Ontario	Manitoba
-geo_central_american_country_3	Medium	Which Central American country is named after Jesus Christ, 'the Saviour'?	El Salvador	Costa Rica	Honduras	Nicaragua
 geo_cayman_islands_tax	Medium	The Cayman Islands, a famous tax haven, are a territory of which country?	Britain	The Netherlands	France	The USA
-geo_state_longest_coastline	Medium	Which US state has the longest coastline?	Alaska	Florida	California	Hawaii
-geo_state_nicknamed_volunteer	Medium	Which US state is nicknamed 'the Volunteer State'?	Tennessee	Kentucky	Virginia	Texas
 geo_state_comes_spanish_2	Medium	Which US state's name comes from the Spanish for 'snow-covered'?	Nevada	Montana	Florida	Arizona
-geo_canadian_province_calls	Medium	Which Canadian province calls itself 'Wild Rose Country'?	Alberta	Manitoba	Ontario	Saskatchewan
 geo_state_begins_two	Medium	Which is the only US state whose name begins with two vowels?	Iowa	Ohio	Utah	Idaho
 geo_central_american_country_4	Medium	Which is the only Central American country with English as its official language?	Belize	Honduras	Guatemala	Costa Rica
-geox_kostaryka	Hard	Which Central American country abolished its army in 1948?	Costa Rica	Panama	Honduras	Belize
+geo_state_main_part	Medium	Which US state's main part is famously shaped like a mitten?	Michigan	Wisconsin	Minnesota	Ohio
+geo_provinces_canada	Medium	How many provinces does Canada have?	Ten	Thirteen	Eight	Twelve
+geo_southernmost_state	Medium	Which is the southernmost US state?	Hawaii	Florida	Texas	Louisiana
+geo_canada_populous_province	Medium	Which is Canada's most populous province?	Ontario	Quebec	British Columbia	Alberta
+geo_state_nicknamed_bay	Medium	Which US state is nicknamed 'the Bay State'?	Massachusetts	Maryland	Delaware	Rhode Island
+geo_state_nicknamed_last	Medium	Which US state is nicknamed 'the Last Frontier'?	Alaska	Montana	Wyoming	Hawaii
+geox_kostaryka	Medium	Which Central American country abolished its army in 1948?	Costa Rica	Panama	Honduras	Belize
+geo_mexico_official	Medium	What is Mexico's official name?	The United Mexican States	The Republic of Mexico	The Mexican Federation	The Aztec Republic
+geo_larger_two_kansas	Medium	The larger of the two Kansas Cities lies in which state?	Missouri	Kansas	Nebraska	Oklahoma
+geo_california_short_lived	Medium	California's short-lived 1846 republic was named after which animal on its flag?	A bear	An eagle	A wolf	A buffalo
+geo_state_counties_254	Medium	Which US state has the most counties, 254 of them?	Texas	California	Georgia	Kentucky
+geo_names_two_states	Medium	The names of which two US states come from a Sioux word meaning 'friends' or 'allies'?	North and South Dakota	North and South Carolina	Kansas and Arkansas	Iowa and Nebraska
+geo_state_just_syllable	Medium	Which is the only US state whose name has just one syllable?	Maine	Utah	Iowa	Ohio
+geo_darien	Medium	The Darien Gap is a missing link in which famous road?	The Pan-American Highway	Route 66	The Silk Road	The Trans-Canada Highway
 geo_state_nicknamed_bluegrass	Hard	Which US state is nicknamed 'the Bluegrass State'?	Kentucky	Tennessee	Virginia	Missouri
 geo_largest_country_central	Hard	Which is the largest country in Central America by area?	Nicaragua	Honduras	Guatemala	Panama
-geo_mexico_official	Hard	What is Mexico's official name?	The United Mexican States	The Republic of Mexico	The Mexican Federation	The Aztec Republic
 geo_country_usa_buy	Hard	From which country did the USA buy the Virgin Islands in 1917?	Denmark	Spain	Britain	The Netherlands
 geo_bermuda_often_lumped	Hard	Bermuda, often lumped in with the Caribbean, lies closest to which US state?	North Carolina	Florida	Texas	Louisiana
 geo_bahamas_often_caribbean	Hard	The Bahamas are often called Caribbean, but in which body of water do they actually lie?	The Atlantic Ocean	The Caribbean Sea	The Gulf of Mexico	The Pacific Ocean
-geo_jamaica_comes_taino	Hard	Jamaica's name comes from a Taino word meaning what?	Land of wood and water	Island of the sun	Green mountain	Home of the hummingbird
 geo_caribbean_island_nicknamed_2	Hard	Which Caribbean island was nicknamed 'Little England'?	Barbados	Jamaica	Bermuda	Antigua
 geo_canadian_province_last	Hard	Which Canadian province was the last to join Canada, in 1949?	Newfoundland	Nova Scotia	British Columbia	Prince Edward Island
 geo_saint_pierre_miquelon	Hard	Saint-Pierre and Miquelon, islands just off Canada's east coast, belong to which country?	France	Britain	Canada	Denmark
@@ -98,46 +85,55 @@ geo_state_independent_republic	Hard	Which US state was an independent republic f
 geo_state_lowest_highest	Hard	Which US state has the lowest 'highest point', just 105 m above sea level?	Florida	Delaware	Louisiana	Rhode Island
 geo_term_banana_republic	Hard	The term 'banana republic' was coined by the writer O. Henry about which country?	Honduras	Guatemala	Costa Rica	Panama
 geo_neighbour_long_claimed	Hard	Which neighbour has long claimed all or part of Belize's territory?	Guatemala	Honduras	Nicaragua	El Salvador
-geo_larger_two_kansas	Hard	The larger of the two Kansas Cities lies in which state?	Missouri	Kansas	Nebraska	Oklahoma
-geo_california_short_lived	Hard	California's short-lived 1846 republic was named after which animal on its flag?	A bear	An eagle	A wolf	A buffalo
 geo_state_house_unicameral	Hard	Which is the only US state with a one-house (unicameral) legislature?	Nebraska	Vermont	Delaware	Wyoming
-geo_state_counties_254	Hard	Which US state has the most counties, 254 of them?	Texas	California	Georgia	Kentucky
 geo_alaska_counties_divided	Hard	Alaska has no counties. What is it divided into instead?	Boroughs	Districts	Townships	Cantons
-geo_two_states_each	Hard	Which two US states each border eight other states, more than any other?	Tennessee and Missouri	Kentucky and Colorado	Texas and Georgia	Idaho and Nevada
 geo_state_nicknamed_sooner	Hard	Which US state is nicknamed 'the Sooner State', after settlers who jumped the gun in the 1889 land rush?	Oklahoma	Kansas	Nebraska	Texas
 geo_state_nicknamed_equality	Hard	Which US state, nicknamed 'the Equality State', let women vote in 1869, decades before the rest of the country?	Wyoming	Utah	Colorado	Idaho
 geo_honduras_spanish	Hard	The name 'Honduras' is Spanish for what?	Depths	Highlands	Harbours	Waterfalls
 geo_states_border_canada	Hard	How many US states border Canada?	Thirteen	Seven	Twenty	Four
 geo_beach_resort_cancun	Hard	The beach resort of Cancun lies in which Mexican state?	Quintana Roo	Yucatan	Campeche	Tabasco
 geo_canadian_province_nicknamed	Hard	Which Canadian province is nicknamed 'The Rock'?	Newfoundland and Labrador	Nova Scotia	New Brunswick	Prince Edward Island
-geo_not_counting_mexico	Hard	Not counting Mexico City, how many states does Mexico have?	31	50	20	12
 geo_smallest_country_central	Hard	Which is the smallest country in Central America by area?	El Salvador	Belize	Costa Rica	Panama
 geo_state_nicknamed_mountain	Hard	Which US state is nicknamed 'the Mountain State'?	West Virginia	Colorado	Montana	Utah
 geo_state_nicknamed_evergreen	Hard	Which US state is nicknamed 'the Evergreen State'?	Washington	Oregon	Maine	Vermont
-geo_names_two_states	Hard	The names of which two US states come from a Sioux word meaning 'friends' or 'allies'?	North and South Dakota	North and South Carolina	Kansas and Arkansas	Iowa and Nebraska
 geo_state_nicknamed_badger	Hard	Which US state is nicknamed 'the Badger State'?	Wisconsin	Michigan	Minnesota	Iowa
 geo_state_flag_designed	Hard	Which US state's flag, designed by a 13-year-old boy in 1927, shows the Big Dipper and the North Star?	Alaska	Minnesota	Maine	Montana
-geo_country_maya_ruins	Hard	In which country are the Maya ruins of Tikal?	Guatemala	Mexico	Honduras	Belize
 geo_state_nicknamed_land_2	Hard	Which US state is nicknamed 'the Land of Enchantment'?	New Mexico	Arizona	Oregon	Vermont
-geo_state_just_syllable	Hard	Which is the only US state whose name has just one syllable?	Maine	Utah	Iowa	Ohio
 geo_pennsylvania_dutch_mostly	Hard	The 'Pennsylvania Dutch' are mostly descended from settlers from which country?	Germany	The Netherlands	Belgium	Denmark
 geo_state_nicknamed_old	Hard	Which US state is nicknamed 'the Old Dominion'?	Virginia	Massachusetts	Maryland	Delaware
 geo_state_nicknamed_constitution	Hard	Which US state is nicknamed 'the Constitution State', after the colonial laws it adopted in 1639?	Connecticut	Pennsylvania	Massachusetts	Virginia
 geo_state_official_state	Hard	Which US state has an official state question: 'Red or green?', about chile sauce?	New Mexico	Arizona	Texas	Colorado
-geo_darien	Expert	The Darien Gap is a missing link in which famous road?	The Pan-American Highway	Route 66	The Silk Road	The Trans-Canada Highway
-geo_mosquito_coast_stretches	Expert	The Mosquito Coast stretches along the Caribbean shores of Nicaragua and which other country?	Honduras	Costa Rica	Panama	Belize
+geo_state_licence_plates_2	Hard	Which US state's licence plates carry the motto 'Live Free or Die'?	New Hampshire	Texas	Vermont	Montana
+mst_kraj_dwa_oceany	Hard	Panama is unusual in that its Caribbean coast lies where relative to its Pacific coast?	To the north	To the east	To the south	To the west
+geo_state_nicknamed_big	Hard	Which US state is nicknamed 'Big Sky Country'?	Montana	Wyoming	Colorado	Idaho
+geo_state_nicknamed_garden	Hard	Which US state is nicknamed 'the Garden State'?	New Jersey	Connecticut	Oregon	Virginia
+geo_four_states_meet	Hard	Which four US states meet at the 'Four Corners'?	Arizona, Utah, Colorado, New Mexico	Arizona, Nevada, Utah, Colorado	Utah, Colorado, Wyoming, New Mexico	Texas, Oklahoma, Colorado, New Mexico
+geo_two_canadian_provinces	Hard	Which two Canadian provinces have no coastline?	Alberta and Saskatchewan	Manitoba and Alberta	Saskatchewan and Manitoba	Alberta and Ontario
+geo_canada_comes_iroquoian	Hard	The name 'Canada' comes from an Iroquoian word meaning what?	Village	Big land	Cold north	Many lakes
+geo_countries_make_central	Hard	How many countries make up Central America?	Seven	Five	Nine	Six
+geo_central_american_country	Hard	Which is the only Central American country with no Caribbean coastline?	El Salvador	Guatemala	Costa Rica	Panama
+geo_caribbean_country_nicknamed	Hard	Which Caribbean country is nicknamed 'the Spice Isle' for its nutmeg?	Grenada	Jamaica	Trinidad	Barbados
+geo_state_nicknamed_show	Hard	Which US state is nicknamed 'the Show Me State'?	Missouri	Kansas	Iowa	Arkansas
+geo_state_nicknamed_keystone	Hard	Which US state is nicknamed 'the Keystone State'?	Pennsylvania	Ohio	Virginia	Maryland
+geo_state_nicknamed_hoosier	Hard	Which US state is nicknamed 'the Hoosier State'?	Indiana	Iowa	Ohio	Kentucky
+geo_state_flag_not	Hard	Which is the only US state whose flag is not a rectangle?	Ohio	Texas	Alaska	Maryland
+geo_populous_country_central	Hard	Which is the most populous country in Central America?	Guatemala	Honduras	Nicaragua	Costa Rica
+geo_state_nicknamed_beehive	Hard	Which US state is nicknamed 'the Beehive State'?	Utah	Idaho	Vermont	Oregon
+geo_state_nicknamed_volunteer	Hard	Which US state is nicknamed 'the Volunteer State'?	Tennessee	Kentucky	Virginia	Texas
+geo_canadian_province_calls	Hard	Which Canadian province calls itself 'Wild Rose Country'?	Alberta	Manitoba	Ontario	Saskatchewan
+geo_mosquito_coast_stretches	Hard	The Mosquito Coast stretches along the Caribbean shores of Nicaragua and which other country?	Honduras	Costa Rica	Panama	Belize
+geo_thanks_islands_beyond	Hard	Thanks to islands beyond the 180th meridian, which US state is technically the easternmost as well as the westernmost?	Alaska	Hawaii	Maine	Florida
+geo_roughly_far_apart	Hard	Roughly how far apart are Russia's Big Diomede and America's Little Diomede islands?	About 4 km	About 40 km	About 400 km	About 1 km
+geo_rupert_land_vast	Hard	Rupert's Land, a vast region handed over to Canada in 1870, had been owned by whom?	The Hudson's Bay Company	The East India Company	The French Crown	The Russian-American Company
 geo_canadian_territory_means	Expert	Which Canadian territory's name means 'great river'?	Yukon	Nunavut	Northwest Territories	Labrador
 geo_part_canada_issued	Expert	Which part of Canada first issued car licence plates shaped like a polar bear, in 1970?	Northwest Territories	Yukon	Manitoba	Newfoundland and Labrador
-geo_thanks_islands_beyond	Expert	Thanks to islands beyond the 180th meridian, which US state is technically the easternmost as well as the westernmost?	Alaska	Hawaii	Maine	Florida
 geo_point_roberts_reachable	Expert	Point Roberts, reachable by land from the rest of the USA only through Canada, belongs to which state?	Washington	Minnesota	Maine	Montana
 geo_northwest_angle_part	Expert	The Northwest Angle, the only part of the lower 48 states north of the 49th parallel, belongs to which state?	Minnesota	North Dakota	Michigan	Montana
-geo_roughly_far_apart	Expert	Roughly how far apart are Russia's Big Diomede and America's Little Diomede islands?	About 4 km	About 40 km	About 400 km	About 1 km
 geo_state_owns_stranded	Expert	Which US state owns a stranded loop of land on the Mississippi, reachable by road only through Tennessee?	Kentucky	Missouri	Arkansas	Illinois
 geo_king_charles_pennsylvania	Expert	King Charles II named Pennsylvania, 'Penn's woods', in honour of whom?	William Penn's father	William Penn himself	Quaker founder George Fox	Admiral Lord Nelson
 geo_caribbean_island_settled	Expert	Which Caribbean island, settled by many Irish Catholics, stamps visitors' passports with a shamrock?	Montserrat	Barbados	Antigua	Saint Kitts
 geo_state_town_renamed	Expert	Which US state has a town that renamed itself in 1950 after a radio quiz show?	New Mexico	Arizona	Nevada	Texas
 geo_state_jousting_official	Expert	Which US state has jousting as its official state sport?	Maryland	Virginia	Kentucky	Delaware
-geo_rupert_land_vast	Expert	Rupert's Land, a vast region handed over to Canada in 1870, had been owned by whom?	The Hudson's Bay Company	The East India Company	The French Crown	The Russian-American Company
 geo_maryland_queen	Expert	Maryland is named after which queen?	Henrietta Maria	Mary I	Mary, Queen of Scots	Mary II
 geo_california	Expert	California is named after what?	An island in a Spanish novel	A Spanish word for 'hot oven'	A Native American chief	A Spanish queen
 geo_state_still_divides	Expert	Which US state still divides its counties into 'hundreds', an old English unit?	Delaware	Maryland	Virginia	Pennsylvania
@@ -146,3 +142,6 @@ geo_canadian_province_licence	Expert	Which Canadian province's licence plates ca
 geo_losing_1830s_toledo	Expert	After losing the 1830s 'Toledo War' strip to Ohio, what did Michigan get in return?	Most of the Upper Peninsula	The islands of Lake Erie	A strip of northern Indiana	The city of Chicago
 geo_tiny_navassa_island	Expert	Tiny Navassa Island, held by the USA, is also claimed by which Caribbean country?	Haiti	Cuba	Jamaica	The Dominican Republic
 geo_2017_caribbean_island	Expert	In 2017, which Caribbean island had to be evacuated after Hurricane Irma damaged about 95% of its buildings?	Barbuda	Anguilla	Nevis	Montserrat
+geo_jamaica_comes_taino	Expert	Jamaica's name comes from a Taino word meaning what?	Land of wood and water	Island of the sun	Green mountain	Home of the hummingbird
+geo_two_states_each	Expert	Which two US states each border eight other states, more than any other?	Tennessee and Missouri	Kentucky and Colorado	Texas and Georgia	Idaho and Nevada
+geo_not_counting_mexico	Expert	Not counting Mexico City, how many states does Mexico have?	31	50	20	12

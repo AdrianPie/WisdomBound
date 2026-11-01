@@ -2,108 +2,88 @@
 id	difficulty	prompt	correct	wrong1	wrong2	wrong3
 geocmp_ludnosc_ameryka_pd	Easy	Which is the most populous country in South America?	Brazil	Argentina	Colombia	Peru
 geo_country_christopher_columbus	Easy	Which country is named after Christopher Columbus?	Colombia	Costa Rica	Venezuela	Ecuador
-geo_argentina_comes_latin	Easy	Argentina's name comes from the Latin word for which metal?	Silver	Gold	Copper	Tin
-geo_country_lies_between	Easy	Which country lies between Argentina and Brazil on the Atlantic coast?	Uruguay	Paraguay	Chile	Bolivia
-geo_roughly_share_south	Easy	Roughly what share of South America's area does Brazil cover?	About half	About a fifth	About 80%	About a tenth
 geo_falkland_islands_territory	Easy	The Falkland Islands are a territory of which country?	Britain	Argentina	Chile	France
 geo_french_guiana_north	Easy	French Guiana, on the north coast of South America, is part of which country?	France	Brazil	The Netherlands	Spain
-geo_south_american_country	Easy	Which is the only South American country with coastlines on both the Pacific and the Caribbean?	Colombia	Venezuela	Ecuador	Peru
-geo_argentinians_call_falkland	Easy	What do Argentinians call the Falkland Islands?	Las Malvinas	Las Galapagos	Las Canarias	Las Azores
 geo_ecuador_takes	Easy	Ecuador takes its name from what?	The equator	A volcano	A Spanish king	An Inca god
 geo_brazil_colony_european	Easy	Brazil was a colony of which European country?	Portugal	Spain	The Netherlands	France
-geo_brazil	Easy	Brazil is named after what?	A tree	A river	A saint	A ship
-geo_country_world_largest	Easy	Which country is the world's largest producer of copper?	Chile	Brazil	Argentina	Venezuela
-geo_country_peru_southern	Easy	Which country is Peru's southern neighbour along the Pacific coast?	Chile	Ecuador	Bolivia	Argentina
 geo_country_lies_pacific	Easy	Which country lies on the Pacific coast between Colombia and Peru?	Ecuador	Bolivia	Venezuela	Chile
 geo_two_languages_spoken	Easy	Which two languages are spoken by the vast majority of South Americans?	Spanish and Portuguese	Spanish and English	Portuguese and French	Spanish and Quechua
-geo_country_famed_finest	Easy	Which country is famed for the finest emeralds, dug at mines such as Muzo?	Colombia	Brazil	Peru	Venezuela
-geo_two_countries_share_2	Easy	Which two countries share the windswept island of Tierra del Fuego?	Argentina and Chile	Chile and Peru	Argentina and Uruguay	Argentina and Brazil
 geo_world_alpacas_prized	Easy	Most of the world's alpacas, prized for their soft wool, live in which country?	Peru	Chile	Argentina	Ecuador
-geo_country_exports_more	Easy	Which country exports more beef than any other?	Brazil	Argentina	Uruguay	Paraguay
 geo_south_american_country_11	Easy	Which South American country is often called 'the Land of the Incas'?	Peru	Bolivia	Ecuador	Chile
 geo_largest_portuguese_speaking	Easy	Which is the largest Portuguese-speaking country in the world?	Brazil	Portugal	Angola	Mozambique
-geo_punta_del_este	Easy	Punta del Este, a glitzy beach resort loved by rich Argentines and Brazilians, is in which country?	Uruguay	Chile	Paraguay	Peru
 geo_sacred_valley_incas	Easy	The 'Sacred Valley of the Incas' lies in which country?	Peru	Bolivia	Ecuador	Colombia
 geo_country_crowds_gather	Easy	In which country do crowds gather at Cusco each June for Inti Raymi, the Inca festival of the sun?	Peru	Bolivia	Ecuador	Chile
-geo_second_populous_country	Medium	Which is the second most populous country in South America?	Colombia	Argentina	Peru	Venezuela
-geo_country_means_little	Medium	Which country's name means 'Little Venice', after villages built on stilts?	Venezuela	Bolivia	Colombia	Ecuador
+geo_country_means_little	Easy	Which country's name means 'Little Venice', after villages built on stilts?	Venezuela	Bolivia	Colombia	Ecuador
+geo_landlocked_bolivia_still	Easy	Landlocked Bolivia still keeps a navy. Where does it mostly sail?	On Lake Titicaca and rivers	Off the coast of Chile	In the Amazon delta	On Lake Maracaibo
+geo_country_british_guiana	Easy	Which country was known as British Guiana until 1966?	Guyana	Suriname	Belize	Trinidad
+geo_three_territories_make	Easy	Which three territories make up 'the Guianas'?	Guyana, Suriname and French Guiana	Guyana, Belize and Suriname	Guyana, Venezuela and Suriname	Suriname, French Guiana and Brazil
+geo_south_american_country_2	Easy	Which South American country lies closest to Africa?	Brazil	Argentina	Venezuela	Guyana
+geo_small_country_stretches	Easy	Which small country stretches from the Pacific coast over the Andes into the Amazon, and owns the Galapagos?	Ecuador	Peru	Colombia	Bolivia
+geo_coffee_axis_unesco	Easy	The 'Coffee Axis', a UNESCO-listed coffee-growing landscape, is in which country?	Colombia	Brazil	Ecuador	Peru
+geo_independence_1975_suriname	Easy	Before independence in 1975, Suriname was known as what?	Dutch Guiana	British Guiana	New Holland	New Zeeland
+geo_brazil_populous_state	Easy	Which is Brazil's most populous state?	Sao Paulo	Rio de Janeiro	Minas Gerais	Bahia
+geo_american_tycoon_built	Easy	Which American tycoon built Fordlandia, a company town in the Brazilian Amazon, to grow rubber?	Henry Ford	Harvey Firestone	Thomas Edison	John D. Rockefeller
 geo_two_south_american	Medium	Which two South American countries do not border Brazil?	Chile and Ecuador	Peru and Bolivia	Uruguay and Paraguay	Colombia and Venezuela
 geo_two_south_american_2	Medium	Which two South American countries are landlocked?	Bolivia and Paraguay	Bolivia and Uruguay	Paraguay and Ecuador	Peru and Bolivia
-geo_independent_countries_south	Medium	How many independent countries are there in South America?	12	9	15	20
-geo_landlocked_bolivia_still	Medium	Landlocked Bolivia still keeps a navy. Where does it mostly sail?	On Lake Titicaca and rivers	Off the coast of Chile	In the Amazon delta	On Lake Maracaibo
 geo_europe_launches_rockets	Medium	Europe launches its rockets from Kourou, in which South American territory?	French Guiana	Suriname	Guyana	Brazil
 geo_largest_spanish_speaking	Medium	Which is the largest Spanish-speaking country by area?	Argentina	Mexico	Spain	Colombia
 geo_2013_country_became	Medium	In 2013, which country became the first to fully legalise recreational cannabis?	Uruguay	The Netherlands	Canada	Portugal
-geo_country_british_guiana	Medium	Which country was known as British Guiana until 1966?	Guyana	Suriname	Belize	Trinidad
-geo_chile_very_long	Medium	Chile is very long and thin. Roughly how wide is it on average?	About 175 km	About 50 km	About 600 km	About 1,000 km
 geo_usually_covers_argentina	Medium	Which name usually covers Argentina, Chile and Uruguay as a region?	The Southern Cone	The Andean Belt	The Pampas Rim	The Silver Coast
-geo_three_territories_make	Medium	Which three territories make up 'the Guianas'?	Guyana, Suriname and French Guiana	Guyana, Belize and Suriname	Guyana, Venezuela and Suriname	Suriname, French Guiana and Brazil
 geo_two_south_american_3	Medium	In which two South American countries do cars drive on the left?	Guyana and Suriname	Chile and Peru	Uruguay and Paraguay	Brazil and Guyana
-geo_south_american_country_2	Medium	Which South American country lies closest to Africa?	Brazil	Argentina	Venezuela	Guyana
-geo_small_country_stretches	Medium	Which small country stretches from the Pacific coast over the Andes into the Amazon, and owns the Galapagos?	Ecuador	Peru	Colombia	Bolivia
-geo_triple_frontier_smuggling	Medium	The 'Triple Frontier', a famous smuggling hub, is where Argentina and Brazil meet which country?	Paraguay	Uruguay	Bolivia	Chile
 geo_country_largest_population	Medium	Which country has the largest population of Japanese descent outside Japan?	Brazil	The USA	Peru	Canada
 geo_tierra_del_fuego	Medium	Tierra del Fuego, 'Land of Fire', got its name from what?	Campfires seen by Magellan's crew	Its many active volcanoes	Natural gas burning from the rocks	Red rocks glowing at sunset
 geo_country_largest_proven	Medium	Which country has the largest proven oil reserves in the world?	Venezuela	Saudi Arabia	Russia	Iran
-geo_time_zones_brazil	Medium	How many time zones does Brazil have?	Four	One	Two	Seven
-geo_coffee_axis_unesco	Medium	The 'Coffee Axis', a UNESCO-listed coffee-growing landscape, is in which country?	Colombia	Brazil	Ecuador	Peru
 geo_uruguay_paraguay_both	Medium	Uruguay and Paraguay are both named after what?	Rivers	Mountains	Indigenous chiefs	Spanish saints
 geo_country_world_biggest	Medium	Which country is the world's biggest exporter of bananas?	Ecuador	Brazil	Colombia	Costa Rica
 geo_three_countries_similar	Medium	Which three countries have similar yellow, blue and red flags, a legacy of Bolivar's Gran Colombia?	Colombia, Ecuador, Venezuela	Peru, Bolivia, Chile	Colombia, Peru, Bolivia	Ecuador, Peru, Venezuela
 geo_smallest_spanish_speaking	Medium	Which is the smallest Spanish-speaking country in South America by area?	Uruguay	Paraguay	Ecuador	Bolivia
 geo_three_countries_border	Medium	Which three countries border Chile?	Peru, Bolivia and Argentina	Peru, Brazil and Argentina	Bolivia, Paraguay and Argentina	Ecuador, Peru and Argentina
-geo_countries_share_land	Medium	How many countries share a land border with Argentina?	Five	Three	Seven	Nine
-geo_independence_1975_suriname	Medium	Before independence in 1975, Suriname was known as what?	Dutch Guiana	British Guiana	New Holland	New Zeeland
 geo_country_world_biggest_2	Medium	Which country is the world's biggest exporter of soybeans?	Brazil	Argentina	Paraguay	Colombia
-geo_south_american_country_6	Medium	Which South American country is often called 'the Switzerland of South America'?	Uruguay	Chile	Paraguay	Bolivia
 geo_people_rio_janeiro	Medium	What are people from Rio de Janeiro called?	Cariocas	Paulistas	Gauchos	Mineiros
-geo_brazil_populous_state	Medium	Which is Brazil's most populous state?	Sao Paulo	Rio de Janeiro	Minas Gerais	Bahia
-geo_two_countries_smiling	Medium	Which two countries have a smiling 'Sun of May' on their flags?	Argentina and Uruguay	Argentina and Chile	Uruguay and Paraguay	Peru and Bolivia
 geo_devil_island_notorious	Medium	Devil's Island, the notorious penal colony of the book 'Papillon', lies off which territory?	French Guiana	Suriname	Guyana	Venezuela
 geo_since_1999_country	Medium	Since 1999, which country's official name has begun 'Bolivarian Republic of'?	Venezuela	Bolivia	Colombia	Ecuador
-geo_not_founding_member	Medium	Which of these was NOT a founding member of the Mercosur trade bloc in 1991?	Chile	Paraguay	Uruguay	Argentina
-geo_states_brazil_besides	Medium	How many states does Brazil have, besides its federal district?	26	12	50	40
-geo_densely_populated_country	Medium	Which is the most densely populated country in South America?	Ecuador	Colombia	Venezuela	Uruguay
-geo_south_american_country_7	Medium	Which South American country's flag has three vertical stripes, red, white and red?	Peru	Chile	Paraguay	Bolivia
 geo_altiplano_world_highest	Medium	The Altiplano, one of the world's highest inhabited plateaus, lies mostly in which country?	Bolivia	Peru	Chile	Ecuador
-geo_under_spanish_rule	Medium	Under Spanish rule, which country was known as 'Upper Peru'?	Bolivia	Ecuador	Chile	Colombia
 geo_country_lies_directly_2	Medium	Which country lies directly across the Rio de la Plata from Buenos Aires?	Uruguay	Paraguay	Brazil	Chile
 geo_carretera_austral_200	Medium	The Carretera Austral, a 1,200 km road through wild Patagonian fjords and forests, is in which country?	Chile	Argentina	Peru	Bolivia
-geo_brazil_roughly_times	Medium	Brazil has roughly how many times as many people as Portugal, its old colonial ruler?	About 20 times	About 3 times	About 8 times	About 50 times
 geo_since_2000_south	Medium	Since 2000, which South American country has used the US dollar as its own currency?	Ecuador	Venezuela	Peru	Colombia
 geo_thanks_clear_bone	Medium	Thanks to its clear, bone-dry desert skies, which country hosts many of the world's biggest telescopes?	Chile	Peru	Bolivia	Argentina
-geo_country_more_three	Medium	Which country has more than three head of cattle for every person?	Uruguay	Argentina	Paraguay	Brazil
-geo_country_world_second	Medium	Which country is the world's second-biggest exporter of cut flowers, behind only the Netherlands?	Colombia	Ecuador	Kenya	Brazil
-geo_south_american_country_10	Medium	In which South American country are the traditional cowboys called 'huasos'?	Chile	Argentina	Uruguay	Brazil
 geo_country_more_bird	Medium	Which country has more bird species than any other, close to 2,000 of them?	Colombia	Brazil	Peru	Indonesia
-geo_country_united_provinces	Medium	Which country was first called the 'United Provinces of the Rio de la Plata'?	Argentina	Uruguay	Paraguay	Bolivia
 geo_roughly_share_uruguay	Medium	Roughly what share of Uruguay's people live in and around its capital, Montevideo?	About half	About a tenth	Nearly all	About a fifth
-geo_gran_sabana_high	Medium	The Gran Sabana, a high plateau of flat-topped tepuis and waterfalls, lies in which country?	Venezuela	Guyana	Colombia	Ecuador
 geo_death_road_once	Medium	The 'Death Road', once called the most dangerous road in the world, winds down from the Andes in which country?	Bolivia	Peru	Ecuador	Chile
-geox_nazca	Hard	In which country are the giant Nazca Lines drawn in the desert?	Peru	Chile	Mexico	Bolivia
-geoy_boliwia_morze	Hard	Bolivia lost its sea coast to which neighbour in a 19th-century war?	Chile	Peru	Brazil	Argentina
+geo_argentina_comes_latin	Medium	Argentina's name comes from the Latin word for which metal?	Silver	Gold	Copper	Tin
+geo_country_lies_between	Medium	Which country lies between Argentina and Brazil on the Atlantic coast?	Uruguay	Paraguay	Chile	Bolivia
+geo_roughly_share_south	Medium	Roughly what share of South America's area does Brazil cover?	About half	About a fifth	About 80%	About a tenth
+geo_south_american_country	Medium	Which is the only South American country with coastlines on both the Pacific and the Caribbean?	Colombia	Venezuela	Ecuador	Peru
+geo_argentinians_call_falkland	Medium	What do Argentinians call the Falkland Islands?	Las Malvinas	Las Galapagos	Las Canarias	Las Azores
+geo_brazil	Medium	Brazil is named after what?	A tree	A river	A saint	A ship
+geo_country_world_largest	Medium	Which country is the world's largest producer of copper?	Chile	Brazil	Argentina	Venezuela
+geo_country_peru_southern	Medium	Which country is Peru's southern neighbour along the Pacific coast?	Chile	Ecuador	Bolivia	Argentina
+geo_country_famed_finest	Medium	Which country is famed for the finest emeralds, dug at mines such as Muzo?	Colombia	Brazil	Peru	Venezuela
+geo_two_countries_share_2	Medium	Which two countries share the windswept island of Tierra del Fuego?	Argentina and Chile	Chile and Peru	Argentina and Uruguay	Argentina and Brazil
+geo_country_exports_more	Medium	Which country exports more beef than any other?	Brazil	Argentina	Uruguay	Paraguay
+geox_nazca	Medium	In which country are the giant Nazca Lines drawn in the desert?	Peru	Chile	Mexico	Bolivia
+geoy_boliwia_morze	Medium	Bolivia lost its sea coast to which neighbour in a 19th-century war?	Chile	Peru	Brazil	Argentina
+geo_country_crossed_both	Medium	Which country is crossed by both the equator and the Tropic of Capricorn?	Brazil	Ecuador	Peru	Bolivia
+geo_brazilian_state_means	Medium	Which Brazilian state's name means 'General Mines'?	Minas Gerais	Mato Grosso	Rio Grande do Sul	Goias
+geo_brazil_largest_state	Medium	Which is Brazil's largest state by area?	Amazonas	Mato Grosso	Para	Bahia
+geo_bolivia_second_official	Medium	Bolivia's second official flag, the chequered rainbow 'Wiphala', represents whom?	The Andean indigenous peoples	The workers of the tin mines	The victims of the Chaco War	The navy that lost the coast
+geo_mendoza_foot_andes	Medium	Mendoza, at the foot of the Andes, makes most of which country's wine, especially Malbec?	Argentina	Chile	Uruguay	Bolivia
 geo_smallest_country_south	Hard	Which is the smallest country in South America?	Suriname	Uruguay	Guyana	Ecuador
 geo_south_american_country_3	Hard	Which South American country's official name calls it the 'Oriental Republic'?	Uruguay	Paraguay	Ecuador	Venezuela
 geo_since_2009_bolivia	Hard	Since 2009, Bolivia's official name begins with which unusual word?	Plurinational	Bolivarian	Andean	Federal
 geo_1667_dutch_gave	Hard	In 1667 the Dutch gave up their claim to New York in return for keeping which South American colony?	Suriname	Guyana	French Guiana	Venezuela
 geo_puerto_williams_often	Hard	Puerto Williams, often called the southernmost town in the world, belongs to which country?	Chile	Argentina	New Zealand	South Africa
 geo_settlers_country_founded	Hard	Settlers from which country founded towns in Argentine Patagonia in 1865, and their language is still spoken there?	Wales	Ireland	Scotland	Iceland
-geo_country_crossed_both	Hard	Which country is crossed by both the equator and the Tropic of Capricorn?	Brazil	Ecuador	Peru	Bolivia
-geo_brazilian_state_means	Hard	Which Brazilian state's name means 'General Mines'?	Minas Gerais	Mato Grosso	Rio Grande do Sul	Goias
-geo_brazil_largest_state	Hard	Which is Brazil's largest state by area?	Amazonas	Mato Grosso	Para	Bahia
 geo_country_owns_robinson	Hard	Which country owns Robinson Crusoe Island, where a real castaway's stay inspired the novel?	Chile	Peru	Ecuador	Colombia
-geo_country_thought_come	Hard	Which country's name is thought to come from a word meaning 'land of many waters'?	Guyana	Paraguay	Uruguay	Suriname
 geo_roughly_long_border	Hard	Roughly how long is the border between Argentina and Chile?	About 5,000 km	About 1,500 km	About 2,500 km	About 12,000 km
 geo_roughly_share_peru	Hard	Roughly what share of Peru is covered by the Amazon rainforest?	About 60%	About 10%	About 25%	About 95%
 geo_hot_dry_gran	Hard	The hot, dry Gran Chaco covers about 60% of which country, yet holds only a tiny share of its people?	Paraguay	Bolivia	Argentina	Uruguay
 geo_country_claims_essequibo	Hard	Which country claims the Essequibo region, about two-thirds of Guyana's territory?	Venezuela	Brazil	Suriname	Colombia
-geo_two_south_american_4	Hard	Which two South American countries each border only two other countries?	Ecuador and Uruguay	Chile and Ecuador	Uruguay and Paraguay	Ecuador and Guyana
 geo_northernmost_point_mainland	Hard	The northernmost point of mainland South America lies in which country?	Colombia	Venezuela	Guyana	Suriname
 geo_brazilian_state_salvador	Hard	Which Brazilian state, with Salvador as its capital, is the heartland of Afro-Brazilian culture?	Bahia	Pernambuco	Minas Gerais	Maranhao
 geo_brazilian_state_bordering	Hard	Which Brazilian state, bordering Uruguay and Argentina, is the home of Brazil's gauchos?	Rio Grande do Sul	Santa Catarina	Parana	Mato Grosso do Sul
 geo_country_official_cooperative	Hard	Which country's official name is the 'Cooperative Republic of' itself?	Guyana	Suriname	Paraguay	Bolivia
 geo_unusual_paraguay_flag	Hard	What is unusual about Paraguay's flag?	Its two sides differ	It has no red	It is square	It shows a map
-geo_bolivia_second_official	Hard	Bolivia's second official flag, the chequered rainbow 'Wiphala', represents whom?	The Andean indigenous peoples	The workers of the tin mines	The victims of the Chaco War	The navy that lost the coast
 geo_south_american_country_8	Hard	Which South American country has the largest share of indigenous people in its population?	Bolivia	Peru	Paraguay	Chile
 geo_2008_country_became	Hard	In 2008, which country became the first to give nature itself rights in its constitution?	Ecuador	Bolivia	Costa Rica	Peru
 geo_country_heavily_forested	Hard	Which country is the most heavily forested in the world, by share of its land?	Suriname	Brazil	Gabon	Finland
@@ -111,26 +91,40 @@ geo_lithium_triangle_holding	Hard	The 'Lithium Triangle', holding over half the 
 geo_2010_country_became	Hard	In 2010, which country became the first in Latin America to legalise same-sex marriage nationwide?	Argentina	Uruguay	Brazil	Chile
 geo_iquitos_largest_city	Hard	Iquitos, the largest city in the world that cannot be reached by road, is in which country?	Peru	Brazil	Colombia	Bolivia
 geo_silver_mountain_potosi	Hard	The silver mountain of Potosi, which bankrolled the Spanish Empire, is in which country?	Bolivia	Peru	Mexico	Argentina
-geo_stars_brazil_flag	Hard	The stars on Brazil's flag show the sky over Rio on which day?	The day the republic was proclaimed	The day Brazil won independence	The day slavery was abolished	The day Brasilia was founded
 geo_butch_cassidy_sundance	Hard	Butch Cassidy and the Sundance Kid are believed to have died in a 1908 shootout in which country?	Bolivia	Argentina	Chile	Mexico
-geo_colonia_del_sacramento	Hard	Colonia del Sacramento, Uruguay's oldest town, was founded in 1680 by which country?	Portugal	Spain	France	Britain
-geo_american_tycoon_built	Hard	Which American tycoon built Fordlandia, a company town in the Brazilian Amazon, to grow rubber?	Henry Ford	Harvey Firestone	Thomas Edison	John D. Rockefeller
 geo_country_world_biggest_3	Hard	Which country is the world's biggest producer of fishmeal, made from its huge anchovy catch?	Peru	Chile	Ecuador	Argentina
 geo_south_american_country_9	Hard	Which South American country's cricketers play Test cricket as part of the West Indies team?	Guyana	Suriname	Venezuela	Colombia
-geo_mendoza_foot_andes	Hard	Mendoza, at the foot of the Andes, makes most of which country's wine, especially Malbec?	Argentina	Chile	Uruguay	Bolivia
 geo_three_south_american	Hard	Which three South American countries does the equator cross?	Ecuador, Colombia and Brazil	Ecuador, Peru and Brazil	Colombia, Venezuela and Brazil	Ecuador, Colombia and Peru
 geo_christ_andes_statue	Hard	The 'Christ of the Andes' statue, high on a mountain pass, celebrates peace between Argentina and which country?	Chile	Bolivia	Peru	Paraguay
 geo_country_home_marble	Hard	Which country is home to the Marble Caves on General Carrera Lake?	Chile	Argentina	Peru	Bolivia
-geo_country_calls_amazon	Hard	Which country calls its Amazon lowlands, east of the Andes, 'El Oriente'?	Ecuador	Chile	Argentina	Uruguay
-geo_country_region_mesopotamia	Hard	Which country has a region called 'Mesopotamia', lying between the Parana and Uruguay rivers?	Argentina	Paraguay	Uruguay	Brazil
 geo_present_day_country	Hard	Which present-day country formed the heart of the Spanish colony of New Granada?	Colombia	Venezuela	Ecuador	Peru
-geo2_panstwo_najdluzsze	Expert	Which country is the longest from north to south?	Chile	Norway	Brazil	Russia
-geo_country_shares_longest	Expert	Which country shares the longest border with Brazil?	Bolivia	Peru	Venezuela	Argentina
+geo_punta_del_este	Hard	Punta del Este, a glitzy beach resort loved by rich Argentines and Brazilians, is in which country?	Uruguay	Chile	Paraguay	Peru
+geo_second_populous_country	Hard	Which is the second most populous country in South America?	Colombia	Argentina	Peru	Venezuela
+geo_independent_countries_south	Hard	How many independent countries are there in South America?	12	9	15	20
+geo_chile_very_long	Hard	Chile is very long and thin. Roughly how wide is it on average?	About 175 km	About 50 km	About 600 km	About 1,000 km
+geo_triple_frontier_smuggling	Hard	The 'Triple Frontier', a famous smuggling hub, is where Argentina and Brazil meet which country?	Paraguay	Uruguay	Bolivia	Chile
+geo_time_zones_brazil	Hard	How many time zones does Brazil have?	Four	One	Two	Seven
+geo_countries_share_land	Hard	How many countries share a land border with Argentina?	Five	Three	Seven	Nine
+geo_south_american_country_6	Hard	Which South American country is often called 'the Switzerland of South America'?	Uruguay	Chile	Paraguay	Bolivia
+geo_two_countries_smiling	Hard	Which two countries have a smiling 'Sun of May' on their flags?	Argentina and Uruguay	Argentina and Chile	Uruguay and Paraguay	Peru and Bolivia
+geo_not_founding_member	Hard	Which of these was NOT a founding member of the Mercosur trade bloc in 1991?	Chile	Paraguay	Uruguay	Argentina
+geo_states_brazil_besides	Hard	How many states does Brazil have, besides its federal district?	26	12	50	40
+geo_densely_populated_country	Hard	Which is the most densely populated country in South America?	Ecuador	Colombia	Venezuela	Uruguay
+geo_south_american_country_7	Hard	Which South American country's flag has three vertical stripes, red, white and red?	Peru	Chile	Paraguay	Bolivia
+geo_under_spanish_rule	Hard	Under Spanish rule, which country was known as 'Upper Peru'?	Bolivia	Ecuador	Chile	Colombia
+geo_country_more_three	Hard	Which country has more than three head of cattle for every person?	Uruguay	Argentina	Paraguay	Brazil
+geo_country_world_second	Hard	Which country is the world's second-biggest exporter of cut flowers, behind only the Netherlands?	Colombia	Ecuador	Kenya	Brazil
+geo_south_american_country_10	Hard	In which South American country are the traditional cowboys called 'huasos'?	Chile	Argentina	Uruguay	Brazil
+geo_country_united_provinces	Hard	Which country was first called the 'United Provinces of the Rio de la Plata'?	Argentina	Uruguay	Paraguay	Bolivia
+geo_gran_sabana_high	Hard	The Gran Sabana, a high plateau of flat-topped tepuis and waterfalls, lies in which country?	Venezuela	Guyana	Colombia	Ecuador
+geo_country_shares_longest	Hard	Which country shares the longest border with Brazil?	Bolivia	Peru	Venezuela	Argentina
+geo_south_american_country_4	Hard	Which is the only South American country lying entirely south of the Tropic of Capricorn?	Uruguay	Chile	Argentina	Paraguay
+geo_cape_froward_southernmost	Hard	Cape Froward, the southernmost point of the South American mainland, lies in which country?	Chile	Argentina	Uruguay	Brazil
+geo_mapuche_resisted_spanish	Hard	The Mapuche, who resisted Spanish conquest for centuries, live mainly in Chile and which other country?	Argentina	Peru	Bolivia	Paraguay
+geo_filadelfia_main_town	Hard	Filadelfia, the main town of Paraguay's Chaco, was founded by German-speaking members of which faith?	The Mennonites	The Amish	The Hutterites	The Moravians
 geo_brazil_acquired_state	Expert	Brazil acquired the state of Acre in 1903 from which country?	Bolivia	Paraguay	Colombia	Venezuela
-geo_south_american_country_4	Expert	Which is the only South American country lying entirely south of the Tropic of Capricorn?	Uruguay	Chile	Argentina	Paraguay
 geo_caribbean_islands_san	Expert	The Caribbean islands of San Andres, much closer to Nicaragua, belong to which country?	Colombia	Venezuela	Honduras	Panama
 geo_1929_chile_handed	Expert	In 1929 Chile handed back which city to Peru, while keeping Arica?	Tacna	Iquique	Antofagasta	Arequipa
-geo_cape_froward_southernmost	Expert	Cape Froward, the southernmost point of the South American mainland, lies in which country?	Chile	Argentina	Uruguay	Brazil
 geo_1863_1886_colombia	Expert	From 1863 to 1886, Colombia was officially called what?	The United States of Colombia	The Kingdom of Colombia	The Andean Republic	The Bolivarian Federation
 geo_suriname_sizeable_community	Expert	Suriname has a sizeable community whose ancestors came as contract workers from which island?	Java	Sri Lanka	Madagascar	Borneo
 geo_1860_french_lawyer	Expert	In 1860 a French lawyer proclaimed himself king of which South American region?	Araucania and Patagonia	The Mosquito Coast	The Gran Chaco	Tierra del Fuego
@@ -139,10 +133,14 @@ geo_brazil_state_mato	Expert	The name of Brazil's state of Mato Grosso means wha
 geo_fernando_noronha_islands	Expert	The Fernando de Noronha islands, famed for their beaches, belong to which Brazilian state?	Pernambuco	Bahia	Ceara	Rio Grande do Norte
 geo_bolivia_paraguay_fought	Expert	Bolivia and Paraguay fought the bloody Chaco War of 1932-1935 partly over hopes of finding what?	Oil	Silver	Gold	Rubber
 geo_nueva_germania_colony	Expert	Nueva Germania, a colony for 'pure' Germans founded by Nietzsche's sister, is in which country?	Paraguay	Brazil	Argentina	Chile
-geo_mapuche_resisted_spanish	Expert	The Mapuche, who resisted Spanish conquest for centuries, live mainly in Chile and which other country?	Argentina	Peru	Bolivia	Paraguay
 geo_colonia_tovar_mountain	Expert	Colonia Tovar, a mountain village founded by Black Forest Germans in 1843, is in which country?	Venezuela	Chile	Brazil	Argentina
-geo_filadelfia_main_town	Expert	Filadelfia, the main town of Paraguay's Chaco, was founded by German-speaking members of which faith?	The Mennonites	The Amish	The Hutterites	The Moravians
 geo_country_capital_grand	Expert	In which country's capital do a grand mosque and a synagogue stand side by side on the same street?	Suriname	Guyana	Venezuela	Argentina
 geo_amazon_river_port	Expert	The Amazon river port of Leticia gives which country its foothold on the great river?	Colombia	Venezuela	Ecuador	Bolivia
 geo_1893_group_australian	Expert	In 1893 a group of Australian socialists founded a utopian colony called 'New Australia' in which country?	Paraguay	Argentina	Chile	Uruguay
 geo_choco_department_rainiest	Expert	Choco, a department famous as one of the rainiest places on Earth, belongs to which country?	Colombia	Ecuador	Venezuela	Peru
+geo_country_thought_come	Expert	Which country's name is thought to come from a word meaning 'land of many waters'?	Guyana	Paraguay	Uruguay	Suriname
+geo_two_south_american_4	Expert	Which two South American countries each border only two other countries?	Ecuador and Uruguay	Chile and Ecuador	Uruguay and Paraguay	Ecuador and Guyana
+geo_stars_brazil_flag	Expert	The stars on Brazil's flag show the sky over Rio on which day?	The day the republic was proclaimed	The day Brazil won independence	The day slavery was abolished	The day Brasilia was founded
+geo_colonia_del_sacramento	Expert	Colonia del Sacramento, Uruguay's oldest town, was founded in 1680 by which country?	Portugal	Spain	France	Britain
+geo_country_calls_amazon	Expert	Which country calls its Amazon lowlands, east of the Andes, 'El Oriente'?	Ecuador	Chile	Argentina	Uruguay
+geo_country_region_mesopotamia	Expert	Which country has a region called 'Mesopotamia', lying between the Parana and Uruguay rivers?	Argentina	Paraguay	Uruguay	Brazil

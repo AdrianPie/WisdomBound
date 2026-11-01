@@ -1,98 +1,81 @@
 # Australia, Nowa Zelandia i panstwa Pacyfiku: stany, przydomki, wyspiarskie panstwa, ciekawostki.
 id	difficulty	prompt	correct	wrong1	wrong2	wrong3
-geo_states_australia	Easy	How many states does Australia have?	Six	Eight	Five	Seven
-geo_australian_state_great	Easy	In which Australian state is the Great Barrier Reef?	Queensland	New South Wales	Western Australia	Northern Territory
 geo_australia_island_state	Easy	Which is Australia's only island state?	Tasmania	Victoria	Queensland	South Australia
-geo_papua_new_guinea	Easy	Papua New Guinea shares the island of New Guinea with which country?	Indonesia	Australia	Malaysia	The Philippines
-geo_australia_largest_state	Easy	Which is Australia's largest state by area?	Western Australia	Queensland	New South Wales	South Australia
-geo_australian_state_lies	Easy	Which Australian state lies directly north of Victoria?	New South Wales	South Australia	Queensland	Tasmania
-geo_counting_islands_smallest	Easy	Counting islands, which is the smallest Australian state?	Tasmania	Victoria	South Australia	New South Wales
 geo_state_lies_oceania	Easy	Which US state lies in Oceania rather than in North America?	Hawaii	Alaska	California	Oregon
-geo_australia_populous_state	Easy	Which is Australia's most populous state?	New South Wales	Victoria	Queensland	Western Australia
 geo_silver_fern_worn	Easy	The silver fern, worn by many of its sports teams, is a national symbol of which country?	New Zealand	Australia	Canada	Fiji
 geo_australia_other_country	Easy	Australia and which other country both fly flags with the Union Jack and the stars of the Southern Cross?	New Zealand	Fiji	Samoa	Papua New Guinea
 geo_populous_country_oceania	Easy	Which is the most populous country in Oceania?	Australia	Papua New Guinea	New Zealand	Fiji
-geo_australian_state_nicknamed	Easy	Which Australian state is nicknamed 'the Sunshine State'?	Queensland	Western Australia	New South Wales	South Australia
-geo_pacific_nation_made	Easy	Which Pacific nation is made up of about 330 islands, the biggest being Viti Levu and Vanua Levu?	Fiji	Samoa	Tonga	Vanuatu
-geo_samoa_tonga_tahiti	Easy	Samoa, Tonga and Tahiti all lie in which Pacific region?	Polynesia	Melanesia	Micronesia	Australasia
-geo_bora_bora_lagoon	Easy	Bora Bora, famous for its lagoon and overwater bungalows, belongs to which country?	France	The USA	New Zealand	Fiji
-geo_australia_roughly_same	Easy	Australia is roughly the same size as which of these?	The contiguous USA	India	Greenland	Mexico
 geo_queenstown_calls_itself	Easy	Queenstown, which calls itself 'the adventure capital of the world', is in which country?	New Zealand	Australia	Fiji	Canada
-geo_gold_coast_surf	Easy	The Gold Coast, famous for its surf beaches and theme parks, is in which Australian state?	Queensland	New South Wales	Victoria	Western Australia
-geo_australian_rock_ayers	Easy	Which Australian rock is also known by the name Ayers Rock?	Uluru	Kata Tjuta	Wave Rock	Mount Augustus
 geo_australia_new_zealand	Easy	Why are Australia and New Zealand nicknamed 'Down Under'?	They lie in the Southern Hemisphere	They lie below sea level	They were settled by convicts	They lie under the ozone hole
 geo_australian_city_nicknamed_2	Easy	Which Australian city is nicknamed 'the Harbour City'?	Sydney	Brisbane	Perth	Adelaide
 geo_country_covers_whole	Easy	Which is the only country that covers a whole continent by itself?	Australia	Antarctica	Greenland	New Zealand
-geo_country_flag_shows_14	Easy	Which country's flag shows the Southern Cross as four red stars?	New Zealand	Australia	Samoa	Fiji
-lmk_uluru_kraj	Medium	In which country is Uluru?	Australia	New Zealand	South Africa	Namibia
-geo_tahiti	Medium	Tahiti is part of which country's overseas territories?	France	Britain	The United States	New Zealand
+lmk_uluru_kraj	Easy	In which country is Uluru?	Australia	New Zealand	South Africa	Namibia
+geo_guam_motto_says	Easy	Guam, whose motto says it is 'where America's day begins', is a territory of which country?	The USA	Japan	Australia	Spain
+geo_christmas_island_mass	Easy	Christmas Island, famous for its mass migration of red crabs, belongs to which country?	Australia	Indonesia	Britain	New Zealand
+geo_land_diving_vanuatu	Easy	The 'land diving' of Vanuatu's Pentecost Island, leaping from towers with vines tied to the ankles, inspired which sport?	Bungee jumping	BASE jumping	Cliff diving	Zip-lining
+geo_opal_mining_town	Easy	In the opal-mining town of Coober Pedy, many people escape the desert heat by living where?	In underground dugouts	In houseboats on a lake	In stilt houses on hills	In air-cooled caravans
+geo_outback_town_sits	Easy	Which outback town sits near the middle of Australia, in the 'Red Centre'?	Alice Springs	Broken Hill	Kalgoorlie	Katherine
+geo_under_1973_deal	Easy	Under a 1973 deal, citizens of which country may live and work in Australia without a visa?	New Zealand	Britain	Fiji	Papua New Guinea
+geo_tasmania_dutch_explorer	Easy	Tasmania is named after which Dutch explorer, the first European to sight it?	Abel Tasman	Willem Janszoon	Dirk Hartog	Jacob Roggeveen
+geo_1999_referendum_australians	Easy	In a 1999 referendum, Australians voted to keep the British monarch rather than turn their country into what?	A republic	A union with New Zealand	A one-chamber democracy	A federal kingdom
+geo_country_produces_nearly	Easy	Which country produces nearly all of the world's precious opals?	Australia	New Zealand	Brazil	South Africa
 geo_country_aotearoa_land	Medium	Which country is known as Aotearoa, 'the land of the long white cloud'?	New Zealand	Australia	Fiji	Samoa
 geo_australian_state_sydney	Medium	In which Australian state is Sydney?	New South Wales	Victoria	Queensland	South Australia
 geo_two_australian_states	Medium	Which two Australian states are both named after Queen Victoria?	Victoria and Queensland	Victoria and Tasmania	Queensland and South Australia	Victoria and New South Wales
 geo_australian_capital_territory	Medium	The Australian Capital Territory is entirely surrounded by which state?	New South Wales	Victoria	Queensland	South Australia
-geo_uluru_lies_australian	Medium	Uluru lies in which Australian state or territory?	The Northern Territory	Western Australia	South Australia	Queensland
 geo_australia_largest_country	Medium	After Australia, which is the largest country in Oceania by area?	Papua New Guinea	New Zealand	Fiji	The Solomon Islands
 geo_new_zealand_province	Medium	New Zealand was named after a province of which country?	The Netherlands	Denmark	Britain	Belgium
 geo_country_hill_letter	Medium	In which country is the hill with an 85-letter name beginning 'Taumatawhakatangihanga'?	New Zealand	Wales	Hawaii	Thailand
 geo_pacific_region_means	Medium	Which Pacific region's name means 'many islands'?	Polynesia	Micronesia	Melanesia	Australasia
 geo_native_people_call	Medium	What do its native people call Easter Island?	Rapa Nui	Te Ika	Aotearoa	Hiva Oa
 geo_roughly_far_new	Medium	Roughly how far is New Zealand from Australia?	About 2,000 km	About 200 km	About 800 km	About 5,000 km
-geo_guam_motto_says	Medium	Guam, whose motto says it is 'where America's day begins', is a territory of which country?	The USA	Japan	Australia	Spain
 geo_pacific_kingdom_friendly	Medium	Which Pacific kingdom, called 'the Friendly Islands' by Captain Cook, was never fully colonised?	Tonga	Fiji	Samoa	Hawaii
 geo_nickel_rich_new	Medium	Nickel-rich New Caledonia voted three times, from 2018 to 2021, on independence from which country?	France	Britain	Australia	New Zealand
 geo_large_share_fiji	Medium	A large share of Fiji's people descend from labourers brought in the 1800s from which country?	India	China	Japan	Indonesia
 geo_2011_pacific_country	Medium	In 2011, which Pacific country skipped 30 December entirely by moving across the date line?	Samoa	Tonga	Fiji	Kiribati
-geo_not_counting_overseas	Medium	Not counting overseas territories, which is the only country lying in all four hemispheres?	Kiribati	Indonesia	Ecuador	Brazil
-geo_christmas_island_mass	Medium	Christmas Island, famous for its mass migration of red crabs, belongs to which country?	Australia	Indonesia	Britain	New Zealand
 geo_dutch_call_australian	Medium	What did the Dutch call the Australian mainland in the 1600s?	New Holland	New Amsterdam	Van Diemen's Land	New Batavia
-geo_independent_countries_oceania	Medium	How many independent countries does Oceania have?	14	9	20	25
-geo_australians_call_tropical	Medium	What do Australians call the tropical northern part of the country around Darwin?	The Top End	The Red Centre	The Never Never	The Far North
 geo_pitcairn_islands_inhabitants	Medium	The Pitcairn Islands, with only about 50 inhabitants, are a territory of which country?	Britain	New Zealand	France	Australia
 geo_roughly_far_easter	Medium	Roughly how far is Easter Island from the coast of South America?	About 3,500 km	About 350 km	About 1,000 km	About 8,000 km
-geo_australian_state_calls	Medium	Which Australian state calls itself 'the Garden State'?	Victoria	Tasmania	New South Wales	South Australia
-geo_australian_state_calls_2	Medium	Which Australian state calls itself 'the Festival State'?	South Australia	Victoria	Queensland	New South Wales
 geo_part_australia_nicknamed	Medium	Which part of Australia is nicknamed 'the Apple Isle'?	Tasmania	Kangaroo Island	Norfolk Island	Phillip Island
-geo_part_new_zealand	Medium	Which part of New Zealand do its own residents jokingly call 'the Mainland'?	The South Island	The North Island	Stewart Island	The Auckland region
-geo_land_diving_vanuatu	Medium	The 'land diving' of Vanuatu's Pentecost Island, leaping from towers with vines tied to the ankles, inspired which sport?	Bungee jumping	BASE jumping	Cliff diving	Zip-lining
-geo_robert_louis_stevenson	Medium	Robert Louis Stevenson, called 'Tusitala' ('teller of tales') by locals, is buried on a mountain in which country?	Samoa	Fiji	Tonga	Vanuatu
 geo_roughly_sheep_each	Medium	Roughly how many sheep are there for each person in New Zealand?	About five	About one	About twenty	About fifty
-geo_opal_mining_town	Medium	In the opal-mining town of Coober Pedy, many people escape the desert heat by living where?	In underground dugouts	In houseboats on a lake	In stilt houses on hills	In air-cooled caravans
-geo_australian_state_capital	Medium	Which Australian state capital is named after a British prime minister?	Melbourne	Brisbane	Hobart	Perth
-geo_outback_town_sits	Medium	Which outback town sits near the middle of Australia, in the 'Red Centre'?	Alice Springs	Broken Hill	Kalgoorlie	Katherine
-geo_pilbara_source_world	Medium	The Pilbara, source of much of the world's iron ore, is in which Australian state?	Western Australia	Queensland	South Australia	New South Wales
 geo_last_large_habitable	Medium	Which was the last large, habitable landmass on Earth to be settled by humans?	New Zealand	Iceland	Madagascar	Hawaii
 geo_new_zealand_city_2	Medium	Which New Zealand city is nicknamed 'the City of Sails'?	Auckland	Wellington	Christchurch	Nelson
-geo_new_zealand_city_3	Medium	Which New Zealand city is nicknamed 'the Garden City'?	Christchurch	Dunedin	Hamilton	Napier
-geo_australian_city_nicknamed	Medium	Which Australian city is nicknamed 'the City of Churches'?	Adelaide	Hobart	Brisbane	Ballarat
 geo_new_zealand_city_4	Medium	The New Zealand city of Dunedin takes its name from the Gaelic word for which city?	Edinburgh	Glasgow	Dublin	Aberdeen
-geo_under_1973_deal	Medium	Under a 1973 deal, citizens of which country may live and work in Australia without a visa?	New Zealand	Britain	Fiji	Papua New Guinea
-geo_roughly_countries_size	Medium	Roughly how many countries the size of New Zealand would fit inside Australia?	About 30	About 3	About 10	About 100
-geo_australian_state_victoria	Medium	The Australian state of Victoria is roughly the same size as which country?	Great Britain	France	Belgium	Portugal
 geo_fiji_vanuatu_solomon	Medium	Fiji, Vanuatu and the Solomon Islands all lie in which Pacific region?	Melanesia	Polynesia	Micronesia	Australasia
 geo_pacific_region_means_2	Medium	Which Pacific region's name means 'small islands'?	Micronesia	Melanesia	Polynesia	Australasia
-geo_tasmania_dutch_explorer	Medium	Tasmania is named after which Dutch explorer, the first European to sight it?	Abel Tasman	Willem Janszoon	Dirk Hartog	Jacob Roggeveen
-geo_barossa_valley_australia	Medium	The Barossa Valley, one of Australia's most famous wine regions, is in which state?	South Australia	Victoria	New South Wales	Western Australia
-geo_1999_referendum_australians	Medium	In a 1999 referendum, Australians voted to keep the British monarch rather than turn their country into what?	A republic	A union with New Zealand	A one-chamber democracy	A federal kingdom
 geo_indian_pacific_train	Medium	The 'Indian Pacific' train crosses Australia from Sydney to which city?	Perth	Darwin	Adelaide	Brisbane
 geo_country_home_waitomo	Medium	Which country is home to the Waitomo caves lit by glowworms?	New Zealand	Australia	Fiji	Chile
 geo_great_ocean_road	Medium	The Great Ocean Road, a famous coastal drive, runs along the shore of which Australian state?	Victoria	New South Wales	Queensland	Western Australia
-geo_pacific_country_more	Medium	Which Pacific country has more languages per person than any other, over 100 for about 300,000 people?	Vanuatu	Fiji	Samoa	Tonga
-geo_country_produces_nearly	Medium	Which country produces nearly all of the world's precious opals?	Australia	New Zealand	Brazil	South Africa
-geo_2009_pacific_country	Medium	In 2009, which Pacific country switched from driving on the right to driving on the left?	Samoa	Fiji	Tonga	Vanuatu
-geo_kimberley_remote_region	Medium	The Kimberley, a remote region of gorges and boab trees, is in which Australian state or territory?	Western Australia	Queensland	South Australia	Northern Territory
-geo_espiritu_santo_largest	Medium	Espiritu Santo, the largest island of its country, belongs to which Pacific nation?	Vanuatu	Fiji	The Solomon Islands	Samoa
-lmk_moai_kraj	Hard	The Moai statues of Easter Island belong to which country?	Chile	Peru	New Zealand	Argentina
+geo_states_australia	Medium	How many states does Australia have?	Six	Eight	Five	Seven
+geo_australian_state_great	Medium	In which Australian state is the Great Barrier Reef?	Queensland	New South Wales	Western Australia	Northern Territory
+geo_papua_new_guinea	Medium	Papua New Guinea shares the island of New Guinea with which country?	Indonesia	Australia	Malaysia	The Philippines
+geo_australia_largest_state	Medium	Which is Australia's largest state by area?	Western Australia	Queensland	New South Wales	South Australia
+geo_australian_state_lies	Medium	Which Australian state lies directly north of Victoria?	New South Wales	South Australia	Queensland	Tasmania
+geo_counting_islands_smallest	Medium	Counting islands, which is the smallest Australian state?	Tasmania	Victoria	South Australia	New South Wales
+geo_australia_populous_state	Medium	Which is Australia's most populous state?	New South Wales	Victoria	Queensland	Western Australia
+geo_australian_state_nicknamed	Medium	Which Australian state is nicknamed 'the Sunshine State'?	Queensland	Western Australia	New South Wales	South Australia
+geo_pacific_nation_made	Medium	Which Pacific nation is made up of about 330 islands, the biggest being Viti Levu and Vanua Levu?	Fiji	Samoa	Tonga	Vanuatu
+geo_samoa_tonga_tahiti	Medium	Samoa, Tonga and Tahiti all lie in which Pacific region?	Polynesia	Melanesia	Micronesia	Australasia
+geo_bora_bora_lagoon	Medium	Bora Bora, famous for its lagoon and overwater bungalows, belongs to which country?	France	The USA	New Zealand	Fiji
+geo_gold_coast_surf	Medium	The Gold Coast, famous for its surf beaches and theme parks, is in which Australian state?	Queensland	New South Wales	Victoria	Western Australia
+geo_country_flag_shows_14	Medium	Which country's flag shows the Southern Cross as four red stars?	New Zealand	Australia	Samoa	Fiji
+lmk_moai_kraj	Medium	The Moai statues of Easter Island belong to which country?	Chile	Peru	New Zealand	Argentina
+geo_solomon_islands_spanish	Medium	The Solomon Islands were named by a Spanish explorer hoping to find what?	King Solomon's gold	The Garden of Eden	The lost tribes of Israel	A route to China
+geo_roughly_share_australians	Medium	Roughly what share of Australians live within 50 km of the coast?	About 85%	About 50%	About 25%	About 10%
+geo_new_guinea_spanish	Medium	New Guinea was named by a Spanish sailor who thought its people looked like those of which region?	Guinea in West Africa	New Spain	Southern India	The Moluccas
+geo_1851_colony_victoria	Medium	In 1851, the colony of Victoria split away from which older colony?	New South Wales	South Australia	Western Australia	Van Diemen's Land
+geo_villagers_island_tanna	Medium	Villagers on the island of Tanna in Vanuatu have long worshipped which British royal as a god?	Prince Philip	Prince Charles	King George VI	Queen Victoria
+geo_australia_outback_train	Medium	Australia's famous outback train 'The Ghan' is named after which people?	Afghan cameleers	Chinese gold miners	Cornish tin miners	Irish railway navvies
+geo_palau_marshall_islands	Medium	Palau, the Marshall Islands and Micronesia all use which currency?	The US dollar	The Australian dollar	The New Zealand dollar	The Japanese yen
+geox_tuvalu_tv	Medium	Which tiny Pacific nation earns money from its '.tv' internet domain?	Tuvalu	Tonga	Tokelau	Taiwan
 geo_cook_islands_niue	Hard	The Cook Islands and Niue are self-governing in 'free association' with which country?	New Zealand	Australia	Britain	France
 geo_country_once_new	Hard	Which country, once the New Hebrides, was ruled jointly by Britain and France?	Vanuatu	Fiji	New Caledonia	The Solomon Islands
 geo_island_nation_official	Hard	Which island nation has no official capital city?	Nauru	Tuvalu	Palau	Kiribati
 geo_2019_island_region	Hard	In 2019, the island region of Bougainville voted almost 98% for independence from which country?	Papua New Guinea	The Solomon Islands	Australia	Indonesia
-geo_solomon_islands_spanish	Hard	The Solomon Islands were named by a Spanish explorer hoping to find what?	King Solomon's gold	The Garden of Eden	The lost tribes of Israel	A route to China
 geo_australian_state_settled	Hard	Which Australian state was settled only by free colonists, never taking convicts?	South Australia	Victoria	Western Australia	Queensland
 geo_roughly_long_australia	Hard	Roughly how long is Australia's Dingo Fence, one of the longest structures ever built?	About 5,600 km	About 560 km	About 1,500 km	About 15,000 km
-geo_roughly_share_australians	Hard	Roughly what share of Australians live within 50 km of the coast?	About 85%	About 50%	About 25%	About 10%
 geo_smallest_state_australian	Hard	Which is the smallest state on the Australian mainland?	Victoria	Tasmania	New South Wales	South Australia
 geo_roughly_share_new	Hard	Roughly what share of New Zealanders live on the North Island?	About three-quarters	About half	About a quarter	About a tenth
-geo_new_guinea_spanish	Hard	New Guinea was named by a Spanish sailor who thought its people looked like those of which region?	Guinea in West Africa	New Spain	Southern India	The Moluccas
 geo_tokelau_places_powered	Hard	Tokelau, one of the first places powered entirely by the sun, is a territory of which country?	New Zealand	Australia	The USA	France
 geo_pacific_nation_makes	Hard	Which Pacific nation makes visitors sign an eco-pledge stamped into their passports?	Palau	Fiji	Vanuatu	Samoa
 geo_three_places_mark	Hard	Which three places mark the corners of the 'Polynesian Triangle'?	Hawaii, New Zealand and Easter Island	Hawaii, Tahiti and Easter Island	Fiji, New Zealand and Easter Island	Hawaii, New Zealand and Tahiti
@@ -101,40 +84,46 @@ geo_2023_treaty_opened	Hard	A 2023 treaty opened a path for people of low-lying 
 geo_under_british_rule_2	Hard	Under British rule, Tuvalu was known as what?	The Ellice Islands	The Gilbert Islands	The Friendly Islands	The New Hebrides
 geo_descendants_bounty_mutineers	Hard	Descendants of the Bounty mutineers resettled in 1856 on which Australian island?	Norfolk Island	Lord Howe Island	Kangaroo Island	Christmas Island
 geo_australian_state_borders	Hard	Which is the only Australian state that borders all the other mainland states and the Northern Territory?	South Australia	New South Wales	Queensland	Victoria
-geo_1863_1911_northern	Hard	From 1863 to 1911, the Northern Territory was run by which Australian colony?	South Australia	Queensland	Western Australia	New South Wales
-geo_1851_colony_victoria	Hard	In 1851, the colony of Victoria split away from which older colony?	New South Wales	South Australia	Western Australia	Van Diemen's Land
 geo_australian_state_flag	Hard	Which Australian state's flag shows a black swan?	Western Australia	Victoria	Tasmania	South Australia
 geo_proud_nickname_lucky	Hard	The proud nickname 'the Lucky Country' began as criticism in a 1964 book about which country?	Australia	New Zealand	Canada	Ireland
 geo_pacific_region_coined	Hard	Which Pacific region's name, coined by a French explorer, means 'black islands'?	Melanesia	Micronesia	Polynesia	Australasia
-geo_pacific_nation_flag	Hard	Which Pacific nation's flag shows a star just below a yellow line, marking its spot just south of the equator?	Nauru	Kiribati	Tuvalu	Palau
-geo_villagers_island_tanna	Hard	Villagers on the island of Tanna in Vanuatu have long worshipped which British royal as a god?	Prince Philip	Prince Charles	King George VI	Queen Victoria
 geo_country_19th_century	Hard	Which country was known to 19th-century sailors as 'the Cannibal Isles'?	Fiji	Tonga	Samoa	Vanuatu
 geo_pacific_nations_still	Hard	Which of these Pacific nations still has the British monarch as its head of state?	Papua New Guinea	Fiji	Vanuatu	Samoa
-geo_australia_outback_train	Hard	Australia's famous outback train 'The Ghan' is named after which people?	Afghan cameleers	Chinese gold miners	Cornish tin miners	Irish railway navvies
-geo_1964_big_banana	Hard	The 1964 'Big Banana', which started Australia's craze for giant roadside 'Big Things', is in which state?	New South Wales	Queensland	Western Australia	Victoria
 geo_marshall_islanders_once	Hard	Marshall Islanders once mapped ocean swells using charts made of what?	Sticks and shells	Carved whale bone	Knotted string	Painted bark
 geo_australian_state_east	Hard	Which Australian state on the east coast refuses to use daylight saving time?	Queensland	New South Wales	Victoria	Tasmania
 geo_densely_populated_australian	Hard	Which is the most densely populated Australian state?	Victoria	New South Wales	Queensland	Tasmania
 geo_torres_strait_islands	Hard	The Torres Strait Islands belong to which Australian state?	Queensland	New South Wales	Western Australia	South Australia
 geo_new_zealand_third	Hard	What is New Zealand's third-largest island, home to only a few hundred people?	Stewart Island	Great Barrier Island	Waiheke Island	Chatham Island
-geo_city_adelaide_queen	Hard	The city of Adelaide is named after the queen of which British king?	William IV	George III	George IV	Edward VII
-geo_palau_marshall_islands	Hard	Palau, the Marshall Islands and Micronesia all use which currency?	The US dollar	The Australian dollar	The New Zealand dollar	The Japanese yen
 geo_pacific_nation_made_2	Hard	Which Pacific nation is made up mainly of two big islands, Upolu and Savai'i?	Samoa	Tonga	Fiji	Vanuatu
-geo_country_often_nicknamed	Hard	Which country is often nicknamed 'the Lucky Country'?	Australia	Ireland	Canada	Switzerland
-geo_tiny_island_nation	Hard	Which tiny island nation was known to 19th-century sailors as 'Pleasant Island'?	Nauru	Tuvalu	Niue	Palau
-geo_french_explorers_samoa	Hard	French explorers called Samoa by which name, after the skill of its canoe-handling people?	The Navigators' Islands	The Friendly Islands	The Society Islands	The Sandwich Islands
 geo_2014_low_lying	Hard	In 2014, which low-lying Pacific nation bought land in Fiji as a refuge against rising seas?	Kiribati	Tuvalu	Nauru	The Marshall Islands
 geo_pacific_country_flag	Hard	Which Pacific country's flag shows a curled boar's tusk?	Vanuatu	Fiji	Samoa	Tonga
-geox_tuvalu_tv	Expert	Which tiny Pacific nation earns money from its '.tv' internet domain?	Tuvalu	Tonga	Tokelau	Taiwan
+geo_uluru_lies_australian	Hard	Uluru lies in which Australian state or territory?	The Northern Territory	Western Australia	South Australia	Queensland
+geo_not_counting_overseas	Hard	Not counting overseas territories, which is the only country lying in all four hemispheres?	Kiribati	Indonesia	Ecuador	Brazil
+geo_independent_countries_oceania	Hard	How many independent countries does Oceania have?	14	9	20	25
+geo_australians_call_tropical	Hard	What do Australians call the tropical northern part of the country around Darwin?	The Top End	The Red Centre	The Never Never	The Far North
+geo_australian_state_calls	Hard	Which Australian state calls itself 'the Garden State'?	Victoria	Tasmania	New South Wales	South Australia
+geo_australian_state_calls_2	Hard	Which Australian state calls itself 'the Festival State'?	South Australia	Victoria	Queensland	New South Wales
+geo_part_new_zealand	Hard	Which part of New Zealand do its own residents jokingly call 'the Mainland'?	The South Island	The North Island	Stewart Island	The Auckland region
+geo_robert_louis_stevenson	Hard	Robert Louis Stevenson, called 'Tusitala' ('teller of tales') by locals, is buried on a mountain in which country?	Samoa	Fiji	Tonga	Vanuatu
+geo_australian_state_capital	Hard	Which Australian state capital is named after a British prime minister?	Melbourne	Brisbane	Hobart	Perth
+geo_pilbara_source_world	Hard	The Pilbara, source of much of the world's iron ore, is in which Australian state?	Western Australia	Queensland	South Australia	New South Wales
+geo_new_zealand_city_3	Hard	Which New Zealand city is nicknamed 'the Garden City'?	Christchurch	Dunedin	Hamilton	Napier
+geo_australian_city_nicknamed	Hard	Which Australian city is nicknamed 'the City of Churches'?	Adelaide	Hobart	Brisbane	Ballarat
+geo_australian_state_victoria	Hard	The Australian state of Victoria is roughly the same size as which country?	Great Britain	France	Belgium	Portugal
+geo_barossa_valley_australia	Hard	The Barossa Valley, one of Australia's most famous wine regions, is in which state?	South Australia	Victoria	New South Wales	Western Australia
+geo_2009_pacific_country	Hard	In 2009, which Pacific country switched from driving on the right to driving on the left?	Samoa	Fiji	Tonga	Vanuatu
+geo_kimberley_remote_region	Hard	The Kimberley, a remote region of gorges and boab trees, is in which Australian state or territory?	Western Australia	Queensland	South Australia	Northern Territory
+geo_espiritu_santo_largest	Hard	Espiritu Santo, the largest island of its country, belongs to which Pacific nation?	Vanuatu	Fiji	The Solomon Islands	Samoa
+geo_some_australian_islands	Hard	Some Australian islands in the Torres Strait lie just a few kilometres off which country's coast?	Papua New Guinea	Indonesia	East Timor	The Solomon Islands
+geo_new_zealand_south	Hard	New Zealand's South Island is also called Te Waipounamu, after which treasured stone?	Greenstone	Obsidian	Opal	Black basalt
+geo_kermadec_islands_halfway	Hard	The Kermadec Islands, about halfway from Auckland to Tonga, belong to which country?	New Zealand	Tonga	Fiji	Australia
 geo_people_born_american	Expert	People born in American Samoa are not automatically US citizens. What are they instead?	US nationals	US residents	Protected persons	Commonwealth subjects
 geo_1933_australian_state	Expert	In 1933, which Australian state voted by a two-thirds majority to leave Australia?	Western Australia	Queensland	Tasmania	South Australia
 geo_canberra_own_sea	Expert	So that Canberra could have its own sea port, the federal government also took which coastal area in 1915?	Jervis Bay	Botany Bay	Port Phillip	Twofold Bay
 geo_big_ben_active	Expert	Big Ben, an active volcano, rises on which remote sub-Antarctic island ruled from Canberra?	Heard Island	Macquarie Island	Christmas Island	Lord Howe Island
 geo_new_zealand_islands	Expert	Which New Zealand islands keep their clocks 45 minutes ahead of the mainland?	The Chatham Islands	Stewart Island	The Kermadec Islands	The Bounty Islands
-geo_some_australian_islands	Expert	Some Australian islands in the Torres Strait lie just a few kilometres off which country's coast?	Papua New Guinea	Indonesia	East Timor	The Solomon Islands
 geo_small_island_nation	Expert	Which small island nation, nicknamed 'the Rock of Polynesia', is one of the world's largest coral islands?	Niue	Nauru	Tuvalu	Tokelau
 geo_tuvalu_means_eight	Expert	Tuvalu's name means 'eight standing together', yet the country has how many islands?	Nine	Seven	Twelve	Eighty
-geo_new_zealand_south	Expert	New Zealand's South Island is also called Te Waipounamu, after which treasured stone?	Greenstone	Obsidian	Opal	Black basalt
 geo_broken_hill_new	Expert	Broken Hill, in New South Wales, sets its clocks to which state's time zone?	South Australia's	Queensland's	Western Australia's	Victoria's
 geo_cameron_corner_dusty	Expert	Cameron Corner, a dusty outback spot with a single store, is where which three Australian states meet?	Queensland, NSW and South Australia	Queensland, NSW and Victoria	NSW, Victoria and South Australia	Queensland, Victoria and South Australia
 geo_french_pacific_territory	Expert	Which French Pacific territory still has three traditional kings?	Wallis and Futuna	New Caledonia	French Polynesia	Clipperton Island
@@ -144,5 +133,10 @@ geo_australia_coral_sea	Expert	Australia's Coral Sea Islands Territory has no pe
 geo_marble_bar_once	Expert	Marble Bar, which once had 160 days in a row above 37.8 C, is in which Australian state?	Western Australia	Queensland	South Australia	New South Wales
 geo_nan_madol_ruined	Expert	Nan Madol, a ruined city built on artificial islets of stacked basalt, is in which country?	Micronesia	Palau	The Marshall Islands	Kiribati
 geo_two_languages_official	Expert	Which two languages are official in New Zealand by law, English being official only by custom?	Maori and NZ Sign Language	Maori and Samoan	Maori and Tongan	Samoan and NZ Sign Language
-geo_kermadec_islands_halfway	Expert	The Kermadec Islands, about halfway from Auckland to Tonga, belong to which country?	New Zealand	Tonga	Fiji	Australia
 geo_rotuma_polynesian_island	Expert	Rotuma, a Polynesian island far to the north, is a dependency of which Melanesian country?	Fiji	Vanuatu	The Solomon Islands	Papua New Guinea
+geo_1863_1911_northern	Expert	From 1863 to 1911, the Northern Territory was run by which Australian colony?	South Australia	Queensland	Western Australia	New South Wales
+geo_pacific_nation_flag	Expert	Which Pacific nation's flag shows a star just below a yellow line, marking its spot just south of the equator?	Nauru	Kiribati	Tuvalu	Palau
+geo_1964_big_banana	Expert	The 1964 'Big Banana', which started Australia's craze for giant roadside 'Big Things', is in which state?	New South Wales	Queensland	Western Australia	Victoria
+geo_city_adelaide_queen	Expert	The city of Adelaide is named after the queen of which British king?	William IV	George III	George IV	Edward VII
+geo_tiny_island_nation	Expert	Which tiny island nation was known to 19th-century sailors as 'Pleasant Island'?	Nauru	Tuvalu	Niue	Palau
+geo_french_explorers_samoa	Expert	French explorers called Samoa by which name, after the skill of its canoe-handling people?	The Navigators' Islands	The Friendly Islands	The Society Islands	The Sandwich Islands
