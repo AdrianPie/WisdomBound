@@ -31,6 +31,9 @@ pp_jenga	Easy	In which game do players pull wooden blocks from a tower without k
 pp_grumpy	Easy	Which frowning cat became one of the most famous internet memes of the 2010s?	Grumpy Cat	Nyan Cat	Keyboard Cat	Maru
 pop_magician_escaping_handcuffs	Easy	Which magician was famous for escaping from handcuffs, straitjackets and locked water tanks?	Harry Houdini	David Copperfield	Harry Blackstone	Penn Jillette
 pop_poker_best_possible	Easy	In poker, what is the best possible hand?	A royal flush	Four of a kind	A full house	A straight
+pop_fast_food_chain_3	Easy	Which fast-food chain's signature burger is the Whopper?	Burger King	McDonald's	Wendy's	KFC
+pop_chocolate_egg_hides	Easy	Which chocolate egg hides a small toy inside a yellow plastic capsule?	Kinder Surprise	Cadbury Creme Egg	Ferrero Rocher	Milka egg
+pop_chocolate_brand_uses	Easy	Which chocolate brand uses a purple cow in its adverts?	Milka	Cadbury	Lindt	Ritter Sport
 pop_lego_ludziki	Medium	What are the little LEGO people officially called?	Minifigures	Brickmen	Legolings	Block buddies
 pop_disneyland	Medium	In which US state did the first Disneyland open, in 1955?	California	Florida	Texas	Nevada
 pp_tamagotchi_kraj	Medium	In which country was the Tamagotchi invented?	Japan	China	South Korea	The USA
@@ -66,6 +69,16 @@ pop_hello_kitty_usta	Medium	Hello Kitty is famously drawn without what?	A mouth	
 pop_teddy	Medium	The teddy bear is named after which US president?	Theodore Roosevelt	Franklin Roosevelt	Abraham Lincoln	Woodrow Wilson
 pp_nyan_cat	Medium	Which internet cat with a Pop-Tart body flies through space leaving a rainbow?	Nyan Cat	Grumpy Cat	Keyboard Cat	Garfield
 org_cola_lek	Medium	Coca-Cola was first sold at pharmacy counters as a remedy for what?	Headaches	Sore throats	Insomnia	Toothache
+pop_2015_internet_split	Medium	In 2015 the internet split over whether a dress was white and gold or what?	Blue and black	Pink and grey	Red and black	Green and gold
+pop_cryptocurrency_began_2013	Medium	Which cryptocurrency began in 2013 as a joke, with a meme dog as its mascot?	Dogecoin	Litecoin	Ripple	Tether
+pop_economist_big_mac	Medium	What does The Economist's 'Big Mac Index' compare between countries?	Currency values	Obesity rates	Minimum wages	Beef prices
+pop_company_logo_hides	Medium	Which company's logo hides a white arrow in the gap between two of its letters?	FedEx	DHL	UPS	Visa
+pop_number_famously_printed	Medium	Which number is famously printed on Heinz ketchup bottles?	57	99	21	101
+pop_secret_herbs_spices	Medium	How many 'secret herbs and spices' are in the Colonel's original fried chicken recipe?	11	7	21	15
+pop_cosmetics_brand_slogan	Medium	Which cosmetics brand's slogan is 'Because you're worth it'?	L'Oreal	Maybelline	Revlon	Nivea
+pop_sweets_invite_taste	Medium	Which sweets invite you to 'taste the rainbow'?	Skittles	Smarties	Jelly Belly	Starburst
+pop_board_game_operation	Medium	In the board game Operation, what lights up when your tweezers touch the edge?	The patient's nose	The patient's eyes	The patient's heart	The patient's belly
+pop_hit_2007_viral	Medium	In the hit 2007 viral video, what does baby Charlie bite?	His brother's finger	His brother's ear	The family dog	A lemon
 pop_barbie_imie	Hard	What is Barbie's full first name?	Barbara	Barbra	Bernadette	Beatrice
 pop_boardwalk	Hard	In the US version of Monopoly, which is the most expensive property?	Boardwalk	Park Place	Marvin Gardens	Pennsylvania Avenue
 pp_barbie_1959	Hard	In which year was the first Barbie doll launched?	1959	1939	1969	1979
@@ -86,6 +99,18 @@ pop_spaces_around_standard	Hard	How many spaces are there around a standard Mono
 pop_animal_appears_every	Hard	Which animal appears on every bottle of Bacardi rum?	A bat	A parrot	A lion	A rooster
 pop_meme_dawkins	Hard	Which scientist coined the word 'meme' in 1976?	Richard Dawkins	Carl Sagan	Stephen Hawking	Stephen Jay Gould
 pop_designer_1947_new	Hard	Which designer's 1947 'New Look' brought back full skirts and tiny waists after the war?	Christian Dior	Coco Chanel	Yves Saint Laurent	Cristobal Balenciaga
+pop_animal_hidden_inside	Hard	Which animal is hidden inside the mountain on the Toblerone logo?	A bear	A goat	An eagle	A marmot
+pop_company_makes_both	Hard	Which company makes both Nutella and Tic Tac mints?	Ferrero	Nestle	Mondelez	Mars
+pop_fanta_created_country	Hard	Fanta was created in which country in WWII, when Coca-Cola syrup could no longer be imported?	Germany	Italy	Japan	Switzerland
+pop_guinness_book_records	Hard	The Guinness Book of Records began after a brewery boss argued about Europe's fastest what?	Game bird	Racehorse	Sailing ship	Steam train
+pop_haagen_dazs_made	Hard	Haagen-Dazs, with its made-up Danish-sounding name, was founded in which country?	The USA	Denmark	Sweden	Norway
+pop_ben_jerry_opened	Hard	Ben & Jerry's opened its first ice-cream shop in 1978 in a converted what?	Petrol station	Fire station	Railway carriage	Church
+pop_chocolate_bar_mars	Hard	Which chocolate bar was named after the Mars family's favourite horse?	Snickers	Milky Way	Twix	Bounty
+pop_surrealist_painter_designed	Hard	Which surrealist painter designed the Chupa Chups lollipop logo?	Salvador Dali	Rene Magritte	Joan Miro	Max Ernst
+pop_1964_toy_introduced	Hard	Which 1964 toy introduced the term 'action figure', to sell dolls to boys?	G.I. Joe	Action Man	Big Jim	He-Man
+pop_success_kid_meme	Hard	In the 'Success Kid' meme, what is the baby clenching in his fist?	Sand	A dummy	A toy car	A biscuit
+pop_disney_theme_park	Hard	Which was the first Disney theme park built outside the United States?	Tokyo Disneyland	Disneyland Paris	Hong Kong Disneyland	Shanghai Disneyland
+pop_1983_doll_craze	Hard	Which 1983 doll craze sent every buyer home with 'adoption papers'?	Cabbage Patch Kids	Care Bears	My Little Pony	Polly Pocket
 pop_hello_kitty_londyn	Expert	According to her creators, in which city does Hello Kitty live?	London	Tokyo	Paris	Osaka
 pop_magie	Expert	Monopoly grew out of 'The Landlord's Game', invented by whom?	Elizabeth Magie	Charles Darrow	George Parker	Milton Bradley
 pp_lego_1958	Expert	In which year did LEGO patent its famous stud-and-tube brick?	1958	1932	1949	1972
@@ -99,3 +124,8 @@ pop_trivial_pursuit_invented	Expert	Trivial Pursuit was invented by two journali
 pop_block_stacking_game	Expert	The name of the block-stacking game Jenga comes from a word meaning 'build' in which language?	Swahili	Japanese	Hindi	Maori
 pop_under_rubik_cube	Expert	Under which name was the Rubik's Cube first sold in its home country?	The Magic Cube	The Puzzle Box	The Colour Cube	The Mind Cube
 pop_barbie_surname	Expert	What is Barbie's surname?	Roberts	Carson	Miller	Stevens
+pop_real_dog_behind	Expert	What was the name of the real dog behind the 'Doge' meme?	Kabosu	Hachiko	Shiro	Maru
+pop_man_behind_hide	Expert	The man behind the 'Hide the Pain Harold' meme comes from which country?	Hungary	Poland	Czechia	Romania
+pop_secret_flavour_mix	Expert	What is the secret flavour mix in Coca-Cola's formula code-named?	Merchandise 7X	Formula 9	Recipe X1	Mixture 33
+pop_rooster_kellogg_corn	Expert	What is the name of the rooster on Kellogg's Corn Flakes boxes?	Cornelius	Chanticleer	Rocky	Rooster Cogburn
+pop_country_efteling_europe	Expert	In which country is Efteling, one of Europe's most visited fairy-tale theme parks?	Netherlands	Belgium	Denmark	Germany

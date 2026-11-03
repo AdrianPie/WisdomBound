@@ -28,6 +28,9 @@ pq_enterprise	Easy	What is the name of Captain Kirk's starship in 'Star Trek'?	T
 pop_reality_show_contestants	Easy	Which reality show has contestants on a remote island voting each other off?	Survivor	Big Brother	The Amazing Race	Love Island
 pop_star_trek_vulcan	Easy	In 'Star Trek', which Vulcan blessing goes with the split-fingered hand salute?	Live long and prosper	May the Force be with you	Logic guides us all	Go boldly in peace
 pop_breaking_bad	Easy	In 'Breaking Bad', what subject does Walter White teach before turning to crime?	Chemistry	Physics	Biology	Mathematics
+pop_business_reality_show	Easy	Which business reality show made 'You're fired!' a catchphrase?	The Apprentice	Dragons' Den	Shark Tank	Undercover Boss
+pop_baking_contest_names	Easy	Which baking contest names one contestant 'Star Baker' each week?	The Great British Bake Off	Junior MasterChef	Cupcake Wars	The Big Family Cooking Showdown
+pop_weakest_link_word	Easy	On 'The Weakest Link', which word follows 'You are the weakest link...'?	Goodbye	You're out	Farewell	Get out
 pop_central_perk	Medium	What is the name of the coffee shop in 'Friends'?	Central Perk	Monk's Cafe	Java Joe's	The Grind
 pop_iron_throne	Medium	In 'Game of Thrones', what is the Iron Throne made of?	Swords	Dragon bones	Iron ore	Shields
 pop_upside_down	Medium	In 'Stranger Things', what is the dark mirror world called?	The Upside Down	The Nether	The Shadow Realm	The Other Side
@@ -84,6 +87,12 @@ pop_friends_joey_tribbiani	Medium	In 'Friends', what does Joey Tribbiani famousl
 pop_dallas	Medium	'Who shot J.R.?' was the huge 1980 cliffhanger of which TV series?	Dallas	Dynasty	Knots Landing	Falcon Crest
 pp_squid_zielone	Medium	In 'Squid Game', which children's game is played first, with a giant doll?	Red Light, Green Light	Tug of war	Marbles	Hopscotch
 pp_laura_palmer	Medium	Which 1990 TV mystery asked 'Who killed Laura Palmer?'	Twin Peaks	Dallas	Murder, She Wrote	The X-Files
+pop_game_thrones_kills	Medium	In 'Game of Thrones', who kills the Night King?	Arya Stark	Jon Snow	Daenerys Targaryen	Bran Stark
+pop_actor_played_captain_3	Medium	Which actor played Captain Picard in 'Star Trek: The Next Generation'?	Patrick Stewart	Ian McKellen	Brent Spiner	Jonathan Frakes
+pop_dexter_dexter_miami	Medium	In 'Dexter', what does Dexter do for the Miami police?	Analyses blood spatter	Draws suspect sketches	Profiles serial killers	Runs the city morgue
+pop_ted_lasso_sport	Medium	In 'Ted Lasso', which sport did Ted coach before English football?	American football	Baseball	Basketball	Ice hockey
+pop_wheel_fortune_players	Medium	On 'Wheel of Fortune', what do players pay to 'buy'?	A vowel	A consonant	A free spin	A clue
+pop_created_starred_boss	Medium	Who created and starred as the boss David Brent in the original British 'The Office'?	Ricky Gervais	Steve Coogan	Stephen Merchant	Martin Freeman
 pp_hawkins	Hard	In which fictional Indiana town is 'Stranger Things' set?	Hawkins	Springfield	Riverdale	Twin Peaks
 pop_jon_snow_white	Hard	What is the name of Jon Snow's white direwolf in 'Game of Thrones'?	Ghost	Summer	Nymeria	Grey Wind
 pop_city_breaking_bad	Hard	In which US city is 'Breaking Bad' set?	Albuquerque	Phoenix	Las Vegas	El Paso
@@ -110,8 +119,29 @@ pop_money_heist_robbers	Hard	In 'Money Heist', what are the robbers' code names?
 pop_doctor_who_1963	Hard	In which year did 'Doctor Who' first air?	1963	1953	1973	1983
 pop_wilhelm_scream_heard	Hard	The 'Wilhelm scream', heard in 'Star Wars' and hundreds of other films, is what?	A stock sound effect	A horror-film award	A guitar technique	A famous stunt fall
 pop_fbi_agent_investigates	Hard	Which FBI agent investigates the murder of Laura Palmer?	Dale Cooper	Fox Mulder	Clarice Starling	Will Graham
+pop_breaking_bad_walt	Hard	In 'Breaking Bad', where do Walt and Jesse cook their very first batches?	In an old RV	In a school lab	In a car wash	In a motel room
+pop_better_call_saul	Hard	In 'Better Call Saul', what is Saul Goodman's real name?	Jimmy McGill	Chuck McGill	Howard Hamlin	Kim Wexler
+pop_city_wire_set	Hard	In which US city is 'The Wire' set?	Baltimore	Philadelphia	Detroit	Chicago
+pop_fictional_indiana_town	Hard	In which fictional Indiana town is 'Parks and Recreation' set?	Pawnee	Hawkins	Scranton	Springfield
+pop_created_seinfeld_based	Hard	Who co-created 'Seinfeld' and based the character George Costanza on himself?	Larry David	Jason Alexander	Michael Richards	Jerry Stiller
+pop_blackadder_baldrick_always	Hard	In 'Blackadder', what does Baldrick always claim to have?	A cunning plan	A secret map	A spare turnip	A bright idea
+pop_nordic_noir_bridge	Hard	The Nordic noir 'The Bridge' opens with a body found on a bridge between which two countries?	Denmark and Sweden	Norway and Sweden	Denmark and Germany	Finland and Sweden
+pop_jeopardy_contestant_won	Hard	Which 'Jeopardy!' contestant won 74 games in a row in 2004?	Ken Jennings	Brad Rutter	James Holzhauer	Alex Trebek
+pop_fictional_detective_inspired	Hard	Which fictional detective inspired the TV doctor Gregory House?	Sherlock Holmes	Hercule Poirot	Philip Marlowe	Miss Marple
+pop_catchphrase_belongs_scruffy	Hard	Which catchphrase belongs to the scruffy TV detective Columbo?	'Just one more thing'	'Book him, Danno'	'Who loves ya, baby?'	'Elementary, my dear'
+pop_actress_played_queen	Hard	Which actress first played Queen Elizabeth II in 'The Crown'?	Claire Foy	Olivia Colman	Imelda Staunton	Helen Mirren
 pop_seinfeld_kramer_revealed	Expert	In 'Seinfeld', what is Kramer's first name, revealed only in the sixth season?	Cosmo	Carl	Stanley	Elliot
 pop_lost_number_oceanic	Expert	In 'Lost', what was the number of the Oceanic flight that crashed on the island?	815	316	42	108
 pop_actor_play_doctor	Expert	Which actor was the first to play the Doctor in 'Doctor Who'?	William Hartnell	Patrick Troughton	Jon Pertwee	Tom Baker
 pop_friends_joey_stuffed	Expert	In 'Friends', what is the name of Joey's stuffed penguin?	Hugsy	Pengy	Waddles	Mr. Flippers
 pop_linguist_developed_klingon	Expert	Which linguist developed the Klingon language for 'Star Trek'?	Marc Okrand	David J. Peterson	Paul Frommer	Noam Chomsky
+pop_mocked_car_walter	Expert	Which much-mocked car does Walter White drive in 'Breaking Bad'?	A Pontiac Aztek	A Chrysler PT Cruiser	A Fiat Multipla	A Nissan Cube
+pop_sopranos_strip_club	Expert	In 'The Sopranos', what is the name of the strip club Tony runs his business from?	Bada Bing	Satriale's	Vesuvio	Copacabana
+pop_seinfeld_made_company	Expert	In 'Seinfeld', which made-up company does George claim to work for?	Vandelay Industries	Pendant Publishing	Monk's Holdings	Costanza and Sons
+pop_office_title_michael	Expert	In the US 'The Office', what is the title of Michael Scott's homemade action film?	Threat Level Midnight	Code Red Scranton	Somehow I Manage	Agent Zero Hour
+pop_parks_recreation_kind	Expert	In 'Parks and Recreation', what kind of animal is the town's idol Li'l Sebastian?	A miniature horse	A pot-bellied pig	A raccoon	A bulldog
+pop_brooklyn_nine_nine	Expert	In 'Brooklyn Nine-Nine', what is Captain Holt's beloved corgi called?	Cheddar	Biscuit	Brie	Kevin
+pop_ted_mosby_long	Expert	Ted Mosby's long-awaited 'Mother' finally gets a first name in the last season. What is it?	Tracy	Robin	Victoria	Stella
+pop_lost_every_minutes	Expert	In 'Lost', every how many minutes must the code be typed into the hatch computer?	108	42	23	60
+pop_actress_voices_gossip	Expert	Which actress voices the gossip narrator Lady Whistledown in 'Bridgerton'?	Julie Andrews	Judi Dench	Maggie Smith	Helen Mirren
+pop_series_1983_finale	Expert	Which series' 1983 finale is still the most-watched scripted episode in US TV history?	M*A*S*H	Cheers	Dallas	Happy Days
