@@ -10,6 +10,18 @@ sci_candle_out_cover	Easy	Why does a candle go out when you cover it with a glas
 sci_mixing_vinegar_baking	Easy	Why does mixing vinegar with baking soda make it fizz?	It gives off carbon dioxide gas	The vinegar begins to boil	Oxygen trapped in it escapes	The soda breaks into steam
 sci_statue_liberty_green	Easy	Why is the Statue of Liberty green?	Its copper skin has corroded	It was painted green in 1906	Algae grows on its surface	It is made of green bronze
 sci_should_never_mix	Easy	Why should you never mix bleach with ammonia-based cleaners?	They give off a toxic gas	They explode on contact	They cancel each other out	They turn into strong acid
+sci_not_chemical_change	Easy	Which of these is NOT a chemical change?	Ice melting	Wood burning	Iron rusting	A cake baking
+sci_world_plastic_made	Easy	What is most of the world's plastic made from?	Oil and gas	Sand and clay	Wood pulp	Plant starch
+sci_iron_railings_sea	Easy	Why do iron railings by the sea rust much faster than inland ones?	Salt speeds up the rusting	Sea air has more oxygen	The sun is stronger there	Waves shake the metal loose
+sci_sugar_dissolve_faster	Easy	Why does sugar dissolve faster in hot tea than in iced tea?	Its molecules move faster	Sugar melts in hot water	Hot tea is more acidic	Cold water is too thick
+sci_won_oil_vinegar	Easy	Why won't oil and vinegar stay mixed in a salad dressing?	Water clings to water, not oil	Oil is heavier than water	Salt pushes them apart	Vinegar turns oil solid
+sci_antacid_tablet_stomach	Easy	What does an antacid tablet do to stomach acid?	Neutralises some of it	Makes the stomach produce more	Adds friendly bacteria	Numbs the stomach lining
+sci_bleach_take_colour	Easy	Why does bleach take the colour out of clothes?	It breaks down dye molecules	It washes the dye into the water	It coats the fibres in white	It dries the dye into dust
+sci_mixture_not_single	Easy	Which of these is a mixture, not a single pure substance?	Air	Pure water	Gold	Table salt
+sci_carbon_dioxide_fire	Easy	How does a carbon dioxide fire extinguisher put out flames?	It shuts out the oxygen	It freezes the fuel solid	It soaks the fuel in water	It makes the fuel fireproof
+sci_burnt_toast_turn	Easy	Why does burnt toast turn black?	It turns into carbon	Soot from the toaster sticks to it	Its water turns black	Its crust melts into tar
+sci_oiling_bike_chain	Easy	Why does oiling a bike chain also stop it rusting?	Oil keeps air and water off the metal	Oil turns rust back into iron	Oil makes the metal harder	Oil kills rust-making germs
+sci_opened_bottle_wine	Easy	An opened bottle of wine left for weeks slowly turns into what?	Vinegar	Brandy	Grape juice	Sherry
 day2_mydlo	Medium	Why does soap clean grease?	Its molecules bind both water and fat	It dissolves fat into acid	It boils the grease away	It makes water hotter
 day_ciasto_rosnie	Medium	Why does bread dough rise?	Yeast releases carbon dioxide	Water evaporates from it	Gluten expands when heated	Salt draws in moisture
 day_papryka_ostra	Medium	Which compound makes chilli peppers hot?	Capsaicin	Menthol	Tannin	Caffeine
@@ -29,6 +41,30 @@ sci_white_fog_pouring	Medium	The white fog pouring off dry ice is mostly what?	W
 trv_lakmus_kwas	Medium	What colour does blue litmus paper turn in an acid?	Red	Green	Yellow	It stays blue
 sci_wax_burning_candle	Medium	Where does the wax of a burning candle mostly go?	It burns away as fuel into gases	It all drips down into the holder	It soaks deep into the wick for good	It turns into the smoke's black soot
 sci_milk_boil_over	Medium	Why does milk boil over in a pan when water does not?	Its proteins form a skin that traps steam	It boils at a much lower temperature	Its fat explodes when heated	It holds dissolved gas, like soda
+sci_plain_soda_water	Medium	Why does plain soda water taste slightly sour?	Its dissolved gas forms a weak acid	Lemon is always added to it	It contains a little vinegar	Its bottle leaks acid into it
+sci_dry_cleaning_clean	Medium	What does 'dry cleaning' clean clothes with, instead of water?	Liquid solvents	Hot dry air	Powdered soap only	Ultraviolet light
+sci_strictly_speaking_burning	Medium	Strictly speaking, what is burning above a puddle of burning petrol?	Its vapour	The liquid itself	Water mixed into it	Air trapped inside it
+sci_acid_rain_eats	Medium	Acid rain eats away old limestone statues. What mostly causes it?	Fumes from burning coal and oil	Salt spray from the sea	Ozone made by lightning	Pollen from city trees
+sci_household_products_strongly	Medium	Which of these household products is strongly alkaline, not acidic?	Oven cleaner	Vinegar	Lemon juice	Cola
+sci_car_tyres_black	Medium	Why are car tyres black?	Carbon black is mixed into the rubber	Raw rubber is naturally black	Black paint hides road dirt	Tar from roads stains them
+sci_lab_grown_diamonds	Medium	How do lab-grown diamonds differ chemically from mined ones?	They don't: both are pure carbon	They are partly made of glass	They hold extra oxygen	They are made of zirconia
+sci_hydrogen_peroxide_fizz	Medium	Why does hydrogen peroxide fizz when poured on a cut?	An enzyme in blood splits off oxygen	It boils at body heat	It reacts with salt on the skin	Dying germs give off gas
+sci_number_recycling_triangle	Medium	What does the number 1 to 7 in the recycling triangle on plastics tell you?	Which type of plastic it is	How often it can be recycled	How many years it lasts	Which bin it goes in
+sci_beer_usually_sold	Medium	Why is beer usually sold in brown bottles?	Light gives it a 'skunky' taste	Brown glass is cheaper to make	It keeps the beer colder	It hides the yeast sediment
+sci_liquid_fuel_see	Medium	Which liquid fuel can you see sloshing inside a clear disposable lighter?	Butane	Petrol	Kerosene	Ethanol
+sci_soap_barely_lather	Medium	Why does soap barely lather in hard water?	Its minerals turn soap into scum	It is too cold for soap	It holds too much oxygen	Its chlorine destroys soap
+sci_water_nicknamed_universal	Medium	Why is water nicknamed the 'universal solvent'?	It dissolves more things than other liquids	It is found inside every living thing	It exists as solid, liquid and gas	It boils at the same heat everywhere
+sci_fiercely_bitter_chemical	Medium	Why is a fiercely bitter chemical added to antifreeze and many cleaning products?	To stop anyone swallowing them	To make them clean better	To stop them freezing	To keep insects away
+sci_milk_curdle_stir	Medium	Why does milk curdle when you stir in lemon juice?	The acid makes its proteins clump	The lemon's sugar thickens it	The juice cools the fat solid	Lemon oil soaks up its water
+sci_causes_new_car	Medium	What causes most of the famous 'new car smell'?	Fumes from new plastics and glues	Paint drying on the body	Fresh oil in the engine	Rubber dust from the tyres
+sci_carbon_monoxide_deadly	Medium	Why is carbon monoxide so deadly to breathe?	It stops blood carrying oxygen	It burns the lining of the lungs	It freezes the nerves	It turns the blood acidic
+sci_rubbing_ketchup_dull	Medium	Why does rubbing ketchup on a dull copper coin make it shine?	Its acid and salt eat the tarnish	Its sugar polishes the metal	Tomato oil coats the coin	Its red dye fills the scratches
+sci_hold_lit_match	Medium	Hold a lit match in the white smoke of a just-blown-out candle. What happens?	The flame jumps down to the wick	Nothing, as the smoke can't burn	The smoke turns jet black	It goes off with a loud bang
+sci_kitchen_powder_smother	Medium	Which kitchen powder can smother a small grease fire in a pan?	Baking soda	Flour	Sugar	Cornflour
+sci_drop_iodine_turns	Medium	A drop of iodine turns a slice of potato blue-black. What does that show?	It contains starch	It contains sugar	It contains protein	It contains fat
+sci_number_such_e330	Medium	What does an 'E number', such as E330, on a food label mean?	An approved food additive	An energy rating	An expiry code	An allergy warning
+sci_look_closely_grains	Medium	Look closely at grains of table salt. What shape are the crystals?	Tiny cubes	Tiny spheres	Six-sided stars	Thin needles
+sci_vaseline_petroleum_jelly	Medium	What is Vaseline, or petroleum jelly, made from?	Oil refinery leftovers	Rendered whale fat	Melted beeswax	Boiled-down pig fat
 sci2_moly_liczba	Hard	How many particles does one mole of a substance contain?	About 6.02 x 10^23	About 3.14 x 10^12	Exactly one million	About 10^100
 sci_tonic_water_glow	Hard	Why does tonic water glow blue under ultraviolet light?	Its quinine is fluorescent	Its bubbles reflect the light	Its sugar crystals sparkle	It contains glowing algae
 sci_box_safety_matches	Hard	On a box of safety matches, where is the red phosphorus that makes them light?	On the striking strip	In the match heads	In the wooden sticks	In the cardboard box
@@ -42,5 +78,39 @@ sci_makes_bright_yellow	Hard	What makes the bright yellow glow of a candle flame
 sci_makes_cola_fountain	Hard	What makes a cola fountain shoot up when you drop Mentos sweets into a bottle?	Gas bubbles form on the sweets' rough surface	The sweets react with the acid in the cola	The mint oil makes the cola boil	The sugar in both burns explosively
 sci_white_shirts_glow	Hard	Why do white T-shirts glow under 'black light' in clubs?	Washing powder leaves fluorescent dyes	Cotton fibres store up daylight	The cloth is slightly radioactive	The light makes the fabric warm
 sci_popping_candy_crackle	Hard	Why does popping candy crackle in your mouth?	Tiny pockets of squeezed gas burst	Sugar crystals snap as they melt	It reacts with acid in your saliva	Water in it boils on your tongue
+sci_road_flare_keep	Hard	Why can a road flare keep burning even underwater?	It carries its own oxygen supply	Its flame is too hot for water	Water itself is its fuel	It is sealed inside glass
+sci_cloud_flour_dust	Hard	Why can a cloud of flour dust explode, as in old flour mills?	Its tiny grains all burn almost at once	Flour gives off hydrogen	Wheat contains natural gunpowder	Millstones make it radioactive
+sci_mothballs_slowly_shrink	Hard	Mothballs slowly shrink to nothing without ever melting. Why?	They turn straight into gas	Moths nibble them away	They crumble into dust	They dissolve in damp air
+sci_each_step_down	Hard	Each step down the pH scale, say from 5 to 4, makes a liquid how much more acidic?	Ten times	Twice	A hundred times	Barely any more
+sci_squeeze_instant_cold	Hard	Squeeze an instant cold pack and it turns icy. Why?	Dissolving a salt soaks up heat	Two liquids freeze on contact	Water inside turns into ice	Gas inside escapes from a can
+sci_huge_2020_explosion	Hard	The huge 2020 explosion in Beirut's port was caused by tonnes of which stored chemical?	Ammonium nitrate	Gunpowder	Nitroglycerin	Liquid hydrogen
+sci_clear_fizzy_drink	Hard	Most clear fizzy-drink bottles are made of which plastic?	PET	PVC	Polystyrene	Nylon
+sci_nylon_big_hit	Hard	Nylon's first big hit in American shops, in 1940, was what?	Women's stockings	Raincoats	Tents	Umbrellas
+sci_octane_rating_petrol	Hard	What does the 'octane' rating of petrol measure?	How well it resists knocking	How much energy it holds	How much lead it contains	How fast it evaporates
+sci_seasoning_cast_iron	Hard	What is the 'seasoning' on a cast-iron pan?	Oil baked into a hard coating	A layer of salt crystals	Rust left on purpose	A sprayed-on enamel
+sci_old_newspapers_turn	Hard	Why do old newspapers turn yellow in sunlight?	A wood compound in it breaks down	The ink seeps through the page	Dust settles into the fibres	Mould grows on the paper
+sci_doesn_acidic_cola	Hard	Why doesn't acidic cola eat through its aluminium can?	A thin plastic lining inside	The metal is too thick	Cola's acid is too weak	The cold protects the metal
+sci_doesn_aluminium_foil	Hard	Why doesn't aluminium foil rust away like iron does?	A thin oxide skin protects it	It doesn't react with air at all	It is coated in clear plastic	It is too thin to react
+sci_sweetener_saccharin_found	Hard	The sweetener saccharin was found in 1879 when a chemist forgot to do what?	Wash his hands before dinner	Turn off his burner	Label his bottles	Close the lab window
+sci_white_powder_mixed	Hard	Which white powder, mixed with water, warms up self-heating cans of coffee?	Quicklime	Baking soda	Table salt	Chalk
+sci_coffee_often_decaffeinated	Hard	Coffee is often decaffeinated with which gas, squeezed until it acts like a liquid?	Carbon dioxide	Nitrogen	Helium	Oxygen
+sci_crush_iron_fortified	Hard	Crush iron-fortified cereal in water and stir with a magnet. What collects on it?	Tiny filings of iron metal	Nothing at all	Red bubbles of rust	Grains of table salt
+sci_happens_gummy_bear	Hard	What happens when a gummy bear is dropped into molten potassium chlorate?	It bursts into roaring flames	It melts into sweet syrup	It freezes solid at once	It turns hard as glass
+sci_synthetic_dye_mauve	Hard	The first synthetic dye, mauve, was found in 1856 by a teenager trying to make what?	A malaria drug	A new perfume	Artificial silk	Fake rubber
+sci_roughly_temperature_table	Hard	At roughly what temperature does table sugar start to caramelise?	About 170 C	About 60 C	About 100 C	About 400 C
+sci_chopped_garlic_smell	Hard	Why does chopped garlic smell much stronger than a whole clove?	Cutting triggers a smelly reaction	Cutting lets out trapped air	The juice evaporates faster	Garlic oil is only in the core
 sci_compound_made_soil	Expert	Which compound made by soil bacteria gives rain its earthy smell?	Geosmin	Petrichor	Ozone	Chlorophyll
 sci_older_eggs_easier	Expert	Why are older eggs easier to peel after boiling than very fresh ones?	Their whites become more alkaline	Their shells grow much thicker	Their yolks shrink and pull away	Their shells lose all their calcium
+sci_sugar_cube_won	Expert	A sugar cube won't burn with a match, but it will if you first dab it in what?	Cigarette ash	Table salt	Lemon juice	Baking soda
+sci_sweetener_sucralose_found	Expert	The sweetener sucralose was found when a student misheard 'test' as what?	Taste	Toast	Paste	Waste
+sci_old_pigment_prussian	Expert	The old pigment Prussian blue is also a medicine against what?	Radioactive caesium	Snake venom	Malaria	Scurvy
+sci_some_estimates_half	Expert	By some estimates, about half the nitrogen in your body was fixed by which process?	The Haber-Bosch process	Photosynthesis	Volcanic eruptions	The Krebs cycle
+sci_galalith_early_plastic	Expert	Galalith, an early plastic used for buttons and pens, was made from what?	Milk protein	Pine resin	Coal tar	Whale bone
+sci_gives_german_pretzels	Expert	What gives German pretzels their deep brown, glossy crust?	A dip in lye before baking	An egg yolk glaze	A coat of burnt sugar	Brushed-on coffee
+sci_old_books_often	Expert	Old books often smell faintly sweet, like vanilla. Where does it come from?	Their paper breaking down	Glue made with sugar	Mould in the pages	Ink fading in the light
+sci_chemists_celebrate_mole	Expert	Chemists celebrate 'Mole Day' from 6:02 am to 6:02 pm on which date?	23 October	6 February	2 June	10 March
+sci_squeeze_orange_peel	Expert	Squeeze orange peel onto a polystyrene cup. What happens?	Its oil eats holes in the cup	Nothing at all	The cup turns orange	The cup gets harder
+sci_burning_litre_petrol	Expert	Burning a litre of petrol produces roughly how much water?	About a litre	About a teaspoon	About ten litres	None at all
+sci_simple_distillation_purify	Expert	Simple distillation can't purify alcohol beyond roughly what strength?	About 96%	About 50%	About 75%	About 99.9%
+sci_smell_added_natural	Expert	The smell added to natural gas comes from the same family of chemicals as which animal's spray?	The skunk	The stink bug	The bombardier beetle	The musk ox
+sci_teflon_few_surfaces	Expert	Teflon is one of the few surfaces that which famous climber cannot cling to?	The gecko	The tree frog	The snail	The squirrel

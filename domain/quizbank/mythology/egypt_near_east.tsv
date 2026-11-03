@@ -2,6 +2,16 @@
 #
 id	difficulty	prompt	correct	wrong1	wrong2	wrong3
 myty_sezamie	Easy	What are the magic words that open the robbers' cave in 'Ali Baba'?	Open sesame	Abracadabra	Hocus pocus	Alakazam
+myt_egyptian_god_sun	Easy	Which Egyptian god was the sun itself and the king of the gods?	Ra	Osiris	Anubis	Thoth
+myt_aladdin_find_magic	Easy	Where does Aladdin find the magic lamp?	In an underground cave	In the sultan's palace	At the bottom of a well	In a shipwreck
+myt_thieves_ali_baba	Easy	How many thieves does Ali Baba outwit in the famous tale?	Forty	Twelve	Seven	A hundred
+myt_magical_object_carries	Easy	Which magical object carries heroes through the air in many Arabian tales?	A carpet	A broomstick	A cloud	A chariot
+myt_aladdin_ali_baba	Easy	Aladdin, Ali Baba and Sinbad are all heroes linked to which story collection?	One Thousand and One Nights	Grimms' Fairy Tales	Aesop's Fables	The Canterbury Tales
+myt_egyptian_gods_shown	Easy	Many Egyptian gods are shown with a human body and what?	An animal's head	Golden wings	Four arms	A fish's tail
+myt_thousand_nights_storyteller	Easy	In 'One Thousand and One Nights', how does the storyteller escape execution night after night?	She stops each tale at a cliffhanger	She sings him to sleep	She grants him three wishes	She hides in a new room
+myt_pharaoh_tomb_said	Easy	Which pharaoh's tomb was said to carry a deadly curse after it was opened in 1922?	Tutankhamun	Ramesses II	Khufu	Cleopatra
+myt_ancient_egyptians_mummify	Easy	Why did ancient Egyptians mummify their dead?	To keep the body for the afterlife	To stop diseases spreading	To scare off grave robbers	To honour the Nile god
+myt_original_aladdin_aladdin	Easy	In the original 'Aladdin', whom does Aladdin marry in the end?	The sultan's daughter	A fisherman's daughter	A slave girl	A female genie
 mit_anubis	Medium	Which Egyptian god had the head of a jackal?	Anubis	Ra	Horus	Osiris
 trv2_ozyrys	Medium	Which Egyptian god ruled the afterlife and was killed by his brother Set?	Osiris	Ra	Horus	Anubis
 myt_szeherezada	Medium	Who tells the stories night after night in 'One Thousand and One Nights'?	Scheherazade	Aladdin	Sinbad	Ali Baba
@@ -14,6 +24,29 @@ mit3_bastet	Medium	Which animal did the Egyptian goddess Bastet represent?	A cat
 myt_ancient_egyptian_ankh	Medium	What does the ancient Egyptian ankh symbol stand for?	Life	Death	Wisdom	Power
 mit2_anubis_rola	Medium	What did Anubis do?	Embalming and guiding the dead	Waging war	Overseeing harvests	Navigating the Nile
 myty_serce_mumii	Medium	Which organ did Egyptians usually leave inside a mummy, as it was needed in the afterlife?	The heart	The brain	The liver	The stomach
+myt_besides_lamp_magic	Medium	Besides the lamp, which magic object held a genie in the original 'Aladdin'?	A ring	A bottle	A mirror	A sword
+myt_voyage_sinbad_lands	Medium	On his first voyage, Sinbad lands on an 'island' that turns out to be what?	A giant whale	A sleeping dragon	A giant crab	A floating city
+myt_city_home_sinbad	Medium	Which city was home to Sinbad the Sailor?	Baghdad	Cairo	Damascus	Istanbul
+myt_word_ghoul_comes	Medium	The word 'ghoul' comes from Arabian folklore. What was a ghul?	A demon that eats the dead	A winged horse of the desert	A genie bound to a lamp	A sea serpent of the Gulf
+myt_egyptians_wear_eye	Medium	Why did Egyptians wear the Eye of Horus as an amulet?	For protection and healing	To bring rain for crops	To attract a husband	To see in the dark
+myt_myth_horus_lose	Medium	In myth, how did Horus lose the eye that became a famous symbol?	Set tore it out in a fight	A cobra spat in it	A scorpion stung it	He stared at the sun
+myt_each_living_pharaoh	Medium	Each living pharaoh was seen as an earthly form of which god?	Horus	Anubis	Sobek	Thoth
+myt_canaanite_storm_god	Medium	Which Canaanite storm god's prophets lost a fire contest to Elijah in the Bible?	Baal	Marduk	Dagon	Moloch
+myt_drove_gilgamesh_search	Medium	What drove Gilgamesh to search for eternal life?	His best friend's death	A curse from Ishtar	A prophecy from a god	His father's dying wish
+myt_thieves_hide_sneaked	Medium	Where did the thieves hide when they sneaked into Ali Baba's house?	In big oil jars	Under the beds	In the chimney	In a hay cart
+myt_babylonian_gods_create	Medium	Why did the Babylonian gods create humans, according to their myths?	To do the gods' hard work	To keep the gods company	To fight the sea monsters	To guard the stars
+myt_according_legend_king	Medium	According to legend, which king used a magic ring to command the djinn?	Solomon	David	Nebuchadnezzar	Darius
+myt_shape_hamsa_lucky	Medium	What shape is the hamsa, a lucky charm popular across the Middle East?	An open hand	A horseshoe	A crescent moon	A coiled snake
+myt_mesopotamian_goddess_ruled	Medium	Which Mesopotamian goddess ruled love, war and the planet Venus?	Ishtar	Tiamat	Ereshkigal	Nut
+myt_egyptian_creation_myths	Medium	In Egyptian creation myths, what was there before the world began?	Endless dark water	A giant tree	Fire and ice	A sleeping giant
+myt_thieves_chalked_ali	Medium	Thieves chalked Ali Baba's door to find it at night. How did his clever servant foil them?	She chalked all the other doors	She painted the door black	She moved the family away	She caught the thief at it
+myt_kind_creature_simurgh	Medium	What kind of creature is the Simurgh of Persian legend?	A giant wise bird	A sea serpent	A winged lion	A fire-breathing horse
+myt_aladdin_tale_evil	Medium	In the 'Aladdin' tale, how does the evil sorcerer first win Aladdin's trust?	He claims to be his uncle	He grants him a wish	He saves his mother	He pays off his debts
+myt_frame_story_thousand	Medium	How does the frame story of 'One Thousand and One Nights' end?	The king spares her life	She escapes by ship	She is executed at dawn	She poisons the king
+myt_king_shahryar_execute	Medium	Why did King Shahryar execute a new bride every morning?	His first wife betrayed him	A prophecy told him to	A djinn cursed him	He hated stories
+myt_ali_baba_greedy	Medium	Why did Ali Baba's greedy brother Cassim get trapped in the treasure cave?	He forgot the magic words	He fell asleep counting gold	The door rusted shut	He lost the key
+myt_god_borrowed_persia	Medium	Which god, borrowed from Persia, had a secret cult popular with Roman soldiers?	Mithras	Mars	Serapis	Ahura
+myt_night_demon_rooted	Medium	Which night demon, rooted in Mesopotamian myth, became Adam's first wife in Jewish folklore?	Lilith	Tiamat	Pazuzu	Ishtar
 ref_myt_maat	Hard	Against the feather of which Egyptian goddess of truth were the hearts of the dead weighed?	Ma'at	Isis	Hathor	Sekhmet
 myt_sachmet	Hard	Which lion-headed Egyptian goddess almost destroyed mankind in a rage?	Sekhmet	Bastet	Hathor	Nut
 mytx_thot_ibis	Hard	The Egyptian god Thoth usually has the head of which bird?	An ibis	A falcon	A vulture	A heron
@@ -31,6 +64,19 @@ mit2_thot	Hard	What was the Egyptian god Thoth the patron of?	Writing and knowle
 mit2_izyda	Hard	What was Isis to Osiris?	His sister and wife	His daughter	His mother	His enemy
 ref_myt_set	Hard	Which Egyptian god ruled chaos, storms and the desert?	Set	Apep	Horus	Ptah
 myt_babylonian_god_slew	Hard	Which Babylonian god slew the sea dragon Tiamat and became king of the gods?	Marduk	Enlil	Gilgamesh	Ashur
+myt_tutankhamun_born_tutankhaten	Hard	Tutankhamun was born Tutankhaten. Which god's name replaced 'Aten' in it?	Amun	Ra	Horus	Ptah
+myt_sky_goddess_nut	Hard	What did the sky goddess Nut do to the sun every evening?	Swallowed it	Hid it in a jar	Drowned it in the Nile	Wrapped it in her hair
+myt_apis_worshipped_memphis	Hard	The Apis, worshipped at Memphis and buried in huge stone coffins, was a sacred what?	Bull	Cat	Crocodile	Ibis
+myt_egyptian_paradise_endless	Hard	What was the Egyptian paradise, an endless version of the farmland by the Nile, called?	The Field of Reeds	The Garden of Ra	The Isle of Gold	The Valley of Lotus
+myt_zoroastrian_belief_world	Hard	In Zoroastrian belief, the world is a struggle between the god of wisdom and which evil spirit?	Angra Mainyu	Pazuzu	Apophis	Tiamat
+myt_demon_beelzebub_comes	Hard	The demon name Beelzebub comes from a Philistine god. What does it mean?	Lord of the flies	King of the dead	Eater of children	Father of lies
+myt_according_epic_gilgamesh	Hard	According to his epic, how much of Gilgamesh was divine?	Two-thirds	Half	One-third	All of him
+myt_gilgamesh_spurned_goddess	Hard	After Gilgamesh spurned the goddess of love, what beast did she send against him?	The Bull of Heaven	The Lion of Night	A seven-headed serpent	A giant eagle
+myt_survived_great_flood	Hard	Who survived the great flood in the Epic of Gilgamesh and was given eternal life?	Utnapishtim	Enkidu	Humbaba	Sargon
+myt_babylonian_flood_myth	Hard	In the Babylonian flood myth of Atrahasis, why did the gods send the flood?	Humans were too noisy to sleep	Humans stopped praying	Humans built a tower	Humans killed a god's son
+myt_test_gilgamesh_fail	Hard	Which test did Gilgamesh fail when trying to win eternal life?	Staying awake for a week	Lifting a mountain	Answering a riddle	Fasting for a month
+myt_fisherman_trick_giant	Hard	How does the fisherman trick a giant jinni back into its jar in the 'Nights'?	He says it could never fit inside	He offers it a wish	He calls for its master	He sings it a lullaby
+myt_hero_persian_shahnameh	Hard	Which hero of the Persian 'Shahnameh' unknowingly killed his own son Sohrab?	Rostam	Jamshid	Zal	Kaveh
 myt_chepri	Expert	Which Egyptian god took the form of a scarab beetle rolling the sun across the sky?	Khepri	Sobek	Ptah	Atum
 myt_nut	Expert	Which Egyptian goddess was the sky, arching her body over the Earth?	Nut	Geb	Hathor	Tefnut
 myty_bes	Expert	Which dwarf god of ancient Egypt protected households and children?	Bes	Ptah	Khnum	Apis
@@ -48,3 +94,7 @@ myt_sacred_heron_like	Expert	Which sacred heron-like bird of Egypt is often link
 myt_according_plutarch_set	Expert	According to Plutarch, how did Set first trap his brother Osiris?	He tricked him into a made-to-measure chest	He poisoned his wine at a royal feast	He pushed him into the flooded Nile	He sealed him inside a new pyramid
 myt_isis_force_sun	Expert	How did Isis force the sun god Ra to reveal his secret name?	She made a snake that bit him	She stole his eye while he slept	She trapped him inside a chest	She hid the sun behind the Moon
 myt_raging_goddess_sekhmet	Expert	How was Ra's raging lion goddess stopped from wiping out humankind?	She drank beer dyed to look like blood	Ra trapped her inside the Moon	Horus defeated her in battle	Osiris chained her in the underworld
+myt_scarab_amulet_laid	Expert	Why was a scarab amulet laid over a mummy's heart?	To stop the heart speaking against them	To keep the heart beating forever	To scare away tomb robbers	To feed the soul in the dark
+myt_gilgamesh_flood_story	Expert	In the Gilgamesh flood story, which bird did not come back, showing that dry land had appeared?	A raven	A dove	A swallow	An eagle
+myt_egyptian_myth_humans	Expert	In one Egyptian myth, the first humans came from what?	The sun god's tears	A cracked egg	The Nile's foam	A falcon's feather
+myt_advice_ale_wife	Expert	What advice does the ale-wife Siduri give Gilgamesh on his quest?	Enjoy food, family and life	Never trust a snake	Go home and pray	Seek the plant of youth
