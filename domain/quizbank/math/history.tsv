@@ -3,6 +3,12 @@
 id	difficulty	prompt	correct	wrong1	wrong2	wrong3
 mat_pitagoras_wzor	Easy	Which famous theorem says a² + b² = c²?	Pythagoras' theorem	Thales' theorem	Fermat's Last Theorem	Euclid's theorem
 mat_ancient_counting_tool	Easy	Which ancient counting tool works by sliding beads along rods?	The abacus	The sextant	The astrolabe	The slide rule
+mat_genius_often_wrongly	Easy	Which genius is often wrongly said to have failed maths at school?	Albert Einstein	Isaac Newton	Marie Curie	Stephen Hawking
+mat_ancient_greek_principle	Easy	Which ancient Greek's 'principle' explains why ships float?	Archimedes'	Pythagoras'	Euclid's	Aristotle's
+mat_pythagoras_euclid_archimedes	Easy	Pythagoras, Euclid and Archimedes all belonged to which ancient civilisation?	Ancient Greece	Ancient Rome	Ancient Egypt	Babylon
+mat_film_theory_everything	Easy	The film 'The Theory of Everything' tells the life of which Cambridge professor?	Stephen Hawking	Alan Turing	Isaac Newton	Paul Dirac
+mat_said_give_place	Easy	Who said 'Give me a place to stand and I will move the Earth', speaking of levers?	Archimedes	Aristotle	Plato	Socrates
+mat_jurassic_park_character	Easy	In 'Jurassic Park', which character is the mathematician who warns about chaos theory?	Ian Malcolm	Alan Grant	John Hammond	Dennis Nedry
 mat_euklides	Medium	Who is known as the 'father of geometry'?	Euclid	Pythagoras	Archimedes	Thales
 mat_trojkat_pascala	Medium	What is the famous triangle of numbers where each is the sum of the two above it?	Pascal's triangle	Euler's triangle	Newton's triangle	Fermat's triangle
 matx_cyfry_indie	Medium	The digits 0 to 9 we use today, called 'Arabic numerals', first developed where?	India	Arabia	Egypt	Greece
@@ -20,6 +26,21 @@ mat_handheld_calculating_tool	Medium	Which handheld calculating tool, based on l
 mat_gauss	Medium	Which mathematician is said to have added up 1 to 100 in seconds as a schoolboy?	Carl Friedrich Gauss	Isaac Newton	Leonhard Euler	Blaise Pascal
 matx_kroliki	Medium	The Fibonacci sequence first appeared in a puzzle about breeding which animals?	Rabbits	Mice	Sheep	Chickens
 mat_ancient_impossible_task	Medium	What is the ancient, impossible task of drawing a square with exactly a circle's area, using only compass and ruler?	Squaring the circle	Doubling the cube	Trisecting the angle	Cornering the arc
+mat_thinker_promoted_binary	Medium	Which thinker promoted the binary system of 0s and 1s in 1703, long before computers?	Gottfried Leibniz	Blaise Pascal	Isaac Newton	Rene Descartes
+mat_ancient_textbook_said	Medium	Which ancient textbook is said to have had more editions than any book except the Bible?	Euclid's 'Elements'	Homer's 'Odyssey'	Aesop's 'Fables'	Ptolemy's 'Almagest'
+mat_ancient_thinker_followers	Medium	Which ancient thinker's followers taught that 'all is number'?	Pythagoras'	Plato's	Euclid's	Aristotle's
+mat_scientist_wrote_book	Medium	Which scientist wrote that the book of nature is written in the language of mathematics?	Galileo Galilei	Isaac Newton	Johannes Kepler	Rene Descartes
+mat_englishman_1850s_algebra	Medium	Which Englishman's 1850s algebra of 'true' and 'false' became the basis of computer circuits?	George Boole	Charles Babbage	Alan Turing	John von Neumann
+mat_mathematician_often_prince	Medium	Which mathematician is often called the 'Prince of Mathematicians'?	Carl Friedrich Gauss	Leonhard Euler	Isaac Newton	Bernhard Riemann
+mat_pierre_fermat_history	Medium	Pierre de Fermat, one of history's great mathematicians, earned his living as what?	A lawyer	A priest	A doctor	A banker
+mat_general_emperor_geometry	Medium	Which famous general and emperor has a geometry theorem named after him?	Napoleon Bonaparte	Julius Caesar	Alexander the Great	Charlemagne
+mat_mathematician_john_nash	Medium	Mathematician John Nash, whose life inspired an Oscar-winning film, won a Nobel Prize in which field?	Economics	Physics	Peace	Literature
+mat_cambridge_wooden_mathematical	Medium	Cambridge's wooden 'Mathematical Bridge' is wrongly said to have been built, without nails, by whom?	Isaac Newton	Charles Babbage	Alan Turing	Charles Darwin
+mat_great_city_learning	Medium	In which great city of learning did Euclid work?	Alexandria	Athens	Rome	Syracuse
+mat_ancient_greek_sieve	Medium	Which ancient Greek's 'sieve' is a simple method for finding prime numbers?	Eratosthenes	Euclid	Archimedes	Pythagoras
+mat_according_legend_archimedes	Medium	According to legend, how did Archimedes set attacking Roman ships on fire?	With giant mirrors	With flaming arrows	With Greek fire	With burning oil
+mat_bertrand_russell_logician	Medium	Bertrand Russell, the logician behind the barber paradox, won a Nobel Prize in which field?	Literature	Physics	Peace	Economics
+mat_mathematician_fibonacci_leonardo	Medium	The mathematician Fibonacci is also known as Leonardo of which city?	Pisa	Florence	Venice	Milan
 mst_zero_indie	Hard	Zero as a number in its own right was first fully developed where?	India	Greece	Egypt	Rome
 mat_ramanujan	Hard	Which self-taught Indian mathematician inspired the film 'The Man Who Knew Infinity'?	Srinivasa Ramanujan	Aryabhata	Brahmagupta	C. R. Rao
 mat_medal_fieldsa	Hard	Which top mathematics award is given only to mathematicians under 40?	The Fields Medal	The Abel Prize	The Wolf Prize	The Turing Award
@@ -65,6 +86,11 @@ matx_archimedes_pi	Hard	Which ancient Greek pinned down pi by drawing polygons w
 matx_hypatia	Hard	Which woman mathematician and astronomer of ancient Egypt was killed by a mob in 415?	Hypatia	Sappho	Aspasia	Cleopatra
 mat_unproven_conjecture_says	Hard	Which unproven conjecture says every even number greater than 2 is the sum of two primes?	Goldbach's conjecture	Fermat's Last Theorem	The Collatz conjecture	The Riemann hypothesis
 mat_ludolph_van_ceulen	Hard	Ludolph van Ceulen spent years working out pi to 35 decimal places. Where were the digits carved?	On his tombstone	Over his front door	On a church bell	Into a city wall
+mat_president_published_own	Hard	Which US president published his own original proof of Pythagoras' theorem?	James Garfield	Thomas Jefferson	Abraham Lincoln	Woodrow Wilson
+mat_florence_nightingale_chart	Hard	Florence Nightingale's famous chart showing soldiers dying of disease is known as what kind of diagram?	A 'rose' diagram	A bar chart	A line graph	A scatter plot
+mat_indian_human_computer	Hard	Which Indian 'human computer' multiplied two 13-digit numbers in her head in 28 seconds?	Shakuntala Devi	Kalpana Chawla	Sarojini Naidu	Anandibai Joshi
+mat_7th_century_indian	Hard	Which 7th-century Indian mathematician first wrote down rules for calculating with zero?	Brahmagupta	Aryabhata	Bhaskara	Al-Khwarizmi
+mat_babylonian_clay_tablets	Hard	Babylonian clay tablets show Pythagoras' famous rule was known how long before he was born?	Over 1,000 years	About 50 years	About 200 years	It wasn't known before him
 mat2_hipoteza_riemanna	Expert	What does the Riemann hypothesis concern?	The distribution of the zeta function's zeros	The solutions of differential equations	The colouring of maps with four colours	The shortest path through a large graph
 mat2_banach_tarski	Expert	What does the Banach-Tarski paradox state?	A ball can be split apart and reassembled into two identical balls	A sphere cannot be turned inside out without tearing	Pi can be written as a ratio of two whole numbers	All infinite sets are exactly the same size
 mat_mirzakhani	Expert	Who was the first woman to win the Fields Medal, in 2014?	Maryam Mirzakhani	Emmy Noether	Sophie Germain	Ada Lovelace
@@ -81,3 +107,5 @@ mat_word_algebra_comes_2	Expert	The word 'algebra' comes from 'al-jabr'. In Spai
 mat_1843_william_rowan	Expert	In 1843, William Rowan Hamilton carved a formula into a Dublin bridge in a flash of inspiration. What had he discovered?	Quaternions	Logarithms	Prime numbers	Imaginary numbers
 mat_1884_novella_flatland	Expert	In the 1884 novella 'Flatland', set in a two-dimensional world, what shape is the narrator?	A square	A circle	A triangle	A straight line
 mat_albrecht_durer_engraving	Expert	Albrecht Durer's engraving 'Melencolia I' hides a 4x4 magic square. What do the two middle numbers of its bottom row show?	The year it was made	The artist's birthday	The number of the beast	The date of an eclipse
+mat_used_greek_letter	Expert	Who first used the Greek letter pi for the circle constant, in 1706?	William Jones	Leonhard Euler	Isaac Newton	John Wallis
+mat_russell_whitehead_principia	Expert	In Russell and Whitehead's 'Principia Mathematica', roughly how many pages pass before 1 + 1 = 2 is proved?	Over 300	About 3	About 30	Over 3,000

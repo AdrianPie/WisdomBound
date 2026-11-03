@@ -8,6 +8,16 @@ bio_identical_twins_form	Easy	How do identical twins form?	One fertilised egg sp
 bio_pair_sex_chromosomes	Easy	Which pair of sex chromosomes does a typical man have?	XY	XX	YY	XO
 bio_darwin	Easy	Who formulated the theory of evolution by natural selection?	Charles Darwin	Gregor Mendel	Louis Pasteur	Carl Linnaeus
 bio3_las_gatunki	Easy	Which land habitat holds the greatest number of species?	Tropical rainforest	Boreal forest (taiga)	Temperate grassland	Tundra
+bio_standard_dna_tests	Easy	Why do standard DNA tests struggle to tell identical twins apart?	Their DNA is almost identical	Twins have no DNA of their own	Their DNA changes every day	Twins share one blood supply
+bio_men_comics_films	Easy	In the X-Men comics and films, where do the heroes' powers come from?	Genetic mutations	Alien radiation	A secret army serum	Ancient magic spells
+bio_roughly_child_dna	Easy	Roughly how much of a child's DNA comes from its mother?	About half	About a quarter	About three-quarters	Nearly all of it
+bio_don_brothers_sisters	Easy	Why don't brothers and sisters (who aren't identical twins) look exactly alike?	Each inherits a different mix of genes	They eat different foods as babies	Only the eldest gets the father's genes	Genes change with birth order
+bio_bacteria_usually_multiply	Easy	How do bacteria usually multiply?	By splitting in two	By laying tiny eggs	By mating in pairs	By growing from seeds
+bio_food_labels_mean	Easy	On food labels, what does 'GM' mean, as in 'GM soya'?	Genetically modified	Grown mechanically	Glucose measured	Globally marketed
+bio_complete_living_thing	Easy	Which of these is a complete living thing made of just one cell?	An amoeba	A jellyfish	A sponge	A coral
+bio_according_evolution_humans	Easy	According to evolution, how are humans related to chimpanzees?	We share a common ancestor	We descend from chimpanzees	Chimps descend from humans	We are not related at all
+bio_parent_not_pass	Easy	Which of these can a parent NOT pass on to a child through their genes?	A scar from an injury	Their natural eye colour	Their blood group	A tendency to freckle
+bio_part_human_cell	Easy	In which part of a human cell is most of its DNA kept?	The nucleus	The cell membrane	The cytoplasm	The ribosomes
 bio_chromosomy	Medium	How many chromosomes does a healthy human cell have?	46	23	48	44
 bio2_dna_zasady	Medium	How many different nitrogenous bases occur in DNA?	Four	Two	Five	Twenty
 bio2_wirus_zycie	Medium	Why are viruses not considered fully-fledged living organisms?	They can't reproduce without a host cell	They have no genetic material	They can't mutate	They don't respond to temperature
@@ -25,6 +35,25 @@ wh_dna_struktura	Medium	Which scientists described the DNA double helix in 1953?
 bio_scientist_gave_plants	Medium	Which scientist gave plants and animals their two-part Latin names?	Carl Linnaeus	Charles Darwin	Gregor Mendel	Louis Pasteur
 sci3_darwin_statek	Medium	What was the name of the ship Charles Darwin sailed on?	HMS Beagle	Endeavour	Santa Maria	Mayflower
 trv_dna_rozwiniecie	Medium	What does DNA stand for?	Deoxyribonucleic acid	Dinucleic acid	Deoxyribose nitrogen acid	Double nucleic arrangement
+bio_mammal_cloned_adult	Medium	The first mammal cloned from an adult cell was named after which singer?	Dolly Parton	Cher	Madonna	Tina Turner
+bio_lucy_found_ethiopia	Medium	The famous 'Lucy', found in Ethiopia in 1974, was named after a song by which band?	The Beatles	The Rolling Stones	Pink Floyd	The Who
+bio_jurassic_park_dna	Medium	In 'Jurassic Park', DNA from which animal was used to fill the gaps in the dinosaur DNA?	Frogs	Lizards	Crocodiles	Chickens
+bio_huge_project_finished	Medium	Which huge project, finished in 2003, read almost all the letters of human DNA?	The Human Genome Project	The Manhattan Project	The Human Cell Atlas	The Blue Brain Project
+bio_voyage_young_charles	Medium	Before his famous voyage, young Charles Darwin was training to become what?	A clergyman	A lawyer	An army officer	A banker
+bio_robert_hooke_said	Medium	Robert Hooke is said to have named 'cells' after what, when he saw cork under his microscope?	Monks' tiny rooms	Fish scales	Bee eggs	Grains of salt
+bio_two_parents_blood	Medium	Two parents with blood group O can normally have children of which blood group?	Only O	Only A or B	Any of the four	Only AB
+bio_natural_red_hair	Medium	Natural red hair usually appears only when a child inherits the red-hair gene from whom?	Both parents	Only the mother	Only the father	Either parent
+bio_father_genetics_pea	Medium	The 'father of genetics' did his famous pea experiments while working as what?	A monk	A soldier	A doctor	A banker
+bio_roughly_life_appear	Medium	Roughly when did the first life appear on Earth?	Nearly 4 billion years ago	About 600 million years ago	About 65 million years ago	About 10 billion years ago
+bio_2018_chinese_scientist	Medium	In 2018, a Chinese scientist caused outrage by announcing the birth of what?	The first gene-edited babies	The first cloned human baby	The first baby from an artificial womb	The first human-ape hybrid
+bio_protein_makes_some	Medium	The protein that makes some lab animals glow green under blue light came from which creature?	A jellyfish	A firefly	A glow-worm	An anglerfish
+bio_germs_become_resistant	Medium	Why do germs become resistant to antibiotics over time?	Resistant survivors multiply	The body gets used to the drug	Antibiotics weaken in storage	Doses get smaller over the years
+bio_latin_species_literally	Medium	What does the Latin name of our species literally mean?	Wise man	Upright man	Handy man	Thinking ape
+bio_scientist_portrait_bank	Medium	Which scientist's portrait was on the Bank of England 10-pound note until 2018?	Charles Darwin	Isaac Newton	Michael Faraday	Alan Turing
+bio_strains_coli_gut	Medium	Most strains of E. coli, the famous gut bacterium, are what?	Harmless to humans	Deadly to humans	Found only in cattle	Found only in soil
+bio_five_year_voyage	Medium	During his five-year voyage round the world, what did Charles Darwin suffer from badly?	Seasickness	Scurvy	Malaria	Gout
+bio_mules_horse_donkey	Medium	Why can mules, a horse-donkey cross, almost never have foals of their own?	Their chromosomes can't pair up	They are always born male	Their blood types clash	They mature too late in life
+bio_inside_whale_front	Medium	Inside a whale's front flipper, which bones hint at its land-living ancestors?	Finger bones	Gill bones	Fish-like fin rays	Shark-like cartilage
 bio2_kodon	Hard	How many nucleotides make up one codon?	Three	Two	Four	Six
 trv_dna_dlugosc	Hard	If you stretched out the DNA from a single human cell, roughly how long would it be?	About 2 metres	About 2 millimetres	About 2 centimetres	About 200 metres
 mst_bakterie_liczba	Hard	Roughly how do bacterial cells in your body compare with your own cells?	Comparable in number	A thousand times fewer	A million times more	Only a few thousand total
@@ -56,6 +85,14 @@ bio_mitochondria_matka	Hard	Which part of your DNA is inherited only from your m
 bio_hela	Hard	Which famous line of human cells, taken in 1951, still grows in labs today?	HeLa cells	CHO cells	Vero cells	Jurkat cells
 bio_leeuwenhoek	Hard	Who was the first person to see bacteria, through his own home-made microscopes?	Antonie van Leeuwenhoek	Robert Hooke	Louis Pasteur	Robert Koch
 bio_gene_shapes_growing	Hard	Which gene that shapes the growing embryo is named after a video game character?	Sonic hedgehog	Pac-Man	Super Mario	Donkey Kong
+bio_roughly_dna_letters	Hard	Roughly how many DNA 'letters' make up the human genome?	About 3 billion	About 3 million	About 3 trillion	About 30,000
+bio_thought_numerous_biological	Hard	Which are thought to be the most numerous biological things on Earth?	Viruses	Bacteria	Ants	Krill
+bio_britain_industrial_revolution	Hard	During Britain's Industrial Revolution, which insect mostly turned black to hide on sooty trees?	The peppered moth	The stag beetle	The red admiral	The honeybee
+bio_missing_link_skull	Hard	Which 'missing link' skull, found in England in 1912, later turned out to be a hoax?	Piltdown Man	Java Man	Peking Man	Cheddar Man
+bio_charles_darwin_mother	Hard	Charles Darwin's mother and his wife both came from which famous family of pottery makers?	The Wedgwoods	The Doultons	The Spodes	The Mintons
+bio_jelly_agar_lab	Hard	The jelly called 'agar', on which lab microbes are grown, is made from what?	Seaweed	Cow bones	Tree sap	Potato starch
+bio_heavy_ivory_poaching	Hard	Heavy ivory poaching in Mozambique led to many more female elephants being born without what?	Tusks	Toenails	Molars	Tail tufts
+bio_charles_darwin_spent	Hard	Charles Darwin spent eight years studying which creatures in minute detail?	Barnacles	Spiders	Snails	Ants
 bio_ektoderma	Expert	Which germ layer does the nervous system develop from?	Ectoderm	Mesoderm	Endoderm	Notochord
 bio3_bioluminescencja_mechanizm	Expert	What accounts for bioluminescence in most organisms?	A luciferase reaction with luciferin	Reflection of moonlight	Fluorescence of photosynthetic proteins	Electric discharges
 dpt_bio_hayflick	Expert	What does the Hayflick limit describe?	How often a normal cell can divide	How long an enzyme stays active	How fast a nerve signal travels	How much oxygen blood carries
@@ -83,3 +120,6 @@ bio_whether_person_wet	Expert	Whether a person has wet or dry earwax depends mos
 bio_scientist_darwin_bulldog	Expert	Which scientist was called 'Darwin's bulldog' for defending evolution?	Thomas Huxley	Alfred Russel Wallace	Richard Owen	Herbert Spencer
 bio_measured_dna_letters	Expert	Measured in DNA letters, how does an onion's genome compare with a human's?	About five times longer	About a tenth as long	About half as long	Almost exactly the same
 bio_roughly_share_human_2	Expert	Roughly what share of the human genome is made of the remains of ancient viruses?	About 8%	About 0.08%	About 0.8%	About 80%
+bio_evolution_luca_stand	Expert	In evolution, what does 'LUCA' stand for?	Last universal common ancestor	Largest unit of cell assembly	Living unit of chemical action	Late upper Cambrian age
+bio_microbe_shrugs_off	Expert	Which microbe that shrugs off huge doses of radiation is nicknamed 'Conan the Bacterium'?	Deinococcus radiodurans	Escherichia coli	Bacillus anthracis	Staphylococcus aureus
+bio_cambridge_charles_darwin	Expert	At Cambridge, Charles Darwin joined a 'Glutton Club' that met to do what?	Eat unusual animals	Drink rare wines	Hold eating contests	Cook French food

@@ -7,6 +7,14 @@ mat_cards_standard_deck	Easy	How many cards are in a standard deck, not counting
 mat_chance_drawing_heart	Easy	What is the chance of drawing a heart from a full 52-card deck?	1 in 4	1 in 13	1 in 2	1 in 52
 mat_chance_rolling_six	Easy	What is the chance of rolling a six with one fair die?	1 in 6	1 in 3	1 in 12	1 in 36
 mat_different_outfits_put	Easy	How many different outfits can you put together from 3 shirts and 4 pairs of trousers?	12	7	9	16
+mat_roll_fair_die	Easy	You roll one fair die. What is the chance of an even number?	1 in 2	1 in 3	1 in 6	2 in 3
+mat_bag_holds_red	Easy	A bag holds 3 red marbles and 1 blue one. What is the chance of picking the blue one?	1 in 4	1 in 3	1 in 2	3 in 4
+mat_mean_average	Easy	What is the mean (average) of 2, 4 and 9?	5	4	6	15
+mat_forecast_gives_chance	Easy	The forecast gives a 70% chance of rain. What is the chance it stays dry?	30%	70%	0%	50%
+mat_range_numbers	Easy	What is the range of the numbers 3, 8, 5 and 12?	9	7	12	4
+mat_roll_fair_die_2	Easy	You roll one fair die. What is the chance of rolling more than 4?	1 in 3	1 in 2	1 in 6	2 in 3
+mat_flip_two_coins_2	Easy	You flip two coins. How many different outcomes are possible, such as heads-tails?	4	3	2	6
+mat_spinner_equal_parts	Easy	A spinner has 5 equal parts, 2 of them green. What is the chance of landing on green?	2 in 5	1 in 5	1 in 2	2 in 3
 trv2_moneta_3_orly	Medium	If you flip a fair coin three times, what is the chance of getting heads every time?	1 in 8	1 in 3	1 in 6	1 in 4
 trv2_kostka_suma	Medium	What is the most likely total when you roll two dice?	7	6	8	12
 mat_dublet	Medium	What is the chance of rolling a double with two dice?	1 in 6	1 in 12	1 in 36	1 in 3
@@ -48,6 +56,10 @@ mat_must_least_two	Medium	Why must at least two Londoners have exactly the same 
 mat_poker_flush_beat	Medium	In poker, why does a flush beat a straight?	It is less likely to be dealt	It uses higher cards	It was invented first	It needs more matching pairs
 mat_monte_carlo_method	Medium	The 'Monte Carlo method', which solves problems using random numbers, is named after what?	A famous casino	A mathematician named Carlo Monte	A Monaco racing rally	A Swiss mountain observatory
 mat_rule_thumb_says	Medium	Which rule of thumb says that roughly 80% of the effects come from 20% of the causes?	The Pareto principle	Murphy's law	Parkinson's law	The Peter principle
+mat_day_week_picked	Medium	A day of the week is picked at random. What is the chance it falls on a weekend?	2 in 7	1 in 7	1 in 2	2 in 5
+mat_roll_two_dice_2	Medium	You roll two dice. What is the chance the total is either 2 or 12?	1 in 18	1 in 36	1 in 12	1 in 6
+mat_pizza_place_offers	Medium	A pizza place offers 5 toppings. How many pizzas with exactly 2 different toppings can you order?	10	20	25	7
+mat_statistics_standard_deviation	Medium	In statistics, what does the 'standard deviation' measure?	How spread out the data is	The most common value	The middle value	The biggest value
 ext_tasowanie_talii	Hard	A shuffled deck of 52 cards has likely landed in an order that has what property?	Never occurred before in history	Repeats roughly yearly	Repeats every million shuffles	Is one of a few billion
 cur_urodziny_paradoks	Hard	How many people must be in a room for a better-than-even chance that two share a birthday?	23	183	57	366
 mat_monty_hall	Hard	In the Monty Hall puzzle, what is your chance of winning if you switch doors?	2 in 3	1 in 2	1 in 3	1 in 4
@@ -77,6 +89,10 @@ mat_huge_2023_study	Hard	A huge 2023 study of over 350,000 coin tosses found tha
 mat_interest_rate_rises	Hard	An interest rate rises from 2% to 3%, one percentage point. By what percentage has the rate itself grown?	50%	1%	33%	150%
 mat_ruletka	Hard	What do all the numbers on a roulette wheel add up to?	666	555	777	1,000
 mat_sports_illustrated_cover	Hard	The 'Sports Illustrated cover jinx', where stars slump after a cover appearance, is best explained by what?	Regression to the mean	The gambler's fallacy	Benford's law	Zipf's law
+mat_roll_three_dice	Hard	You roll three dice. What is the chance that all three show a six?	1 in 216	1 in 18	1 in 36	1 in 108
+mat_well_run_opinion	Hard	A well-run opinion poll of about 1,000 people has a margin of error of roughly what?	About 3 points	About 0.1 points	About 10 points	About 30 points
+mat_roughly_casino_edge	Hard	Roughly what is the casino's edge on every bet at European roulette?	About 2.7%	About 0.1%	About 10%	About 27%
+mat_roughly_chance_person	Hard	Roughly what is the chance that a person's birthday falls on 29 February?	About 1 in 1,461	About 1 in 365	About 1 in 4	About 1 in 10,000
 mat_petersburg_paradox_game	Expert	In the 'St Petersburg paradox', a game's prize doubles every time a coin lands heads, stopping at the first tails. What is its expected payout?	Infinite	Exactly $2	About $25	Nothing at all
 mat_1973_berkeley_seemed	Expert	In 1973, UC Berkeley seemed to favour men overall, yet most departments slightly favoured women. What is this effect called?	Simpson's paradox	Benford's law	The gambler's fallacy	Zeno's paradox
 mat_test_disease_000	Expert	A test for a disease that 1 in 10,000 people have is 99% accurate. You test positive. Roughly how likely are you to have it?	About 1%	About 99%	About 50%	About 90%
@@ -88,3 +104,7 @@ mat_mathematicians_showed_riffle	Expert	Mathematicians showed that about how man
 mat_chance_rolling_five	Expert	What is the chance of rolling five of a kind (a 'Yahtzee') with five dice in a single throw?	1 in 1,296	1 in 7,776	1 in 216	1 in 46,656
 mat_1906_francis_galton	Expert	In 1906, Francis Galton studied 787 guesses of an ox's weight at a fair. What surprised him?	The middle guess was within 1% of the truth	Nobody came within 100 kg of the truth	The butchers guessed worst of all	Most guesses were exactly right
 mat_chevalier_mere_won	Expert	The Chevalier de Mere won by betting on a six in four rolls. Why did his bet on a double six in 24 rolls of two dice disappoint him?	It lost slightly more often than it won	It won exactly half the time	Casinos refused to take the bet	Two dice cannot land a double six
+mat_roll_three_dice_2	Expert	You roll three dice. What is the chance that all three show different numbers?	5 in 9	1 in 2	1 in 6	2 in 3
+mat_big_secret_santa	Expert	In a big Secret Santa draw, roughly how likely is it that nobody picks their own name?	About 37%	About 5%	About 63%	About 90%
+mat_average_rolls_fair_2	Expert	On average, how many rolls of a fair die does it take to see all six faces?	About 15	About 6	About 9	About 36
+mat_draw_two_cards_2	Expert	You draw two cards from a full deck. What is the chance they are the same suit?	4 in 17	1 in 4	1 in 13	1 in 16
