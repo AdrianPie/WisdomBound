@@ -12,6 +12,15 @@ spo_paris_avenue_tour	Easy	On which famous Paris avenue does the Tour de France 
 spo2_tour_de_france	Easy	What jersey does the Tour de France leader wear?	Yellow	Green	Pink	Polka-dot
 spox_le_mans	Easy	Which famous motor race lasts 24 hours?	Le Mans	The Monaco Grand Prix	The Indianapolis 500	The Dakar Rally
 cap_indy_500_car	Easy	The famous 'Indy 500' car race is named after which US state capital?	Indianapolis	Columbus	Nashville	Atlanta
+spo_legend_left_coma	Easy	Which F1 legend was left in a coma by a skiing accident in the French Alps in 2013?	Michael Schumacher	Mika Hakkinen	Jenson Button	Kimi Raikkonen
+spo_roughly_top_speed	Easy	Roughly what top speed can a modern Formula 1 car reach?	About 350 km/h	About 150 km/h	About 600 km/h	About 1,000 km/h
+spo_powers_cars_formula	Easy	What powers the cars in the Formula E racing series?	Electricity	Hydrogen	Solar panels	Biofuel
+spo_grand_prix_top	Easy	'Grand Prix', the name for top motor races, is French for what?	Great prize	Great race	Fast lap	First place
+spo_motorbike_sport_raced	Easy	Which motorbike sport is raced on rough dirt tracks full of big jumps?	Motocross	Speedway	Superbike	Road racing
+spo_star_played_veteran	Easy	Which star played a veteran racing driver in the 2025 film 'F1'?	Brad Pitt	Tom Cruise	Matt Damon	Keanu Reeves
+spo_racing_cyclists_ride	Easy	Why do racing cyclists ride tucked in right behind one another?	To save energy out of the wind	To stop rivals from passing	Because the rules demand it	To see the road ahead better
+spo_kind_track_nascar	Easy	What kind of track are most NASCAR races held on?	Oval tracks	Street circuits	Dirt roads	Mountain passes
+spo_safety_car_formula	Easy	What does the safety car do during a Formula 1 race?	Slows the field after a crash	Tows away broken-down cars	Carries injured drivers away	Checks the drivers' speeds
 trv2_f1_rekordy	Medium	Which driver has won the most Formula 1 world championships (tied at seven)?	Michael Schumacher and Lewis Hamilton	Ayrton Senna and Alain Prost	Sebastian Vettel and Max Verstappen	Juan Manuel Fangio and Niki Lauda
 spw_kolarstwo_peleton	Medium	What is the main group of riders in a road race called?	The peloton	The breakaway	The domestique	The prologue
 spo_ferrari	Medium	Which team has won the most Formula 1 constructors' championships?	Ferrari	McLaren	Williams	Mercedes
@@ -31,6 +40,27 @@ spox_silver_arrows	Medium	Which Formula 1 team's cars are nicknamed 'the Silver 
 spox_senna	Medium	Which Brazilian F1 legend died after a crash at Imola in 1994?	Ayrton Senna	Nelson Piquet	Rubens Barrichello	Emerson Fittipaldi
 spox_tour_dlugosc	Medium	Roughly how long does the Tour de France last?	About three weeks	About one week	About two months	About ten days
 spo_indianapolis_motor_speedway	Medium	Why is the Indianapolis Motor Speedway nicknamed 'the Brickyard'?	Its track was once paved with bricks	It was built on an old brick factory	Its stands are made of red brick	Its first winner was a bricklayer
+spo_car_maker_won	Medium	Which car maker has won the Le Mans 24 Hours more times than any other?	Porsche	Ferrari	Audi	Toyota
+spo_roughly_long_top	Medium	Roughly how long does a top F1 pit crew need to change all four tyres?	About 2 seconds	About 10 seconds	About 30 seconds	About a minute
+spo_netflix_series_credited	Medium	Which Netflix series is credited with winning Formula 1 millions of new fans?	Drive to Survive	Pole to Podium	Grand Prix Life	Formula Rivals
+spo_moustached_briton_1992	Medium	Which moustached Briton, the 1992 F1 champion, was nicknamed 'Il Leone' by Ferrari fans?	Nigel Mansell	Damon Hill	Jenson Button	David Coulthard
+spo_signals_start_formula	Medium	What signals the start of a Formula 1 race?	Five red lights going out	A green flag waving	A starter's pistol	A klaxon blast
+spo_show_lance_armstrong	Medium	On whose TV show did Lance Armstrong finally admit to doping, in 2013?	Oprah Winfrey	David Letterman	Larry King	Jay Leno
+spo_2025_lewis_hamilton	Medium	In 2025 Lewis Hamilton left Mercedes to drive for which team?	Ferrari	Red Bull	McLaren	Williams
+spo_brazil_interlagos_formula	Medium	Brazil's famous Interlagos Formula 1 circuit is in which city?	Sao Paulo	Rio de Janeiro	Brasilia	Salvador
+spo_treadless_tyres_cars	Medium	What are the treadless tyres that F1 cars use in dry weather called?	Slicks	Intermediates	Full wets	Grooves
+spo_cycling_three_grand	Medium	Which of cycling's three Grand Tours is held in Spain?	The Vuelta	The Giro	The Tour	The Dauphine
+spo_emirate_yas_marina	Medium	In which emirate is the Yas Marina Formula 1 circuit?	Abu Dhabi	Dubai	Sharjah	Ajman
+spo_formula_driver_fans	Medium	Which Formula 1 driver's fans are known as the 'Orange Army'?	Max Verstappen	Lando Norris	Charles Leclerc	Fernando Alonso
+spo_bike_race_small	Medium	In a bike race, what is a small group that escapes ahead of the main pack called?	A breakaway	A sprint train	A gruppetto	An echelon
+spo_british_playboy_driver	Medium	Which British playboy driver won the 1976 F1 title by a single point?	James Hunt	Jackie Stewart	Nigel Mansell	Graham Hill
+spo_2013_ron_howard	Medium	Which 2013 Ron Howard film retells the 1976 Formula 1 title fight?	Rush	Senna	Le Mans	Days of Thunder
+spo_actor_keen_racer	Medium	Which actor and keen racer starred in the 1971 film 'Le Mans'?	Steve McQueen	Paul Newman	James Dean	Clint Eastwood
+spo_italian_motorbike_maker	Medium	Which Italian motorbike maker from Bologna is famous for its red racing bikes?	Ducati	Aprilia	Moto Guzzi	MV Agusta
+spo_must_rider_set	Medium	What must a rider do to set cycling's famous 'Hour Record'?	Cover the most distance in an hour	Climb the most metres in an hour	Ride 50 km in under an hour	Win a race lasting an hour
+spo_driver_holds_record	Medium	Which driver holds the record of six wins at the Monaco Grand Prix?	Ayrton Senna	Graham Hill	Michael Schumacher	Alain Prost
+spo_spaniard_won_2005	Medium	Which Spaniard won the 2005 and 2006 F1 titles, ending Schumacher's winning run?	Fernando Alonso	Carlos Sainz	Pedro de la Rosa	Marc Gene
+spo_italian_tyre_maker	Medium	Which Italian tyre maker has been Formula 1's only tyre supplier since 2011?	Pirelli	Michelin	Bridgestone	Goodyear
 trv2_flaga_biala	Hard	In NASCAR, what does a white flag signal?	The final lap	The race is stopped	Slippery track	A driver must pit
 spoy_monza	Hard	Which Formula 1 circuit is nicknamed 'the Temple of Speed'?	Monza	Silverstone	Spa	Suzuka
 spo_colour_points_sprinters	Hard	What colour is the points (sprinters') jersey in the Tour de France?	Green	Polka-dot	White	Pink
@@ -53,6 +83,19 @@ spo_country_tadej_pogacar	Hard	Which country is Tadej Pogacar, a multiple winner
 dpt_spo_indy_500	Hard	How many laps make up the Indianapolis 500?	200	100	250	500
 spoy_indy_mleko	Hard	What does the winner of the Indianapolis 500 traditionally drink?	Milk	Champagne	Lemonade	Beer
 spoy_merckx	Hard	Which Belgian cyclist, nicknamed 'the Cannibal', won five Tours de France?	Eddy Merckx	Jacques Anquetil	Bernard Hinault	Miguel Indurain
+spo_italian_rider_won	Hard	Which Italian rider won a record 15 motorcycle Grand Prix world titles?	Giacomo Agostini	Valentino Rossi	Max Biaggi	Loris Capirossi
+spo_max_verstappen_became	Hard	Max Verstappen became the youngest ever F1 race winner in 2016, aged what?	18	20	16	22
+spo_circuit_cars_charge	Hard	At which circuit do F1 cars charge up the famous Eau Rouge corner?	Spa-Francorchamps	Monza	Silverstone	Suzuka
+spo_bruce_mclaren_founder	Hard	Bruce McLaren, founder of the McLaren team, came from which country?	New Zealand	Australia	Britain	South Africa
+spo_cycling_team_domestique	Hard	In a cycling team, what is a 'domestique'?	A helper who rides for the leader	The mechanic who fixes the bikes	A rider racing in his home country	The team's cook and chef
+spo_tour_france_climb	Hard	Which Tour de France climb is famous for its 21 numbered hairpin bends?	Alpe d'Huez	Col du Tourmalet	Mont Ventoux	Col du Galibier
+spo_team_won_both	Hard	Which team won both 2009 Formula 1 titles in its one and only season?	Brawn GP	Toro Rosso	Force India	Super Aguri
+spo_team_michael_schumacher	Hard	With which team did Michael Schumacher win his first two F1 titles?	Benetton	Ferrari	Jordan	Williams
+spo_argentine_won_five	Hard	Which Argentine won five Formula 1 world titles in the 1950s?	Juan Manuel Fangio	Jose Froilan Gonzalez	Carlos Reutemann	Alberto Ascari
+spo_colour_jersey_best	Hard	What colour jersey does the best young rider wear in the Tour de France?	White	Blue	Orange	Red
+spo_saved_romain_grosjean	Hard	What saved Romain Grosjean when his car split in two and burst into flames in 2020?	The halo	A cockpit airbag	A fireproof canopy	An ejector seat
+spo_2009_dakar_rally	Hard	In 2009 the Dakar Rally moved from Africa to which continent?	South America	Asia	Australia	North America
+spo_mans_start_dropped	Hard	What was the famous 'Le Mans start', dropped after 1969?	Drivers sprinted across the track to their cars	Cars set off one by one at timed intervals	Cars rolled off behind a pace car at speed	Drivers had to push their cars to the line
 spo2_tour_najwiecej	Expert	Who was the first to win the Tour de France five times?	Jacques Anquetil	Eddy Merckx	Bernard Hinault	Miguel Indurain
 dpt_spo_f1_flaga	Expert	What does a black and white diagonal flag mean in Formula 1?	A warning for unsporting driving	The driver must pit immediately	The session has been suspended	A faster car is about to lap you
 spo_formula_posthumous_world	Expert	Who is Formula 1's only posthumous world champion, crowned in 1970?	Jochen Rindt	Jim Clark	Gilles Villeneuve	Ronnie Peterson
@@ -63,3 +106,10 @@ trv2_tour_de_france_start	Expert	In which year was the first Tour de France held
 spo_tour_france_rider	Expert	In the Tour de France, what is the rider in last place overall nicknamed?	The lanterne rouge	The broom wagon	The grupetto	The domestique
 spo_became_driver_win	Expert	Who became the first driver to win motorsport's 'Triple Crown': Monaco, the Indy 500 and Le Mans?	Graham Hill	Jim Clark	Jackie Stewart	Mario Andretti
 spo_won_1989_tour	Expert	Who won the 1989 Tour de France by just eight seconds, after a final-day time trial?	Greg LeMond	Laurent Fignon	Pedro Delgado	Stephen Roche
+spo_man_win_world	Expert	Who is the only man to win world titles on both two wheels and four?	John Surtees	Mike Hailwood	Valentino Rossi	Damon Hill
+spo_won_very_formula	Expert	Who won the very first Formula 1 world championship, in 1950?	Giuseppe Farina	Alberto Ascari	Luigi Fagioli	Juan Manuel Fangio
+spo_formula_grand_chelem	Expert	In Formula 1, what is a 'grand chelem'?	Pole, win, fastest lap and leading every lap	Winning the first four races of a season	Winning at Monaco, Monza and Spa	A one-two finish for the same team
+spo_cycling_classic_nicknamed	Expert	Which cycling classic is nicknamed 'La Primavera' because it opens the spring?	Milan-San Remo	Tour of Flanders	Liege-Bastogne-Liege	Il Lombardia
+spo_driver_nicknamed_nurburgring	Expert	Which driver nicknamed the Nurburgring's Nordschleife 'the Green Hell'?	Jackie Stewart	Niki Lauda	Jim Clark	Stirling Moss
+spo_motor_racing_yellow	Expert	In motor racing, what does a yellow flag with red stripes warn of?	A slippery track	A car on fire	The pit lane is closed	Two laps to go
+spo_keke_rosberg_became	Expert	Keke Rosberg became F1 world champion in 1982 despite winning how many races that year?	Just one	None at all	Four	Six
