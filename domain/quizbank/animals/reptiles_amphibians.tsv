@@ -20,6 +20,11 @@ scicmp_ktory_gad	Easy	Which of these animals is a reptile?	The crocodile	The fro
 ani_spitting_cobra_aim	Easy	Where does a spitting cobra aim its venom?	At its attacker's eyes	At its attacker's feet	At the ground in front	Straight up into the air
 ani_australian_lizard_opens	Easy	Which Australian lizard opens a big frill around its neck to scare enemies?	Frilled lizard	Thorny devil	Bearded dragon	Goanna
 anix_szklana_zaba	Easy	Which frog has see-through belly skin that shows its beating heart?	The glass frog	The tree frog	The bullfrog	The dart frog
+ani_roughly_long_ago	Easy	Roughly how long ago did the last of the giant dinosaurs die out?	About 66 million years ago	About 6 million years ago	About 660,000 years ago	About 660 million years ago
+ani_australian_star_around	Easy	Which Australian TV star was known around the world as 'The Crocodile Hunter'?	Steve Irwin	Paul Hogan	Bear Grylls	Hugh Jackman
+ani_old_folklore_wrongly	Easy	Old folklore wrongly blames which animal for giving people warts?	The toad	The slug	The newt	The lizard
+ani_lizards_bask_sunny	Easy	Why do lizards bask on sunny rocks in the morning?	To warm up their bodies	To dry out their scales	To grow new scales	To scare off rivals
+ani_sea_turtles_often	Easy	Sea turtles often swallow floating plastic bags because they mistake them for what?	Jellyfish	Seaweed	Fish eggs	Sea sponges
 wld_ani_ptaki_dinozaury	Medium	Which living animals are the direct descendants of dinosaurs?	Birds	Crocodiles	Lizards	Sharks
 ani_dinozaur_nazwa	Medium	What does the word 'dinosaur' mean?	Terrible lizard	Giant beast	Ancient dragon	Thunder foot
 anix_zolw_dlugowiecznosc	Medium	Which land animal can live the longest, sometimes past 150 years?	The giant tortoise	The elephant	The parrot	The crocodile
@@ -45,6 +50,23 @@ zwi2_aksolotl_kraj	Medium	Which country does the axolotl come from?	Mexico	Brazi
 dpt_zwi_krokodyl_zgryz	Medium	Which living animal has the strongest measured bite?	The saltwater crocodile	The great white shark	The spotted hyena	The Bengal tiger
 zwi2_axolotl_regeneracja	Medium	What else can an axolotl regenerate besides its limbs?	Parts of its heart and brain	Only the tip of its tail	Only patches of its skin	Nothing beyond its limbs
 zwi2_zabka_jad	Medium	Which frog is considered the most poisonous land animal?	Golden poison frog	Cane toad	Tree frog	African clawed frog
+ani_tell_alligator_crocodile	Medium	How can you tell an alligator from a crocodile by its snout?	The alligator's is broad and U-shaped	The alligator's is long and V-shaped	The alligator's has a knob on the tip	The alligator's is covered in bristles
+ani_long_necked_dinosaurs	Medium	Which long-necked dinosaurs, such as Argentinosaurus, were the biggest land animals ever?	Sauropods	Theropods	Ceratopsians	Stegosaurs
+ani_giant_sea_reptile	Medium	Which giant sea reptile leaps out of a lagoon to swallow a shark in 'Jurassic World'?	Mosasaurus	Plesiosaurus	Ichthyosaurus	Spinosaurus
+ani_long_necked_sea	Medium	Which long-necked sea reptiles with four flippers are often linked to the Loch Ness monster?	Plesiosaurs	Mosasaurs	Ichthyosaurs	Pterosaurs
+ani_rattlesnake_rattle_made	Medium	What is a rattlesnake's rattle made of?	Loose rings of keratin	Hollow tail bones	Dried pebble-filled skin	Hardened cartilage
+ani_poison_dart_frogs_2	Medium	How did poison dart frogs get their name?	Hunters poisoned blowgun darts with them	Their skin is shaped like darts	They dart away faster than eyes can follow	Their tongues shoot out like darts
+ani_tiny_coqui_frog	Medium	The tiny coqui frog, named after its two-note call, is a beloved symbol of which island?	Puerto Rico	Cuba	Jamaica	Trinidad
+ani_slow_worm_common	Medium	The slow worm, common in European gardens, is really what?	A legless lizard	A young snake	A giant earthworm	A kind of eel
+ani_african_snake_often	Medium	Which African snake is often called the fastest snake on land?	The black mamba	The puff adder	The boomslang	The Egyptian cobra
+ani_snake_charmer_cobra	Medium	A snake charmer's cobra sways mainly in response to what?	The movement of the pipe	The pitch of the music	The smell of the charmer	The beat of a drum
+ani_popular_pet_lizard	Medium	Which popular pet lizard puffs out and darkens its spiny 'beard' when upset?	The bearded dragon	The green iguana	The frilled lizard	The leopard gecko
+ani_unlike_other_turtles	Medium	Unlike most other turtles, what do tortoises do?	Live entirely on land	Live only in salt water	Eat only fish	Lay eggs underwater
+ani_might_mother_crocodile	Medium	Why might a mother crocodile hold her newly hatched babies in her mouth?	To carry them safely to water	To eat the weakest ones	To keep them warm at night	To teach them to bite
+ani_galapagos_islands_take	Medium	The Galapagos Islands take their name from an old Spanish word for what?	Tortoises	Iguanas	Volcanoes	Sea lions
+ani_group_reptiles_survived	Medium	Which group of reptiles survived the asteroid that wiped out the dinosaurs?	Crocodilians	Pterosaurs	Plesiosaurs	Mosasaurs
+ani_frogs_old_skin	Medium	What do many frogs do with their old skin after shedding it?	Eat it	Bury it	Hide it as a decoy	Line their nest with it
+ani_word_amphibian_comes	Medium	The word 'amphibian' comes from Greek words meaning what?	Double life	Cold blood	Slimy skin	Water lizard
 trv_zaba_mroz	Hard	Which animal can survive being frozen solid through the winter?	The wood frog	The garden snail	The brown bear	The garter snake
 wld_kameleon_kolor	Hard	Chameleons change colour mainly to do what?	Signal mood and control temperature	Hide from every predator	Match any background exactly	Attract prey
 ani_taipan	Hard	Which snake has the most toxic venom in laboratory tests?	The inland taipan	The black mamba	The king cobra	The rattlesnake
@@ -72,6 +94,17 @@ ani_lizard_sprint_across	Hard	Which lizard can sprint across water on its hind l
 scicmp_jadowity_nie_trujacy	Hard	Which of these animals is venomous rather than poisonous?	The cobra	The poison dart frog	The pufferfish	The monarch butterfly
 aniy_zolwie_morskie	Hard	How do newly hatched sea turtles find the sea at night?	They head for the brighter horizon	They follow their mother	They smell the salt	They listen for waves
 ani_now_extinct_gastric	Hard	The now-extinct gastric-brooding frog of Australia raised its young where?	In its stomach	In its mouth	In pockets on its back	In a foam nest
+ani_komodo_dragons_long	Hard	Komodo dragons were long thought to kill with germ-filled saliva. What do they actually have?	Venom glands in their jaws	Poison spines on their tail	Acid in their stomach spray	Stinging hairs on their tongue
+ani_snakes_don_really	Hard	Snakes don't really dislocate their jaws. What lets them swallow such huge prey?	Lower jaw halves that spread apart	Teeth that fold flat like hinges	Skull bones that soften in saliva	A throat that pulls prey in
+ani_dinosaur_means_arm	Hard	Which dinosaur, whose name means 'arm lizard', had front legs longer than its back legs?	Brachiosaurus	Diplodocus	Apatosaurus	Iguanodon
+ani_giant_north_american	Hard	Which giant North American salamander is nicknamed the 'snot otter'?	The hellbender	The axolotl	The olm	The mudpuppy
+ani_fossil_hunter_mary	Hard	Fossil hunter Mary Anning's first famous find, around 1811, was the skeleton of what?	An ichthyosaur	A pterosaur	A mosasaur	A woolly mammoth
+ani_long_necked_dinosaur	Hard	Which long-necked dinosaur's name was scrapped for about a century, then revived in 2015?	Brontosaurus	Iguanodon	Allosaurus	Diplodocus
+ani_harmless_snake_plays	Hard	Which harmless snake 'plays dead', rolling over with its tongue lolling out?	The hognose snake	The garter snake	The corn snake	The milk snake
+ani_roughly_long_famously	Hard	Roughly how long were the famously 'tiny' arms of Tyrannosaurus rex?	About 1 metre	About 30 cm	About 10 cm	About 3 metres
+ani_box_turtle_other	Hard	What can a box turtle do that most other turtles cannot?	Shut its shell tight with a hinge	Breathe underwater for weeks	Shed its whole shell each year	Change the colour of its shell
+ani_marine_iguana_get	Hard	How does the marine iguana get rid of the extra salt from the seawater it swallows?	It sneezes it out	It sweats it out	It cries it out	It stores it in its tail
+ani_prehistoric_snake_metres	Hard	Which prehistoric snake, about 13 metres long, was found in a Colombian coal mine?	Titanoboa	Megalania	Sarcosuchus	Gigantophis
 ref_ani_neotenia	Expert	An axolotl keeps its larval features for life. What is this called?	Neoteny	Metamorphosis	Diapause	Estivation
 ani_widely_used_diabetes	Expert	A widely used diabetes drug was first developed from the saliva of which venomous lizard?	The Gila monster	The Komodo dragon	The frilled lizard	The green iguana
 ani_australia_thorny_devil	Expert	How does Australia's thorny devil lizard drink?	Grooves in its skin wick water to its mouth	It licks dew off rocks with its tongue	It absorbs water through its belly	It gets all its water from ants
@@ -83,3 +116,10 @@ ani_threatened_african_hairy	Expert	When threatened, the African hairy frog does
 ani_besides_usa_country	Expert	Besides the USA, which is the only country with wild alligators?	China	Brazil	Australia	India
 ani_plant_eating_dinosaur	Expert	Which plant-eating dinosaur had claws up to about a metre long?	Therizinosaurus	Velociraptor	Spinosaurus	Allosaurus
 ani_snake_build_nest	Expert	Which is the only snake known to build a nest for its eggs?	The king cobra	The black mamba	The green anaconda	The reticulated python
+ani_male_darwin_frog	Expert	Where does a male Darwin's frog raise his tadpoles?	Inside his vocal sac	In his stomach	In pockets on his back	Under his tongue
+ani_gideon_mantell_place	Expert	Where did Gideon Mantell first place Iguanodon's spiky thumb bone?	On its nose	On its tail	On its back	On its knee
+ani_british_anatomist_coined	Expert	Which British anatomist coined the word 'dinosaur' in 1842?	Richard Owen	Charles Darwin	Thomas Huxley	Gideon Mantell
+ani_oviraptor_means_egg	Expert	Oviraptor means 'egg thief'. Why does the name now seem unfair?	It was brooding its own eggs	It ate only plants	It laid no eggs at all	It guarded other dinosaurs' nests
+ani_flying_dragon_lizards	Expert	How do the 'flying dragon' lizards of South-East Asia glide between trees?	On skin stretched over long ribs	On feathers along their arms	On webbed toes like frogs	On a flattened, wing-like tail
+ani_african_snake_longest	Expert	Which African snake has the longest fangs, up to about 5 cm?	The Gaboon viper	The black mamba	The boomslang	The puff adder
+ani_young_some_caecilians	Expert	How do the young of some caecilians, legless amphibians, feed?	By peeling off their mother's skin	By drinking their father's milk	By eating their own tails	By sucking sap from roots

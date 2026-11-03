@@ -24,6 +24,9 @@ ani_caterpillar_form_around	Easy	What does a caterpillar form around itself befo
 ani_tiny_bloodsucker_jump	Easy	Which tiny bloodsucker can jump more than 100 times its own body length?	The flea	The tick	The bedbug	The louse
 zwi3_motyl_monarcha	Easy	How far do monarch butterflies migrate?	Thousands of kilometers between Canada and Mexico	A few dozen kilometres around one meadow	Only inside a single flowering meadow	They do not migrate anywhere at all
 bio3_owad_nogi	Easy	How many legs does an insect have?	Six	Four	Eight	Ten
+ani_tiny_insects_live	Easy	Which tiny insects live in human hair and glue their eggs, called nits, to it?	Head lice	Fleas	Bedbugs	Ticks
+ani_earthworms_good_garden	Easy	Why are earthworms good for a garden?	They mix and air the soil	They eat harmful pests	They kill the weeds	They scare off moles
+ani_weight_weight_spider	Easy	Weight for weight, spider silk is stronger than which material?	Steel	Diamond	Kevlar	Carbon fibre
 zwi3_mrowki_feromony	Medium	What do ants mark a trail to food with?	Pheromones	Saliva	Droppings alone	Sound
 trv_pszczola_taniec	Medium	How do honeybees tell each other where flowers are?	With a 'waggle dance'	By buzzing at different pitches	By leaving a trail of wax	By flashing their wings
 anix_komar_samice	Medium	Which mosquitoes bite people to drink blood?	Only the females	Only the males	Both equally	Only the young
@@ -56,6 +59,18 @@ ani_swarming_locusts_really	Medium	Swarming locusts are really which insects, tr
 zwi3_mrowki_rolnictwo	Medium	What do leafcutter ants of the genus Atta do?	Farm fungus on the leaves they bring as their main food	They hunt other insects and eat nothing else	Live in symbiosis with fish in flooded nests	Migrate to another continent every year
 anix_swierszcz	Medium	By counting what can you roughly work out the air temperature?	A cricket's chirps	A frog's croaks	An owl's hoots	A bee's buzzes
 bio_group_insects_described	Medium	Which group of insects has the most described species?	Beetles	Ants	Butterflies	Flies
+ani_wings_insects_covered	Medium	The wings of which insects are covered in tiny scales that rub off like dust?	Butterflies and moths	Bees and wasps	Flies and mosquitoes	Beetles and ladybirds
+ani_woodworm_holes_old	Medium	'Woodworm' holes in old furniture are made by the larvae of which insects?	Beetles	Moths	Wasps	Flies
+ani_mosquitoes_find_people	Medium	Mosquitoes find people mainly by sensing what?	The carbon dioxide we breathe out	The sound of our heartbeat	The light from our screens	The colour of our hair
+ani_praying_mantis_insects	Medium	What can a praying mantis do that most insects cannot?	Turn its head to look behind it	Walk backwards up glass	Fly upside down	See in total darkness
+ani_despite_fireflies_actually	Medium	Despite the name, fireflies are actually what kind of insect?	Beetles	Flies	Moths	Wasps
+ani_killer_bees_spread	Medium	The 'killer bees' that spread through the Americas came from crossing European bees with bees from where?	Africa	Asia	Australia	South America
+ani_beetle_world_longest	Medium	Which beetle, one of the world's longest, is named after a hero of Greek myth?	The Hercules beetle	The Achilles beetle	The Perseus beetle	The Jason beetle
+ani_glasswing_butterfly_central	Medium	The glasswing butterfly of Central and South America is famous for what?	See-through wings	Wings that shatter	Wings that ring when they beat	Wings that reflect sunlight
+ani_earthworm_breathe	Medium	How does an earthworm breathe?	Through its skin	Through its mouth	Through tiny gills	Through holes in its tail
+ani_insects_include_longest	Medium	Which insects include the longest in the world, over half a metre with legs outstretched?	Stick insects	Dragonflies	Centipedes	Praying mantises
+ani_eyes_spiders	Medium	How many eyes do most spiders have?	Eight	Two	Four	Twelve
+ani_tell_ladybird_age	Medium	Can you tell a ladybird's age by counting its spots?	No, the spots show its species	Yes, one spot per year	Yes, one spot per month	Only for the males
 zwi2_skorpion_uv	Hard	What happens to a scorpion under ultraviolet light?	It glows blue-green	It becomes transparent	It turns red	It faints
 zwi2_cykada_cykl	Hard	Every how many years do periodical cicadas emerge en masse in the USA?	Every 13 or 17 years	Every 2 years	Every 7 years	Every 25 years
 trv_zuk_sila	Hard	Relative to its weight, which animal is the strongest, pulling over 1,000 times its own mass?	The dung beetle	The ant	The gorilla	The elephant
@@ -83,6 +98,16 @@ zwi3_mrowkolew	Hard	How does an antlion larva hunt?	It digs a pit trap in the sa
 ani_crickets_make_chirping	Hard	How do crickets make their chirping sound?	Rubbing their wings together	Rubbing their legs together	Vibrating their throats	Clicking their jaws
 ani_insect_hunter_catches	Hard	Which insect hunter catches up to about 95% of the prey it chases?	The dragonfly	The praying mantis	The hornet	The ladybird
 ani_some_southeast_asian	Hard	Some Southeast Asian ants defend their colony in an extreme way. What do they do?	Burst their bodies to spray toxic goo	Bite off their own heads	Glue attackers to the ground	Throw stones at them
+ani_red_food_colouring	Hard	The red food colouring carmine is made from which crushed insects?	Cochineal bugs	Ladybirds	Fire ants	Red aphids
+ani_insects_loudest_some	Hard	Which insects are the loudest, with some species louder than a lawnmower?	Cicadas	Crickets	Grasshoppers	Bumblebees
+ani_australian_spider_deadly	Hard	Which Australian spider is deadly, though no one has died of its bite since antivenom arrived in 1981?	The Sydney funnel-web	The redback	The huntsman	The white-tail
+ani_termite_queen_some	Hard	A termite queen of some species can lay up to roughly how many eggs a day?	30,000	30	300	30 million
+ani_honeybees_thicken_runny	Hard	How do honeybees thicken the runny liquid they gather into honey?	By fanning it with their wings	By mixing it with wax	By letting it freeze	By chewing it with pollen
+ani_velvet_ant_fuzzy	Hard	The 'velvet ant', with its fuzzy body and very painful sting, is really what?	A wingless wasp	A hairy beetle	A tiny spider	A kind of moth
+ani_tarantula_hawk_wasp	Hard	What does the tarantula hawk wasp do with the tarantula it paralyses?	Lays an egg on it for its larva to eat	Keeps it as a guard for its nest	Drinks its blood and lets it go	Uses its silk to build a nest
+ani_zombie_ant_fungus	Hard	What does the 'zombie-ant' fungus make an infected ant do before it dies?	Climb a plant and clamp onto a leaf	Walk back into its own nest	Bite the queen of its colony	Jump into the nearest stream
+ani_silk_moths_bred	Hard	Silk moths, bred by people for thousands of years, can no longer do what?	Fly	Eat	Lay eggs	See
+ani_harvestmen_often_daddy	Hard	Harvestmen, often called 'daddy longlegs', have no what?	Venom glands	Eyes	Mouths	Knees
 ani_argentynska_mrowka	Expert	The Argentine ant formed one 'supercolony' about 6,000 km long in which region?	Southern Europe	California	Eastern Australia	Southern Japan
 ani_madagascar_moth_seen	Expert	In Madagascar, one moth has been seen drinking what from sleeping birds?	Their tears	Their blood	Their saliva	Their egg yolk
 ani_spider_madagascar_spins	Expert	Which spider of Madagascar spins webs that can stretch right across rivers?	Darwin's bark spider	The golden orb-weaver	The Goliath birdeater	The Sydney funnel-web
@@ -96,3 +121,8 @@ ani_glowing_worms_new	Expert	The famous glowing 'worms' of New Zealand's Waitomo
 ani_meganeura_giant_dragonfly	Expert	Meganeura, a giant dragonfly-like insect of 300 million years ago, had a wingspan of roughly how much?	About 70 cm	About 15 cm	About 2 metres	About 30 cm
 ani_hearts_earthworm	Expert	How many hearts does an earthworm have?	Five	One	Two	Ten
 ani_flowers_such_tomatoes	Expert	Many flowers, such as tomatoes, release pollen best when a bumblebee does what to them?	Vibrates its flight muscles	Bites off the petals	Licks the stem	Sits on them overnight
+ani_wasp_stings_cockroach	Expert	Which wasp stings a cockroach's brain, then leads it to its burrow like a dog on a leash?	The jewel wasp	The paper wasp	The yellowjacket	The hornet
+ani_makes_jumping_spider	Expert	What makes the jumping spider Bagheera kiplingi unusual?	It is almost entirely vegetarian	It is blind from birth	It lives inside ant nests	It can glide on its legs
+ani_shellac_used_furniture	Expert	Shellac, used on furniture and old 78 rpm records, is made from what?	Resin made by lac insects	Sap from pine trees	Oil from whale fat	Crushed beetle wings
+ani_butterfly_makes_round	Expert	Which butterfly makes a round trip of about 12,000 km between tropical Africa and the Arctic?	The painted lady	The monarch	The peacock	The swallowtail
+ani_giant_water_bugs	Expert	In giant water bugs, who carries the eggs until they hatch?	The father, on his back	The mother, on her belly	The father, in his jaws	The eldest sister, on her legs
