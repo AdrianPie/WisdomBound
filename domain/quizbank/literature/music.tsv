@@ -12,6 +12,16 @@ lit_beethoven	Easy	Which composer kept writing great music after going almost co
 litx_piata_symfonia	Easy	Whose Fifth Symphony opens with the famous 'da-da-da-DUM'?	Beethoven	Mozart	Bach	Brahms
 lit_cappella_mean_music	Easy	What does 'a cappella' mean in music?	Singing without instruments	Singing in a church choir	Singing very softly	Singing in Italian
 pol2_chopin_instrument	Easy	Which instrument did Frederic Chopin compose for above all?	The piano	The violin	The organ	The cello
+lit_brass_instrument_changes	Easy	Which brass instrument changes its notes with a long sliding tube instead of valves?	The trombone	The trumpet	The tuba	The French horn
+lit_woodwind_instrument_held	Easy	Which woodwind instrument is held sideways when it is played?	The flute	The clarinet	The oboe	The recorder
+lit_ballet_dancer_full	Easy	What is a ballet dancer's full turn on one foot called?	A pirouette	A plie	An arabesque	A jete
+lit_ballerinas_wear_dance	Easy	What do ballerinas wear to dance up on the tips of their toes?	Pointe shoes	Tap shoes	Character shoes	Jazz shoes
+lit_ticking_device_helps	Easy	Which ticking device helps musicians keep a steady beat?	A metronome	A tuning fork	A pitch pipe	A capo
+lit_frederic_chopin_spent	Easy	Frederic Chopin spent his last years in Paris, but which country did he come from?	Poland	France	Austria	Hungary
+lit_largest_lowest_sounding	Easy	Which is the largest and lowest-sounding brass instrument in the orchestra?	The tuba	The trombone	The French horn	The trumpet
+lit_marzipan_chocolate_balls	Easy	The marzipan chocolate balls sold all over Austria are named after which composer?	Mozart	Haydn	Schubert	Johann Strauss
+lit_pianist_press_foot	Easy	What does a pianist press with a foot to keep the notes ringing?	A pedal	A key	A hammer	A string
+lit_section_orchestra_players	Easy	Which section of the orchestra has the most players?	The strings	The brass	The woodwinds	The percussion
 lit_vivaldi	Medium	Who composed 'The Four Seasons'?	Antonio Vivaldi	Johann Sebastian Bach	Wolfgang Amadeus Mozart	Joseph Haydn
 litx_mozart_salzburg	Medium	In which city was Mozart born?	Salzburg	Vienna	Prague	Munich
 litx_czajkowski	Medium	Which composer wrote the ballets 'Swan Lake' and 'The Nutcracker'?	Pyotr Tchaikovsky	Sergei Prokofiev	Igor Stravinsky	Nikolai Rimsky-Korsakov
@@ -41,6 +51,23 @@ lit_composer_died_finishing	Medium	Which composer died before finishing his Requ
 lit_handel_water_music	Medium	Where was Handel's 'Water Music' first played for King George I?	On barges on the Thames	At a fountain garden party	At the launch of a warship	At a spa in Bath
 pop_italian_tenor_made	Medium	Which Italian tenor made 'Nessun dorma' famous at the 1990 World Cup?	Luciano Pavarotti	Andrea Bocelli	Placido Domingo	Enrico Caruso
 capx_wieden_muzyka	Medium	Which capital was home to Mozart, Beethoven and Schubert for much of their careers?	Vienna	Berlin	Prague	Paris
+lit_rossini_overture_galloped	Medium	Which Rossini overture galloped into fame as the theme of 'The Lone Ranger'?	'William Tell'	'The Barber of Seville'	'The Thieving Magpie'	'Tancredi'
+lit_piano_full_pianoforte	Medium	The piano's full name, 'pianoforte', says it can do what?	Play soft and loud	Play fast and slow	Play high and low	Play two tunes at once
+lit_country_opera_born	Medium	In which country was opera born, around the year 1600?	Italy	France	Germany	Austria
+lit_old_mozart_died	Medium	How old was Mozart when he died?	35	50	70	25
+lit_brass_instrument_player	Medium	In which brass instrument does the player keep one hand inside the bell?	The French horn	The trumpet	The tuba	The trombone
+lit_big_orchestral_drums	Medium	Which big orchestral drums can be tuned to exact notes with foot pedals?	Timpani	Snare drums	Bass drums	Bongos
+lit_1940_disney_film	Medium	Which 1940 Disney film turned classical pieces, from Bach to Stravinsky, into cartoons?	Fantasia	Dumbo	Pinocchio	Bambi
+lit_instrument_star_musician	Medium	Which instrument is the star musician Yo-Yo Ma famous for?	The cello	The violin	The piano	The viola
+lit_vienna_new_year	Medium	At the Vienna New Year's Concert, the audience claps along to which march?	The 'Radetzky March'	The 'Wedding March'	The 'Turkish March'	The 'Imperial March'
+lit_verdi_opera_tells	Medium	Which Verdi opera tells of the doomed Parisian courtesan Violetta?	'La Traviata'	'Tosca'	'La Boheme'	'Rigoletto'
+lit_german_city_beethoven	Medium	In which German city was Beethoven born, in 1770?	Bonn	Leipzig	Hamburg	Cologne
+lit_george_frideric_handel	Medium	George Frideric Handel became a British hero, but in which country was he born?	Germany	Italy	Austria	Denmark
+lit_french_novelist_often	Medium	Which French novelist, who often wore men's clothes, was Chopin's partner for nine years?	George Sand	Colette	Madame de Stael	Juliette Drouet
+lit_string_instrument_looks	Medium	Which string instrument looks like a violin but is slightly bigger and lower?	The viola	The cello	The fiddle	The mandolin
+lit_small_flute_plays	Medium	Which small flute plays an octave higher than the ordinary flute?	The piccolo	The oboe	The recorder	The ocarina
+lit_unlike_piano_hammers	Medium	Unlike the piano, which hammers its strings, what does a harpsichord do to them?	Plucks them	Bows them	Rubs them	Blows on them
+lit_composer_father_symphony	Medium	Which composer is called 'the father of the symphony', having written over 100 of them?	Joseph Haydn	Wolfgang Amadeus Mozart	Ludwig van Beethoven	Johann Sebastian Bach
 litx_oboj	Hard	Which instrument usually plays the note the whole orchestra tunes to?	The oboe	The violin	The piano	The trumpet
 lit_composed_bolero	Hard	Who composed 'Bolero'?	Maurice Ravel	Claude Debussy	Erik Satie	Camille Saint-Saens
 lit_composed_opera_madama	Hard	Who composed the opera 'Madama Butterfly'?	Giacomo Puccini	Giuseppe Verdi	Gioachino Rossini	Vincenzo Bellini
@@ -75,6 +102,14 @@ lit_chopin_minute_waltz	Hard	Chopin's 'Minute Waltz' usually takes longer than a
 lit_according_tradition_audiences	Hard	Why, according to tradition, do audiences stand for the 'Hallelujah' chorus of Handel's 'Messiah'?	King George II stood up	Handel demanded it	The choir once fainted	It was a church rule
 lit_composed_hall_mountain	Hard	Who composed 'In the Hall of the Mountain King'?	Edvard Grieg	Jean Sibelius	Carl Nielsen	Antonin Dvorak
 lit_composed_dreamy_piano	Hard	Who composed the dreamy piano pieces 'Gymnopedies'?	Erik Satie	Claude Debussy	Maurice Ravel	Gabriel Faure
+lit_american_founding_father	Hard	Which American Founding Father invented the glass harmonica, for which Mozart later wrote music?	Benjamin Franklin	Thomas Jefferson	John Adams	Alexander Hamilton
+lit_surname_composer_bach	Hard	What does the surname of the composer Bach mean in German?	A brook	A baker	A beard	A bell
+lit_mozart_opera_ends	Hard	Which Mozart opera ends with its seducer hero dragged down to hell?	'Don Giovanni'	'The Magic Flute'	'Cosi fan tutte'	'Idomeneo'
+lit_mozart_opera_continues	Hard	Which Mozart opera continues the story begun in 'The Barber of Seville'?	'The Marriage of Figaro'	'Cosi fan tutte'	'The Abduction from the Seraglio'	'La clemenza di Tito'
+lit_roughly_long_four	Hard	Roughly how long do the four operas of Wagner's 'Ring' cycle last in all?	About 15 hours	About 5 hours	About 40 hours	About 2 hours
+lit_pianist_wife_composer	Hard	Which pianist, wife of a famous composer, appeared on Germany's 100-mark banknote?	Clara Schumann	Fanny Mendelssohn	Cosima Wagner	Alma Mahler
+lit_italian_town_stradivari	Hard	In which Italian town did Stradivari and Guarneri make their famous violins?	Cremona	Verona	Parma	Bologna
+lit_1942_starving_musicians	Hard	In 1942, starving musicians played Shostakovich's Seventh Symphony in which besieged city?	Leningrad	Stalingrad	Moscow	Sevastopol
 lit_french_composer_wrote	Expert	Which French composer wrote 'The Sorcerer's Apprentice', later made famous by Mickey Mouse?	Paul Dukas	Camille Saint-Saens	Maurice Ravel	Hector Berlioz
 lit_stolen_joseph_haydn	Expert	What was stolen from Joseph Haydn's grave and only reunited with his body 145 years later?	His skull	His heart	His violin	His wedding ring
 lit_tchaikovsky_rich_patron	Expert	Tchaikovsky's rich patron Nadezhda von Meck paid him an allowance for 13 years on what odd condition?	That they never meet	That he never marry	That he live in her house	That he teach her daughters
@@ -91,3 +126,8 @@ lit_bridal_march_here	Expert	The bridal march 'Here Comes the Bride' comes from 
 lit_composer_wrote_sprach	Expert	Which composer wrote 'Also sprach Zarathustra', made famous by the film '2001'?	Richard Strauss	Johann Strauss II	Richard Wagner	Gustav Mahler
 lit_mozart_said_written	Expert	At 14, Mozart is said to have written down which closely guarded piece from memory after hearing it in the Sistine Chapel?	Allegri's 'Miserere'	Palestrina's 'Stabat Mater'	Handel's 'Messiah'	Bach's 'Mass in B minor'
 lit_haydn_hint_prince	Expert	How did Haydn hint to Prince Esterhazy that his musicians wanted to go home to their families?	In a symphony, players left one by one	He set the prince's letters to music	The orchestra played until he slept	He wrote a symphony with no ending
+lit_according_story_bach	Expert	According to a famous story, Bach's 'Goldberg Variations' were written to ease a count's what?	Insomnia	Toothache	Grief	Gout
+lit_said_ruined_robert	Expert	What is said to have ruined Robert Schumann's hopes of a career as a concert pianist?	A finger-stretching device	A fall from a horse	A sword duel	Frostbite on a march
+lit_gave_moonlight_sonata	Expert	Who gave the 'Moonlight' Sonata its dreamy nickname, five years after its composer died?	A music critic	His publisher	His pupil	A countess
+lit_opera_heartbroken_clown	Expert	In which opera does the heartbroken clown Canio sing 'Vesti la giubba'?	'Pagliacci'	'Rigoletto'	'Tosca'	'Turandot'
+lit_saint_saens_danse	Expert	In Saint-Saens's 'Danse macabre', which instrument imitates the rattling bones of skeletons?	The xylophone	The castanets	The timpani	The harp

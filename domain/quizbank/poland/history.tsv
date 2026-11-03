@@ -19,6 +19,11 @@ pol_his2_liberum_veto	Easy	What allowed a single deputy's vote to dissolve the C
 pol_his3_wojna_o_niepodleglosc_usa_pomoc	Easy	Which Pole fought in the American War of Independence?	Tadeusz Kosciuszko	Jozef Pilsudski	John III Sobieski	Wladyslaw Sikorski
 pol3_ostatni_krol	Easy	Who was the last King of Poland?	Stanislaw August Poniatowski	John III Sobieski	Augustus III	Stanislaw Leszczynski
 dpt_pol_rozbiory_panstwa	Easy	Which three powers partitioned the country in the 18th century?	Russia, Prussia and Austria	Russia, Sweden and Turkey	Prussia, France and Austria	Austria, Hungary and Russia
+pol_years_poland_vanish	Easy	For how many years did Poland vanish from the map of Europe after the partitions?	123 years	45 years	200 years	88 years
+pol_year_mieszko_baptised	Easy	In which year was Mieszko I baptised, the date seen as the birth of the Polish state?	966	1025	1000	1138
+pol_year_poland_lithuania	Easy	In which year did Poland and Lithuania crush the Teutonic Knights at Grunwald?	1410	1385	1466	1525
+pol_commonwealth_golden_age	Easy	In the Commonwealth's golden age, down which river did Polish grain float to Gdansk for export?	The Vistula	The Oder	The Warta	The Bug
+pol_polish_noble_class	Easy	What was the Polish noble class, about a tenth of the people, called?	The szlachta	The boyars	The junkers	The hidalgos
 pol_his2_rozbior_pierwszy	Medium	In which year did the first partition of Poland occur?	1772	1793	1795	1764
 pol_his2_unia_lubelska_co	Medium	What was formed by the Union of Lublin?	The Polish-Lithuanian Commonwealth	The Hanseatic League	The Congress Kingdom	The Teutonic Order's state
 pol_his2_wielka_emigracja	Medium	After which uprising did the Great Emigration take place?	The November Uprising	The January Uprising	The Greater Poland Uprising	The Kosciuszko Uprising
@@ -54,6 +59,16 @@ pol_battle_972_mieszko	Medium	Which battle of 972 did Mieszko I win against Marg
 pol_young_king_poland	Medium	Which young king of Poland and Hungary died fighting the Ottomans at Varna in 1444?	Wladyslaw III	Wladyslaw II Jagiello	Casimir IV	John I Albert
 pol_country_polish_light	Medium	In which country did Polish light cavalry make the famous charge at Somosierra in 1808?	Spain	Portugal	Italy	Austria
 pol2_elekcja_pierwsza	Medium	Who was the first king elected in a free election in Poland?	Henry of Valois	Stephen Bathory	Sigismund III Vasa	Wladyslaw IV
+pol_commander_polish_national	Medium	Which commander, named in the Polish national anthem, fought the Swedes during the Deluge?	Stefan Czarniecki	Stanislaw Zolkiewski	Jan Karol Chodkiewicz	Jeremi Wisniowiecki
+pol_warsaw_shoemaker_led	Medium	Which Warsaw shoemaker led the city's townsfolk in the 1794 uprising?	Jan Kilinski	Bartosz Glowacki	Jakub Jasinski	Tadeusz Rejtan
+pol_polish_countess_became	Medium	Which Polish countess became Napoleon's lover, hoping to win his help for Poland?	Maria Walewska	Emilia Plater	Izabela Czartoryska	Anna Potocka
+pol_election_1764_poland	Medium	Before his election in 1764, Poland's last king had been the lover of which future empress?	Catherine the Great	Maria Theresa	Elizabeth of Russia	Anna of Russia
+pol_secret_marriage_king	Medium	Whose secret marriage to King Sigismund II Augustus outraged the Polish nobles?	Barbara Radziwill	Bona Sforza	Elizabeth of Austria	Catherine Jagiellon
+pol_other_country_crown	Medium	Which other country's crown did Sigismund III Vasa wear until its parliament deposed him?	Sweden	Denmark	Hungary	Bohemia
+pol_kingdom_carved_polish	Medium	What was the kingdom carved from Polish lands in 1815, with the Russian tsar as its king, called?	The Congress Kingdom	The Duchy of Warsaw	The Free City of Krakow	The Grand Duchy of Posen
+pol_sparked_january_uprising	Medium	What sparked the January Uprising of 1863?	Forced army conscription	A ban on Polish schools	A tax on salt and bread	The arrest of the Primate
+pol_partitioning_power_allowed	Medium	Which partitioning power allowed Polish schools, universities and self-rule from the 1860s?	Austria	Russia	Prussia	Saxony
+pol_commission_national_education	Medium	The Commission of National Education, set up in 1773, is often called Europe's first what?	Ministry of education	Public library	State university	Teachers' union
 pol_1605_battle_polish	Hard	In which 1605 battle did Polish-Lithuanian hussars crush a Swedish army about three times larger?	Kircholm	Klushino	Chocim	Beresteczko
 pol_became_king_jan	Hard	Before he became king, Jan Sobieski beat the Ottomans in 1673 at which fortress?	Chocim	Kamieniec Podolski	Vienna	Cecora
 pol_city_tiny_independent	Hard	Which city was a tiny independent 'free city' republic from 1815 to 1846?	Krakow	Gdansk	Torun	Lublin
@@ -62,6 +77,24 @@ pol_russian_grand_duke	Hard	Which Russian grand duke escaped the cadets who stor
 pol_12th_century_bronze	Hard	What do the 12th-century bronze doors of Gniezno Cathedral show?	The life of St Adalbert	The baptism of Mieszko I	The coronation of Chrobry	The legend of Lech's eagle
 pol_document_991_placed	Hard	Which document of about 991 placed Mieszko I's realm under papal protection?	Dagome iudex	The Bull of Gniezno	The Golden Bull	The Act of Gniezno
 pol_peasant_leader_headed	Hard	Which peasant leader headed the bloody 1846 uprising against the nobles of Galicia?	Jakub Szela	Bartosz Glowacki	Jan Kilinski	Jozef Sowinski
+pol_astronomer_led_defence	Hard	Which astronomer led the defence of Olsztyn Castle against the Teutonic Knights in 1521?	Nicolaus Copernicus	Jan Dlugosz	Jan Laski	Johannes Hevelius
+pol_polish_prince_elected	Hard	Which Polish prince was elected Tsar of Russia in 1610, though he never ruled in Moscow?	Wladyslaw Vasa	John Casimir Vasa	Michal Wisniowiecki	Jakub Sobieski
+pol_university_king_stefan	Hard	Which university did King Stefan Batory raise from a Jesuit college to an academy in 1579?	Vilnius University	Krakow Academy	Lwow University	Zamosc Academy
+pol_russian_city_stefan	Hard	Which Russian city did Stefan Batory besiege in 1581, in his war with Ivan the Terrible?	Pskov	Smolensk	Novgorod	Kazan
+pol_long_coronation_henry	Hard	How long after his coronation did Henry of Valois secretly flee Poland for the French throne?	About four months	About four years	About two weeks	About ten years
+pol_warsaw_confederation_1573	Hard	What did the Warsaw Confederation of 1573 guarantee to Polish nobles?	Freedom of religion	Freedom of the press	Freedom from taxes	Right to elect bishops
+pol_personal_promises_every	Hard	What were the personal promises that every newly elected king of Poland had to swear called?	Pacta conventa	Nihil novi	Liberum veto	Dagome iudex
+pol_parliament_1788_1792	Hard	What is the parliament of 1788-1792 that passed the Constitution of May 3 known as?	The Four-Year Sejm	The Coronation Sejm	The Convocation Sejm	The Partition Sejm
+pol_russian_general_troops	Hard	Which Russian general's troops massacred the people of Warsaw's Praga district in 1794?	Alexander Suvorov	Mikhail Kutuzov	Pyotr Bagration	Ivan Paskevich
+pol_1794_battle_kosciuszko	Hard	At which 1794 battle was Kosciuszko wounded and taken prisoner by the Russians?	Maciejowice	Szczekociny	Raclawice	Dubienka
+pol_19th_century_polish	Hard	What was the 19th-century Polish idea of growing strong through business and schools, not uprisings?	Organic work	Romanticism	Messianism	Sarmatism
+pol_secret_warsaw_university	Hard	Which secret Warsaw university, moving from flat to flat, taught the young Maria Sklodowska?	The Flying University	The Night Academy	The Hidden Lyceum	The Free School
+pol_paris_mansion_base	Hard	Which Paris mansion was the base of Prince Adam Czartoryski's emigre camp after 1831?	Hotel Lambert	Hotel de Ville	Palais Royal	Hotel Lutetia
+pol_1385_agreement_tied	Hard	Which 1385 agreement first tied Poland to Lithuania through a royal marriage?	The Union of Krewo	The Union of Lublin	The Union of Horodlo	The Union of Brest
+pol_war_ended_second	Hard	Which war ended with the Second Peace of Torun in 1466, giving Poland Gdansk Pomerania?	The Thirteen Years' War	The Hundred Years' War	The Great Northern War	The Livonian War
+pol_city_casimir_restorer	Hard	Which city did Casimir the Restorer make his seat after Gniezno was sacked in the 1030s?	Krakow	Poznan	Plock	Wroclaw
+pol_according_legend_boleslaw	Hard	According to legend, how did Boleslaw the Brave buy back St Adalbert's body from the Prussians?	For its weight in gold	For a hundred horses	For a captive prince	For a ship of salt
+pol_saying_eat_drink	Hard	The saying 'eat, drink and loosen your belt' recalls Poland under which kings?	The Saxon kings	The Piast kings	The Vasa kings	The Jagiellon kings
 pol_hetman_crushed_russian	Expert	Which hetman crushed a Russian-Swedish army at Klushino in 1610, opening the road to Moscow?	Stanislaw Zolkiewski	Jan Karol Chodkiewicz	Stanislaw Koniecpolski	Jan Zamoyski
 pol_polish_king_later	Expert	Which Polish king later became Duke of Lorraine and died after his robe caught fire by the hearth?	Stanislaw Leszczynski	Augustus III	Michal Korybut Wisniowiecki	John II Casimir
 pol_abdicating_1668_polish	Expert	After abdicating in 1668, which Polish king became an abbot in France?	John II Casimir	Henry of Valois	Stanislaw Leszczynski	Michal Korybut Wisniowiecki
@@ -70,3 +103,10 @@ pol_1902_international_court	Expert	In 1902, an international court in Graz sett
 pol_prehistoric_miners_dig	Expert	What did prehistoric miners dig for at Krzemionki, a UNESCO site near Ostrowiec Swietokrzyski?	Striped flint	Rock salt	Amber	Iron ore
 pol_krakow_site_pilsudski	Expert	From which Krakow site did Pilsudski's First Cadre Company march out in August 1914?	Oleandry	Blonia	Wawel	Krzemionki
 pol_pilsudski_comrades_rob	Expert	What did Pilsudski and his comrades rob at Bezdany in 1908?	A Russian mail train	A tsarist bank in Warsaw	A gold convoy in Lodz	A ship in the port of Riga
+pol_sejm_1717_silent	Expert	Why is the Sejm of 1717 known as the 'Silent Sejm'?	No deputy was allowed to speak	It met in secret at night	The king had lost his voice	It never passed a law
+pol_bar_confederates_poland	Expert	What did Bar confederates do to Poland's king on a Warsaw street in 1771?	Kidnapped him	Crowned him again	Poisoned him	Shot his horse
+pol_young_pilsudski_sent	Expert	The young Pilsudski was sent to Siberia over a plot, with Lenin's brother, to kill which tsar?	Alexander III	Nicholas II	Alexander II	Nicholas I
+pol_czech_duke_sacked	Expert	Which Czech duke sacked Gniezno around 1038 and carried off St Adalbert's relics?	Bretislaus I	Boleslaus II	Wenceslaus I	Ottokar I
+pol_habsburg_archduke_jan	Expert	Which Habsburg archduke did Jan Zamoyski defeat and capture at Byczyna in 1588?	Maximilian	Rudolf	Ferdinand	Ernest
+pol_russian_governor_nicknamed	Expert	Which Russian governor, nicknamed 'the Hangman', crushed the January Uprising in Lithuania?	Mikhail Muravyov	Ivan Paskevich	Fyodor Berg	Grand Duke Constantine
+pol_off_town_small	Expert	Off which town did the small Polish navy beat a Swedish squadron in 1627?	Oliwa	Puck	Hel	Kolobrzeg

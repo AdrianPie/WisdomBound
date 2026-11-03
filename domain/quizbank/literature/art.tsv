@@ -15,6 +15,12 @@ litx_banksy	Easy	Which anonymous street artist shredded one of his own paintings
 lit_museum_glass_pyramid	Easy	Which famous museum has a glass pyramid at its entrance?	The Louvre	The Prado	The British Museum	The Uffizi
 lit_flemish_painter_full	Easy	Which Flemish painter's full-figured women gave us the word 'Rubenesque'?	Peter Paul Rubens	Anthony van Dyck	Pieter Bruegel	Jan van Eyck
 lit_snow_capped_mountain	Easy	Which snow-capped mountain sits small in the background of the woodblock print 'The Great Wave off Kanagawa'?	Mount Fuji	Mount Aso	Mount Takao	Mount Ontake
+lit_pablo_picasso_lived	Easy	Pablo Picasso lived mostly in France, but which country was he from?	Spain	France	Italy	Portugal
+lit_renaissance_artist_not	Easy	Which Renaissance artist does NOT share a name with a Teenage Mutant Ninja Turtle?	Titian	Raphael	Donatello	Michelangelo
+lit_andy_warhol_said	Easy	Andy Warhol said that in the future everyone would be world-famous for how long?	15 minutes	15 seconds	15 days	15 years
+lit_surrealist_painter_long	Easy	Which surrealist painter was famous for his long, upturned waxed moustache?	Salvador Dali	Pablo Picasso	Rene Magritte	Joan Miro
+lit_painter_big_perm	Easy	Which TV painter with a big perm promised viewers 'happy little trees'?	Bob Ross	Rolf Harris	Tony Hart	Neil Buchanan
+lit_country_wooden_nesting	Easy	In which country were the famous wooden nesting dolls, the matryoshkas, first made?	Russia	Poland	Ukraine	Germany
 lit_guernica	Medium	Who painted 'Guernica'?	Pablo Picasso	Salvador Dali	Joan Miro	Francisco Goya
 lit_rodin	Medium	Who sculpted 'The Thinker'?	Auguste Rodin	Michelangelo	Donatello	Antonio Canova
 litx_stworzenie_adama	Medium	Which famous fresco shows God's finger almost touching a man's?	The Creation of Adam	The Last Supper	The Birth of Venus	The Night Watch
@@ -45,6 +51,22 @@ lit_french_painter_left	Medium	Which French painter left Paris for Tahiti and pa
 his_headless_hellenistic_statue	Medium	Which headless Hellenistic statue of the goddess Nike stands at the top of a grand staircase in the Louvre?	The Victory of Samothrace	The Venus de Milo	The Laocoon Group	The Dying Gaul
 his_plainest_three_greek	Medium	Which plainest of the three Greek column styles has a simple cushion-shaped top?	Doric	Ionic	Corinthian	Tuscan
 his_ancient_statue_shows	Medium	Which famous ancient statue shows a wounded Celtic warrior, naked except for a torc around his neck?	The Dying Gaul	The Discobolus	The Laocoon	The Farnese Hercules
+lit_roughly_long_barcelona	Medium	Roughly how long has Barcelona's Sagrada Familia church been under construction?	Over 140 years	About 70 years	About 30 years	About 300 years
+lit_country_delft_blue	Medium	Which country is famous for 'Delft blue' pottery, painted blue on white?	The Netherlands	Portugal	Denmark	Belgium
+lit_paris_arts_centre	Medium	Which Paris arts centre wears its pipes, ducts and escalators on the outside?	The Centre Pompidou	The Musee d'Orsay	The Grand Palais	The Louvre
+lit_british_sculptor_big	Medium	Which British sculptor is famous for big, smooth reclining figures pierced with holes?	Henry Moore	Antony Gormley	Eduardo Paolozzi	Anish Kapoor
+lit_ancient_sculptures_taken	Medium	Which ancient sculptures, taken from Athens in the 1800s, does Greece want back from the British Museum?	The Elgin Marbles	The Benin Bronzes	The Lewis Chessmen	The Portland Vase
+lit_2017_salvator_mundi	Medium	In 2017 'Salvator Mundi' sold for about $450 million, a record. It was sold as the work of whom?	Leonardo da Vinci	Michelangelo	Raphael	Titian
+lit_painter_went_through	Medium	Which painter went through a 'Blue Period' of gloomy pictures in shades of blue?	Pablo Picasso	Claude Monet	Vincent van Gogh	Henri Matisse
+lit_japanese_artist_polka	Medium	Which Japanese artist is famous for polka dots and mirrored 'Infinity Rooms'?	Yayoi Kusama	Takashi Murakami	Yoko Ono	Katsushika Hokusai
+lit_american_painter_huge	Medium	Which American painter is famous for huge close-up flowers and New Mexico desert scenes?	Georgia O'Keeffe	Mary Cassatt	Frida Kahlo	Grandma Moses
+lit_dutch_artist_drew	Medium	Which Dutch artist drew impossible staircases and two hands drawing each other?	M. C. Escher	Piet Mondrian	Rembrandt	Hieronymus Bosch
+lit_british_painter_stormy	Medium	Which British painter of stormy seas and blazing skies gave his name to a famous modern art prize?	J. M. W. Turner	John Constable	Thomas Gainsborough	William Blake
+lit_italian_word_meaning	Medium	Which Italian word, meaning 'light-dark', names strong contrasts of light and shadow in painting?	Chiaroscuro	Sfumato	Impasto	Fresco
+lit_hilly_paris_district	Medium	Which hilly Paris district was home to Picasso, Renoir and Toulouse-Lautrec?	Montmartre	Le Marais	Saint-Germain	La Defense
+lit_japanese_art_flower	Medium	What is the Japanese art of flower arranging called?	Ikebana	Bonsai	Origami	Kirigami
+lit_pablo_picasso_surname	Medium	Pablo Picasso's famous surname came from whom?	His mother	His father	His godfather	His first teacher
+lit_colour_yves_klein	Medium	Which colour did Yves Klein make his trademark, even registering his own shade of it?	Blue	Red	Gold	Black
 lity_hokusai	Hard	Who made the famous Japanese print 'The Great Wave off Kanagawa'?	Hokusai	Hiroshige	Utamaro	Sesshu
 lit_painted_american_gothic	Hard	Who painted 'American Gothic', with a farmer holding a pitchfork?	Grant Wood	Edward Hopper	Norman Rockwell	Andrew Wyeth
 lit_british_artist_exhibited	Hard	Which British artist exhibited a shark preserved in formaldehyde?	Damien Hirst	Tracey Emin	Banksy	David Hockney
@@ -77,6 +99,17 @@ lity_fontanna	Hard	Which artist shocked the art world by exhibiting a urinal tit
 lit_painted_garden_earthly	Hard	Who painted 'The Garden of Earthly Delights'?	Hieronymus Bosch	Pieter Bruegel	Jan van Eyck	Albrecht Durer
 his_flemish_master_painted	Hard	Which Flemish master painted the 'Arnolfini Portrait' in 1434?	Jan van Eyck	Pieter Bruegel	Hieronymus Bosch	Rogier van der Weyden
 his_german_artist_engravings	Hard	Which German artist is famous for his engravings and self-portraits around 1500?	Albrecht Durer	Hans Holbein	Lucas Cranach	Matthias Grunewald
+lit_french_impressionist_painted	Hard	Which French Impressionist painted friends relaxing in 'Luncheon of the Boating Party'?	Pierre-Auguste Renoir	Edouard Manet	Gustave Caillebotte	Alfred Sisley
+lit_art_movement_got	Hard	Which art movement got its name when a critic called its painters 'wild beasts'?	Fauvism	Cubism	Dadaism	Futurism
+lit_young_artist_questioned	Hard	Which young artist was questioned by police after the Mona Lisa was stolen in 1911?	Pablo Picasso	Henri Matisse	Marcel Duchamp	Amedeo Modigliani
+lit_japanese_art_mending	Hard	What is the Japanese art of mending broken pottery with gold called?	Kintsugi	Ikebana	Raku	Ukiyo-e
+lit_roughly_paintings_johannes	Hard	Roughly how many paintings by Johannes Vermeer are known to survive?	About 35	About 120	About 350	About 900
+lit_russian_painter_shocked	Hard	Which Russian painter shocked viewers in 1915 with a plain 'Black Square'?	Kazimir Malevich	Wassily Kandinsky	Marc Chagall	Ilya Repin
+lit_iraqi_born_british	Hard	Which Iraqi-born British architect was the first woman to win the Pritzker Prize?	Zaha Hadid	Kazuyo Sejima	Denise Scott Brown	Lina Bo Bardi
+lit_architect_summed_modernism	Hard	Which architect summed up modernism with the motto 'Less is more'?	Mies van der Rohe	Le Corbusier	Walter Gropius	Frank Lloyd Wright
+lit_baroque_sculptor_designed	Hard	Which Baroque sculptor designed the great curved colonnade of St Peter's Square?	Gian Lorenzo Bernini	Francesco Borromini	Michelangelo	Donato Bramante
+lit_painted_sunday_afternoon	Hard	Who painted 'A Sunday Afternoon on the Island of La Grande Jatte', made of tiny dots?	Georges Seurat	Paul Signac	Claude Monet	Camille Pissarro
+lit_giant_steel_figure	Hard	Which giant steel figure with outstretched wings greets drivers near Gateshead in England?	The Angel of the North	The Kelpies	The Iron Man	The Spirit of the Tyne
 lit_official_title_painting	Expert	What is the official title of the painting known as 'Whistler's Mother'?	Arrangement in Grey and Black No. 1	Portrait of the Artist's Mother	Lady in a Black Chair	Study in Grey and Silver
 lit_painted_raft_medusa	Expert	Who painted 'The Raft of the Medusa', based on a real shipwreck of 1816?	Theodore Gericault	Eugene Delacroix	Jacques-Louis David	Gustave Courbet
 lit_romanian_sculptor_made	Expert	Which Romanian sculptor made the sleek, polished 'Bird in Space'?	Constantin Brancusi	Alberto Giacometti	Henry Moore	Jean Arp
@@ -87,3 +120,10 @@ lit_damaged_bottom_mural	Expert	What damaged the bottom of a famous mural in a M
 lit_painter_added_two	Expert	Which painter added two bored-looking little angels to his 'Sistine Madonna'?	Raphael	Michelangelo	Titian	Caravaggio
 lit_painter_hid_stretched	Expert	Which painter hid a stretched-out skull across the bottom of 'The Ambassadors'?	Hans Holbein the Younger	Albrecht Durer	Lucas Cranach the Elder	Jan van Eyck
 lit_becoming_full_time	Expert	Before becoming a full-time painter, Paul Gauguin made a good living as what?	A stockbroker	A ship's doctor	A lawyer	A schoolteacher
+lit_marcel_duchamp_add	Expert	What did Marcel Duchamp add to a cheap postcard of the Mona Lisa in 1919?	A moustache and goatee	A pair of glasses	A speech bubble	A crown of thorns
+lit_early_1800s_mona	Expert	In the early 1800s, the Mona Lisa hung for a few years in whose bedroom?	Napoleon's	Robespierre's	Marie Antoinette's	Victor Hugo's
+lit_posing_drowning_ophelia	Expert	Posing as the drowning Ophelia for Millais, Elizabeth Siddal lay in a bath for hours. What happened?	She fell ill from the cold	She nearly drowned	The bath tub cracked	She fainted from heat
+lit_diego_rivera_1933	Expert	Why was Diego Rivera's 1933 mural in New York's Rockefeller Center destroyed?	It showed Lenin's face	It showed a nude mayor	Its paint was poisonous	The building was demolished
+lit_according_legend_giotto	Expert	According to legend, how did Giotto prove his skill to a messenger from the pope?	He drew a perfect circle	He carved a statue in a day	He painted with his eyes shut	He copied a fresco from memory
+lit_goya_paint_gloomy	Expert	Where did Goya first paint his gloomy 'Black Paintings', such as 'Saturn Devouring His Son'?	On the walls of his house	On church ceilings	On old ship sails	On the backs of maps
+lit_michelangelo_last_judgment	Expert	In Michelangelo's 'The Last Judgment', his own face is thought to appear on what?	A flayed human skin	A demon's mask	A skull in Hell	An angel's shield
