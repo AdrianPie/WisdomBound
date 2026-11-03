@@ -8,6 +8,10 @@ myt_thor_father_norse	Easy	Who is Thor's father in Norse mythology?	Odin	Loki	Ty
 myt_force_nature_norse	Easy	Which force of nature did the Norse god Thor rule?	Thunder	Fire	The sea	The wind
 myt_thor_hammer_always	Easy	What does Thor's hammer always do after he throws it?	Flies back to his hand	Splits into lightning	Turns into a serpent	Buries itself in the earth
 mit_odyn	Easy	What was the chief Norse god called?	Odin	Thor	Loki	Baldur
+myt_great_enemies_norse	Easy	Who are the great enemies of the Norse gods, and Thor above all?	Giants	Titans	Demons	Dragons
+myt_thor_became_comic	Easy	Thor first became a comic-book superhero with which publisher?	Marvel	DC	Image	Dark Horse
+myt_seafaring_raiders_scandinavia	Easy	Which seafaring raiders from Scandinavia worshipped Odin and Thor?	The Vikings	The Celts	The Romans	The Huns
+myt_ragnarok_happens_norse	Easy	At Ragnarok, what happens to most of the Norse gods?	They die in battle	They flee to Earth	They fall asleep	They become human
 mit2_walhalla	Medium	Who was admitted to Valhalla?	Warriors fallen in battle	All the dead	Priests	Kings
 trv2_mjolnir	Medium	What is the name of Thor's hammer?	Mjolnir	Gungnir	Gram	Skidbladnir
 myt_heimdall	Medium	Which Norse god guards the rainbow bridge to Asgard?	Heimdall	Tyr	Baldr	Freyr
@@ -19,6 +23,22 @@ mit2_odyn_ofiara	Medium	What did Odin sacrifice for wisdom?	One eye	A hand	His h
 ref_myt_asgard	Medium	What is the realm of the Aesir gods called in Norse myth?	Asgard	Midgard	Niflheim	Jotunheim
 mit_ragnarok	Medium	What is the Norse end of the world called?	Ragnarok	Valhalla	Niflheim	Ginnungagap
 mit2_valkirie	Medium	What did the Valkyries do?	Chose the slain for Valhalla	Guarded the Nibelung treasure	Brewed the mead of poetry	Watched over Bifrost
+myt_german_wagner_operas	Medium	In German, and in Wagner's operas, the chief Norse god Odin is called what?	Wotan	Donar	Ziu	Fro
+myt_country_norse_myths	Medium	In which country were most Norse myths written down in the Middle Ages?	Iceland	Norway	Denmark	Sweden
+myt_norse_creation_life	Medium	In Norse creation, life first stirred where the ice of the north met what?	Fire from the south	Salt from the sea	Light from the stars	Wind from the east
+myt_ragnarok_norse_myths	Medium	After Ragnarok, what do the Norse myths say rises from the sea?	A new green world	A fleet of giants	The drowned dead	A mountain of fire
+myt_tricked_blind_god	Medium	Who tricked a blind god into killing Baldr with a dart of mistletoe?	Loki	Heimdall	Tyr	Freyr
+myt_unlike_blond_marvel	Medium	Unlike the blond Marvel hero, what colour is Thor's beard in the old Norse sources?	Red	Black	White	Grey
+myt_fallen_warriors_valhalla	Medium	How do the fallen warriors in Valhalla spend each day?	Fighting each other	Sleeping in the hall	Herding Odin's cattle	Forging weapons
+myt_norse_midgard_echoed	Medium	The Norse name 'Midgard', echoed in Tolkien's Middle-earth, literally means what?	Middle enclosure	Great hall	Land of mist	Giants' gate
+myt_come_just_ragnarok	Medium	What will come just before Ragnarok, according to Norse myth?	Three winters with no summer	A hundred years of peace	Seven years of drought	A rain of golden apples
+myt_germanic_folklore_often	Medium	In Germanic folklore, who often leads the Wild Hunt, a ghostly ride across winter skies?	Odin	Loki	Thor	Baldr
+myt_mare_nightmare_germanic	Medium	The 'mare' in 'nightmare' was what in Germanic folklore?	A spirit that sits on sleepers	A ghostly black horse	A witch's familiar cat	A howling night wind
+myt_loki_cut_off	Medium	After Loki cut off a goddess's hair, what did the dwarves make to replace it?	Hair of real gold	A crown of stars	A wig of silk	A golden helmet
+myt_norse_sagas_draugr	Medium	In the Norse sagas, what is a draugr?	A walking corpse	A house elf	A sea giant	A war horse
+myt_special_odin_spear	Medium	What is special about Odin's spear, Gungnir?	It never misses its target	It cannot be lifted	It sings in battle	It turns to ice
+myt_iceland_road_projects	Medium	In Iceland, road projects have been rerouted to avoid disturbing whose homes?	The hidden people	Sleeping dragons	Viking ghosts	Old sea trolls
+myt_german_legend_siegfried	Medium	In the German legend, how did Siegfried make his skin as hard as horn?	He bathed in a dragon's blood	He wore a dwarf's cloak	He drank a giant's mead	He slept inside a volcano
 mit2_jormungand	Hard	What was Jormungand?	A serpent encircling the world	A dragon guarding gold	Odin's steed	A god of the sea
 trv2_sleipnir	Hard	What is the name of Odin's eight-legged horse?	Sleipnir	Fenrir	Jormungandr	Huginn
 trv2_fenrir	Hard	Which Norse god is fated to be swallowed by the wolf Fenrir at Ragnarok?	Odin	Thor	Loki	Heimdall
@@ -40,6 +60,14 @@ myt_ragnarok_thor_die	Hard	At Ragnarok, how does Thor die after killing the Worl
 myt_norse_gods_split	Hard	The Norse gods were split into two tribes: the Aesir and which other?	The Vanir	The Jotnar	The Einherjar	The Alfar
 mytx_sif	Hard	The trickster god cut off the golden hair of which goddess, Thor's wife?	Sif	Freyja	Frigg	Idun
 mytx_fafnir	Hard	Which dragon did the hero Sigurd (Siegfried) slay?	Fafnir	Smaug	Nidhogg	Jormungand
+myt_tolkien_took_gandalf	Hard	Tolkien took the name 'Gandalf' from an old Norse poem's list of what?	Dwarves	Kings	Giants	Wizards
+myt_thor_belt_megingjord	Hard	What does Thor's belt, Megingjord, do for him?	Doubles his strength	Lets him fly	Makes him invisible	Stops all arrows
+myt_frigg_made_everything	Hard	Frigg made everything swear never to harm Baldr. Why was mistletoe left out?	She thought it too young	It grew only in Jotunheim	Loki had hidden it	It was sacred to Odin
+myt_norse_god_poetry	Hard	Which Norse god of poetry had runes carved on his tongue?	Bragi	Mimir	Kvasir	Heimdall
+myt_loki_bet_head	Hard	Loki bet his head with a dwarf and lost. How did he save it?	The neck was not in the deal	Odin paid a ransom	He won a riddle contest	He swapped heads with a goat
+myt_valhalla_flows_endlessly	Hard	In Valhalla, what flows endlessly from the udders of the goat Heidrun?	Mead	Milk	Wine	Honey
+myt_birth_norse_trickster	Hard	By birth, what was the Norse trickster Loki?	A giant	An elf	A dwarf	A Vanir god
+myt_norse_god_sea	Hard	Which Norse god of the sea and ships is the father of Freyr and Freyja?	Njord	Aegir	Ullr	Bragi
 mit2_mimir	Expert	Who guarded the well of wisdom in Norse mythology?	Mimir	Heimdall	Bragi	Ullr
 myt_naglfar	Expert	In Norse myth, which ship is built from the fingernails and toenails of the dead?	Naglfar	Skidbladnir	Hringhorni	Ellida
 myt_skoll	Expert	In Norse myth, which wolf chases the Sun across the sky?	Skoll	Fenrir	Hati	Garm
@@ -74,3 +102,5 @@ myt_thunder_god_thor	Expert	Why does the thunder god Thor's hammer have such a s
 myt_form_odin_take	Expert	Which form did Odin take to fly off with the stolen mead of poetry?	An eagle	A raven	A falcon	A swan
 myt_norse_giantess_goddess	Expert	Which Norse giantess, goddess of skiing, chose her husband by looking only at his feet?	Skadi	Gerd	Hel	Angrboda
 myt_golden_ring_odin	Expert	Which golden ring of Odin drips eight new rings every ninth night?	Draupnir	Andvaranaut	Brisingamen	Gleipnir
+myt_gods_made_wise	Expert	The gods made the wise being Kvasir, whose blood became the mead of poetry, out of what?	Their spit	Their tears	Their blood	Their breath
+myt_according_norse_myth_3	Expert	According to Norse myth, the goddess Gefjon ploughed which Danish island out of Sweden?	Zealand	Funen	Bornholm	Lolland

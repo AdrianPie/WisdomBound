@@ -8,7 +8,6 @@ mat_ancient_greek_principle	Easy	Which ancient Greek's 'principle' explains why 
 mat_pythagoras_euclid_archimedes	Easy	Pythagoras, Euclid and Archimedes all belonged to which ancient civilisation?	Ancient Greece	Ancient Rome	Ancient Egypt	Babylon
 mat_film_theory_everything	Easy	The film 'The Theory of Everything' tells the life of which Cambridge professor?	Stephen Hawking	Alan Turing	Isaac Newton	Paul Dirac
 mat_said_give_place	Easy	Who said 'Give me a place to stand and I will move the Earth', speaking of levers?	Archimedes	Aristotle	Plato	Socrates
-mat_jurassic_park_character	Easy	In 'Jurassic Park', which character is the mathematician who warns about chaos theory?	Ian Malcolm	Alan Grant	John Hammond	Dennis Nedry
 mat_euklides	Medium	Who is known as the 'father of geometry'?	Euclid	Pythagoras	Archimedes	Thales
 mat_trojkat_pascala	Medium	What is the famous triangle of numbers where each is the sum of the two above it?	Pascal's triangle	Euler's triangle	Newton's triangle	Fermat's triangle
 matx_cyfry_indie	Medium	The digits 0 to 9 we use today, called 'Arabic numerals', first developed where?	India	Arabia	Egypt	Greece
@@ -41,6 +40,7 @@ mat_ancient_greek_sieve	Medium	Which ancient Greek's 'sieve' is a simple method 
 mat_according_legend_archimedes	Medium	According to legend, how did Archimedes set attacking Roman ships on fire?	With giant mirrors	With flaming arrows	With Greek fire	With burning oil
 mat_bertrand_russell_logician	Medium	Bertrand Russell, the logician behind the barber paradox, won a Nobel Prize in which field?	Literature	Physics	Peace	Economics
 mat_mathematician_fibonacci_leonardo	Medium	The mathematician Fibonacci is also known as Leonardo of which city?	Pisa	Florence	Venice	Milan
+mat_jurassic_park_character	Medium	In 'Jurassic Park', which character is the mathematician who warns about chaos theory?	Ian Malcolm	Alan Grant	John Hammond	Dennis Nedry
 mst_zero_indie	Hard	Zero as a number in its own right was first fully developed where?	India	Greece	Egypt	Rome
 mat_ramanujan	Hard	Which self-taught Indian mathematician inspired the film 'The Man Who Knew Infinity'?	Srinivasa Ramanujan	Aryabhata	Brahmagupta	C. R. Rao
 mat_medal_fieldsa	Hard	Which top mathematics award is given only to mathematicians under 40?	The Fields Medal	The Abel Prize	The Wolf Prize	The Turing Award

@@ -4,6 +4,13 @@ id	difficulty	prompt	correct	wrong1	wrong2	wrong3
 mytx_zodiak	Easy	How many animals are there in the Chinese zodiac?	12	10	8	13
 wh_mit_wisznu	Easy	In which religion do the gods Brahma, Vishnu and Shiva appear?	Hinduism	Buddhism	Sikhism	Jainism
 myt_maneki_neko_often	Easy	What is the maneki-neko, often seen in Japanese shop windows?	A lucky beckoning cat	A grinning fox spirit	A laughing frog charm	A smiling badger god
+myt_chinese_thought_yin	Easy	In Chinese thought, what do yin and yang stand for?	Opposite forces in balance	Heaven and hell	Two rival emperors	Sun and rain gods
+myt_creature_played_dancers	Easy	Which creature, played by dancers under one long costume, winds through Chinese New Year parades?	A dragon	A tiger	A phoenix	A crane
+myt_chinese_zodiac_decides	Easy	In the Chinese zodiac, what decides which animal sign you belong to?	The year you were born	Your birth month	Your blood type	The day of the week
+myt_traditionally_tucked_inside	Easy	What is traditionally tucked inside the red envelopes given out at Chinese New Year?	Money	Tea leaves	Love poems	Lucky seeds
+myt_hindu_belief_idea	Easy	In Hindu belief, what is the idea that your good and bad deeds come back to you?	Karma	Nirvana	Mantra	Yoga
+myt_hindus_believe_happens	Easy	What do Hindus believe happens to the soul after death?	It is reborn in a new body	It sleeps until the end	It turns into a star	It fades away forever
+myt_chinese_practice_arranges	Easy	Which Chinese practice arranges homes and furniture so that good energy flows?	Feng shui	Tai chi	Kung fu	Ikebana
 trv2_ganesha	Medium	Which Hindu god has the head of an elephant?	Ganesha	Hanuman	Vishnu	Shiva
 myt_kryszna	Medium	Which Hindu god is often shown with blue skin, playing a flute?	Krishna	Shiva	Ganesha	Hanuman
 mytx_chinski_smok	Medium	In Chinese tradition, dragons are mostly seen as what?	Bringers of luck and rain	Evil fire-breathers	Guardians of the dead	Messengers of war
@@ -18,6 +25,22 @@ mit3_amaterasu	Medium	What is Amaterasu the goddess of in Japanese mythology?	Th
 dpt_mit_siwa	Medium	Which Hindu god is known as the destroyer?	Shiva	Vishnu	Brahma	Indra
 myty_kali	Medium	Which fierce Hindu goddess wears a garland of skulls and sticks out a red tongue?	Kali	Lakshmi	Saraswati	Parvati
 myt_sacred_river_said	Medium	Which sacred river is said to have fallen from heaven through Shiva's hair to soften its landing?	The Ganges	The Indus	The Yamuna	The Brahmaputra
+myt_hindus_pray_ganesha	Medium	Hindus pray to Ganesha before starting anything new because he removes what?	Obstacles	Sins	Illnesses	Enemies
+myt_hindu_god_open	Medium	Which Hindu god can open a third eye that burns whatever it looks at?	Shiva	Vishnu	Brahma	Indra
+myt_japanese_beer_brand	Medium	The Japanese beer brand Kirin is named after what?	A mythical hooved beast	A Shinto sun goddess	A sacred mountain	An ancient emperor
+myt_monsters_goblins_ghosts	Medium	What are the monsters, goblins and ghosts of Japanese folklore collectively called?	Yokai	Kaiju	Kabuki	Bonsai
+myt_child_hindu_god	Medium	As a child, the Hindu god Krishna was famous for stealing what?	Butter	Mangoes	Gold coins	Peacock feathers
+myt_hindu_god_vishnu	Medium	On what does the Hindu god Vishnu rest while floating on the cosmic ocean?	A giant serpent	A lotus leaf	A white elephant	A golden turtle
+myt_japan_tanabata_star	Medium	At Japan's Tanabata star festival, what do people tie to bamboo branches?	Wishes written on paper	Rice cakes for the gods	Lanterns for the dead	Bells to scare demons
+myt_imperial_china_dragon	Medium	In imperial China the dragon stood for the emperor. Which creature stood for the empress?	The phoenix	The crane	The tiger	The tortoise
+myt_japan_obon_festival	Medium	During Japan's Obon festival, who is believed to come home for a visit?	The spirits of ancestors	The Seven Lucky Gods	The fox spirits	The sun goddess
+myt_chinese_families_burn	Medium	Why do Chinese families burn paper money at funerals and festivals?	To send it to the dead	To scare away thieves	To bring good harvests	To mark a new emperor
+myt_jiangshi_stiff_walking	Medium	How does the jiangshi, a stiff walking corpse of Chinese folklore, move about?	By hopping	By crawling	By flying	By rolling
+myt_small_spirit_houses	Medium	What are the small 'spirit houses' outside Thai homes and shops for?	Homes for local spirits	Stores for rice	Nests for lucky birds	Shrines to the king
+myt_small_stone_jizo	Medium	Who are the small stone Jizo statues in red bibs at Japanese temples said to protect?	Children and travellers	Farmers and fishermen	Samurai and monks	Emperors and nobles
+myt_chinese_dragon_often	Medium	What is a Chinese dragon often shown chasing?	A flaming pearl	A white tiger	Its own tail	A falling star
+myt_jolly_pot_bellied	Medium	The jolly, pot-bellied 'Laughing Buddha' is based on whom?	A wandering Chinese monk	The Buddha himself	A Japanese emperor	An Indian god of wealth
+myt_unlike_european_dragons	Medium	Unlike most European dragons, what do Chinese dragons usually lack?	Wings	Scales	Claws	Horns
 cultw_izanagi	Hard	In Japanese myth, which pair created the islands of Japan?	Izanagi and Izanami	Amaterasu and Susanoo	Raijin and Fujin	Inari and Hachiman
 ref_myt_hanuman	Hard	Which monkey god is Rama's devoted ally in the Ramayana?	Hanuman	Ganesha	Garuda	Krishna
 myt_garuda	Hard	Which giant bird carries the Hindu god Vishnu?	Garuda	Jatayu	Hamsa	Simurgh
@@ -74,6 +97,11 @@ myt_claws_dragons_chinese	Hard	How many claws did the dragons on a Chinese emper
 myt_japanese_kami_rice	Hard	Which Japanese kami of rice uses foxes as messengers?	Inari	Hachiman	Ebisu	Raijin
 cultw_mahabharata	Hard	Which Sanskrit epic contains the Bhagavad Gita?	The Mahabharata	The Ramayana	The Rigveda	The Upanishads
 dpt_mit_kitsune	Hard	What is a kitsune in Japanese folklore?	A fox spirit that gains tails with age	A mountain demon with bright red skin	A drowned soul that haunts the rivers	A dragon set to guard a hidden shrine
+myt_lucky_gods_sail	Hard	How many lucky gods sail the treasure ship of Japanese folklore?	Seven	Five	Nine	Twelve
+myt_nyepi_bali_new	Hard	On Nyepi, Bali's New Year, why does the whole island stay silent and dark?	To make demons think it is empty	To mourn the old year	To hear the gods speak	To honour the sleeping volcano
+myt_japanese_tale_crane	Hard	In the Japanese tale of the crane wife, what does she secretly weave her fine cloth from?	Her own feathers	Moonlight	Spider silk	Her own hair
+myt_chinese_goddess_said	Hard	Which Chinese goddess, said to be a fisherman's daughter, protects sailors at sea?	Mazu	Nuwa	Chang'e	Xiwangmu
+myt_female_pair_chinese	Hard	What does the female of a pair of Chinese guardian lions rest her paw on?	A cub	A globe	A sword	A lotus
 ref_myt_susanoo	Expert	Which Japanese storm god slew the eight-headed serpent Yamata no Orochi?	Susanoo	Raijin	Hachiman	Tsukuyomi
 myt_narasimha	Expert	Which avatar of Vishnu has the head of a lion and the body of a man?	Narasimha	Varaha	Matsya	Kurma
 myt_lunar_new_year	Expert	Before the Lunar New Year, why do Chinese families smear honey or sweets on the Kitchen God's lips?	So he reports only sweet things to heaven	To feed him for his long journey home	To keep him from eating the family's rice	So he will bless the coming year's harvests
@@ -92,3 +120,5 @@ myt_korea_founding_myth	Expert	In Korea's founding myth, how did a bear become t
 myt_years_rama_exiled	Expert	For how many years was Rama exiled to the forest in the 'Ramayana'?	Fourteen	Seven	Twelve	Forty
 myt_according_folklore_trick	Expert	According to Japanese folklore, what trick lets you escape a kappa?	Bow, so it bows back and spills its water	Splash it with salt water from the sea	Shout its true name three times	Offer it a bowl of rice and sake
 myt_child_hanuman_mistake	Expert	As a child, what did Hanuman mistake the sun for and leap up to eat?	A ripe fruit	A golden egg	A ball of butter	A lotus flower
+myt_vietnam_founding_myth	Expert	In Vietnam's founding myth, how many children hatched from the egg sac of the fairy Au Co?	100	12	7	1,000
+myt_japanese_yokai_looks	Expert	Which Japanese yokai looks like a normal woman by day but stretches her neck at night?	Rokurokubi	Yuki-onna	Kuchisake-onna	Futakuchi-onna
