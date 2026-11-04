@@ -426,7 +426,7 @@ object TechnologyQuestions {
     //
     private fun transport(): List<QuizEntry> = section(
         "technology/transport",
-        q("wh_bracia_wright", "Who made the first successful powered airplane flight in 1903?", "The Wright brothers", listOf("Louis Bleriot", "Otto Lilienthal", "Alberto Santos-Dumont"), E),
+        q("wh_bracia_wright", "Who made the first successful powered aeroplane flight, at Kitty Hawk?", "The Wright brothers", listOf("Louis Bleriot", "Otto Lilienthal", "Alberto Santos-Dumont"), E),
         q("tec_tesla_model3", "Which company makes the Model S and Model 3 electric cars?", "Tesla", listOf("Toyota", "BMW", "Ford"), E),
         q("tec_model_t", "Which company built the Model T, the first mass-produced car?", "Ford", listOf("General Motors", "Chrysler", "Cadillac"), E),
         q("tec_gps_stand", "What does 'GPS' stand for?", "Global Positioning System", listOf("General Positioning Satellite", "Global Pathfinding Service", "Geo Pointing System"), E),

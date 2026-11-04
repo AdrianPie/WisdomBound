@@ -86,7 +86,7 @@ object EstimationQuestionsModern {
         count("zyrafa_wysokosc", "How tall is an adult giraffe, in metres times ten?", 55, "tenths of a metre", 6, 200),
         count("pszczola_skrzydla", "How many times per second does a honeybee beat its wings?", 230, "beats per second", 30, 900),
         count("kolibr_serce", "What is a hummingbird's heart rate in flight, in beats per minute?", 1_200, "beats per minute", 150, 4_000),
-        count("sekwoja_wysokosc", "How tall is the tallest known coast redwood, in metres?", 116, "m", 12, 400),
+        count("sekwoja_wysokosc", "How tall is Hyperion, the tallest known tree on Earth, in metres?", 116, "m", 12, 400),
         count("gatunki_ptakow", "Roughly how many bird species are known?", 11_000, "species", 1_200, 40_000),
 
         /* ------------------------------ Skala i fizyka ------------------------------ */

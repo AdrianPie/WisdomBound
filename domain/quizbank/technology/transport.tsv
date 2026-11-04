@@ -1,7 +1,7 @@
 # Transport: cars, planes, trains, ships, bikes, rockets as vehicles, roads
 #
 id	difficulty	prompt	correct	wrong1	wrong2	wrong3
-wh_bracia_wright	Easy	Who made the first successful powered airplane flight in 1903?	The Wright brothers	Louis Bleriot	Otto Lilienthal	Alberto Santos-Dumont
+wh_bracia_wright	Easy	Who made the first successful powered aeroplane flight, at Kitty Hawk?	The Wright brothers	Louis Bleriot	Otto Lilienthal	Alberto Santos-Dumont
 tec_tesla_model3	Easy	Which company makes the Model S and Model 3 electric cars?	Tesla	Toyota	BMW	Ford
 tec_model_t	Easy	Which company built the Model T, the first mass-produced car?	Ford	General Motors	Chrysler	Cadillac
 tec_gps_stand	Easy	What does 'GPS' stand for?	Global Positioning System	General Positioning Satellite	Global Pathfinding Service	Geo Pointing System

@@ -90,7 +90,6 @@ object EstimationQuestionsWorld {
         year("igrzyska_nowozytne", "In which year were the first modern Olympic Games held?", 1896),
 
         /* -------------------------------- 20th century -------------------------------- */
-        year("wright_lot", "In which year did the Wright brothers make their first powered flight?", 1903),
         year("einstein_wzglednosc", "In which year did Einstein publish the special theory of relativity?", 1905),
         year("ww1_start", "The outbreak of World War I happened in which year?", 1914),
         year("penicylina_odkrycie", "In which year did Fleming discover penicillin?", 1928),

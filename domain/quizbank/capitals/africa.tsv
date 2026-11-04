@@ -4,18 +4,18 @@ id	difficulty	prompt	correct	wrong1	wrong2	wrong3
 cap2_cairo	Easy	What is the capital of Egypt?	Cairo	Alexandria	Giza	Luxor
 cap3_algiers	Easy	What is the capital of Algeria?	Algiers	Tunis	Tripoli	Rabat
 cap3_tunis	Easy	What is the capital of Tunisia?	Tunis	Algiers	Tripoli	Rabat
+cap_nairobi	Easy	What is the capital of Kenya?	Nairobi	Mombasa	Kisumu	Nakuru
+cap_kraj_pretoria	Easy	Pretoria is the capital of which country?	South Africa	Kenya	Zimbabwe	Namibia
 cap3_tripoli	Medium	What is the capital of Libya?	Tripoli	Tunis	Algiers	Cairo
 cap_coastal_megacity_nigeria	Medium	Which coastal megacity was Nigeria's capital until 1991?	Lagos	Kano	Ibadan	Port Harcourt
 cap_south_african_city	Medium	Which South African city is home to the country's parliament?	Cape Town	Johannesburg	Durban	Bloemfontein
-cap_nairobi	Medium	What is the capital of Kenya?	Nairobi	Mombasa	Kisumu	Nakuru
-cap_kraj_pretoria	Medium	Pretoria is the capital of which country?	South Africa	Kenya	Zimbabwe	Namibia
 cap3_dakar	Medium	What is the capital of Senegal?	Dakar	Bamako	Conakry	Nouakchott
 cur_rpa_trzy_stolice	Medium	Which country has three capital cities?	South Africa	Switzerland	Malaysia	Nigeria
 cap_capital_somalia	Medium	What is the capital of Somalia?	Mogadishu	Hargeisa	Djibouti	Asmara
+cap2_addis_ababa	Medium	What is the capital of Ethiopia?	Addis Ababa	Dire Dawa	Gondar	Mekelle
+cap3_accra	Medium	What is the capital of Ghana?	Accra	Lagos	Abidjan	Lome
 cap_rabat	Hard	What is the capital of Morocco?	Rabat	Casablanca	Marrakesh	Fez
 cap_abuja	Hard	What is the capital of Nigeria?	Abuja	Lagos	Kano	Ibadan
-cap2_addis_ababa	Hard	What is the capital of Ethiopia?	Addis Ababa	Dire Dawa	Gondar	Mekelle
-cap3_accra	Hard	What is the capital of Ghana?	Accra	Lagos	Abidjan	Lome
 cap3_harare	Hard	What is the capital of Zimbabwe?	Harare	Lusaka	Maputo	Gaborone
 cap3_kinshasa	Hard	What is the capital of Democratic Republic of the Congo?	Kinshasa	Brazzaville	Luanda	Kigali
 cap3_kampala	Hard	What is the capital of Uganda?	Kampala	Nairobi	Kigali	Bujumbura
@@ -29,10 +29,10 @@ cap3_khartoum	Hard	What is the capital of Sudan?	Khartoum	Cairo	Addis Ababa	Juba
 cap3_juba	Hard	What is the capital of South Sudan?	Juba	Khartoum	Kampala	Nairobi
 cap_monrowia	Hard	Which African capital is named after a US president?	Monrovia	Freetown	Accra	Banjul
 cap_former_capital_means	Hard	Which former capital's name means 'abode of peace' in Arabic?	Dar es Salaam	Zanzibar	Mombasa	Khartoum
+cap2_antananarivo	Hard	What is the capital of Madagascar?	Antananarivo	Toamasina	Mahajanga	Toliara
 cap_asmara	Expert	What is the capital of Eritrea?	Asmara	Massawa	Keren	Assab
 cap_kraj_ouagadougou	Expert	Ouagadougou is the capital of which country?	Burkina Faso	Mali	Niger	Chad
 cap2_yamoussoukro	Expert	What is the capital of Ivory Coast?	Yamoussoukro	Abidjan	Bouake	Korhogo
-cap2_antananarivo	Expert	What is the capital of Madagascar?	Antananarivo	Toamasina	Mahajanga	Toliara
 cap2_windhoek	Expert	What is the capital of Namibia?	Windhoek	Walvis Bay	Swakopmund	Oshakati
 cap3_gaborone	Expert	What is the capital of Botswana?	Gaborone	Windhoek	Lusaka	Maseru
 cap3_maseru	Expert	What is the capital of Lesotho?	Maseru	Mbabane	Gaborone	Bloemfontein

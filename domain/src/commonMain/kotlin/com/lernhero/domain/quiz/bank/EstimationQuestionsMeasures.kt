@@ -36,26 +36,26 @@ object EstimationQuestionsMeasures {
 
         /* -------------------------------- Szczyty (m) ------------------------------- */
         measure("everest", "How high is Mount Everest?", 8849, "m", 250, 10_000),
-        measure("k2", "How high is K2, the second-highest mountain on Earth?", 8611, "m", 250, 10_000),
-        measure("kilimanjaro", "How high is Kilimanjaro, the highest peak in Africa?", 5895, "m", 250, 10_000),
-        measure("mont_blanc", "How high is Mont Blanc, the highest peak in the Alps?", 4808, "m", 200, 10_000),
-        measure("denali", "How high is Denali, the highest peak in North America?", 6190, "m", 250, 10_000),
-        measure("aconcagua", "How high is Aconcagua, the highest peak in South America?", 6961, "m", 250, 10_000),
-        measure("elbrus", "How high is Mount Elbrus, the highest peak in the Caucasus?", 5642, "m", 250, 10_000),
+        measure("k2", "How high is K2?", 8611, "m", 250, 10_000),
+        measure("kilimanjaro", "How high is Kilimanjaro?", 5895, "m", 250, 10_000),
+        measure("mont_blanc", "How high is Mont Blanc?", 4808, "m", 200, 10_000),
+        measure("denali", "How high is Denali?", 6190, "m", 250, 10_000),
+        measure("aconcagua", "How high is Aconcagua?", 6961, "m", 250, 10_000),
+        measure("elbrus", "How high is Mount Elbrus?", 5642, "m", 250, 10_000),
         measure("fuji", "How high is Mount Fuji?", 3776, "m", 200, 10_000),
 
         /* -------------------------------- Rzeki (km) -------------------------------- */
         measure("nil", "How long is the Nile?", 6650, "km", 350, 8_000),
         measure("amazonka", "How long is the Amazon?", 6400, "km", 350, 8_000),
-        measure("jangcy", "How long is the Yangtze, the longest river in Asia?", 6300, "km", 350, 8_000),
+        measure("jangcy", "How long is the Yangtze?", 6300, "km", 350, 8_000),
         measure("mississippi", "How long is the Mississippi itself (without the Missouri)?", 3766, "km", 300, 8_000),
-        measure("wolga", "How long is the Volga, the longest river in Europe?", 3530, "km", 250, 8_000),
+        measure("wolga", "How long is the Volga?", 3530, "km", 250, 8_000),
         measure("dunaj", "How long is the Danube?", 2850, "km", 200, 8_000),
         measure("ren", "How long is the Rhine?", 1230, "km", 120, 8_000),
 
         /* ------------------------------ Glebokosci (m) ------------------------------ */
         measure("rowmarianski", "How deep is the Mariana Trench at its deepest point?", 10935, "m", 400, 13_000),
-        measure("bajkal", "How deep is Lake Baikal, the deepest lake on Earth?", 1642, "m", 120, 2_500),
+        measure("bajkal", "How deep is Lake Baikal?", 1642, "m", 120, 2_500),
         measure("morze_srodziemne", "What is the greatest depth of the Mediterranean Sea?", 5267, "m", 350, 7_000),
         measure("baltyk", "What is the greatest depth of the Baltic Sea?", 459, "m", 60, 1_500),
 
